@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-11-18T08:00:48+00:00",
+  "v1_v2_change_summary": {
+    "UNCHANGED": 295,
+    "ADDED_TO_PRIMARY": 82,
+    "REMOVED_FROM_PRIMARY": 49,
+    "MEANS_CHANGED_LNRR_SAME": 15,
+    "CLASS_CHANGED": 12
+  },
+  "changed_N": 158,
+  "required_k": 24,
+  "package": "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\SynerPlant_Yield_V2\\audit\\HUMAN_AUDIT_V2_PACKAGE.xlsx",
+  "human_verdicts_preserved": 158
+}

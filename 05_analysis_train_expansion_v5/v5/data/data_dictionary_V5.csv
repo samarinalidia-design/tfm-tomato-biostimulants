@@ -1,0 +1,559 @@
+﻿column,description,source,in_v5_tables
+v5_stress_declared,Author-declared stress kept for transparency when V5 reclassified the stress (e.g. 112 SALINITY_AUTHOR_DECLARED_SOIL_EC_1.2_mS_cm).,V5,True
+v5_correction,"V5 correction codes applied to the contrast (STRESS_DISPUTED, NO_STRESS_RECODED).",V5,True
+v5_measurement_year,"Measurement (harvest) year taken from the timepoint key where it carries the year (717, D_068b..., D_0e4b...).",V5,True
+v5_fractions_summed,Number of fruit-size fractions summed into this total-yield contrast (SD not summed; variance imputed).,V5,True
+h_stress_class,"V5 harmonised stress class: NONE, SALINITY, DROUGHT, HEAT, COLD, NUTRIENT, HEAVY_METAL, CHEMICAL_TOXICITY, BIOTIC, ALKALINITY_CALCAREOUS, LIGHT_UV_OZONE, FLOOD_HYPOXIA, OTHER_MANAGEMENT, COMBINED (>= 2 families). Fixed V4 rule bugs ('ht_' matched 'drought_'; 'nutrient solution' read as nutrient stress; 'wilting' read as disease).",V5,True
+h_stress_families,"All stress families detected in the stress code, joined with '+'.",V5,True
+h_hybrid,HYBRID only with explicit hybrid/F1 evidence; OP_CULTIVAR_LINE only with explicit open-pollinated/landrace/heirloom/inbred evidence; else UNSPECIFIED.,V5,True
+h3_hybrid,"1 = hybrid, 0 = explicit OP/landrace, NaN = unknown (V4 coded unknown as 0).",V5,True
+h3_experiment_year,"Experiment year: measurement year from the timepoint key if present, else parsed from the season text.",V5,True
+h3_experiment_year_source,TIMEPOINT_KEY | SEASON_TEXT | MISSING.,V5,True
+h3_latitude_source,"PRINTED (coordinates in the paper) | COUNTRY_CENTROID (centre of the country, approximate) | MISSING.",V5,True
+h3_cultivar_key,Normalised cultivar name; UNSPECIFIED when not reported (never guessed).,V5,True
+dataset_role_v5,TRAIN (TRAIN_DEV freeze 2026-11-13) or TEST (EXTERNAL_TEST freeze 2026-11-18).,V5,True
+var_lnrr_imp,"Sampling variance of lnRR. Author SD/SE where reported; otherwise study-printed CV%/LSD; otherwise the mean CV (CV-bar, Nakagawa et al. 2023) estimated on TRAIN only. Imputed variances are NOT reported by the authors.",V5,True
+variance_status,AUTHOR_SD_SE | STUDY_PRINTED_CV_OR_LSD_OR_N_IMPUTED | IMPUTED_MEAN_CV_NOT_AUTHOR_REPORTED.,V5,True
+yield_tier,"Yield definition tier (STRICT/ASSUMED/BROAD/UNIT_UNRESOLVED per export.py rules; EARLY; DRY; OTHER_DEFINITION). Feature, not a filter.",TFM_TRAIN_EXPANSION rounds 1-7,True
+is_dry_yield,1 if mass_basis == DRY (yield table).,TFM_TRAIN_EXPANSION rounds 1-7,True
+is_early_yield,1 if yield_scope == EARLY (yield table).,TFM_TRAIN_EXPANSION rounds 1-7,True
+is_boxplot,1 if flag BOX_CENTRE_ASSUMED_MEAN (box centre assumed to be a mean). Excluded from default model.,TFM_TRAIN_EXPANSION rounds 1-7,True
+is_duplicate,1 if flag DUPLICATE_EXCLUDED. None in this freeze.,TFM_TRAIN_EXPANSION rounds 1-7,False
+in_default,1 if the row belongs to the default model table (no boxplot; biomass: last timepoint per group).,TFM_TRAIN_EXPANSION rounds 1-7,True
+sig_no_tp,Biomass: measurement signature with the timepoint removed.,TFM_TRAIN_EXPANSION rounds 1-7,True
+tp_group_id,Biomass: group of the same contrast measured at several timepoints.,TFM_TRAIN_EXPANSION rounds 1-7,True
+n_timepoints_in_group,Biomass: number of timepoints available for the group.,TFM_TRAIN_EXPANSION rounds 1-7,True
+is_last_timepoint,"Biomass: 1 for the last timepoint of the group (terminal first, then max days).",TFM_TRAIN_EXPANSION rounds 1-7,True
+var_effect_original,Sampling variance of lnRR as delivered in the freeze (may include USER_ASSUMED_SE). Untouched.,TFM_TRAIN_EXPANSION rounds 1-7,True
+effect_bc_original,Bias-corrected lnRR as delivered in the freeze (only where SD known).,TFM_TRAIN_EXPANSION rounds 1-7,True
+n_imp_t / n_imp_c,Group n; missing n replaced by the median n of the endpoint table (flag N_IMPUTED_MEDIAN).,TFM_TRAIN_EXPANSION rounds 1-7,False
+n_imputed_t / n_imputed_c,1 if n was imputed.,TFM_TRAIN_EXPANSION rounds 1-7,False
+cv_used_t / cv_used_c,CV (sd/mean) used for the variance of each group.,TFM_TRAIN_EXPANSION rounds 1-7,False
+cv_source_t / cv_source_c,"AUTHOR_SD (authors' SD/SE, SOURCE_REPORTED) | STUDY_PRINTED_CV_PCT (study ANOVA CV%) | STUDY_PRINTED_LSD | IMPUTED_MEAN_CV (pooled CV-bar, NOT reported by authors).",TFM_TRAIN_EXPANSION rounds 1-7,False
+var_lnrr_meancv_all,"var(lnRR) using CV-bar for every group (Nakagawa et al. 2023 method 1), sensitivity only.",TFM_TRAIN_EXPANSION rounds 1-7,True
+effect_bc_imp,Bias-corrected lnRR: lnRR + 0.5*(CV_t^2/n_t - CV_c^2/n_c) using cv_used and n_imp.,TFM_TRAIN_EXPANSION rounds 1-7,True
+variance_from_author_sd,1 if both groups have author SD/SE and reported n (no imputation of any kind).,TFM_TRAIN_EXPANSION rounds 1-7,True
+variance_flags,"JSON list: VARIANCE_IMPUTED_MEAN_CV, VARIANCE_FROM_STUDY_CV_PCT, VARIANCE_FROM_STUDY_LSD, N_IMPUTED_MEDIAN, USER_ASSUMED_SE_NOT_USED_FOR_VARIANCE, INDEPENDENT_ARMS_ASSUMED_FOR_VARIANCE.",TFM_TRAIN_EXPANSION rounds 1-7,False
+w_n,Sample-size weight n_t*n_c/(n_t+n_c) (imputed n where missing).,TFM_TRAIN_EXPANSION rounds 1-7,True
+mod_lnrr_stress_SvsC,lnRR of S vs C for the matching stressed control arm (0 for B_vs_C). META-REGRESSION MODERATOR ONLY. Never an ML feature (post-stress outcome).,TFM_TRAIN_EXPANSION rounds 1-7,True
+is_B_vs_C,1 for contrasts without stress (B vs C).,TFM_TRAIN_EXPANSION rounds 1-7,True
+stress,stress_code; NONE for B_vs_C.,TFM_TRAIN_EXPANSION rounds 1-7,True
+is_terminal,is_terminal_t.,TFM_TRAIN_EXPANSION rounds 1-7,True
+year_num,"Publication year as number (descriptive only, not a feature).",TFM_TRAIN_EXPANSION rounds 1-7,False
+h_dujardin,"Primary biostimulant category after du Jardin (2015): HUMIC_FULVIC, PROTEIN_N, SEAWEED_BOTANICAL, CHITOSAN_BIOPOLYMER, INORGANIC, BENEFICIAL_FUNGI, BENEFICIAL_BACTERIA; MIXTURE if >1; OTHER_NON_DUJARDIN; UNCLASSIFIED. Regex over f_biostimulant_class/bio_code/f_microorganism/f_composition/f_strain.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h_dj_*,Multi-hot du Jardin categories (a product can belong to several).,TFM_TRAIN_EXPANSION rounds 1-7,False
+h_dose_class,"Harmonised dose unit class (CFU, MOLAR_mM, MOLAR_uM, CONC_gL_or_mLL, PER_PLANT_OR_POT, PER_AREA, PER_SOIL_MASS, UNKNOWN, NOT_REPORTED).",TFM_TRAIN_EXPANSION rounds 1-7,True
+h_log10_dose,"log10 of dose on the canonical scale of its class (mg/L->g/L, uM->mM, 1 % = 10 g/L).",TFM_TRAIN_EXPANSION rounds 1-7,True
+h_dose_rel_study,Dose rescaled 0..1 within study and dose class (design only).,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_stress_intensity,Design-based relative stress intensity: salinity NaCl-equivalent mM / 200 (EC dS/m*10; 1 % w/v = 171 mM); drought 1 - FC/100; NONE = 0. Never uses an outcome.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_stress_rank_study,Within-study dense rank of the stress level / max rank (0..1).,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_nacl_equiv_mm,"NaCl-equivalent concentration (mM), salinity only.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h_crop_group,"Tomato market group from f_fruit_type/f_cultivar: CHERRY_COCKTAIL, PROCESSING, BEEF_LARGE, ROUND_FRESH_MARKET, UNSPECIFIED.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h_growth_habit,DETERMINATE / SEMI_DETERMINATE / INDETERMINATE / UNSPECIFIED.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_system,Growing system: FIELD / GREENHOUSE / CHAMBER / SOILLESS / UNSPECIFIED.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_potted,1 if grown in pots/bags/containers.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_route,Application route: FOLIAR / SEED / ROOT_DIP / FERTIGATION / SOIL_SUBSTRATE / UNSPECIFIED.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h_n_applications,Number of applications (numeric f_n_applications).,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_dujardin,du Jardin class v2: cell-free filtrates -> DJ_MICROBIAL_DERIVED_NONLIVING; single-component preparations take the first-named category; MIXTURE only for >=2 components (db_arms.n_bio_components) spanning >=2 categories.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_n_components,Number of biostimulant components of the treated arm (db_arms.n_bio_components).,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_live_microorganism,1 if the product contains living microorganisms (0 for cell-free filtrates/extracts).,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_nonliving_microbial_product,"1 for cell-free filtrates, supernatants, microbial water extracts.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_drought_supply_type,"FIELD_CAPACITY_PCT | ETC_OR_IRRIGATION_PCT | UNKNOWN_TYPE (drought, not reported) | NOT_APPLICABLE (not drought).",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_drought_fc_pct / h2_drought_etc_pct,"Water supply of the drought treatment by measurement type; 100 when not drought (no deficit); NaN = drought, not reported.",TFM_TRAIN_EXPANSION rounds 1-7,False
+h2_drought_supply_reported,"Within drought rows only: 1 reported, 0 not reported; NaN = not applicable.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_salinity_measure_type,NACL_CONCENTRATION | EC_WATER_MEASURED | NACL_AND_EC | UNKNOWN_TYPE | NOT_APPLICABLE.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_salinity_nacl_mm / h2_salinity_ecw_dsm,NaCl concentration (mM; % w/v*171.1; g/L*17.11) and measured irrigation-water EC (dS/m) kept separate; 0 when not saline.,TFM_TRAIN_EXPANSION rounds 1-7,False
+h2_salinity_reported,"Within salinity rows only: 1 reported, 0 not; NaN = not applicable.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_stress_duration_days,"Stress duration in days (weeks*7, months*30.4, h/24); 0 when no stress; NaN = not reported.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_stress_duration_reported,Within stressed rows: 1/0; NaN for no-stress rows.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_days_application_before_stress,Days between first application and stress onset (unit converted); NaN without stress.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_application_phase / h2_stress_onset_phase,"Development phase: SEED, NURSERY_SEEDLING, TRANSPLANT, VEGETATIVE, FLOWERING, FRUITING, MULTIPLE_STAGES, UNSPECIFIED (onset: NOT_APPLICABLE without stress).",TFM_TRAIN_EXPANSION rounds 1-7,False
+h2_substrate_type,"SOILLESS_INERT, PEAT_POTTING_MIX, STERILISED_SOIL, SAND_OR_SANDY, FIELD_OR_NATURAL_SOIL, UNSPECIFIED.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_soil_ec_dsm,Soil EC normalised to dS/m (uS/cm / 1000).,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_plant_density_m2,"Plants per m2: printed value, plants/ha / 10000, plants per plot area, or 1/(row x plant spacing). Range-checked 0.2-40.",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_density_source,"Provenance of the density value (F_PLANT_DENSITY_M2, PLANTS_PER_HA, PLANTS_PER_PLOT_AREA, SPACING_GEOMETRY, PRINTED_PER_M2).",TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_density_status,REPORTED_OR_DERIVED | NOT_APPLICABLE_POTS | NOT_REPORTED.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h2_yield_scope / h2_harvest_window,Yield definition with UNSPECIFIED refined only when the printed locator/source cell states it.,TFM_TRAIN_EXPANSION rounds 1-7,False
+h2_definition_refined_from_locator,1 if a definition field was refined from the locator text.,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_bacillus,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_pseudomonas,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_azoto_azospir,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_trichoderma,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_amf,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_rhizobia,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_streptomyces,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_other_bacteria,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_taxon_yeast,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_seaweed,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_humic,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_protein_amino,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_chitosan,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_silicon,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_selenium,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_hormone_like,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_botanical_extract,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_active_nano,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_n_taxa,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_n_actives,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_genus_main,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_route_foliar,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_route_soil_drench,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_route_seed,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_route_root_dip,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_route_fertigation,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_route_substrate_mix,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_n_routes,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_n_applications,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_n_applications_source,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_log_n_applications,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_salinity,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_drought,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_heat,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_cold,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_nutrient,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_biotic,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_metal,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_other,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_n_stresses,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_combined,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_ambient,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_application_phase_ord,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_stress_onset_phase_ord,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_phase_app_minus_stress,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_sand_pct,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_clay_pct,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_soil_texture_source,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_fert_none,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_fert_nutrient_solution,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_fert_n_kg_ha,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_fert_reported,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_start_month_sin,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_start_month_cos,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_warm_season,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_country,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_abs_latitude,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_arid_country,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_region,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_declared_tolerance,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_small_fruited,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_processing_type,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+h3_class_key,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block,TFM_TRAIN_EXPANSION rounds 1-7,True
+_row,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,False
+study_id,"freeze column; table=studies, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+canonical_key,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+legacy_study_id,"freeze column; table=studies, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+doi,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+title,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+authors,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+year,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+journal,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+publication_type,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+country,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+publisher_group,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+crop,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+species,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+identity_status,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+identity_source,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+notes,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+updated_at,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+dataset_role,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+first_publication_date,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+temporal_eligibility,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+class_final,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+final_disposition,"freeze column; table=studies, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+source_file_id,"freeze column; table=files, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+role,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+file_name,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+path,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+sha256,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+status,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+disposition,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+relevance,"freeze column; table=files, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+experiment_key,"freeze column; table=experiments, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+experiment_id,"freeze column; table=experiments, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+description,"freeze column; table=experiments, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+system,"freeze column; table=experiments, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+run_id,"freeze column; table=experiments, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+allocation,"freeze column; table=experiments, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+factorial_verified,"freeze column; table=experiments, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,False
+arm_key,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+arm_id,"freeze column; table=arms, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+label_in_source,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+stress_code,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+stress_desc,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+bio_code,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+bio_desc,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+n_bio_components,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,False
+genotype,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+season,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+site,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+component_codes,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+background_key,"freeze column; table=arms, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+tv_id,"freeze column; table=measurements, role=ID_GROUP, dtype=int64",freeze data_dictionary.csv,False
+dispersion_provenance_json,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+n_source,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+record_key,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+endpoint,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+yield_scope,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+mass_basis,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+denominator,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+harvest_window,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+organ_scope,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+timepoint_key,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+timepoint_days,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+mean,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+dispersion_type,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+dispersion_value,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+dispersion_type_reported,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+dispersion_basis,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+error_bar_status,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+error_bar_bounds_json,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+error_bar_relative_uncertainty,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+sd,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+n,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+n_unit,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+unit_raw,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+unit_norm,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+mean_norm,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+sd_norm,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+source_kind,"freeze column; table=measurements, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,False
+page,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+locator,"freeze column; table=measurements, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,False
+verbatim,"freeze column; table=measurements, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,False
+figure_item_id,"freeze column; table=measurements, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+verification,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+outcome_context_json,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+context_key,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+ci_json,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+receipt_id,"freeze column; table=measurements, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+source_cell,"freeze column; table=measurements, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,False
+basis_value_ids,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+created_at,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+measurement_id,"freeze column; table=measurements, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+outcome_standard_name,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+unit,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+provenance_id,"freeze column; table=measurements, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,False
+verification_status,"freeze column; table=measurements, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+source_quote,"freeze column; table=provenance_qa, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,False
+mod_id,"freeze column; table=moderators, role=ID_GROUP, dtype=int64",freeze data_dictionary.csv,False
+availability,"freeze column; table=moderators, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+feature,"freeze column; table=moderators, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+value,"freeze column; table=moderators, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+domain,"freeze column; table=risk_of_bias, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+judgement,"freeze column; table=risk_of_bias, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+support,"freeze column; table=risk_of_bias, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+rel_id,"freeze column; table=study_relations, role=ID_GROUP, dtype=int64",freeze data_dictionary.csv,False
+study_a,"freeze column; table=study_relations, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+study_b,"freeze column; table=study_relations, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+relation,"freeze column; table=study_relations, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+evidence,"freeze column; table=study_relations, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+confidence,"freeze column; table=study_relations, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+receipts,"freeze column; table=source_audit, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,False
+docling_findings,"freeze column; table=source_audit, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+asset_key,"freeze column; table=asset_inventory, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+reason,"freeze column; table=asset_inventory, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+contrast_a,"freeze column; table=covariance, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+contrast_b,"freeze column; table=covariance, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+covariance,"freeze column; table=covariance, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,False
+method,"freeze column; table=covariance, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+shared_tv_ids,"freeze column; table=covariance, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+contrast_id,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+contrast_type,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+signature,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+arm_key_t,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+arm_key_c,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+tv_ids,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+mean_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+sd_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+n_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+mean_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+sd_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+n_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+effect,"freeze column; table=contrast_candidates, role=TARGET, dtype=float64",freeze data_dictionary.csv,True
+var_effect,"freeze column; table=contrast_candidates, role=TARGET, dtype=float64",freeze data_dictionary.csv,True
+effect_bc,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+effect_metric,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+estimand_id,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+favorable_direction,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+pct_effect,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+var_available,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+shared_control_id,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+dependency_cluster_id,"freeze column; table=contrast_candidates, role=ID_GROUP, dtype=object",freeze data_dictionary.csv,True
+min_verification,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+any_figure_source,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+flags,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+is_terminal_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+is_terminal_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+source_file_id_t,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+source_file_id_c,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+locator_t,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+locator_c,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+receipt_id_t,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+receipt_id_c,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+source_cell_t,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+source_cell_c,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+analysis_eligible,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=int64",freeze data_dictionary.csv,True
+exclusion_reason,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+weighted_eligible,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=int64",freeze data_dictionary.csv,True
+uncertainty_status,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+dry_basis_confirmed,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+uncertainty_assumed,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=int64",freeze data_dictionary.csv,True
+uncertainty_assumption_policy,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+weighted_reported_uncertainty_only_eligible,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=int64",freeze data_dictionary.csv,True
+error_bar_digitization_over_5pct,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+per_plant_context_assumed,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,True
+se_effect,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+ci95_lower,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+ci95_upper,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+ci95_method,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_cultivar_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_cultivar,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_system_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_system,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_substrate_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_substrate,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_soil_texture_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_soil_texture,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_soil_ph_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_soil_ph,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_organic_matter_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_organic_matter,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_organic_matter_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_country_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_country,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_season_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_season,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_stress_intensity_unit_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_intensity_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_composition_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_composition,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_dose_unit_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_dose_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_route_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_route,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_frequency_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_frequency,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_n_applications_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_n_applications_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_n_applications,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+context_application_stage_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_application_stage,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_experimental_design_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_experimental_design,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_replicate_unit_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_replicate_unit,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_n_replicates_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_n_replicates_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_n_replicates,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_n_replicates_unit,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_statistical_test_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_statistical_test,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_biostimulant_class_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_biostimulant_class,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_microorganism_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_microorganism,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_strain_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_strain,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_dose_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_dose_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_dose,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+context_stress_type_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_stress_type,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_stress_intensity_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_intensity,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_onset_stage_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_stress_onset_stage,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_days_application_before_stress_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_days_application_before_stress_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_days_application_before_stress,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_days_application_before_stress_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_irrigation_regime_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_irrigation_regime,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+mean_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+sd_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+n_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+n_unit_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+n_source_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_type_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_type_reported_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_value_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+dispersion_basis_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_provenance_json_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+error_bar_status_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+error_bar_bounds_json_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+error_bar_relative_uncertainty_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+unit_raw_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+mean_norm_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+sd_norm_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+outcome_context_json_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_key_raw_t,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+mean_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+sd_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+n_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+n_unit_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+n_source_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_type_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_type_reported_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_value_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+dispersion_basis_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+dispersion_provenance_json_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+error_bar_status_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+error_bar_bounds_json_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+error_bar_relative_uncertainty_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+unit_raw_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+mean_norm_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+sd_norm_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+outcome_context_json_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_key_raw_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_temperature_day_c_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_temperature_day_c_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_temperature_day_c,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_temperature_day_c_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_temperature_night_c_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_temperature_night_c_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_temperature_night_c,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_temperature_night_c_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_relative_humidity_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_relative_humidity_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_relative_humidity,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_relative_humidity_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_photoperiod_h_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_photoperiod_h_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_photoperiod_h,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_photoperiod_h_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_pathogen_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_pathogen,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_pathogen_strain_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_pathogen_strain,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_inoculum_dose_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_inoculum_dose,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_inoculum_dose_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_inoculation_method_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_inoculation_method,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_stress_duration_days_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_duration_days,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_duration_days_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_genotype_type_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_genotype_type,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_substrate_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_soil_texture,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_soil_texture_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_soil_ph_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_soil_ph,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_soil_ph_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_organic_matter_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_organic_matter,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_organic_matter_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_latitude_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_latitude_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_latitude,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_latitude_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_relative_humidity,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_relative_humidity_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_product_name_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_product_name,"freeze column; table=contrast_candidates, role=PROVENANCE_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_dose_unit_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_fertilization_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_fertilization,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_randomization_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_randomization,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_field_capacity_pct_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_field_capacity_pct_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_field_capacity_pct,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_field_capacity_pct_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_pot_volume_l_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_pot_volume_l_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_pot_volume_l,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_pot_volume_l_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_ppfd_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_ppfd_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_ppfd,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_ppfd_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_nacl_mm_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_nacl_mm_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_nacl_mm,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_nacl_mm_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_soil_ec_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_soil_ec_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_soil_ec,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_soil_ec_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_country,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_temperature_day_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_temperature_day_c_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_n_applications_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_grafted_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_grafted,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_plant_density_m2_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_plant_density_m2_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_plant_density_m2,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_plant_density_m2_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_temperature_night_c,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_temperature_night_c_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_fertilization_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_field_capacity_pct,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_field_capacity_pct_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_duration_days_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_stress_duration_days,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_stress_duration_days_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_product_name_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_statistical_test,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_ec_irrigation_ds_m_raw,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_ec_irrigation_ds_m_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_ec_irrigation_ds_m,"freeze column; table=contrast_candidates, role=FEATURE, dtype=float64",freeze data_dictionary.csv,True
+f_ec_irrigation_ds_m_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+f_composition_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_photoperiod_h,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_photoperiod_h_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_fruit_type_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_fruit_type,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_stress_type,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_application_stage_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_growth_habit_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_growth_habit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_ppfd,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_ppfd_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_randomization,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_intensity_unit_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_n_replicates,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_n_replicates_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_microorganism,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=float64",freeze data_dictionary.csv,True
+context_soil_ph_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_irrigation_regime_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_soil_ec,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_soil_ec_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_irrigation_regime,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_irrigation_regime_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_stress_onset_stage,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_route_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_replicate_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_composition,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_composition_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_stress_onset_stage_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_stress_onset_stage_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_pathogen,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_genotype_type,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_vpd_kpa_all,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_vpd_kpa,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_vpd_kpa_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_days_application_before_stress,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_days_application_before_stress_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_season_unit,"freeze column; table=contrast_candidates, role=FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_inoculation_method,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+f_replicate_unit_unit,"freeze column; table=contrast_candidates, role=QUALITY_FEATURE, dtype=object",freeze data_dictionary.csv,True
+context_plant_density_m2,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_plant_density_m2_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_season,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_fertilization,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_fertilization_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_pathogen_strain,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_application_stage,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_route,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_dose,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_frequency,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_n_applications,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_ec_irrigation_ds_m,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+context_ec_irrigation_ds_m_unit,"freeze column; table=contrast_candidates, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,True
+primary_estimand,"freeze column; table=A_direct_yield, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,False
+n_independent_clusters_endpoint,"freeze column; table=A_strict_SxB, role=CONTEXT_ONLY, dtype=int64",freeze data_dictionary.csv,False
+inference_scope,"freeze column; table=A_strict_SxB, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False
+yield_assumptions,"freeze column; table=A_direct_yield_assumed, role=CONTEXT_ONLY, dtype=object",freeze data_dictionary.csv,False

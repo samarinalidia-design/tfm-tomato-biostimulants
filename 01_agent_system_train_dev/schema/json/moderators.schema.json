@@ -1,0 +1,222 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "MODERATORS output",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-\\d{6}$"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "enum": [
+    "tfm-moderator-extractor",
+    "tfm-qa-auditor",
+    "tfm-adjudicator"
+   ]
+  },
+  "model_id": {
+   "type": "string",
+   "minLength": 3
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "moderators": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "experiment_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "arm_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "feature": {
+      "enum": [
+       "cultivar",
+       "genotype_type",
+       "growth_habit",
+       "fruit_type",
+       "grafted",
+       "system",
+       "substrate",
+       "soil_texture",
+       "soil_ph",
+       "soil_ec",
+       "organic_matter",
+       "pot_volume_l",
+       "plant_density_m2",
+       "country",
+       "latitude",
+       "season",
+       "temperature_day_c",
+       "temperature_night_c",
+       "relative_humidity",
+       "vpd_kpa",
+       "photoperiod_h",
+       "ppfd",
+       "stress_type",
+       "stress_intensity",
+       "stress_intensity_unit",
+       "stress_duration_days",
+       "stress_onset_stage",
+       "irrigation_regime",
+       "nacl_mm",
+       "ec_irrigation_ds_m",
+       "field_capacity_pct",
+       "pathogen",
+       "pathogen_strain",
+       "inoculum_dose",
+       "inoculation_method",
+       "biostimulant_class",
+       "product_name",
+       "composition",
+       "microorganism",
+       "strain",
+       "dose",
+       "dose_unit",
+       "route",
+       "frequency",
+       "application_stage",
+       "n_applications",
+       "days_application_before_stress",
+       "fertilization",
+       "experimental_design",
+       "replicate_unit",
+       "n_replicates",
+       "randomization",
+       "statistical_test"
+      ]
+     },
+     "value": {
+      "type": [
+       "string",
+       "number",
+       "boolean"
+      ]
+     },
+     "unit": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "locator": {
+      "type": "string",
+      "minLength": 3
+     },
+     "verbatim": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400
+     },
+     "availability": {
+      "enum": [
+       "PLAN_PRE_EXPERIMENT",
+       "OBSERVED_POST_TREATMENT",
+       "UNKNOWN"
+      ]
+     },
+     "receipt_id": {
+      "type": "string"
+     },
+     "source_file_id": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "feature",
+     "value",
+     "locator",
+     "verbatim",
+     "availability",
+     "receipt_id",
+     "source_file_id"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "not_reported": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "cultivar",
+     "genotype_type",
+     "growth_habit",
+     "fruit_type",
+     "grafted",
+     "system",
+     "substrate",
+     "soil_texture",
+     "soil_ph",
+     "soil_ec",
+     "organic_matter",
+     "pot_volume_l",
+     "plant_density_m2",
+     "country",
+     "latitude",
+     "season",
+     "temperature_day_c",
+     "temperature_night_c",
+     "relative_humidity",
+     "vpd_kpa",
+     "photoperiod_h",
+     "ppfd",
+     "stress_type",
+     "stress_intensity",
+     "stress_intensity_unit",
+     "stress_duration_days",
+     "stress_onset_stage",
+     "irrigation_regime",
+     "nacl_mm",
+     "ec_irrigation_ds_m",
+     "field_capacity_pct",
+     "pathogen",
+     "pathogen_strain",
+     "inoculum_dose",
+     "inoculation_method",
+     "biostimulant_class",
+     "product_name",
+     "composition",
+     "microorganism",
+     "strain",
+     "dose",
+     "dose_unit",
+     "route",
+     "frequency",
+     "application_stage",
+     "n_applications",
+     "days_application_before_stress",
+     "fertilization",
+     "experimental_design",
+     "replicate_unit",
+     "n_replicates",
+     "randomization",
+     "statistical_test"
+    ]
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "moderators",
+  "not_reported"
+ ]
+}

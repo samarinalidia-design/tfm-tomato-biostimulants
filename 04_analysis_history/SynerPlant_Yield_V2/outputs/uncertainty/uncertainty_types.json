@@ -1,0 +1,7 @@
+{
+  "A_cv_error_bars": "SD of group-MAE across 5 outer folds x 5 seeds (outputs/ml/model_comparison.csv: fold_group_mae_sd, group_mae_sd_seeds)",
+  "B_conformal_prediction_interval": "this folder: interval for a future contrast (single) or for all contrasts of a new study (simultaneous)",
+  "C_meta_CI": "outputs/meta/meta_summary.json: CI of the pooled mean lnRR",
+  "D_meta_PI": "outputs/meta/meta_summary.json: prediction interval of a new study's TRUE mean effect (heterogeneity)",
+  "do_not_mix": "A describes model-assessment noise, B future observations incl. within-study scatter, C the mean, D the spread of true study effects"
+}

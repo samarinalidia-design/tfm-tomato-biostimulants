@@ -1,0 +1,10 @@
+Предупреждения:
+1: пакет 'metafor' был собран под R версии 4.5.3 
+2: пакет 'metadat' был собран под R версии 4.5.3 
+3: пакет 'numDeriv' был собран под R версии 4.5.2 
+4: пакет 'clubSandwich' был собран под R версии 4.5.3 
+yield core done
+yield all done
+biomass core done
+biomass all done
+done

@@ -1,0 +1,161 @@
+{
+  "built_at": "2026-11-18T07:47:01+00:00",
+  "sets": {
+    "PRIMARY_EXPANDED": {
+      "rows": 404,
+      "studies": 69,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 217,
+        "STRICT": 105,
+        "BROAD_DEFINITION": 67,
+        "RELATIVE_SHARED_UNIT": 15
+      },
+      "biotic_studies": 4
+    },
+    "STRICT_SENSITIVITY": {
+      "rows": 105,
+      "studies": 12,
+      "by_tier": {
+        "STRICT": 105
+      },
+      "biotic_studies": 1
+    },
+    "SENSITIVITY_STRICT_PLUS_ASSUMED": {
+      "rows": 322,
+      "studies": 51,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 217,
+        "STRICT": 105
+      },
+      "biotic_studies": 3
+    },
+    "SENSITIVITY_NO_ROB_HIGH": {
+      "rows": 318,
+      "studies": 56,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 188,
+        "STRICT": 80,
+        "BROAD_DEFINITION": 41,
+        "RELATIVE_SHARED_UNIT": 9
+      },
+      "biotic_studies": 3
+    },
+    "SENSITIVITY_REPORTED_VARIANCE": {
+      "rows": 153,
+      "studies": 24,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 99,
+        "STRICT": 37,
+        "BROAD_DEFINITION": 16,
+        "RELATIVE_SHARED_UNIT": 1
+      },
+      "biotic_studies": 1
+    },
+    "SENSITIVITY_TABLE_SOURCED": {
+      "rows": 262,
+      "studies": 47,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 154,
+        "STRICT": 60,
+        "BROAD_DEFINITION": 40,
+        "RELATIVE_SHARED_UNIT": 8
+      },
+      "biotic_studies": 3
+    },
+    "SENSITIVITY_NO_SOURCE_FLAGS": {
+      "rows": 349,
+      "studies": 62,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 183,
+        "STRICT": 84,
+        "BROAD_DEFINITION": 67,
+        "RELATIVE_SHARED_UNIT": 15
+      },
+      "biotic_studies": 4
+    },
+    "SENSITIVITY_NO_AMBIENT_STRESS": {
+      "rows": 333,
+      "studies": 60,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 194,
+        "STRICT": 79,
+        "BROAD_DEFINITION": 51,
+        "RELATIVE_SHARED_UNIT": 9
+      },
+      "biotic_studies": 2
+    },
+    "QUALITY_CORE": {
+      "rows": 221,
+      "studies": 37,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 162,
+        "STRICT": 59
+      },
+      "biotic_studies": 3
+    },
+    "SENSITIVITY_PLUS_BOX_AMBIG_SYNTH": {
+      "rows": 438,
+      "studies": 73,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 229,
+        "STRICT": 107,
+        "BROAD_DEFINITION": 67,
+        "RELATIVE_SHARED_UNIT": 15,
+        "AMBIGUOUS_IDENTITY": 10,
+        "BOX_CENTRE": 10
+      },
+      "biotic_studies": 4
+    },
+    "SENSITIVITY_PLUS_AMBIENT_BVC": {
+      "rows": 419,
+      "studies": 71,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 217,
+        "STRICT": 105,
+        "BROAD_DEFINITION": 67,
+        "RELATIVE_SHARED_UNIT": 15,
+        "AMBIENT_STRESS_BVC": 15
+      },
+      "biotic_studies": 4
+    },
+    "V1_EQUIVALENT": {
+      "rows": 371,
+      "studies": 52,
+      "by_tier": {
+        "ASSUMED_DEFINITION": 256,
+        "STRICT": 115
+      },
+      "biotic_studies": 3
+    }
+  },
+  "status_counts": {
+    "INCLUDED": 404,
+    "EXCLUDED_DUPLICATE": 128,
+    "EXCLUDED": 62,
+    "SENSITIVITY_ONLY": 49
+  },
+  "v1_rows_not_in_v2_primary": {
+    "DUPLICATE_ARM_PAIR_kept": 34,
+    "V2-M003": 14,
+    "V2-X001": 1
+  },
+  "files": {
+    "feature_completeness.csv": "d61840aa5cf0c05896a8e6a3d01f5b1b06b8460168ae2d309ac947938c02986a",
+    "physiology_linkage_by_trait.csv": "9bafc01c879d25b052ebb8db1bdfa3ac510dca0db086af8062ed2853d66bde3b",
+    "PRIMARY_EXPANDED.csv": "de0661818fb53f47ffe74a6238aedc81a0c9039c2ee312f957126cd71ee4ccb0",
+    "QUALITY_CORE.csv": "ee0c2963361fd29d789bd8c4df9a38cee621ad53fab7c6aeab9fa0aec38609a3",
+    "SENSITIVITY_NO_AMBIENT_STRESS.csv": "0e783f6cf26a27fd91d9e669401c5599b079d288eb7508a70f99dff648010ccb",
+    "SENSITIVITY_NO_ROB_HIGH.csv": "ddbf60ee3f889d4c31c683c0b23c95ce15cdec135b0d2c0f9de05725921846c3",
+    "SENSITIVITY_NO_SOURCE_FLAGS.csv": "12bcd13fe7d8c542a9e978b6e0f6c515a6e404428ff7b22b6de3c7f530747141",
+    "SENSITIVITY_PLUS_AMBIENT_BVC.csv": "f4951f056e9c12851a59c6eb82cc4fed5ad0e45b94009d3747956341219cd5f3",
+    "SENSITIVITY_PLUS_BOX_AMBIG_SYNTH.csv": "5b9c73cd8e3db5ab8acdd0dece6808fa2b3e56fa91253e5818faefdaf6ce24f4",
+    "SENSITIVITY_REPORTED_VARIANCE.csv": "32a48df9f1a4430c6ea80e192de99eca2623f117020f83067aed779bb9599fe2",
+    "SENSITIVITY_STRICT_PLUS_ASSUMED.csv": "3ad719bf56a506ad36c23fc9c5aaee7ebafb3865a95345e5c1cf28f2911d8b94",
+    "SENSITIVITY_TABLE_SOURCED.csv": "cb81cee739220fca4e6814da26036542715687be1b775f07afb145408ddb83a1",
+    "STRICT_SENSITIVITY.csv": "00528d25d14fe806e1fc474c8900be8ce572405e4afd72c96f88ea311fe45342",
+    "V1_EQUIVALENT.csv": "9e9f0735ce1fd0bd437806db8fdb983fc147cae74748dc24ffea42fe516f5ab3",
+    "v1_rows_not_in_v2_primary.csv": "218541fce1478e1fb4b387eb272fc817d6d00be1240888a70707c7989561f37d",
+    "v1_v2_comparison.csv": "18443cbfde19e745187c2bdb8381d03fdd5da8e13d3ff631a0f5e7998bf1da91",
+    "v2_yield_contrast_register.csv": "b2e907216bb5790fe6f71a60de62c119e8ce902fac74225c7e9f387aa4149e13"
+  }
+}

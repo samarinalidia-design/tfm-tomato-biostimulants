@@ -1,0 +1,2 @@
+contrast_id,study_id,stress_code,bio_code,arm_key_t,arm_key_c,lnRR_v2,lnRR,v31_action,v31_reason
+01da2351c4c2e1e04623881b,D_1c70767428261b78,RS_SOIL_2E5CFU_G,VEHICLE_NB_MEDIUM_100X,E1.SB.VEH,E1.S.C1,0.0434851119397388,0.0434851119397388,AUX,R2_NOT_A_BIOSTIMULANT(vehicle/solvent/fertilizer)

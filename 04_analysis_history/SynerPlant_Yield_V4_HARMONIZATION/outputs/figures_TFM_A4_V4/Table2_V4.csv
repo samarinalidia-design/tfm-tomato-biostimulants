@@ -1,0 +1,13 @@
+﻿quantity,V2/V3.1 median,V4 multilevel mean,note
+Point estimate (lnRR),0.285 (median),0.431 (rma.mv REML),TRAIN 403 contrasts / 69 studies
+CV group-MAE,0.361,0.381,+5.6 %; CI includes 0
+CV bias,-0.166,-0.026,study-balanced
+"CV 90 % half-width, one contrast",±0.97,±0.87,coverage 0.908 -> 0.918
+"CV interval score, one contrast",2.91,2.67,-8.4 %; CI < 0
+TEST group-MAE,0.415,0.425,post-hoc TEST re-use
+TEST RMSE,0.663,0.606,
+TEST bias,-0.251,-0.105,study-balanced
+"TEST coverage, one contrast",0.847,0.847,pre-registered threshold 0.85: not met
+"TEST coverage, whole study",0.917,1.000,11/12 -> 12/12
+"TEST interval score, one contrast",2.67,2.36,-11.6 %; CI < 0
+Pre-registered verdict,,PARTIAL,H1 not met (coverage)

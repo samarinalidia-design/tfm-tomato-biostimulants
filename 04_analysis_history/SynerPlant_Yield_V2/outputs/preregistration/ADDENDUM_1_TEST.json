@@ -1,0 +1,143 @@
+{
+  "title": "Addendum 1 to PREREG_TEST_V2 (before the TEST is opened)",
+  "registered_at_utc": "2026-11-18T09:37:55+00:00",
+  "test_status_at_registration": "NOT OPENED: no TEST outcome, table or study file has been read by V2 code",
+  "1_test_dataset_builder": {
+    "script": "src/s14_build_test_dataset.py --test-sqlite <TEST DATA_FREEZE sqlite>",
+    "principle": "imports the frozen s03_build_dataset.py and x01_stress_recovery.py unchanged; only the input database and output folder are redirected",
+    "validation_on_train": {
+      "validated_at": "2026-11-18T09:36:08+00:00",
+      "primary_identical_file_hash": true,
+      "primary_same_ids": true,
+      "primary_max_abs_lnRR_diff": 0.0,
+      "quadruples_same_rows": true,
+      "quadruples_max_abs_D_diff": 4.440892098500626e-16,
+      "rows": 404,
+      "studies": 69,
+      "quadruple_rows": 224,
+      "PASS": true
+    },
+    "outputs": [
+      "outputs/test_inputs/TEST_PRIMARY.csv",
+      "outputs/test_inputs/TEST_quadruples.csv"
+    ]
+  },
+  "2_test_specific_rules": {
+    "year_window": "the TRAIN rule 'year > 2023 excluded' is replaced by 'year < 2024 excluded' (TEST window)",
+    "study_specific_train_decisions": "value corrections, relative-unit inclusions and study exclusions of the TRAIN register name TRAIN studies only and do not apply to TEST",
+    "unit_unresolved_test_contrasts": "excluded from TEST_PRIMARY (no study-level review is allowed after opening TEST); counted and reported",
+    "generic_rules_applied": "yield tiers, one contrast per SB/S arm pair (terminal cumulative total), synthetic-PGR exclusion, box-centre / dry / non-marketable routing"
+  },
+  "3_confirmatory_TRAIN_meta_analysis_R": {
+    "method": "metafor::rma.mv REML, random ~1|study/contrast; clubSandwich CR2 by study (Satterthwaite df)",
+    "results_frozen": {
+      "PRIMARY_EXPANDED": {
+        "k_studies": 31,
+        "mu_lnRR": 0.54391696333,
+        "pct_effect": 72.2741579347,
+        "ci95_CR2": [
+          0.35396937851,
+          0.73386454815
+        ],
+        "p_CR2": 2.4086181847e-06,
+        "tau2_between": 0.21868401959,
+        "tau2_within": 0.11461131146,
+        "pi95_new_study_mean": [
+          -0.4297749233,
+          1.51760885
+        ]
+      },
+      "STRICT_SENSITIVITY": {
+        "k_studies": 5,
+        "mu_lnRR": 0.38148931595,
+        "pct_effect": 46.4464015724,
+        "ci95_CR2": [
+          0.010732220911,
+          0.75224641099
+        ],
+        "p_CR2": 0.046096325502,
+        "tau2_between": 0.079298867088,
+        "tau2_within": 0.02746451617,
+        "pi95_new_study_mean": [
+          -0.48275171797,
+          1.2457303499
+        ]
+      },
+      "REPORTED_VARIANCE_ONLY": {
+        "k_studies": 24,
+        "mu_lnRR": 0.53238625354,
+        "pct_effect": 70.2991232744,
+        "ci95_CR2": [
+          0.30627017483,
+          0.75850233225
+        ],
+        "p_CR2": 6.7893322498e-05,
+        "tau2_between": 0.24188516183,
+        "tau2_within": 0.12173657493,
+        "pi95_new_study_mean": [
+          -0.5097645744,
+          1.5745370815
+        ]
+      },
+      "QUALITY_CORE": {
+        "k_studies": 15,
+        "mu_lnRR": 0.59602185129,
+        "pct_effect": 81.4884539865,
+        "ci95_CR2": [
+          0.30031051533,
+          0.89173318726
+        ],
+        "p_CR2": 0.00072560844281,
+        "tau2_between": 0.25650517724,
+        "tau2_within": 0.070188777852,
+        "pi95_new_study_mean": [
+          -0.52983130095,
+          1.7218750035
+        ]
+      },
+      "V1_EQUIVALENT": {
+        "k_studies": 23,
+        "mu_lnRR": 0.59775046373,
+        "pct_effect": 81.8024484938,
+        "ci95_CR2": [
+          0.36423169626,
+          0.83126923119
+        ],
+        "p_CR2": 2.6342143191e-05,
+        "tau2_between": 0.25733578339,
+        "tau2_within": 0.11641342399,
+        "pi95_new_study_mean": [
+          -0.47988924291,
+          1.6753901704
+        ]
+      }
+    },
+    "agreement_with_python_REML": "|mu_R - mu_Python| < 2e-8 in all five sets"
+  },
+  "4_secondary_TEST_meta_analyses": {
+    "script": "src/s17_test_meta.py (runs only after the one-time s13 evaluation)",
+    "analyses": [
+      "TEST pooled lnRR (same model, CR2)",
+      "TRAIN vs TEST difference (dataset moderator, CR2)",
+      "TRAIN+TEST pooled lnRR (updated synthesis)"
+    ],
+    "interpretation": "consistency if the 95% CR2 CI of the TEST-minus-TRAIN difference includes 0; the TEST pooled mean is also compared with the TRAIN 95% prediction interval for a new study's mean (-0.43 to 1.52). Secondary only: never changes the primary verdicts of PREREG_TEST_V2"
+  },
+  "5_chronology_and_blinding": {
+    "test_extraction_frozen_against": "V1 MODEL_FREEZE (pipeline.yaml model_freeze_path of the TEST project)",
+    "v1_model_freeze_sha256": "659717424576b40596b7d00029f1f05d273053462517ba7d4521bbb60a53bf21",
+    "test_project_last_checkpoint_utc": "2026-11-15T08:42:36+00:00",
+    "statement": "The TEST extraction started under the V1 freeze. V2 (data audit, models, intervals, conditional models) was developed afterwards without access to any TEST data: only the TEST project's task-state counts were looked at. The TEST therefore remains independent of V2. The TEST project configuration is not changed."
+  },
+  "hashes_sha256": {
+    "src/s14_build_test_dataset.py": "0ac606a1779c0f6fbe33cf39cb3d76fbdab9d4a3a2026bd59783cb338293b7dd",
+    "src/s16_meta_R.py": "171379ac5e8d7e66e534b84b4caf9d3ab4f193ba4a24f08bbf1fea4ea9f1bfa6",
+    "src/meta_confirmatory.R": "a4700affabff4926880858d9be92cbd35a4f7af3b58501466e904a785b94a9f1",
+    "src/meta_test.R": "40ce863b24c4e22d3fe023f78878100e795d3416efd224e3bb96c16149ff41db",
+    "src/s17_test_meta.py": "36719d1f0998c6cc3e845cc9896ffeeb323ba63c81a40ed362ab4e77969f286c",
+    "src/s12b_addendum.py": "d3672bfa6a778a41a0ce56a2f69968a8fb36ab9f5f89da0e23a2973928f8130f",
+    "outputs/meta/R_confirmatory.json": "3731119e1cb2fd0bcadcef0b0eae2668e35fbe1c9a55f2bddec2204a349da92a",
+    "outputs/test_inputs_validation.json": "8f7572ec5d0e383a42fd2302bff7ba26cc5266b6a01581c97a91743ce3a5060e",
+    "outputs/preregistration/PREREG_TEST_V2.json": "174e2052e69c5624456971f787c8cd9fab6ecd8626089d8505e9bede19c86401"
+  }
+}

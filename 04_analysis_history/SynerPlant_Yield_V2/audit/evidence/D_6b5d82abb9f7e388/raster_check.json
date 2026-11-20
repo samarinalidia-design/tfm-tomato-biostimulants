@@ -1,0 +1,25 @@
+{
+ "method": "1200 dpi raster, colour-segmented bar tops, baseline=x-axis line centre, scale from y-axis line top (tick 5)",
+ "baseline_pt": 627.36,
+ "pt_per_kg": 4.01400000000001,
+ "heights_kg": [
+  0.994,
+  0.994,
+  0.994,
+  0.994,
+  0.994,
+  1.996,
+  0.994,
+  0.994,
+  1.996,
+  0.994,
+  0.994,
+  1.996,
+  0.994,
+  0.994,
+  1.996,
+  0.994,
+  0.994,
+  0.994
+ ]
+}

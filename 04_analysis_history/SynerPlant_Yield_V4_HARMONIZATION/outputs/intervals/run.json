@@ -1,0 +1,17 @@
+{
+ "finished": "2026-11-18T15:20:39+00:00",
+ "models": [
+  "row_median|B|none|z",
+  "study_median|B|none|z",
+  "quantile_l1|FH|mlre|robust",
+  "quantile_l1|F1|mlre|z",
+  "R:ls|loc1_scale_stress",
+  "R:ls|loc1_scale_stress_sys_microbe",
+  "R:ls|loc_stress+comp_scale_stress",
+  "R:rma_mv|intercept",
+  "R:rma_mv|stress+class",
+  "R:rma_mv|stress+comp"
+ ],
+ "alpha": 0.1,
+ "test_read": false
+}

@@ -1,0 +1,807 @@
+UNIVERSITAT DE BARCELONA
+FACULTAT DE BIOLOGIA
+MÁSTER UNIVERSITARIO EN AGROBIOLOGÍA AMBIENTAL
+TRABAJO FINAL DE MÁSTER
+Marco de aprendizaje automático informado por la evidencia para predecir la eficacia dependiente del contexto y evaluar efectos de interacción de bioestimulantes vegetales en tomate bajo estrés abiótico y biótico
+Aplicación a sequía, salinidad, estrés térmico y estrés biótico
+Autora: Lidiia Samarina
+Dirección propuesta: Prof. Dr. Sergi Munné-Bosch
+Grupo de investigación propuesto: PLANTsynergy
+Departamento: Biologia Evolutiva, Ecologia i Ciències Ambientals
+Curso académico: 2026-2027
+Barcelona, 2027
+Datos del Trabajo Final de Máster
+Título: Marco de aprendizaje automático informado por la evidencia para predecir la eficacia dependiente del contexto y evaluar efectos de interacción de bioestimulantes vegetales en tomate bajo estrés abiótico y biótico.
+Autora: Lidiia Samarina.
+Máster: Máster Universitario en Agrobiología Ambiental, Universitat de Barcelona.
+Línea de trabajo propuesta: AgriFood Biotechnology / bioestimulantes y tolerancia de cultivos a estreses abióticos y bióticos, PLANTsynergy.
+Dirección propuesta: Prof. Dr. Sergi Munné-Bosch.
+Naturaleza del trabajo: investigación computacional reproducible basada en síntesis cuantitativa de evidencia publicada, datos abiertos, meta-análisis y aprendizaje automático.
+Estudiante
+Firma: ________________________________
+Director/a de TFM
+Firma: ________________________________
+Tutor/a académico/a (si procede)
+Firma: ________________________________
+Resumen
+Los bioestimulantes vegetales constituyen una herramienta relevante para mejorar la tolerancia de los cultivos a estreses abióticos y bióticos, incluyendo sequía, salinidad, temperaturas elevadas y enfermedades experimentales, pero su eficacia muestra una heterogeneidad sustancial entre genotipos, productos, dosis, sistemas de cultivo y condiciones ambientales. Este TFM propone desarrollar un marco reproducible de síntesis de evidencia y aprendizaje automático para predecir prioritariamente el efecto de bioestimulantes sobre el rendimiento de frutos de tomate (Solanum lycopersicum L.) bajo estrés abiótico y biótico. La biomasa seca terminal se evaluará como endpoint secundario independiente, con cuantificación de la incertidumbre predictiva para ambos resultados. Se realizará una revisión sistemática con extracción de resultados cuantitativos y metadatos experimentales, complementada con conjuntos abiertos derivados de meta-análisis y estudios recientes. Los efectos se normalizarán principalmente mediante razones de respuesta logarítmicas cuando la escala lo permita; para outcomes bióticos no compatibles con lnRR se utilizarán estimandos preespecificados adecuados a su escala. Los efectos se analizarán con modelos meta-analíticos multinivel. Sobre esta base se compararán modelos predictivos interpretables y de ensamblado mediante validación agrupada por estudio, validación temporal y pruebas fuera de dominio, evitando la fuga de información. La incertidumbre se calibrará mediante predicción conforme y se definirá un dominio de aplicabilidad que permita al sistema abstenerse cuando la evidencia sea insuficiente. Como objetivo secundario, en los estudios factoriales se estimarán dos tipos de interacción: la modificación del efecto del bioestimulante por el estrés y, cuando existan comparaciones Control-A-B-A+B, la sinergia, aditividad o antagonismo entre tratamientos. El resultado de transferencia será un prototipo denominado SynerPlant Evidence, orientado a priorizar evidencia y experimentos de I+D, no a sustituir la validación agronómica. El diseño reduce la necesidad de generar grandes volúmenes de datos nuevos y se alinea con la investigación de PLANTsynergy en bioestimulantes, estreses abióticos y bióticos y transferencia al sector agroalimentario.
+Palabras clave: bioestimulantes vegetales; tomate; estrés abiótico; estrés biótico; sequía; salinidad; calor; meta-análisis; aprendizaje automático; incertidumbre predictiva; sinergia.
+Títol, resum i paraules clau en català
+Títol: Marc d'aprenentatge automàtic informat per l'evidència per predir l'eficàcia dependent del context i avaluar els efectes d'interacció dels bioestimulants vegetals en tomàquet sota estrès abiòtic i biòtic. Aplicació a sequera, salinitat, estrès tèrmic i estrès biòtic.
+Els bioestimulants vegetals constitueixen una eina rellevant per millorar la tolerància dels cultius als estressos abiòtics i biòtics, incloent sequera, salinitat, temperatures elevades i malalties experimentals, però la seva eficàcia presenta una heterogeneïtat important entre genotips, productes, dosis, sistemes de cultiu i condicions ambientals. Aquest TFM proposa desenvolupar un marc reproduïble de síntesi d’evidència i aprenentatge automàtic per predir prioritàriament l’efecte dels bioestimulants sobre el rendiment de fruits del tomàquet (Solanum lycopersicum L.) sota estrès abiòtic i biòtic. La biomassa seca terminal s’avaluarà com a endpoint secundari independent, amb quantificació de la incertesa predictiva per a ambdós resultats. Es farà una revisió sistemàtica amb extracció de resultats quantitatius i metadades experimentals, complementada amb conjunts de dades obertes procedents de meta-anàlisis i estudis recents. Els efectes es normalitzaran principalment mitjançant raons de resposta logarítmiques quan l’escala ho permeti; per als outcomes biòtics no compatibles amb lnRR s’utilitzaran estimands preespecificats adequats a la seva escala. Els efectes s’analitzaran amb models meta-analítics multinivell. Es compararan models predictius mitjançant validació agrupada per estudi, validació temporal i proves fora de domini, evitant la fuga d’informació. La incertesa es calibrarà amb predicció conforme i es definirà un domini d’aplicabilitat. Com a objectiu secundari, en estudis factorials s’estimaran la interacció entre bioestimulant i estrès i, quan existeixin comparacions Control-A-B-A+B, la sinergia, additivitat o antagonisme entre tractaments. El resultat de transferència serà un prototip, SynerPlant Evidence, destinat a prioritzar evidència i experiments d’R+D sense substituir la validació agronòmica.
+Paraules clau: bioestimulants vegetals; tomàquet; estrès abiòtic; estrès biòtic; sequera; salinitat; calor; meta-anàlisi; aprenentatge automàtic; incertesa predictiva; sinergia.
+Índice
+Apartado
+p.
+Datos del Trabajo Final de Máster
+1
+Resumen
+1
+Títol, resum i paraules clau en català
+2
+Abreviaturas
+5
+1. Introducción
+6
+1.1. Estrés abiótico y biótico, producción de tomate y necesidad de soluciones reproducibles
+6
+1.2. Heterogeneidad de la eficacia de los bioestimulantes
+6
+1.3. Evidencia reciente en tomate: estreses abióticos y bióticos
+7
+1.4. De “combinación eficaz” a interacción, sinergia, aditividad y antagonismo
+9
+1.5. Aprendizaje automático, validación realista e incertidumbre
+9
+1.6. Posicionamiento respecto al estado del arte y novedad científica
+10
+1.7. Encaje con PLANTsynergy y potencial de transferencia
+10
+2. Preguntas de investigación, hipótesis y objetivos
+11
+2.1. Pregunta principal
+11
+2.2. Preguntas secundarias
+11
+2.3. Hipótesis
+12
+2.4. Objetivo general
+12
+2.5. Objetivos específicos
+12
+3. Materiales y métodos
+13
+3.1. Diseño general del estudio
+13
+3.2. Protocolo y estrategia de búsqueda bibliográfica
+13
+3.3. Criterios de inclusión y exclusión
+14
+3.4. Selección de estudios y control de duplicados
+14
+3.5. Extracción de datos y diccionario de variables
+15
+3.6. Fuentes de datos abiertas y reutilización
+15
+3.7. Definición de endpoints y tamaños de efecto
+16
+3.8. Interacción estrés × bioestimulante
+16
+3.9. Sinergia A × B entre bioestimulantes
+17
+3.10. Evaluación de calidad, riesgo de sesgo y sesgo de publicación
+17
+3.11. Meta-análisis y meta-regresión
+18
+3.12. Preparación de datos para aprendizaje automático
+18
+3.13. Modelos predictivos y baselines
+18
+3.14. Estrategia de validación y prevención de fuga de información
+19
+3.15. Incertidumbre predictiva, calibración y dominio de aplicabilidad
+19
+3.16. Interpretabilidad y plausibilidad biológica
+20
+3.17. Prototipo SynerPlant Evidence
+20
+3.18. Reproducibilidad, software y trazabilidad
+21
+3.19. Consideraciones éticas, legales y de propiedad intelectual
+21
+3.20. Viabilidad, plan de trabajo y carga de 450 horas
+21
+3.21. Riesgos de ejecución y estrategias de mitigación
+22
+4. Resultados
+23
+4.1. Selección de estudios y diagrama PRISMA
+23
+4.2. Características de la base de evidencia
+23
+4.3. Distribución de genotipos, bioestimulantes, estreses y sistemas de cultivo
+23
+4.4. Efectos globales y heterogeneidad por familia de endpoint
+23
+4.5. Moderadores de la eficacia y meta-regresión
+23
+4.6. Interacción estrés × bioestimulante
+23
+4.7. Interacción A × B: sinergia, aditividad y antagonismo
+23
+4.8. Rendimiento predictivo de los modelos
+23
+4.9. Validación agrupada por estudio y validación temporal
+23
+4.10. Generalización fuera de dominio
+23
+4.11. Calibración e incertidumbre predictiva
+23
+4.12. Interpretabilidad y dominio de aplicabilidad
+23
+4.13. Prototipo SynerPlant Evidence
+23
+4.14. Análisis de sensibilidad y robustez
+23
+5. Discusión
+23
+5.1. Marco para interpretar la eficacia media frente a la eficacia dependiente del contexto
+23
+5.2. Relevancia biológica de los moderadores
+24
+5.3. Genotipo y sistema de cultivo como fuentes de transportabilidad limitada
+24
+5.4. Qué significaría demostrar o no demostrar interacción
+24
+5.5. Generalización, incertidumbre y valor de la abstención
+25
+5.6. Relación con el estado del arte de IA y bioestimulantes
+25
+5.7. Limitaciones previstas
+25
+5.8. Implicaciones para I+D, regulación y comercialización
+26
+6. Conclusiones
+26
+6.1. Conclusiones sustentadas por el planteamiento y la literatura
+26
+6.2. Conclusiones empíricas a completar tras el análisis
+26
+7. Contribución a los Objetivos de Desarrollo Sostenible
+27
+7.1. ODS 2. Hambre cero
+27
+7.2. ODS 12. Producción y consumo responsables
+27
+7.3. ODS 13. Acción por el clima
+27
+7.4. ODS 9. Industria, innovación e infraestructura
+27
+7.5. Riesgos y responsabilidad
+28
+8. Bibliografía
+28
+Anexo A. Estrategias de búsqueda previstas
+31
+Anexo B. Esquema mínimo del dataset analítico
+31
+Anexo C. Criterios de decisión para el objetivo de sinergia
+31
+Abreviaturas
+Abreviatura
+Definición
+AM
+aprendizaje automático
+BE
+bioefector/bioestimulante, según la terminología del estudio
+CV
+validación cruzada
+EC
+conductividad eléctrica
+IC
+intervalo de confianza
+lnRR
+logaritmo de la razón de respuesta
+MAE
+error absoluto medio
+OOD
+fuera de dominio (out-of-distribution)
+PI
+intervalo de predicción
+PRISMA
+Preferred Reporting Items for Systematic Reviews and Meta-Analyses
+R²
+coeficiente de determinación
+RMSE
+raíz del error cuadrático medio
+TFM
+Trabajo Final de Máster
+VPD
+déficit de presión de vapor
+1. Introducción
+1.1. Estrés abiótico y biótico, producción de tomate y necesidad de soluciones reproducibles
+La producción hortícola mediterránea está expuesta a episodios de sequía, salinidad y calor cuya intensidad y combinación alteran el crecimiento, la fotosíntesis, las relaciones hídricas, el equilibrio iónico, la reproducción y la calidad del fruto. En tomate, la respuesta a una intervención puede cambiar sustancialmente según el genotipo, la fase fenológica y la severidad del estrés, como se ha observado en estudios de fenotipado de dos genotipos sometidos a sequía, calor y estrés combinado (Francesca et al., 2022) y en ensayos recientes con diferentes variedades sometidas a salinidad (Ntanasi et al., 2024). Esta dependencia del contexto es central para cualquier herramienta predictiva que pretenda ser útil fuera del experimento del que proceden sus datos.
+Los bioestimulantes de plantas se definen en la regulación europea por su función de estimular procesos de nutrición independientemente de su contenido en nutrientes con el fin de mejorar, entre otros rasgos, la eficiencia en el uso de nutrientes, la tolerancia al estrés abiótico o la calidad (Reglamento (UE) 2019/1009). Esta definición funcional implica que una afirmación de eficacia debe estar ligada a una planta objetivo y a condiciones de uso concretas. La inclusión de estrés biótico en este TFM se trata como una extensión de la evidencia experimental y no implica que la mitigación de patógenos constituya por sí misma un claim regulatorio de bioestimulante bajo el Reglamento (UE) 2019/1009. La literatura reciente coincide en que los mecanismos potenciales abarcan regulación hormonal, ajuste osmótico, control del estado redox, protección fotosintética, asimilación mineral y reprogramación metabólica, pero también señala limitaciones de reproducibilidad, caracterización del producto y transferencia del laboratorio al campo (Ma et al., 2022; Franzoni et al., 2022; Di Sario et al., 2025).
+1.2. Heterogeneidad de la eficacia de los bioestimulantes
+La principal justificación cuantitativa de este TFM es que el efecto promedio de los bioestimulantes oculta una heterogeneidad muy elevada. Un meta-análisis de más de mil comparaciones de campo mostró un incremento medio del rendimiento del 17,9 %, pero con diferencias asociadas al tipo de bioestimulante, método de aplicación, grupo de cultivo, clima y propiedades del suelo; el beneficio fue mayor en determinadas condiciones áridas, salinas o de baja materia orgánica (Li et al., 2022). Por otra parte, la síntesis del proyecto BIOFECTOR, que incluyó experimentos controlados y de campo con tratamientos microbianos y no microbianos, estimó un aumento medio más moderado, alrededor del 9,3 %, y evidenció diferencias entre cultivos y sistemas de producción, con una respuesta particularmente dependiente del ambiente (Nkebiwe et al., 2024).
+La evidencia más reciente refuerza esa conclusión. Un meta-análisis de extractos de algas publicado en 2026 reunió más de dos mil comparaciones y mostró que la respuesta del rendimiento depende de la estrategia de aplicación, formulación, método de extracción, especie algal, clima, suelo y exposición a estrés (Pérez-Oñate et al., 2026). En tomate, un meta-análisis específico de extractos de algas también confirma variación entre productos y condiciones de aplicación (Li et al., 2026). Estas síntesis son útiles para estimar efectos medios y moderadores, pero no están diseñadas como sistemas de predicción individualizada para un nuevo experimento con cuantificación explícita de incertidumbre y dominio de aplicabilidad.
+La variabilidad no debe considerarse solamente ruido. Desde una perspectiva de desarrollo de producto, es información sobre dónde funciona una intervención y dónde no. El Reglamento (UE) 2019/1009 exige declarar el efecto para la planta objetivo e instrucciones relevantes para la eficacia (Reglamento (UE) 2019/1009), mientras que un análisis crítico reciente de los procedimientos de registro insiste en que la eficacia debe demostrarse con controles y diseños suficientemente robustos y contextualizados (Termorshuizen et al., 2026). Por tanto, predecir la eficacia dependiente del contexto tiene interés simultáneamente científico, agronómico y de transferencia.
+1.3. Evidencia reciente en tomate: estreses abióticos y bióticos
+En sequía, estudios recientes han mostrado respuestas positivas a extractos de algas y levaduras, hidrolizados proteicos y otros productos bioactivos, con cambios en estado hídrico, fotosíntesis, antioxidantes y rendimiento (Campobenedetto et al., 2021; Francesca et al., 2021; Wang et al., 2022; Domingo et al., 2023; Leporino et al., 2024; Kanojia et al., 2024). Sin embargo, la magnitud y el rasgo afectado no son uniformes. Por ejemplo, ensayos en invernadero con varios niveles de déficit hídrico han observado mejoras fisiológicas que no necesariamente se traducen en incremento del rendimiento del fruto (Kadoglidou et al., 2025), y ensayos de campo multianuales muestran que la variación ambiental entre años puede dominar la respuesta productiva (Fusco et al., 2025; Iacuzzi et al., 2024).
+En salinidad, se han descrito mejoras de crecimiento, rendimiento, estado nutricional, estabilidad de membranas y metabolismo mediante extractos de algas, hidrolizados proteicos, biofertilizantes y microorganismos promotores del crecimiento (Gedeon et al., 2022; Hernández-Herrera et al., 2022; Ikuyinminu et al., 2022; Zhang et al., 2023; Ntanasi et al., 2024; Benito et al., 2025). El trabajo de Ntanasi et al. es especialmente relevante para el objetivo predictivo porque dos variedades locales respondieron de forma diferente a los mismos tipos de bioestimulantes, ilustrando una interacción producto × genotipo × ambiente que no debería colapsarse en un único promedio (Ntanasi et al., 2024).
+Para temperatura, el número de estudios es menor, pero existen evidencias directas de respuestas específicas a diferentes bioestimulantes bajo frío y calor en plántulas de tomate (Niu et al., 2022), así como fenotipado de hidrolizados proteicos bajo calor, sequía y estrés combinado (Francesca et al., 2022). En 2025 se documentaron respuestas morfológicas, fisiológicas, metabólicas y transcripcionales de tomate a extractos de algas pardas bajo temperaturas elevadas (Sariñana-Aldaco et al., 2025). Las revisiones recientes sobre agricultura en ambiente controlado identifican precisamente el manejo del calor con bioestimulantes como una línea prometedora pero todavía heterogénea (Gardiner-Piggott et al., 2025). La ampliación actual del corpus incorpora además estudios con estrés biótico; estos se conservan como estrato BIOTIC, manteniendo la identidad del patógeno y sus condiciones de inoculación como moderadores trazables.
+Tabla 1. Evidencia reciente representativa que sustenta el alcance biológico del TFM.
+Estrés
+Intervención
+Valor para el proyecto
+Fuente
+Sequía
+Extracto de algas/levadura
+Tomate; estado hídrico y estrés oxidativo
+Campobenedetto et al., 2021
+Sequía
+Hidrolizado proteico
+Campo; rendimiento y fisiología
+Francesca et al., 2021
+Sequía + calor
+Hidrolizado proteico
+Dos genotipos; fenotipado multiestrés
+Francesca et al., 2022
+Salinidad
+Bioestimulantes mixtos
+Fisiología, enzimas y expresión génica
+Gedeon et al., 2022
+Salinidad
+Hidrolizado + extracto de algas
+Tratamientos individuales y combinación; metabolómica
+Zhang et al., 2023
+Salinidad
+Algas y PGPB
+Dos variedades; respuesta genotipo-dependiente
+Ntanasi et al., 2024
+Calor
+Tres bioestimulantes
+Respuesta diferencial a temperatura
+Niu et al., 2022
+Calor
+Extractos de algas pardas
+Fisiología, metabolómica y transcriptómica
+Sariñana-Aldaco et al., 2025
+Sequía
+Varios tratamientos y combinaciones
+Screening bajo limitación hídrica
+Garrido-Ruiz et al., 2026
+Regímenes hídricos
+Bioestimulante de residuo de Opuntia
+Maduración y calidad; contexto PLANTsynergy
+Mesa et al., 2026
+1.4. De “combinación eficaz” a interacción, sinergia, aditividad y antagonismo
+La literatura utiliza con frecuencia el término sinergia cuando una combinación supera al control o a uno de sus componentes. Ese criterio no demuestra interacción estadística: una combinación A+B puede ser superior al control y, aun así, ser exactamente compatible con la suma o multiplicación esperada de los efectos individuales. Existen ya métodos de cribado combinatorio para detectar efectos aditivos, sinérgicos o antagónicos de bioestimulantes (Benito et al., 2022), y en tomate se han estudiado combinaciones de hidrolizados proteicos con extractos de algas (Zhang et al., 2023), de productos vegetales con Trichoderma atroviride (Campana et al., 2025) y de un bioestimulante no microbiano con una bacteria promotora del crecimiento bajo salinidad (Benito et al., 2025). Los ensayos de 2026 con varios tratamientos simples y combinados bajo limitación hídrica amplían este tipo de evidencia (Garrido-Ruiz et al., 2026).
+Por ello, el TFM separará dos preguntas. La primera, con mayor disponibilidad de datos, es si el estrés modifica el efecto de un bioestimulante: muchos estudios tienen diseño 2 × 2 con plantas sin estrés/con estrés y sin/con bioestimulante. La segunda, más exigente, es si dos bioestimulantes presentan interacción A × B en estudios Control-A-B-A+B. Esta distinción aumenta la viabilidad del proyecto porque permite estudiar interacción contextual incluso si el número de combinaciones A+B resulta limitado.
+1.5. Aprendizaje automático, validación realista e incertidumbre
+El aprendizaje automático se utiliza de forma creciente para modelar estrés vegetal y rendimiento, y los algoritmos de árboles, regularización y boosting son frecuentes en agricultura digital (Rico-Chávez et al., 2022; Shawon et al., 2025). Sin embargo, una precisión alta obtenida con particiones aleatorias no garantiza capacidad de generalización a un nuevo año, lugar o estudio. En simulaciones agronómicas, las particiones temporales produjeron evaluaciones más realistas y los autores recomendaron evitar la partición aleatoria cuando el objetivo es predecir el futuro (Morales & Villalobos, 2023). Para este TFM, la unidad de independencia real será el estudio o experimento, no cada fila extraída.
+Un segundo requisito es representar la incertidumbre. Un sistema de apoyo a decisiones debe distinguir entre una predicción sustentada por muchos experimentos similares y una extrapolación a una combinación de condiciones ausente del entrenamiento. La predicción conforme se ha propuesto recientemente en agricultura como una estrategia model-agnostic para producir intervalos calibrados y evaluar su comportamiento frente a cambios de distribución (Farag et al., 2025). Se incorporará, por tanto, una capa de incertidumbre y un dominio de aplicabilidad que permita al sistema declarar “evidencia insuficiente” en lugar de producir una recomendación aparentemente precisa.
+1.6. Posicionamiento respecto al estado del arte y novedad científica
+La novedad propuesta no consiste en aplicar de manera genérica una red neuronal a datos de bioestimulantes. Ya se ha publicado optimización de formulaciones mediante una red neuronal combinada con un algoritmo genético multiobjetivo para estrés salino e hídrico (Gammoudi & Ferchichi, 2025), y la literatura conceptual avanza hacia la integración de bioestimulantes con agricultura digital, IA, ómicas e IoT (Mashabela et al., 2025). Asimismo, los meta-análisis existentes ya cuantifican efectos promedio y algunos moderadores (Li et al., 2022; Nkebiwe et al., 2024; Pérez-Oñate et al., 2026; Li et al., 2026). En tomate, Trentin et al. (2025) predijeron el rendimiento absoluto con datos espectrales de un único ensayo; Li et al. (2026) sintetizaron 40 publicaciones sobre extractos de algas y Behera (2026) propuso un marco multimodal de IA, sin demostrar una validación externa multiesstudio del efecto relativo SB/S.
+La contribución científica de este TFM no es introducir por primera vez ML, meta-análisis o lnRR, sino predecir el beneficio relativo del bioestimulante sobre el rendimiento de frutos bajo el mismo estrés, integrando piezas que habitualmente aparecen separadas: (i) una base de evidencia multiesstudio armonizada a nivel de experimento; (ii) estimación meta-analítica de efectos e interacciones; (iii) modelos que se validan dejando fuera estudios completos y periodos temporales; (iv) incertidumbre calibrada y detección de condiciones fuera de dominio; y (v) estimación explícita de interacción estrés × bioestimulante y, cuando los datos lo permitan, interacción A × B entre bioestimulantes. En la revisión exploratoria realizada para formular este proyecto no se identificó una publicación que reúna simultáneamente estos cinco componentes para bioestimulantes en tomate. Esta formulación evita una afirmación de “primer estudio” absoluta y convierte la novedad en un conjunto de objetivos verificables.
+1.7. Encaje con PLANTsynergy y potencial de transferencia
+PLANTsynergy integra bioquímica vegetal, ecofisiología y biotecnología agroalimentaria. Su línea de AgriFood Biotechnology incluye explícitamente tolerancia de cultivos a estreses abióticos y bióticos, biofertilizantes y bioestimulantes, con interés en desarrollar productos eficaces y transferibles (PLANTsynergy, 2026). El proyecto CAFPROM valida un bioestimulante basado en cafeína para mejorar rendimiento y calidad de tomate en sistemas como la hidroponía y persigue avanzar desde TRL 4 hasta TRL 8 (PLANTsynergy, 2025). Además, el grupo ha publicado en 2026 un bioestimulante derivado de la valorización de residuos de Opuntia ficus-indica bajo regímenes hídricos contrastantes (Mesa et al., 2026).
+El TFM no requiere acceso a datos propietarios de CAFPROM. El núcleo se construirá exclusivamente con literatura y datos públicos, de modo que la tesis sea reproducible y no dependa de acuerdos de confidencialidad. Si posteriormente PLANTsynergy desea utilizar datos internos como validación externa, se incorporarán solo tras autorización específica y se mantendrán separados del repositorio público. Esta separación protege tanto la reproducibilidad científica como la propiedad intelectual del grupo.
+2. Preguntas de investigación, hipótesis y objetivos
+2.1. Pregunta principal
+¿En qué medida el genotipo, las características del bioestimulante y su aplicación, el tipo e intensidad del estrés y el sistema de cultivo permiten predecir el cambio relativo del rendimiento de frutos de tomate bajo estrés y con qué incertidumbre?
+2.2. Preguntas secundarias
+¿Qué moderadores explican la heterogeneidad entre estudios y cómo difieren los efectos sobre el rendimiento de frutos y la biomasa seca terminal cuando ambos se miden?
+¿Cuál es la pérdida de rendimiento predictivo cuando la validación se realiza por estudios completos, de forma temporal o fuera de dominio, en comparación con particiones aleatorias?
+¿Pueden obtenerse intervalos de predicción con cobertura empírica adecuada y detectar situaciones en las que el modelo debe abstenerse?
+En diseños factoriales estrés × bioestimulante, ¿el tratamiento modifica de forma consistente la respuesta al estrés?
+En el subconjunto Control-A-B-A+B, ¿puede cuantificarse y, de forma exploratoria, predecirse la interacción sinérgica, aditiva o antagónica entre bioestimulantes?
+2.3. Hipótesis
+H1. La magnitud del efecto de un bioestimulante no es intercambiable entre contextos y puede explicarse parcialmente mediante variables del cultivo, producto, dosis, aplicación, estrés y ambiente.
+H2. Los modelos que incorporen moderadores contextuales superarán a una predicción basal basada únicamente en el efecto medio, aunque su rendimiento será menor y más realista bajo validación agrupada y temporal que bajo partición aleatoria.
+H3. La incorporación de predicción conforme y de un dominio de aplicabilidad permitirá producir intervalos de incertidumbre informativos e identificar extrapolaciones con riesgo elevado.
+H4. En estudios factoriales compatibles se podrán estimar interacciones entre bioestimulante y estrés; su modelización predictiva dependerá del número de grupos independientes disponibles. La interacción A × B se considerará exploratoria y no constituirá un resultado obligatorio del TFM.
+2.4. Objetivo general
+Desarrollar y validar un marco reproducible de síntesis cuantitativa y aprendizaje automático para estimar y, cuando la evidencia lo permita, predecir la eficacia de los bioestimulantes en tomate bajo estrés, priorizando el rendimiento de frutos y evaluando por separado la biomasa seca terminal, con cuantificación de la incertidumbre y análisis factoriales condicionados a la disponibilidad de datos.
+2.5. Objetivos específicos
+Diseñar y ejecutar una revisión sistemática reproducible de estudios cuantitativos de bioestimulantes en tomate bajo estrés abiótico y biótico.
+Construir una base de datos armonizada de experimentos, tratamientos, condiciones ambientales, genotipos, endpoints y estadísticos necesarios para calcular tamaños de efecto.
+Estimar efectos globales y heterogeneidad mediante meta-análisis multinivel y meta-regresión, controlando la dependencia entre múltiples comparaciones de un mismo estudio.
+Entrenar y comparar modelos predictivos separados para rendimiento de frutos (primario) y biomasa seca terminal (secundario), según el número de grupos independientes disponibles, frente a baselines simples y meta-regresivos.
+Evaluar generalización mediante validación agrupada por estudio, validación temporal y escenarios fuera de dominio, evitando fuga de información.
+Cuantificar incertidumbre mediante intervalos calibrados y definir un dominio de aplicabilidad/evidencia.
+Estimar interacciones estrés × bioestimulante en diseños factoriales compatibles y, cuando la cobertura de datos lo permita, modelarlas de forma secundaria; evaluar la interacción A × B de forma exploratoria con una definición matemática previa de sinergia.
+Desarrollar un prototipo web reproducible, SynerPlant Evidence, que muestre predicción, incertidumbre, cobertura de evidencia y estudios análogos para apoyar la priorización de experimentos de I+D.
+3. Metodología de investigación
+Esta metodología define un pipeline reproducible para construir, verificar y finalizar la base de evidencia de SynerPlant antes del aprendizaje automático. El objetivo de esta fase no es ajustar modelos predictivos, sino transformar el corpus bibliográfico y sus suplementos en una base relacional, trazable y estadísticamente coherente que pueda producir datasets model-ready sin volver a consultar los PDF durante el entrenamiento. La unidad analítica final es un contraste experimental verificado, no una publicación completa. El rendimiento de frutos constituye el endpoint predictivo primario; la biomasa seca terminal se modela por separado como endpoint secundario. La extracción maximiza tanto la información cuantitativa como los moderadores categóricos potencialmente generalizables: genotipo, sistema de cultivo, definición física del estrés, composición, dosis y aplicación del bioestimulante, diseño experimental, endpoint, tiempo, método analítico, incertidumbre y calidad de evidencia.
+El protocolo distingue cuatro niveles: (i) el ledger histórico de registros identificados; (ii) los candidatos a texto completo; (iii) el corpus documental canónico efectivamente recuperado; y (iv) la base analítica derivada tras extracción y QA. El corpus documental recopilado corresponde a publicaciones hasta el 31 de diciembre de 2023 inclusive y constituye TRAIN_DEV, sujeto a verificación de elegibilidad y calidad. Todavía no existe un corpus TEST. Las publicaciones desde 2024 se recopilarán después de MODEL_FREEZE mediante una búsqueda preespecificada y se procesarán con el mismo protocolo de cribado, extracción, armonización y control de calidad; ninguna publicación ya utilizada para desarrollar el pipeline o los modelos podrá reclasificarse como TEST confirmatorio.
+3.1. Diseño general del estudio y principio de trazabilidad
+El estudio se plantea como una investigación computacional reproducible basada en evidencia experimental publicada. Se separan explícitamente la unidad bibliográfica (artículo), la unidad experimental (experimento independiente), la unidad de tratamiento (brazo), la unidad de observación (medición o réplica biológica) y la unidad analítica (contraste). Una publicación puede contener varios experimentos; un experimento puede contener múltiples dosis, niveles de estrés, sitios, temporadas, órganos y timepoints; y cada combinación científicamente distinta puede generar uno o varios contrastes. Esta jerarquía evita pseudorreplicación y evita reducir una publicación compleja a una única fila.
+La trazabilidad mínima es: registro bibliográfico → archivo fuente → estudio → experimento → contexto experimental → brazo → componente de intervención → exposición al estrés → medición raw → provenance → contraste → mart model-ready. Los valores fuente nunca se sobrescriben. Toda corrección, conversión de unidades, reconstrucción de SD, normalización categórica o cálculo de efecto se almacena como una capa derivada y reproducible. Cada tabla utiliza claves primarias y foráneas; companion publications y versiones duplicadas se enlazan al mismo experimento cuando corresponda. La Figura 1 resume la arquitectura general.
+Figura 1. Arquitectura general revisada del pipeline SynerPlant. La finalización de la base de datos pre-ML se separa del modelado predictivo; el corpus de publicaciones hasta 2023 inclusive constituye TRAIN_DEV y el test externo (publicaciones desde 2024) se recopilará después de MODEL_FREEZE.
+Tabla 1. Etapas, unidad de análisis y artefactos reproducibles del pipeline revisado.
+Etapa
+Unidad principal
+Artefacto reproducible / gate
+Búsqueda histórica y deduplicación
+Registro bibliográfico
+Logs de consulta, ledger histórico, DOI/título normalizados y estado de duplicación.
+Corpus canónico
+Archivo / publicación
+CORPUS_MANIFEST, file IDs, URLs, MIME, tamaño, SHA-256 y rol de fuente.
+Cribado científico
+Publicación y experimento
+Clase A/B/C/D/E/X, decisión, motivo y rol analítico; X queda fuera de extracción.
+Extracción documental y estructuración
+Archivo / experimento / brazo / medición
+Source layer V4.3 + STUDY_HANDOFF/QA + contrato semántico V4.4; full text, suplementos, tablas, figuras y datos raw con provenance.
+Verificación y reconciliación
+Fuente / campo crítico
+QA automático + verificador dirigido + revisión humana de flags; conflictos y digitización de figuras se resuelven antes de integrar.
+Harmonización y QA
+Medición
+Unidades compatibles, SD/SE/IC, n inferencial, duplicados, missingness, outliers flag y RoB.
+Construcción de efectos
+Contraste
+S vs C, B vs C, SB vs S, interacción S×B y A×B cuando el diseño lo permite.
+Cierre de base pre-ML
+Contraste verificado
+evidence_long, marts model-ready, diccionario, QA, CSV/Parquet y hashes.
+ML y evaluación externa
+Estudio/cluster como grupo
+Notebook ML separado; MODEL_FREEZE; test externo nuevo, nunca usado para tuning.
+3.2. Fuente de evidencia, búsqueda histórica y definición actual de TRAIN_DEV/TEST
+El universo bibliográfico se construyó históricamente mediante dos pases complementarios en Crossref, Europe PMC y OpenAlex. Las consultas históricas combinaron términos de tomate (Solanum lycopersicum y Lycopersicon esculentum), bioestimulantes, estrés abiótico y experimentos primarios, adaptando la sintaxis a cada fuente. La ampliación a estrés biótico se documenta como una extensión protocolizada del corpus, sin reescribir retrospectivamente las consultas históricas. Se conservaron resultados brutos, fecha, fuente, identificador de consulta y metadatos suficientes para reconstruir deduplicación y cribado.
+El primer pase produjo 19 910 registros y la expansión de precisión 19 717, para un total histórico de 39 627. Tras combinar y deduplicar por DOI y título normalizado se obtuvieron 12 141 registros únicos. El ledger histórico se dividió en publicaciones ≤2023 (n = 7 331) y ≥2024 (n = 4 810): estas cifras son recuentos históricos de registros, no tamaños finales de las muestras analíticas. El criterio temporal sí define el plan de validación: publicaciones hasta 2023 inclusive para TRAIN_DEV y publicaciones desde 2024, aún por recopilar y verificar, para el futuro TEST externo.
+Durante la finalización de la base no se amplía de forma oportunista el TRAIN_DEV en respuesta al rendimiento de futuros modelos. Antes de MODEL_FREEZE, las búsquedas destinadas a TRAIN_DEV se limitan a resolver identidades, reparar enlaces y recuperar textos o suplementos de candidatos elegibles publicados hasta 2023 e incluidos en el ledger; los resultados de estudios desde 2024 no se utilizarán para seleccionar features, ajustar modelos ni tomar decisiones guiadas por el rendimiento predictivo. La última expansión histórica aportó todavía un 6,746 % de registros con apariencia de estudio primario; por ello, el corpus se describe como sistemáticamente construido y amplio, pero no exhaustivo. El futuro TEST se definirá mediante una búsqueda de actualización preespecificada y ejecutada solo después del congelamiento del pipeline.
+3.3. Cribado histórico, corpus canónico actual y reporte PRISMA-style
+En el flujo histórico, los 7 331 registros entonces asignados al bloque ≤2023 pasaron por cribado de título/resumen. Se etiquetaron 1 732 como ADVANCE_FULLTEXT y 5 599 como excluidos por WRONG_CROP (n = 1 762), WRONG_STRESS (n = 2 365), WRONG_OR_NO_BIOSTIMULANT (n = 635) o NOT_PRIMARY_EXPERIMENT (n = 837). Un segundo cribado redujo el conjunto histórico a 1 192 candidatos a texto completo. Estos recuentos se mantienen para reproducibilidad del cribado histórico y no representan el número definitivo de estudios elegibles del TRAIN_DEV (publicaciones hasta 2023 inclusive).
+El cuello de botella inicial fue de acceso, no de elegibilidad biológica. Tras la remediación y normalización documental, el corpus canónico utilizado para la fase de extracción contiene 766 estudios vinculados a 766 full texts y 100 suplementos. La correspondencia manifest ↔ Drive se audita por identificadores activos y no por el nombre visible del archivo. La disponibilidad de fuente y la decisión científica permanecen como variables independientes.
+Todos los 766 estudios con fuente interpretable se sometieron a cribado completo y se clasificaron en una taxonomía analítica A/B/C/D/E/X. En el estado auditado previo a extracción: A = 399, B = 158, C = 29, D = 53, E = 42 y X = 85. Los 681 estudios no-X se conservan para extracción estructurada según su rol; la clase X permanece en el manifest y en los denominadores de selección, pero no entra en la base cuantitativa.
+La cola de extracción se genera automáticamente desde el manifest y el screening, nunca mediante selección manual ad hoc. En el estado actual comprende 774 archivos fuente no-X, priorizando suplementos legibles por máquina, después otros suplementos con datos y finalmente el texto completo. Los archivos del corpus actual pertenecen a TRAIN_DEV, limitado a publicaciones hasta 2023 inclusive. Los recuentos finales de extracción y model-readiness se recalculan por código en cada build y no se transcriben manualmente.
+Figura 2. Flujo PRISMA-style correspondiente a una instantánea histórica previa a la ampliación del corpus. Sus recuentos (674 estudios; A=321, B=152, C=27, D=47, E=40, X=87; 658 archivos) se conservan únicamente como audit trail; los recuentos actuales del corpus v1.5 se reportan en la Sección 3.3 (766 estudios; A=399, B=158, C=29, D=53, E=42, X=85; 774 archivos). La partición ≤2023/≥2024 tampoco define el split actual: todo el corpus ya inspeccionado es TRAIN_DEV y el TEST externo todavía no existe.
+3.4. Inventario, normalización, linkage y verificación de contenido
+La carpeta canónica de Google Drive se inventaría recursivamente. La normalización es copy-only: los archivos fuente no se mueven ni se sobrescriben. Full texts y suplementos se registran por función y reciben identificadores estables. Cada ejecución es idempotente y reanudable mediante checkpoints, de modo que un archivo ya inventariado no se vuelve a crear ni a contar como evidencia nueva.
+CORPUS_MANIFEST registra como mínimo study_id, file_id activo, nombre, DOI/pista de identidad, rol (FULLTEXT/SUPPLEMENT), URL, MIME, tamaño, checksum cuando esté disponible, estado de identidad, estado de acceso y timestamp. El manifest constituye la fuente de verdad documental; los spreadsheets analíticos referencian sus file IDs. Cualquier discrepancia entre extensión y firma de contenido se enruta por la firma real del archivo y se registra como QA.
+La identidad no se infiere solo del nombre de carpeta. Se prioriza DOI confirmado en el documento, seguido por título normalizado y autor/año. Duplicados exactos se detectan mediante SHA-256; companion publications se enlazan mediante study_relations en lugar de contarse como estudios independientes. Una identidad ambigua nunca se fuerza automáticamente y pasa a revisión manual.
+Para los PDF con capa de texto digital se utiliza esa capa como primera fuente de extracción. El OCR se reserva para documentos sin texto legible y el método utilizado se registra como parte de provenance. Para valores cuantitativos se prioriza, cuando existe, la representación más estructurada: dataset suplementario legible por máquina > tabla suplementaria > tabla del texto principal > valor explícito en prosa > digitalización de figura.
+3.5. Recuperación de textos completos y cribado científico
+3.5.1. Recuperación de fuentes y estados de acceso
+La recuperación parte de las 1 192 identidades candidatas y comienza comprobando los PDF y metadatos ya presentes en el corpus para evitar descargas redundantes. La coincidencia primaria se establece por DOI exacto; cuando el DOI falta o es inconsistente, se utiliza el título normalizado y, si está disponible, autor/año como evidencia adicional. Las coincidencias ambiguas se mantienen para revisión manual y no se aceptan automáticamente.
+Para candidatos ya identificados se documentan rutas lícitas de acceso a través de PMC/Europe PMC, páginas del editor o repositorios enlazados por OpenAlex/Crossref y recuperación manual cuando la ruta automatizada no es suficiente. Cada intento conserva la URL de origen, tipo de fuente, fecha de acceso y estado. Los estados de acceso pueden incluir obtained, paywalled, access_blocked, landing_page_only, route_failed o unresolved, o equivalentes funcionales.
+La falta de acceso nunca se codifica como exclusión científica. El listado FULLTEXT_NEEDED se deriva únicamente después de reconciliar las identidades bibliográficas con los PDF existentes y de retirar duplicados exactos o versiones ya representadas. Los materiales suplementarios se recuperan y vinculan por separado porque pueden contener datos cuantitativos ausentes del texto principal.
+Los documentos recuperados se incorporan a la misma estructura normalizada y quedan registrados en CORPUS_MANIFEST. Esta separación entre adquisición documental y decisión de elegibilidad permite distinguir una ausencia de evidencia de una ausencia de acceso a la evidencia.
+3.5.2. Cribado científico a texto completo
+Cada publicación con fuente interpretable recibe una clase A/B/C/D/E/X y un estado de verificación. La decisión se basa en el artículo completo y sus suplementos. La clasificación a nivel de publicación sirve para gestión del corpus, pero la elegibilidad final de targets se decide a nivel de experimento/contraste: una publicación mixta puede contener experimentos con roles analíticos distintos.
+La clase A exige tomate, estrés experimental (abiótico o biótico) y bioestimulante, y aporta los contrastes S/SB de rendimiento de frutos o biomasa seca cuando existan datos compatibles. La clase B reúne estudios de tomate con estrés, sin bioestimulante, para caracterizar la respuesta basal S/C; la clase C, estudios de tomate con bioestimulante sin estrés, para caracterizar la respuesta basal B/C. La clase D contiene ensayos de otros cultivos con estrés y bioestimulante, útiles para analizar transportabilidad entre especies; la clase E, ensayos de otros cultivos con un solo factor, aporta contexto biológico y mecanístico. Las clases B–E se analizan en estratos separados: no aportan contrastes S/SB de tomate ni aumentan el número de estudios independientes del modelo primario. La clase X se excluye. La elegibilidad final depende del experimento, el endpoint y la calidad del contraste, no solo de la clase bibliográfica.
+Los estreses núcleo abióticos son sequía/déficit hídrico, salinidad y alta temperatura. Se conservan además frío/chilling, limitación nutricional, anegamiento/hipoxia, estrés osmótico, elementos tóxicos, radiación y combinaciones cuando estén explícitamente reportados. Cada estrés mantiene su representación física original; no se crea una “severidad universal” que mezcle, por ejemplo, mM NaCl con potencial hídrico o temperatura. Los estreses bióticos se mantienen en un estrato BIOTIC separado, conservando patógeno, especie/aislado, inóculo, método y timing de inoculación; Fusarium se retiene como subgrupo preespecificado sin inferir automáticamente el agente causal.
+Tabla 2. Taxonomía de cribado y función de cada clase en la base de evidencia.
+Clase
+Criterio resumido
+Rol en la base
+Uso pre-ML
+A
+Tomate + estrés + bioestimulante
+PRIMARY
+Mitigación directa; interacción S×B si existe C/S/B/SB.
+B
+Tomate + estrés, sin bioestimulante
+BASELINE_STRESS
+Respuesta basal al estrés; S vs C.
+C
+Tomate + bioestimulante, sin estrés
+BIO_BASELINE
+Efecto basal del bioestimulante; evidencia contextual/secundaria.
+D
+Otro cultivo + estrés + bioestimulante
+TRANSFER
+Transfer learning/contexto; no se equipara automáticamente a tomate.
+E
+Otro cultivo + solo estrés o solo bioestimulante
+SUPPORTING
+Contexto mecanístico/feature support; no target primario.
+X
+Fuera de alcance o no utilizable
+EXCLUDE
+Se conserva en ledger/PRISMA, no se extrae a la base cuantitativa.
+3.6. Extracción de datos: pipeline documental, estructuración y modelo relacional
+La capa de extracción documental se ejecutó con el pipeline local V4.3, run docling_local_sourceqa_v4_3_rerun_380, en Python/Jupyter. La selección de fuentes no se realiza por orden de carpetas, sino desde un frozen manifest a nivel de archivo derivado de la base TFM_ML_DATABASE_V3. El manifest vincula cada study_id con su full text y suplementos, conserva la clase de cribado y excluye de la extracción cuantitativa la clase X. El corpus se procesa por lotes de tamaño configurable; hashes y checkpoints permiten reanudar la ejecución sin repetir estudios ya completados y mantienen los fallos como reintentables.
+La primera capa es un source layer determinista y no depende de una API ni de un modelo generativo. Los archivos se enrutan por firma de contenido, no solo por extensión. Los PDF se procesan con Docling, usando el modo de tablas de alta precisión, y PyMuPDF para texto, páginas y geometría nativa; RapidOCR se activa solo cuando la capa digital no es suficiente. Los archivos XLS/XLSX/CSV se leen con pandas/openpyxl y, para Excel, se conserva provenance exacto a nivel de hoja y celda A1. Los documentos Word se extraen de forma nativa cuando es posible y los .doc heredados se convierten mediante LibreOffice. Las figuras se exportan en alta resolución y se conservan además palabras/coordenadas vectoriales cuando están disponibles; OpenCV se usa únicamente para detectar estructura geométrica y candidatos de digitización, no para aceptar valores gráficos sin calibración.
+La prioridad de fuente para un mismo dato es: suplemento legible por máquina > tabla suplementaria > tabla del texto principal > valor numérico explícito en prosa > digitización calibrada de figura. Una fuente de menor prioridad puede aportar n, SD/SE/IC, unidades, timepoints, contexto o estadística faltante, pero no duplica un valor ya respaldado por una representación superior. Las discrepancias entre fuentes se registran como conflicto y no se resuelven mediante sustitución silenciosa.
+Cada estudio genera una carpeta independiente que conserva los artefactos por fuente y tres salidas de control: STUDY_HANDOFF.json, que resume el inventario, texto, tablas, hojas, figuras, candidatos cuantitativos y localizadores; STUDY_QA.json, que resume cobertura y estado del estudio; y HUMAN_REVIEW_QUEUE.csv cuando existen activos o decisiones que requieren revisión. La salida source layer se considera completa solo cuando las fuentes esperadas han sido procesadas y cada activo cuantitativo tiene una disposición explícita.
+La segunda capa es la estructuración semántica del handoff. Los paquetes por estudio se procesan por lotes en ChatGPT Business mediante un prompt y un contrato semántico JSON V4.4 versionados; en cada sesión se registran fecha, modelo disponible, versión del prompt y versión del esquema. El esquema separa study, experiments, experiment_context, arms, stress_factors, arm_components, measurements, reported_effects, statistical_analyses, raw_observations, data_assets, provenance_qa, risk_of_bias, contrast_candidates, asset_dispositions, figure_digitization_queue y ambiguities. La interpretación semántica no modifica la evidencia original: produce una propuesta estructurada que debe superar la verificación descrita en la Sección 3.8 antes de integrarse en la base relacional. Se enumeran por separado experimentos, sitios/temporadas, cultivares, niveles y combinaciones de estrés, dosis con sus unidades, formulaciones, vía, frecuencia y fase de aplicación, órganos, outcomes y timepoints. stress_factors admite estrés abiótico, biótico o combinado y conserva, cuando procede, patógeno, taxonomía, inóculo, método y timing de inoculación. Las mezclas se descomponen en arm_components; las réplicas biológicas raw se conservan en raw_observations; matrices ómicas de alta dimensión se registran como data_assets y no se explotan como miles de observaciones agronómicas independientes. En la base relacional TFM_ML_DATABASE_V3, esquema 3.6.0, stress_factors es la fuente de verdad para la exposición al estrés; los campos stress_* de arms se conservan únicamente como resumen de compatibilidad.
+Figura 3. Esquema relacional de la base de evidencia. Las entidades raw, QA y efectos permanecen separadas, y los marts pre-ML se generan como productos derivados y versionados.
+Tabla 3. Capas del modelo relacional y unidad de observación asociada.
+Capa
+Tablas principales
+Unidad de fila
+Función
+Identidad
+studies, files, screening, study_relations
+publicación/archivo
+Identidad, clase, vínculos y trazabilidad documental.
+Experimento
+experiments, experiment_context
+experimento/sitio/temporada
+Diseño, ambiente, sistema, unidad experimental.
+Tratamiento
+arms, arm_components, stress_factors
+brazo/componente
+Estrés, mezcla, dosis, formulación y aplicación.
+Observación
+measurements, raw_observations
+medición/réplica
+Valores, incertidumbre, n, outcome, tiempo, órgano.
+Activos
+data_assets
+archivo/matriz
+Omics, matrices raw/procesadas y mapeo de muestras.
+QA
+provenance_qa, risk_of_bias
+valor/dominio
+Verificación, procedencia y riesgo de sesgo.
+Efectos
+reported_effects, contrasts, contrast_terms
+contraste
+lnRR, interacción y estructura de dependencia.
+Export
+evidence_long, model_ready marts
+contraste
+Entrada limpia al notebook de ML.
+3.7. Outcomes, endpoint primario y jerarquía de targets
+El endpoint primario es el rendimiento de frutos de tomate bajo estrés, expresado como masa cosechada y evaluado mediante la comparación directa entre plantas con estrés y bioestimulante (SB) y plantas sometidas al mismo estrés sin bioestimulante (S). Se prioriza el rendimiento total; el rendimiento comercializable se analiza por separado. Cada contraste exige compatibilidad de base fresca/seca, denominador (planta/superficie), periodo y carácter acumulado o puntual de la cosecha. El número de frutos, la masa media por fruto y la productividad hídrica son outcomes distintos. La biomasa seca terminal constituye el endpoint secundario independiente: se prioriza la biomasa total de planta y, en su ausencia, la aérea, manteniendo la biomasa radicular aislada por separado. El total raíz + parte aérea solo se reconstruye con componentes compatibles y varianza justificable. Rendimiento y biomasa no se agrupan en un único target.
+La capa de evidencia conserva además crecimiento/morfología, arquitectura radicular, intercambio gaseoso, fotosíntesis y fluorescencia, pigmentos, relaciones hídricas, estado iónico/nutricional, daño oxidativo, antioxidantes/redox, osmólitos, hormonas/señalización, metabolómica, transcriptómica, proteínas/actividad enzimática, calidad de fruto, fenología, supervivencia/daño e índices de estrés; para BIOTIC se conservan además severidad e incidencia de enfermedad, carga del patógeno, área de lesión, mortalidad/supervivencia e índices de agallamiento cuando proceda. Se mantienen outcome_raw_name, outcome_standard_name, outcome_family, órgano, método, instrumento y timepoint. Los biomarcadores medidos después del tratamiento pueden usarse en síntesis mecanística, pero no como predictores primarios pre-experimentales.
+Tabla 4. Jerarquía de outcomes y regla de uso analítico.
+Familia
+Rol
+Ejemplos
+Regla
+Biomasa seca terminal
+Secundario
+total, shoot, root separado
+Endpoint secundario; root-only por separado.
+Rendimiento
+Primario
+kg/planta, t/ha, comercializable
+Endpoint primario: rendimiento total; comercializable aparte.
+Biomasa fresca / crecimiento
+Secundario
+fresh mass, altura, área, hojas
+Escalas/familias separadas.
+Fisiología
+Secundario
+A, gs, Fv/Fm, RWC, pigmentos
+Conservar dirección biológica, unidad y tiempo.
+Bioquímica / iones
+Mec./secundario
+prolina, MDA, CAT, Na+/K+
+No invertir automáticamente para crear un “benefit score”.
+Omics
+Mec./activo de datos
+metabolitos, genes, proteínas
+Registrar matriz/muestras; no pseudorreplicar features como filas agronómicas.
+3.8. Provenance, control de calidad, verificación y reconstrucción estadística
+Cada valor cuantitativo y cada variable categórica relevante se vinculan a source_file_id y, siempre que sea posible, a página, tabla, figura/panel, hoja/celda A1 o variable del dataset, junto con el método de extracción, unidad, transformación y verification_status. Para cada activo se asigna una disposición explícita: EXTRACTED, DUPLICATE_HIGHER_PRIORITY, NOT_ELIGIBLE, NEEDS_DIGITIZATION o NEEDS_REVIEW. Los valores presentes únicamente en gráficos no se estiman visualmente por el modelo: permanecen en figure_digitization_queue hasta una digitización calibrada y verificable.
+El control automático se ejecuta primero a nivel de archivo y después a nivel de estudio. Los indicadores mínimos son source_file_coverage, table_asset_coverage, figure_asset_coverage y quantitative_figure_asset_coverage, además de failed_sources y needs_review_sources. Los estados operativos incluyen SOURCE_LAYER_COMPLETE, SOURCE_LAYER_COMPLETE__FIGURE_RECONCILIATION_PENDING, NEEDS_REVIEW y FAIL. El estado PENDING_VERIFICATION indica que la extracción documental terminó pero la interpretación semántica todavía no ha sido verificada. Un archivo o estudio con FAIL no se considera finalizado y permanece disponible para reprocesamiento después de corregir la causa técnica.
+La verificación semántica se realiza mediante una pasada estructurada principal y una revisión dirigida de los campos críticos, en lugar de duplicar de forma indiscriminada toda la extracción con dos modelos. Se comprueban explícitamente la identidad y composición de los brazos, stress_factors, outcome y timepoint, media o valor reportado, SD/SE/IC, n inferencial, unidad, dosis/aplicación, diseño factorial, dependencia entre contrastes y provenance. Para el tratamiento se verifican dosis y unidad originales, concentración o dilución, vía, frecuencia, fase fenológica y momento relativo al estrés cuando estén reportados; los datos ausentes se marcan como no reportados y no se infieren. Los casos ambiguos, los conflictos entre fuentes, las figuras cuantitativas y los diseños complejos se remiten a revisión humana. Las discrepancias no se promedian. Si posteriormente se detecta una omisión, la corrección se incorpora como patch versionado sobre el registro del estudio, preservando el valor raw, la fuente original y el historial de verificación.
+Se distingue entre unidades aleatorizadas, réplicas biológicas, réplicas técnicas, submuestras y repeticiones independientes. El n inferencial es la unidad realmente aleatorizada o experimental; una lectura técnica adicional no aumenta n. Cuando el suplemento contiene réplicas biológicas identificables, se preservan los valores raw y se recalculan de forma reproducible media, SD y n. Si la estructura de réplica no puede defenderse, el registro recibe un flag y no se usa en análisis que requieran varianza independiente. Las conversiones de incertidumbre solo se aplican cuando los supuestos necesarios son explícitos y quedan documentados.
+Figura 4. Arquitectura operativa del pipeline de extracción, completado y verificación de datos de SynerPlant. Primero, el source layer se genera localmente con Docling y herramientas auxiliares; después, ChatGPT (última versión disponible en ChatGPT Business) revisa los paquetes por estudio, identifica omisiones o ambigüedades y completa la extracción semántica; finalmente, una verificación final controla consistencia, estadística, trazabilidad y necesidad de revisión humana antes de integrar la evidencia en la base analítica.
+La Figura 4 resume el flujo reproducible aplicado en este TFM. La etapa 1 parte de un corpus canónico definido por un frozen manifest, que fija de manera determinista los study_id, source_file_id, el full text y los suplementos esperados. La etapa 2 corresponde a la extracción local automatizada V4.3, run docling_local_sourceqa_v4_3_rerun_380: Docling procesa PDF, RapidOCR se activa solo cuando la capa textual es insuficiente, pandas/openpyxl leen hojas de cálculo, y PyMuPDF/OpenCV generan activos, localizadores y candidatos cuantitativos sin aceptar valores gráficos no calibrados. La etapa 3 empaqueta cada estudio en un handoff estandarizado (por ejemplo, source_inventory.json, document_text.md, tables/, figures/, quantitative_candidates.json, STUDY_HANDOFF.json y STUDY_QA.json). La etapa 4 utiliza ChatGPT (última versión) para revisar estos paquetes por lotes, detectar campos faltantes o ambiguos y producir una extracción semántica estructurada conforme al contrato semántico JSON V4.4, sin sobrescribir la evidencia raw. La etapa 5 aplica una verificación final, con revisión dirigida de campos críticos —brazos, stress_factors, timepoints, outcomes, unidades, media/SD/SE/IC/n, dependencia entre contrastes y provenance— y remisión a HUMAN_REVIEW_QUEUE cuando persisten ambigüedades, conflictos entre fuentes o necesidad de digitización calibrada. Solo los registros verificados pasan a la base relacional y a los datasets model-ready.
+SD = SE · √n
+SD = [(U − L) / (2 · t₀.₉₇₅, n−1)] · √n     (IC bilateral de la media; supuestos documentados)
+Tabla 5. Reglas permitidas para reconstrucción de incertidumbre y n.
+Dato reportado
+Conversión permitida
+Condición / QA
+SD
+Usar directamente
+Unidad compatible; SD ≥ 0.
+SE + n
+SD = SE·√n
+n debe representar unidad experimental independiente.
+IC de una media + n
+IC → SE → SD
+Nivel del IC y distribución de referencia conocidos.
+IC/diferencia entre grupos
+No derivar SD de brazo por defecto
+Solo con fórmula explícita y supuestos suficientes.
+p-value sin estadístico
+No reconstruir varianza por defecto
+Se conserva como metadata, no como sustituto de SD.
+Réplicas biológicas raw
+Recalcular media/SD/n
+IDs de réplica y unidad experimental deben ser claros.
+Réplicas técnicas
+No aumentar n
+Se mantienen como mediciones anidadas.
+3.9. Tamaños de efecto, contrastes factoriales y propagación de incertidumbre
+Los efectos se calculan exclusivamente a partir de valores raw reconciliados. Se usa la notación C = control sin estrés ni bioestimulante, S = estrés sin bioestimulante, B = bioestimulante sin estrés y SB = estrés + bioestimulante. Para medias estrictamente positivas, se utiliza el logaritmo de la razón de medias (lnRR), calculado y validado por separado para cada endpoint.
+lnRR_S|C = ln(Ȳ_S / Ȳ_C)                        [efecto del estrés]
+lnRR_B|C = ln(Ȳ_B / Ȳ_C)                        [efecto basal del bioestimulante]
+lnRR_yield = ln(Ȳ_yield,SB / Ȳ_yield,S)     [target primario: rendimiento de frutos]
+lnRR_biomass = ln(Ȳ_biomass,SB / Ȳ_biomass,S)     [target secundario: biomasa seca terminal]
+La interpretación porcentual se expresa como Efecto (%) = 100·[exp(lnRR) − 1]. No se añade epsilon ni pseudoconteo para hacer positivas medias cero o negativas; esos outcomes se analizan en una escala alternativa compatible o se excluyen de lnRR.
+Var(lnRR_T|C) = SD_T²/(n_T·Ȳ_T²) + SD_C²/(n_C·Ȳ_C²)
+SE(lnRR) = √Var(lnRR);        IC₉₅% ≈ lnRR ± 1.96·SE(lnRR)
+Como sensibilidad se puede calcular el lnRR con corrección de sesgo de segundo orden cuando media, SD y n son defendibles; la lnRR ordinaria permanece como estimando principal.
+lnRR_bc = lnRR + ½[SD_T²/(n_T·Ȳ_T²) − SD_C²/(n_C·Ȳ_C²)]
+La interacción estrés × bioestimulante se evalúa solo en diseños C/S/B/SB comparables en background, dosis, outcome y timepoint:
+I_S×B = ln(Ȳ_SB/Ȳ_S) − ln(Ȳ_B/Ȳ_C) = ln[(Ȳ_SB·Ȳ_C)/(Ȳ_S·Ȳ_B)]
+Var(I_S×B) = v_SB + v_S + v_B + v_C,     v_j = SD_j²/(n_j·Ȳ_j²)   [brazos independientes]
+Si los brazos comparten unidades, controles o medidas repetidas, la covarianza se incorpora explícitamente; si no puede reconstruirse, se conserva el dependency_cluster_id y se evita tratar efectos correlacionados como independientes.
+Para combinaciones de dos bioestimulantes A y B, la sinergia estricta se calcula únicamente con C/A/B/A+B a dosis, background y tiempo comparables:
+I_AB = ln[(Ȳ_AB·Ȳ_C)/(Ȳ_A·Ȳ_B)]
+La forma general implementada es un contraste lineal en escala logarítmica:
+θ = Σⱼ cⱼ·ln(Ȳⱼ);     Var(θ) = Σⱼ cⱼ²vⱼ + 2Σᵢ<ⱼ cᵢcⱼCov[ln(Ȳᵢ),ln(Ȳⱼ)]
+Cuando lnRR no es apropiado pero los grupos comparten una escala continua, Hedges g se conserva como análisis de sensibilidad; no se mezcla numéricamente con lnRR en un único target. Para incidencias o mortalidad/supervivencia se preespecifican medidas para proporciones (p. ej., log-RR/log-OR); escalas ordinales de severidad no usan lnRR por defecto y no se introducen pseudoconteos para forzar su cálculo.
+S_p = √{[(n_T−1)SD_T² + (n_C−1)SD_C²]/(n_T+n_C−2)};   g = J·(Ȳ_T−Ȳ_C)/S_p
+3.10. Calidad, riesgo de sesgo, outliers y síntesis cuantitativa
+El riesgo de sesgo se evalúa por dominios y no se reduce a una puntuación arbitraria: aleatorización/asignación, unidad experimental, pseudorreplicación, comparabilidad basal, fidelidad de la intervención, objetividad/cegamiento de la medición cuando proceda, datos faltantes, reporte selectivo, cointervenciones y corrección de la unidad de análisis. Las categorías son low, some_concerns, high o unclear. Un juicio de riesgo modifica sensibilidad e interpretación; no elimina automáticamente toda la evidencia.
+Los valores extremos se auditan antes de cualquier síntesis. Dentro de grupos comparables de outcome/unidad se calcula un z robusto basado en MAD; |z_MAD| > 4,5 genera un flag de revisión, nunca un borrado automático. También se controlan n ≤ 0, SD/SE negativos, incoherencia SD ≈ SE·√n, unidades imposibles, duplicados de natural_key y coeficientes de variación extremos. La heterogeneidad biológica esperada se conserva como señal, no como error por defecto.
+La síntesis cuantitativa utiliza modelos de efectos aleatorios cuando existe información suficiente y varianzas defendibles. τ² se estima por REML; cuando el número de estudios independientes lo permite, los intervalos del efecto medio se ajustan con Hartung–Knapp y se reporta intervalo de predicción. Múltiples efectos por estudio se manejan con estructura multinivel y/o errores estándar robustos por cluster; los shared controls y repeated measures nunca se asumen independientes por defecto. Para interacciones estrictas S×B o A×B no se realiza pooling confirmatorio con menos de cinco estudios independientes.
+z_MAD = 0.6745·(x − mediana) / MAD;      flag si |z_MAD| > 4.5
+w_i = 1/(v_i + τ²_REML);       θ̂_RE = Σw_i y_i / Σw_i
+I² = max[0, (Q − (k−1))/Q] · 100%
+La completitud de cada feature se reporta como C_f = 100·N_reportado/N_elegible y se acompaña por número de estudios independientes, número de niveles categóricos y soporte por nivel. Esta métrica describe la información disponible; no es una puntuación de calidad y no se usa por defecto como predictor. La auditoría humana final revisa min[N, max(20, ⌈0,15·N⌉)] registros, estratificando por clase, fuente, tipo de outcome y flags de QA.
+3.11. Finalización de la base y generación de datasets model-ready
+La base se considera finalizada cuando todas las entidades necesarias para cada contraste están enlazadas, los targets tienen provenance y verification_status, n corresponde a la unidad experimental, y no existen errores blocking de integridad. La salida central es evidence_long, una tabla larga rica en contexto; de ella se derivan dos marts independientes de clase A, A_direct_yield (primario) y A_direct_dry_biomass (secundario), además de los estratos de síntesis e interacción. La ausencia de un endpoint no se completa con valores del otro.
+En esta fase se aplican únicamente transformaciones deterministas y reproducibles: tipado, normalización semántica mediante vocabularios congelados, conversiones físicamente equivalentes, timepoint en días cuando es posible, reconstrucción documentada de SD, flags de QA, missingness indicators y agregación explícita de componentes. No se ajustan sobre el corpus completo imputadores estadísticos, scaling, one-hot/frequency/target encoding ni umbrales aprendidos de categorías raras. Esas operaciones se entrenarán dentro de cada fold del futuro grouped CV para evitar leakage.
+La política de features separa ID_GROUP/PROVENANCE_ONLY/CONTEXT_ONLY/FEATURE/QUALITY_FEATURE/TARGET. DOI, título, autores, revista, source_file_id y study_id nunca son predictores. El nombre comercial exacto se conserva para trazabilidad/sensibilidad, mientras que clase, composición, origen, formulación, dosis, ruta y timing son candidatos generalizables. Los biomarcadores post-tratamiento se excluyen del modelo primario pre-experimental. Para cada feature se calcula soporte por estudios independientes, completitud y número de niveles con ≥5 y ≥10 estudios, sin seleccionar variables en función de la métrica predictiva.
+Los exports se generan simultáneamente en CSV y Parquet, acompañados por data dictionary, feature_policy, qa_issues, acceptance_report y un manifest con SHA-256. El notebook de ML solo puede consumir estos artefactos versionados; no vuelve a PDF para reparar targets. Un cambio posterior en extracción o reglas de armonización obliga a generar una nueva versión y nuevos hashes.
+Tabla 6. Marts pre-ML definidos por pregunta biológica.
+Mart
+Población / contraste
+Target
+Uso
+all_contrasts
+Todos los contrastes computables
+effect_value
+Auditoría y análisis global.
+A_direct_mitigation
+Clase A; SB vs S
+lnRR_SB|S
+Dataset principal de eficacia bajo estrés.
+A_strict_SxB
+Clase A; C/S/B/SB
+I_S×B
+Interacción específica de estrés.
+B_stress_baseline
+Clase B; S vs C
+lnRR_S|C
+Respuesta basal del tomate al estrés.
+D_transfer_mitigation
+Clase D; SB vs S
+lnRR_SB|S
+Transferencia desde otros cultivos.
+A_direct_dry_biomass
+A_direct_mitigation + dry biomass
+lnRR_SB|S
+Target secundario: biomasa seca terminal.
+A_direct_yield
+A_direct_mitigation + yield
+lnRR_SB|S
+Target primario: rendimiento de frutos.
+Figura 5. Dos endpoints independientes derivados de una base de evidencia verificada: rendimiento de frutos (primario) y biomasa seca terminal (secundario); evaluación y validación agrupadas por estudio.
+En el estrato BIOTIC, el rendimiento de frutos solo contribuye al target primario cuando se dispone de cosechas y comparaciones S/SB verificadas. La biomasa seca terminal conserva su función secundaria; severidad, incidencia y carga del patógeno, área de lesión, mortalidad/supervivencia e índices de agallas requieren estimandos específicos. Ninguno de estos resultados se combina con rendimiento o biomasa en un índice sintético.
+Tabla 7. Gates obligatorios antes de iniciar el notebook de aprendizaje automático.
+Gate
+Criterio de PASS
+Acción si falla
+Integridad relacional
+PK únicas; FK study→experiment→arm→measurement válidas.
+Detener build y corregir enlaces.
+Cobertura de extracción
+Todos los estudios no-X revisados, incluidos suplementos.
+Mantener PENDING; no declarar base final.
+Provenance del target
+100 % de targets con source_file_id + localización + verification.
+Excluir del mart verificado.
+n e incertidumbre
+n inferencial defendible; SD/SE/IC distinguibles.
+Flag/excluir análisis ponderado.
+Contrastes
+Medias positivas para lnRR; brazos comparables; dependencia registrada.
+No calcular o marcar exploratorio.
+QA biológico
+Sin valores imposibles/duplicados blocking; outliers revisados.
+Resolver o documentar flag.
+Leakage
+IDs/provenance/post-treatment biomarkers fuera de features primarios.
+FAIL hasta retirar variables.
+Reproducibilidad
+CSV/Parquet + diccionario + QA + SHA-256 del mismo run.
+No congelar dataset.
+TEST externo
+0 registros TEST inspeccionados antes de MODEL_FREEZE.
+Invalida carácter confirmatorio.
+3.12. Modelos predictivos, regularización y optimización
+Tabla 8. Protocolo preespecificado de incremento de complejidad del modelo cuando las métricas internas son bajas.
+Nivel
+Acción ante métricas bajas
+Regla anti-overfitting
+1. Datos
+Revisar reconciliación, target, unidad experimental, missingness y cobertura
+No cambiar etiquetas/categorías según el resultado del modelo
+2. Baselines
+Comparar media y Ridge L2
+La complejidad solo se justifica frente al baseline
+3. Regularización
+Elastic Net L1/L2; robust Huber
+Hiperparámetros solo en inner grouped CV
+4. No linealidad
+Random Forest, Extra Trees, HistGradientBoosting
+Outer folds permanecen intactos durante tuning
+5. Features
+Selección embebida y análisis de categorías raras
+Selección dentro del pipeline de entrenamiento
+6. Diagnóstico
+Learning curves por estudios, OOD y análisis de residuos
+No usar el test temporal para decidir cambios
+7. Decisión
+Preferir el modelo más simple con mejora estable
+Si no hay mejora robusta, reportar predictibilidad limitada
+La modelización se ejecuta en un notebook separado una vez superados los gates de la Tabla 7. Se ajustan pipelines independientes para A_direct_yield (primario) y A_direct_dry_biomass (secundario), sin fusionar los targets ni imputar uno a partir del otro. Los efectos sobre biomasa medidos después del tratamiento no se utilizarán como predictores preexperimentales del rendimiento. Cada tarea se compara primero con un predictor de media y Ridge; después se consideran Elastic Net/Huber y, si el soporte por estudios lo permite, Random Forest, Extra Trees, HistGradientBoosting y CatBoost. La complejidad se acepta únicamente si aporta mejoras estables frente a baselines bajo validación agrupada por estudios.
+Los hiperparámetros, imputación, scaling, encoding, selección de variables y cualquier agrupación aprendida se ajustan exclusivamente dentro de los folds internos. Los modelos con categóricas nativas no reciben target encodings calculados fuera del fold. Las semillas, grids/distribuciones de búsqueda, versión de software y número de jobs se fijan en configuración y se registran en el run manifest.
+El objetivo no es maximizar una métrica mediante iteraciones sobre el test, sino determinar si existe señal predictiva reproducible. Una mejora puntual en un fold externo no constituye evidencia suficiente. Si modelos más complejos no superan de forma estable los baselines, el resultado metodológicamente correcto es documentar una capacidad predictiva limitada, ampliar la incertidumbre y/o aplicar reglas de abstención en contextos fuera de dominio.
+3.13. Validación interna y métricas de rendimiento
+La validación principal es nested grouped cross-validation. El grupo mínimo es study_id; si study_relations, shared controls, mismo sitio/temporada o companion publications indican dependencia más amplia, se utiliza dependency_cluster_id. Ningún grupo aparece simultáneamente en train y validation. Los umbrales se aplican por separado a cada endpoint y al número de grupos independientes elegibles, no al número de filas; los estudios B–E y los contrastes de biomasa no incrementan el soporte del modelo de rendimiento: con ≥30 grupos se prevén 5 folds externos y 5 internos; con 15–29, 5 externos y 3 internos; con 8–14, 4 externos y 3 internos. Con <8 grupos independientes no se sostiene una comparación compleja: se prioriza leave-one-study-out, síntesis y una conclusión data-limited. Para la interacción estricta estrés × bioestimulante no se realiza pooling confirmatorio con <5 estudios independientes y su modelización predictiva permanece secundaria. Para A × B, el modelado predictivo solo se intentará con ≥30 grupos independientes y diversidad suficiente de componentes; con ≥5 podrá realizarse síntesis cuantitativa exploratoria y con <5 se limitará a descripción y mapa de vacíos de evidencia.
+Las métricas principales de regresión son RMSE y MAE; R² se presenta como métrica complementaria y se interpreta con cautela cuando los folds contienen pocos estudios. Se reportan media, dispersión entre folds, número de estudios de entrenamiento/validación y parámetros seleccionados. La comparación entre modelos se realiza sobre los resultados externos, mientras que la elección de hiperparámetros utiliza únicamente el bucle interno.
+Para diagnosticar si un rendimiento bajo es consecuencia de insuficiencia de datos se generan learning curves agrupadas por estudio, variando la fracción de grupos utilizada para entrenamiento. Una disminución sostenida del error al aumentar el número de estudios sugeriría un problema data-limited; una curva plana y cercana al baseline sugeriría señal predictiva limitada con las variables disponibles.
+3.14. Incertidumbre, calibración y dominio de aplicabilidad
+Además de la predicción puntual, el pipeline estima incertidumbre mediante un esquema conformal con partición por grupos de estudio. La calibración se realiza en grupos independientes del ajuste principal y se evalúa mediante cobertura empírica y anchura de los intervalos. La metodología de incertidumbre se congelará junto con el modelo antes de la evaluación temporal externa.
+El dominio de aplicabilidad se evalúa mediante una distancia en el espacio de features transformadas, ajustado exclusivamente con datos de entrenamiento. Se utiliza una referencia de vecinos más próximos y un umbral derivado de la distribución de distancias internas. Las observaciones con distancia superior al umbral se marcan como OOD o low applicability y pueden activar una advertencia o una política de abstención. El OOD no se interpreta como prueba de invalidez biológica, sino como señal de baja densidad de evidencia comparable.
+3.15. Análisis de robustez y generalización interna
+La robustez se explora mediante diagnósticos de transferencia interna por familia de estrés, clase de bioestimulante, ruta de aplicación, sistema de cultivo, cultivar/genotipo y, cuando la cobertura lo permita, bloques de era de publicación. Estos análisis siguen siendo internos al corpus de desarrollo y no se describen como validación externa independiente.
+Se realizarán análisis de sensibilidad para efectos influyentes, leave-one-study-out, definiciones alternativas de outcomes compatibles, disponibilidad de varianza, riesgo de sesgo y, cuando esté preespecificado, ponderación por precisión como sensibilidad. Los resultados de sensibilidad no se utilizan para escoger retrospectivamente la definición primaria que produzca el mejor resultado.
+3.16. Visualizaciones y generación reproducible de figuras para la TFM
+Las figuras de la fase de datos se generan por código desde el mismo build que produce los CSV/Parquet. Se exportan en PDF/SVG vectorial y PNG de alta resolución, con tabla subyacente cuando procede. Los recuentos de screening, extracción, disponibilidad de varianza, provenance y model-readiness se recalculan desde artefactos versionados; no se editan manualmente en Word.
+El notebook de finalización de base genera ocho conjuntos de figuras para la TFM: (1) PRISMA-style/database assembly; (2) evidence landscape de clases, estrés, bioestimulante y sistema; (3) heatmap estrés × clase de bioestimulante por estudios independientes; (4) completitud y riqueza categórica; (5) attrition estudios → experimentos → brazos → mediciones → contrastes → targets de rendimiento y biomasa por separado; (6) provenance, varianza, datos raw y RoB; (7) cobertura de outcomes y contrastes computables; y (8) contribución de suplementos/raw data. Las figuras de rendimiento, SHAP, calibración, OOD y test externo se reservan para el notebook ML posterior.
+3.17. MODEL_FREEZE y futura validación externa
+MODEL_FREEZE.md se crea después de cerrar la base TRAIN_DEV (publicaciones hasta 2023 inclusive) y antes de buscar artículos publicados desde 2024 para el test externo. Fija hashes del dataset y del código, criterios de elegibilidad, targets, feature policy, vocabularios, preprocessing, lógica de grupos/folds, semillas, familias de modelos, tuning, calibración, OOD y métricas. Toda publicación ya abierta, cribada o extraída antes de este punto queda permanentemente fuera del TEST confirmatorio, aunque su año de publicación sea reciente.
+Solo después del freeze se ejecutará una búsqueda independiente de publicaciones desde 2024, con cadenas, bases, fecha de consulta y ventana registradas antes de inspeccionar outcomes. Se aplicará el mismo protocolo que en TRAIN_DEV para elegibilidad, deduplicación, extracción, construcción de contrastes S/SB y QA, sin usar el TEST para ajustar el modelo; los estudios elegibles y no utilizados previamente en desarrollo constituirán el candidato TEST. La evaluación se realizará una sola vez; si el test contiene <10 estudios independientes o <30 efectos primarios se declarará underpowered y no se utilizará para justificar cambios del modelo. Cualquier modificación motivada por su rendimiento inicia un nuevo ciclo de desarrollo y deja de ser validación externa confirmatoria.
+3.18. Software, versionado y reproducibilidad
+La gestión documental se implementa en Google Drive/Google Sheets y scripts reproducibles de inventario; la base relacional activa es TFM_ML_DATABASE_V3, esquema 3.6.0, sobre el corpus v1.5. La finalización de datos se ejecuta en Python/Jupyter mediante SynerPlant_FINAL_DATABASE_BUILDER_v1.ipynb; el aprendizaje automático se mantendrá en un notebook distinto. La base pre-ML conserva código, configuraciones, logs, manifests, diccionarios, tablas derivadas, QA y checksums; los documentos sujetos a copyright permanecen fuera del repositorio público salvo licencia compatible.
+Cada build registra fecha/hora, versiones de dependencias, configuración, fingerprints SHA-256 de tablas exportadas, versión del vocabulario y estado de los acceptance gates. El objetivo de reproducibilidad es que cualquier valor de una tabla o figura final pueda rastrearse hacia atrás hasta el contraste, la medición raw y la localización exacta en el artículo o suplemento.
+3.19. Criterios de reporte y transparencia
+El reporte distingue claramente: (i) reglas prespecificadas; (ii) decisiones de extracción/QA tomadas sin observar rendimiento predictivo; (iii) análisis secundarios; y (iv) extensiones exploratorias. Se documentan el carácter curado y no exhaustivo del corpus, la heterogeneidad de protocolos, missingness, varianzas ausentes, unidades experimentales ambiguas, categorías con poco soporte y concentración de evidencia en determinados productos/cultivares/sistemas. La falta de datos suficiente para un modelo complejo se reporta como resultado metodológico, no se corrige ampliando retrospectivamente el target o relajando reglas de independencia.
+Los resultados predictivos se presentan junto con incertidumbre y aplicabilidad. Un modelo complejo solo se considera preferible si mejora de forma estable frente a baselines en validación agrupada y mantiene un comportamiento razonable en los análisis de robustez; en caso contrario se reporta predictibilidad limitada como hallazgo informativo.
+3.20. Referencias metodológicas
+1. Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., et al. (2021). The PRISMA 2020 statement: an updated guideline for systematic reviews. BMJ, 372, n71. https://doi.org/10.1136/bmj.n71.
+2. Rethlefsen, M. L., Kirtley, S., Waffenschmidt, S., Ayala, A. P., Moher, D., Page, M. J., Koffel, J. B., & PRISMA-S Group. (2021). PRISMA-S: an extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews. Systematic Reviews, 10, 39. https://doi.org/10.1186/s13643-020-01542-z.
+3. Hedges, L. V., Gurevitch, J., & Curtis, P. S. (1999). The meta-analysis of response ratios in experimental ecology. Ecology, 80, 1150–1156. https://doi.org/10.1890/0012-9658(1999)080[1150:TMAORR]2.0.CO;2.
+4. Viechtbauer, W. (2010). Conducting Meta-Analyses in R with the metafor Package. Journal of Statistical Software, 36(3), 1–48. https://doi.org/10.18637/jss.v036.i03.
+5. Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., & Gulin, A. (2018). CatBoost: unbiased boosting with categorical features. Advances in Neural Information Processing Systems, 31.
+6. Iglewicz, B., & Hoaglin, D. C. (1993). How to Detect and Handle Outliers. ASQC Quality Press.
+4. Resultados
+4.1. Selección de estudios y diagrama PRISMA
+4.2. Características de la base de evidencia
+4.3. Distribución de genotipos, bioestimulantes, estreses y sistemas de cultivo
+4.4. Efectos globales y heterogeneidad por familia de endpoint
+4.5. Moderadores de la eficacia y meta-regresión
+4.6. Interacción estrés × bioestimulante
+4.7. Interacción A × B: sinergia, aditividad y antagonismo
+4.8. Rendimiento predictivo de los modelos
+4.9. Validación agrupada por estudio y validación temporal
+4.10. Generalización fuera de dominio
+4.11. Calibración e incertidumbre predictiva
+4.12. Interpretabilidad y dominio de aplicabilidad
+4.13. Prototipo SynerPlant Evidence
+4.14. Análisis de sensibilidad y robustez
+5. Discusión
+5.1. Marco para interpretar la eficacia media frente a la eficacia dependiente del contexto
+La discusión final deberá distinguir rigurosamente entre “un efecto promedio positivo” y “una respuesta predecible para un contexto concreto”. Los meta-análisis de referencia ofrecen benchmarks útiles: efectos medios positivos en campo (Li et al., 2022), efectos más moderados en un programa europeo con inclusión sistemática de experimentos (Nkebiwe et al., 2024) y respuestas de extractos de algas condicionadas por formulación y estrategia de aplicación (Pérez-Oñate et al., 2026). Si el TFM reproduce un efecto medio positivo pero los modelos contextuales no superan claramente al baseline bajo validación por estudio, la conclusión correcta será que la evidencia permite síntesis poblacional pero no aún predicción individual robusta. Ese resultado sería científicamente informativo y evitaría sobreprometer una capacidad de decisión que los datos no sostienen.
+5.2. Relevancia biológica de los moderadores
+Los moderadores con valor predictivo deberán interpretarse a la luz de mecanismos plausibles. Una interacción con severidad de sequía podría relacionarse con ajuste osmótico, mantenimiento de fotosíntesis o priming molecular (Kanojia et al., 2024; Leporino et al., 2024); una interacción con salinidad puede reflejar homeostasis iónica, membranas o señalización hormonal (Zhang et al., 2023; Benito et al., 2025); y una interacción con temperatura podría asociarse a protección fotosintética, antioxidantes o respuestas de estrés térmico (Francesca et al., 2022; Sariñana-Aldaco et al., 2025). Sin embargo, el objetivo del modelo no será inferir mecanismos moleculares no medidos. Las variables explicativas indicarán asociaciones transferibles, que solo se considerarán mecanísticas cuando exista evidencia experimental independiente.
+5.3. Genotipo y sistema de cultivo como fuentes de transportabilidad limitada
+La respuesta diferencial de cultivares frente a un mismo bioestimulante bajo salinidad (Ntanasi et al., 2024) y la divergencia entre genotipos bajo estrés combinado (Francesca et al., 2022) hacen probable que el genotipo sea un moderador importante. A la vez, muchos estudios no caracterizan suficientemente el cultivar, lo que puede limitar el aprendizaje. El sistema de cultivo también debe discutirse como un eje de transportabilidad: un efecto observado en cámara o hidroponía no puede trasladarse automáticamente a campo. El meta-análisis BIOFECTOR muestra diferencias entre condiciones controladas y campo (Nkebiwe et al., 2024), y estudios de procesamiento de tomate evidencian que la variación interanual puede superar el efecto de los bioestimulantes (Fusco et al., 2025).
+5.4. Qué significaría demostrar o no demostrar interacción
+Para la interacción estrés × bioestimulante, un Iestrés×B positivo y reproducible indicaría que el beneficio relativo aumenta bajo estrés, un resultado más fuerte que mostrar dos comparaciones separadas con distintos valores de p. Para A × B, la discusión no debe llamar sinergia a cualquier combinación superior al control. Se contrastará la interacción con una referencia matemática predefinida y con su incertidumbre. Los trabajos combinatorios recientes demuestran que existen formulaciones con comportamientos distintos y que la interacción entre componentes es una cuestión activa de investigación (Benito et al., 2022; Campana et al., 2025; Benito et al., 2025; Garrido-Ruiz et al., 2026). Si el subconjunto factorial es pequeño, la principal contribución podrá ser una estimación transparente de la escasez y de qué combinaciones merecen ensayos adicionales.
+5.5. Generalización, incertidumbre y valor de la abstención
+La métrica crítica no será el R² más alto en un split aleatorio, sino la capacidad de predecir estudios completos y publicaciones futuras. Un descenso de rendimiento en validación temporal sería esperable y debe interpretarse como una estimación más honesta, no como un fracaso metodológico (Morales & Villalobos, 2023). Del mismo modo, un intervalo amplio en un contexto poco representado contiene información operacional: indica que el experimento siguiente tiene valor para reducir incertidumbre. En agricultura digital, la predicción conforme ofrece una vía para expresar esa incertidumbre de manera calibrada (Farag et al., 2025).
+5.6. Relación con el estado del arte de IA y bioestimulantes
+La discusión deberá diferenciar el presente enfoque de la optimización de formulaciones dentro de un único experimento. Gammoudi y Ferchichi combinaron ANN y optimización multiobjetivo para proponer una mezcla de bioestimulantes bajo estrés (Gammoudi & Ferchichi, 2025); este TFM, en cambio, evalúa transferencia entre estudios y contextos, con uncertainty y evidencia trazable. La revisión de bioestimulantes de nueva generación sitúa precisamente la integración digital y la estandarización de evidencia entre los retos de la siguiente fase del sector (Mashabela et al., 2025). El valor añadido del proyecto dependerá, por tanto, de su generalización, trazabilidad y calibración, no de la complejidad del algoritmo.
+5.7. Limitaciones previstas
+Las principales limitaciones serán publicación selectiva de resultados positivos, descripción incompleta de la composición de productos comerciales, cambios de formulación bajo el mismo nombre, heterogeneidad de dosis/unidades, confusión entre estrés y otras prácticas de manejo, diversidad de endpoints y dependencia estadística dentro de artículos. La revisión sistemática y los modelos multinivel reducen algunos problemas, pero no convierten evidencia observacional entre estudios en causalidad. Además, la ausencia de una variable en los artículos no implica que sea biológicamente irrelevante. Estas limitaciones deberán acompañar cualquier salida del prototipo.
+5.8. Implicaciones para I+D, regulación y comercialización
+El producto de transferencia tendría mayor valor como herramienta B2B de inteligencia de evidencia para fabricantes de bioestimulantes, fertilizantes, empresas de agricultura protegida y CRO agrícolas que como app de recomendación directa al agricultor. Su función sería contestar “qué sabemos, con qué incertidumbre y qué experimento conviene priorizar”, no indicar una dosis comercial. Este posicionamiento está alineado con la necesidad regulatoria de relacionar claims con plantas y condiciones específicas (Reglamento (UE) 2019/1009; Termorshuizen et al., 2026) y con el objetivo de PLANTsynergy de desarrollar soluciones eficaces y transferibles para el sector agroalimentario (PLANTsynergy, 2026).
+6. Conclusiones
+6.1. Conclusiones sustentadas por el planteamiento y la literatura
+La eficacia de los bioestimulantes es suficientemente heterogénea entre cultivos, ambientes, formulaciones y condiciones de aplicación como para justificar un enfoque explícitamente dependiente del contexto, en lugar de una única estimación media.
+El corpus de tomate reúne evidencia experimental bajo sequía y salinidad y un conjunto menor bajo estrés térmico y biótico. La disponibilidad de rendimiento de frutos y biomasa seca, así como la independencia de los contrastes de cada endpoint, se establecerá tras la verificación de las mediciones.
+La novedad no reside en “usar IA”, sino en combinar síntesis multiesstudio, validación sin fuga de información, incertidumbre calibrada, detección fuera de dominio y contraste explícito de interacciones.
+La sinergia A × B debe mantenerse como objetivo secundario condicionado a disponibilidad de datos; la interacción estrés × bioestimulante ofrece una vía más robusta y abundantemente representada para estudiar dependencia del contexto.
+Un prototipo de apoyo a I+D es científicamente defendible solo si muestra evidencia y uncertainty y puede abstenerse en regiones sin soporte; una interfaz que oculta la incertidumbre no sería un resultado satisfactorio.
+6.2. Conclusiones empíricas a completar tras el análisis
+Magnitud y heterogeneidad de los efectos globales.
+Moderadores que aportan información reproducible.
+Rendimiento y calibración de los modelos bajo validación agrupada y temporal.
+Alcance real del dominio de aplicabilidad.
+Evidencia de interacción estrés × bioestimulante y A × B.
+Utilidad y limitaciones del prototipo SynerPlant Evidence.
+7. Contribución a los Objetivos de Desarrollo Sostenible
+La normativa de la Facultad de Biología exige identificar y reflexionar sobre la contribución del TFM a los Objetivos de Desarrollo Sostenible (Universitat de Barcelona, 2024a). La contribución del proyecto es principalmente indirecta: no produce por sí mismo un nuevo bioestimulante, sino infraestructura de evidencia para seleccionar mejor intervenciones y experimentos.
+7.1. ODS 2. Hambre cero
+El proyecto se relaciona con la meta de sistemas de producción sostenibles y resilientes al clima al estudiar intervenciones destinadas a mantener productividad bajo sequía, salinidad y calor. La contribución será significativa solo si el sistema distingue resultados robustos de respuestas contextuales o inciertas; promover intervenciones de baja eficacia podría aumentar costes sin mejorar resiliencia.
+7.2. ODS 12. Producción y consumo responsables
+La priorización basada en evidencia puede reducir ensayos redundantes y favorecer el uso eficiente de insumos. Además, el encaje con líneas de valorización de subproductos, como el trabajo de PLANTsynergy con residuos de Opuntia y el desarrollo circular de CAFPROM, conecta la lógica del proyecto con economía circular (Mesa et al., 2026; PLANTsynergy, 2025). No obstante, un aumento indiscriminado del número de aplicaciones de bioestimulantes sería contrario a este ODS; por ello el prototipo debe favorecer experimentos informativos y no maximizar consumo de productos.
+7.3. ODS 13. Acción por el clima
+La adaptación agrícola a episodios de sequía y calor es el vínculo más directo. La herramienta puede ayudar a identificar en qué contextos existe evidencia de mitigación del estrés y dónde faltan datos. Su contribución climática será de adaptación, no una demostración directa de reducción de emisiones.
+7.4. ODS 9. Industria, innovación e infraestructura
+El componente de transferencia combina infraestructura de datos, métodos de AM reproducibles y una interfaz de apoyo a I+D. La comercialización potencial se plantea como servicio de inteligencia de evidencia para desarrollo de productos y priorización experimental, coherente con la orientación de transferencia de PLANTsynergy (PLANTsynergy, 2026; PLANTsynergy, 2025).
+7.5. Riesgos y responsabilidad
+La contribución a los ODS no debe asumirse automáticamente por utilizar términos como “sostenible” o “IA”. Los riesgos incluyen sesgo de publicación, modelos mal calibrados, exclusión de cultivares o sistemas poco representados, sobreconfianza del usuario y posible desplazamiento de ensayos agronómicos necesarios. La mitigación propuesta consiste en trazabilidad, uncertainty explícita, domain-of-applicability, no emitir recomendaciones fuera de evidencia y mantener la validación experimental como requisito para cualquier claim comercial.
+8. Bibliografía
+Se priorizan publicaciones de 2021-2026. Se mantienen únicamente referencias metodológicas anteriores cuando son fundamentales para el cálculo de tamaños de efecto o el meta-análisis.
+Asif, A., Ali, M., Qadir, M. et al. (2023). Enhancing crop resilience by harnessing the synergistic effects of biostimulants against abiotic stress. Frontiers in Plant Science, 14, 1276117. https://doi.org/10.3389/fpls.2023.1276117
+Behera, B.S. (2026). AI-Enabled Agricultural Evaluation of Seaweed Biostimulants for Tomato Growth, Yield, and Quality. Worldwide Journal of Creative Research and Thoughts, 2(3), 52–60. https://wjcrt.org/index.php/wjcrt/article/view/51
+Benito, P., Ligorio, D., Bellón, J., Yenush, L. & Mulet, J.M. (2022). A fast method to evaluate in a combinatorial manner the synergistic effect of different biostimulants for promoting growth or tolerance against abiotic stress. Plant Methods, 18, 111. https://doi.org/10.1186/s13007-022-00943-6
+Benito, P., Trigueros, S., Celdrán, M. et al. (2025). The combined effect of a newly designed biostimulant and a plant growth-promoting bacterium increases tomato yield under salt stress by increasing the cytokinin isopentenyladenine riboside content. Chemical and Biological Technologies in Agriculture, 12, 117. https://doi.org/10.1186/s40538-025-00825-8
+Campana, E., Consentino, B.B., Vultaggio, L. et al. (2025). The Action of Plant Protein Hydrolysates, Plant Extracts and Trichoderma atroviride Modulates the Performance of Cherry Tomato Plants Cultivated in a Soilless System. Horticulturae, 11, 248. https://doi.org/10.3390/horticulturae11030248
+Campobenedetto, C., Agliassa, C., Mannino, G. et al. (2021). A Biostimulant Based on Seaweed (Ascophyllum nodosum and Laminaria digitata) and Yeast Extracts Mitigates Water Stress Effects on Tomato (Solanum lycopersicum L.). Agriculture, 11, 557. https://doi.org/10.3390/agriculture11060557
+Di Sario, L., Boeri, P., Matus, J.T. & Pizzio, G.A. (2025). Plant Biostimulants to Enhance Abiotic Stress Resilience in Crops. International Journal of Molecular Sciences, 26, 1129. https://doi.org/10.3390/ijms26031129
+Domingo, G., Marsoni, M., Álvarez-Viñas, M., Torres, M.D., Domínguez, H. & Vannini, C. (2023). The Role of Protein-Rich Extracts from Chondrus crispus as Biostimulant and in Enhancing Tolerance to Drought Stress in Tomato Plants. Plants, 12, 845. https://doi.org/10.3390/plants12040845
+Farag, M.M., Emam, A., Leonhardt, J. & Roscher, R. (2025). Enhancing decision support in crop production: Analyzing conformal prediction for uncertainty quantification. Computers and Electronics in Agriculture, 237, 110559. https://doi.org/10.1016/j.compag.2025.110559
+Francesca, S., Cirillo, V., Raimondi, G., Maggio, A., Barone, A. & Rigano, M.M. (2021). A Novel Protein Hydrolysate-Based Biostimulant Improves Tomato Performances under Drought Stress. Plants, 10, 783. https://doi.org/10.3390/plants10040783
+Francesca, S., Najai, S., Zhou, R. et al. (2022). Phenotyping to dissect the biostimulant action of a protein hydrolysate in tomato plants under combined abiotic stress. Plant Physiology and Biochemistry, 179, 32-43. https://doi.org/10.1016/j.plaphy.2022.03.012
+Franzoni, G., Cocetta, G., Prinsi, B., Ferrante, A. & Espen, L. (2022). Biostimulants on Crops: Their Impact under Abiotic Stress Conditions. Horticulturae, 8, 189. https://doi.org/10.3390/horticulturae8030189
+Fusco, G.M., Burato, A., Pentangelo, A., Carillo, P. & Parisi, M. (2025). Processing Tomato Responses to Plant-Based Biostimulants Are Modulated by Environmental Conditions. Physiologia Plantarum, 177, e70450. https://doi.org/10.1111/ppl.70450
+Gammoudi, N. & Ferchichi, A. (2025). Artificial neural network-multi-objective genetic algorithm hybrid and Simulink simulation: powerful candidates for designing synergistic biostimulants formulation to promote plant resilience against salt and drought stress. Results in Engineering, 28, 108375. https://doi.org/10.1016/j.rineng.2025.108375
+Gardiner-Piggott, A., McAinsh, M., Toledo-Ortiz, G. & Orr, D. (2025). The Effects of High Temperature Stress and Its Mitigation Through the Application of Biostimulants in Controlled Environment Agriculture. Agronomy, 15. https://doi.org/10.3390/agronomy15040912
+Garrido-Ruiz, C., Frisby, J., Kaundal, A., Sun, Y. & de Oliveira, M.M.T. (2026). Screening Biostimulants to Enhance Early Growth of Tomato (Solanum lycopersicum L.) Under Water-Limited Conditions. Horticulturae, 12, 432. https://doi.org/10.3390/horticulturae12040432
+Gedeon, S., Ioannou, A., Balestrini, R., Fotopoulos, V. & Antoniou, C. (2022). Application of Biostimulants in Tomato Plants (Solanum lycopersicum) to Enhance Plant Growth and Salt Stress Tolerance. Plants, 11, 3082. https://doi.org/10.3390/plants11223082
+Hedges, L.V., Gurevitch, J. & Curtis, P.S. (1999). The meta-analysis of response ratios in experimental ecology. Ecology, 80, 1150-1156. https://doi.org/10.1890/0012-9658(1999)080[1150:TMAORR]2.0.CO;2
+Hernández-Herrera, R.M., Sánchez-Hernández, C., Palmeros-Suárez, P.A. et al. (2022). Seaweed Extract Improves Growth and Productivity of Tomato Plants under Salinity Stress. Agronomy, 12, 2495. https://doi.org/10.3390/agronomy12102495
+Iacuzzi, N., Tuttolomondo, T., Farruggia, D., Tortorici, N., Alaimo, F., De Santis, D., Rossini, F. & Di Miceli, G. (2024). A Two-Year Evaluation of Biostimulant Effects on Yield and Quality Parameters of Tomato Landrace Pizzutello Delle Valli Ericine Cultivated Without Irrigation. Journal of Sustainable Agriculture and Environment, 3. https://doi.org/10.1002/sae2.70028
+Ikuyinminu, E., Goñi, O. & O’Connell, S. (2022). Enhancing Irrigation Salinity Stress Tolerance and Increasing Yield in Tomato Using a Precision Engineered Protein Hydrolysate and Ascophyllum nodosum-Derived Biostimulant. Agronomy, 12, 809. https://doi.org/10.3390/agronomy12040809
+Kadoglidou, K.I., Anthimidou, E., Krommydas, K. et al. (2025). Effect of Biostimulants on Drought Tolerance of Greenhouse-Grown Tomato. Horticulturae, 11, 601. https://doi.org/10.3390/horticulturae11060601
+Kanojia, A., Lyall, R., Sujeeth, N. et al. (2024). Physiological and molecular insights into the effect of a seaweed biostimulant on enhancing fruit yield and drought tolerance in tomato. Plant Stress, 14, 100692. https://doi.org/10.1016/j.stress.2024.100692
+Kanojia, A. et al. (2024). Raw metabolomics data associated with drought/biostimulant treatments in Micro-Tom tomato. Zenodo. https://doi.org/10.5281/zenodo.14444961
+Krid, A. et al. (2023). The potential of seaweed extracts as a biostimulant for improving salt stress tolerance of Solanum lycopersicum L. South African Journal of Botany, 161, 305-316. https://doi.org/10.1016/j.sajb.2023.08.020
+Leporino, M., Rouphael, Y., Bonini, P., Colla, G. & Cardarelli, M. (2024). Protein hydrolysates enhance recovery from drought stress in tomato plants: phenomic and metabolomic insights. Frontiers in Plant Science, 15, 1357316. https://doi.org/10.3389/fpls.2024.1357316
+Li, J., Van Gerrewey, T. & Geelen, D. (2022). A Meta-Analysis of Biostimulant Yield Effectiveness in Field Trials. Frontiers in Plant Science, 13, 836702. https://doi.org/10.3389/fpls.2022.836702
+Li, D., Li, P., Zhang, C., Nie, L., Ma, J., Li, Q., Zhang, R. & Wang, X.X. (2026). Meta-analysis of seaweed extracts as multifunctional biostimulants improving growth, yield, quality, and physiology in tomato (Solanum lycopersicum L.). Scientia Horticulturae, 361, 114825. https://doi.org/10.1016/j.scienta.2026.114825
+Ma, Y., Freitas, H. & Dias, M.C. (2022). Strategies and prospects for biostimulants to alleviate abiotic stress in plants. Frontiers in Plant Science, 13, 1024243. https://doi.org/10.3389/fpls.2022.1024243
+Martínez-Lorente, S.E., Martí-Guillén, J.M., Pedreño, M.A., Almagro, L. & Sabater-Jara, A.B. (2024). Higher Plant-Derived Biostimulants: Mechanisms of Action and Their Role in Mitigating Plant Abiotic Stress. Antioxidants, 13, 318. https://doi.org/10.3390/antiox13030318
+Mashabela, M.D., Terefe, T., Kerchev, P., Sitole, L. & Mhlongo, M.I. (2025). Next-generation biostimulants: molecular insights, digital integration, and regulatory frameworks for sustainable agriculture. Frontiers in Plant Science, 16, 1710899. https://doi.org/10.3389/fpls.2025.1710899
+Mesa, T., Villadangos, S., Boyano-Casimiro, L. & Munné-Bosch, S. (2026). A biostimulant derived from Opuntia ficus-indica residue valorisation modulates tomato ripening and quality under contrasting water regimes. Plant Science, 368, 113159. https://doi.org/10.1016/j.plantsci.2026.113159
+Morales, A. & Villalobos, F.J. (2023). Using machine learning for crop yield prediction in the past or the future. Frontiers in Plant Science, 14, 1128388. https://doi.org/10.3389/fpls.2023.1128388
+Morales-Sierra, S. et al. (2023). Biostimulant activity of Galaxaura rugosa seaweed extracts against water deficit stress in tomato seedlings involves activation of ABA signaling. Frontiers in Plant Science, 14, 1251442. https://doi.org/10.3389/fpls.2023.1251442
+Niu, C., Wang, G., Sui, J., Liu, G., Ma, F. & Bao, Z. (2022). Biostimulants alleviate temperature stress in tomato seedlings. Scientia Horticulturae, 293, 110712. https://doi.org/10.1016/j.scienta.2021.110712
+Nkebiwe, P.M., Stevens Lekfeldt, J.D., Symanczik, S. et al. (2024). Effectiveness of bio-effectors on maize, wheat and tomato performance and phosphorus acquisition from greenhouse to field scales in Europe and Israel: a meta-analysis. Frontiers in Plant Science, 15, 1333249. https://doi.org/10.3389/fpls.2024.1333249
+Ntanasi, T., Karavidas, I., Spyrou, G.P. et al. (2024). Plant Biostimulants Enhance Tomato Resilience to Salinity Stress: Insights from Two Greek Landraces. Plants, 13, 1404. https://doi.org/10.3390/plants13101404
+Page, M.J., McKenzie, J.E., Bossuyt, P.M. et al. (2021). The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. BMJ, 372, n71. https://doi.org/10.1136/bmj.n71
+Pérez-Oñate, C.J., Malvas Nicolau, M.C., Ferreira, T.C. et al. (2026). Crop yield responses to seaweed extract-based biostimulants depend on application strategy, formulation, and extraction methods: a meta-analysis. Frontiers in Plant Science, 17, 1803269. https://doi.org/10.3389/fpls.2026.1803269
+Rethlefsen, M.L., Kirtley, S., Waffenschmidt, S. et al. (2021). PRISMA-S: an extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews. Systematic Reviews, 10, 39. https://doi.org/10.1186/s13643-020-01542-z
+Rico-Chávez, A.K., Franco, J.A., Fernandez-Jaramillo, A.A., Contreras-Medina, L.M., Guevara-González, R.G. & Hernández-Escobedo, Q. (2022). Machine Learning for Plant Stress Modeling: A Perspective towards Hormesis Management. Plants, 11, 970. https://doi.org/10.3390/plants11070970
+Sariñana-Aldaco, O., Rodríguez-Jasso, R.M., Benavides-Mendoza, A. et al. (2025). Brown Algae Extracts Increase the Tolerance of Tomato Plants to High Temperatures by Improving Morphological, Physiological, Metabolomic, and Transcriptional Parameters. Plants, 14, 2996. https://doi.org/10.3390/plants14192996
+Shawon, S.M., Ema, F.B., Mahi, A.K., Niha, F.L. & Tarif, M.Z.H. (2025). Crop yield prediction using machine learning: An extensive and systematic literature review. Smart Agricultural Technology, 10, 100718. https://doi.org/10.1016/j.atech.2024.100718
+Termorshuizen, A.J., Giller, K.E., Struik, P.C. & Kuyper, T.W. (2026). Proper efficacy testing should be mandatory for registration of biostimulants. Outlook on Agriculture, 55(1), 3-12. https://doi.org/10.1177/00307270261419517
+Trentin, C., Ampatzidis, Y., Tasioulas, S. & Tsouvaltzis, P. (2025). Optimizing tomato yield prediction using phenologically timed UAV-based spectral data and machine learning. Smart Agricultural Technology, 12, 101158. https://doi.org/10.1016/j.atech.2025.101158
+Viechtbauer, W. (2010). Conducting Meta-Analyses in R with the metafor Package. Journal of Statistical Software, 36(3), 1-48. https://doi.org/10.18637/jss.v036.i03
+Wang, W., Zheng, W., Lv, H. et al. (2022). Animal-derived plant biostimulant alleviates drought stress by regulating photosynthesis, osmotic adjustment, and antioxidant systems in tomato plants. Scientia Horticulturae, 305, 111365. https://doi.org/10.1016/j.scienta.2022.111365
+Zhang, L., Freschi, G., Rouphael, Y., De Pascale, S. & Lucini, L. (2023). The differential modulation of secondary metabolism induced by a protein hydrolysate and a seaweed extract in tomato plants under salinity. Frontiers in Plant Science, 13, 1072782. https://doi.org/10.3389/fpls.2022.1072782
+Unión Europea (2019, texto consolidado). Reglamento (UE) 2019/1009 por el que se establecen disposiciones relativas a la puesta a disposición en el mercado de los productos fertilizantes UE. PFC 6: bioestimulantes de plantas. Enlace
+Universitat de Barcelona, Facultat de Biologia (2024a). Normativa del Treball de Fi de Màster (TFM) de la Facultat de Biologia, aprobada por la Comisión Académica el 25 de abril de 2024 y por la Junta de Facultad el 2 de mayo de 2024. Enlace
+Universitat de Barcelona, Facultat de Biologia (2026). Máster Universitario en Agrobiología Ambiental: organización, metodología y Trabajo Final de Máster. Curso 2026-2027. Enlace
+Universitat de Barcelona (Memoria Verifica publicada). Máster Universitario en Agrobiología Ambiental. Directrices para la redacción de la memoria del TFM: estructura, citación y formato. Enlace
+PLANTsynergy, Universitat de Barcelona (2026). AgriFood Biotechnology: crop tolerance to abiotic and biotic stressors and plant biostimulants. Enlace
+PLANTsynergy, Universitat de Barcelona (2025). Validation of CAFPROM, a circular economy-based biostimulant for improving yield and quality of tomatoes. Knowledge Industry Programme 2025. Enlace
+Anexo A. Estrategias de búsqueda previstas
+Las cadenas se conservarán exactamente como se ejecuten, con fecha, base, interfaz, filtros y número de resultados. La siguiente matriz define los bloques conceptuales mínimos; la sintaxis se adaptará a cada base.
+Bloque
+Términos
+Cultivo
+tomato* OR "Solanum lycopersicum"
+Bioestimulante
+biostimulant* OR "seaweed extract*" OR "protein hydrolysate*" OR humic OR fulvic OR botanical OR Trichoderma OR mycorrhiz* OR PGPR OR "plant growth-promoting bacter*"
+Estrés
+drought OR "water deficit" OR salinity OR salt OR heat OR "high temperature" OR "abiotic stress" OR "biotic stress" OR disease OR pathogen* OR Fusarium OR Verticillium OR nematod* OR "root-knot"
+Interacción
+combination OR combined OR factorial OR synerg* OR additive OR antagonis*
+Límites
+Corpus TRAIN_DEV: publicaciones hasta 2023 inclusive, ya recopiladas y pendientes de completar/verificar para modelado. Corpus TEST externo: publicaciones desde 2024, aún por recopilar tras MODEL_FREEZE y procesar con el mismo protocolo; se excluirá cualquier estudio utilizado previamente para desarrollar la metodología o los modelos.
+Anexo B. Esquema mínimo del dataset analítico
+study_id; experiment_id; citation; DOI; year; country; cultivar; growth_stage; system; substrate; stress_factor_id; stress_domain; stress_family; stress_type; stress_level; stress_duration; stressor_or_pathogen; strain_or_isolate; inoculum; inoculation_method; inoculation_timing; temperature; relative_humidity; VPD; irrigation; pH; EC; organic_matter; biostimulant_class; product; source; composition; microorganism; strain; dose; dose_unit; route; frequency; application_stage; outcome_family; outcome_name; endpoint_role; yield_scope; yield_marketability; yield_mass_basis; yield_denominator; harvest_window_type; harvest_is_cumulative; biomass_organ_scope; timepoint; mean_treatment; sd_treatment; n_treatment; mean_control; sd_control; n_control; reported_effect_id; reported_metric; reported_value; lnRR; var_lnRR; shared_control_id; dependency_cluster_id; provenance_id; extraction_run_id; quality_flags; extraction_source; extractor; verification_status.
+Anexo C. Criterios de decisión para el objetivo de sinergia
+Antes de iniciar el modelado A × B se realizará un audit de factibilidad. El objetivo predictivo de sinergia se mantendrá solo si existe un número suficiente de estudios independientes y diversidad de combinaciones para evitar que el modelo memorice productos concretos. Si no se alcanza esa masa crítica, la tesis conservará: (i) síntesis descriptiva de los contrastes disponibles; (ii) estimación meta-analítica de IAB cuando sea posible; y (iii) mapa de vacíos de evidencia para proponer experimentos prioritarios. Esta regla se define a priori para impedir que la conclusión dependa de obtener un resultado “positivo”.
+

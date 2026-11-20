@@ -1,0 +1,9 @@
+endpoint,role,type,studies,k,mean_of_study_means,ci_lo,ci_hi,method
+yield,train,SxB,47,355,0.220254217078217,0.0899292840381004,0.350579150118333,unweighted t-CI over study means
+yield,train,AxB,8,34,-0.73970693423916,-1.33065543331889,-0.148758435159426,unweighted t-CI over study means
+yield,test,SxB,10,52,0.16350278188049,-0.0261078852982142,0.353113449059194,unweighted t-CI over study means
+yield,test,AxB,3,5,-0.362421880650206,-1.88167804142132,1.15683428012091,unweighted t-CI over study means
+dry_biomass,train,SxB,115,563,0.1321694947375,0.0686901382647123,0.195648851210287,unweighted t-CI over study means
+dry_biomass,train,AxB,10,57,-0.18661674863223,-0.318665859204249,-0.0545676380602104,unweighted t-CI over study means
+dry_biomass,test,SxB,21,139,0.1416526418475,-0.0145201447848002,0.297825428479801,unweighted t-CI over study means
+dry_biomass,test,AxB,8,30,-0.077814246167045,-0.260587803992236,0.104959311658145,unweighted t-CI over study means

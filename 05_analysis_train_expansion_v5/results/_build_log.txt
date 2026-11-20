@@ -1,0 +1,54 @@
+      table                                                                                                            step  contrasts  studies  clusters                                          note
+0     yield                                                                    00 endpoint=FRUIT_YIELD (all contrast types)       1508       85        82                                              
+1     yield                                                                                       01 dataset_role TRAIN_DEV       1508       85        82                                              
+2     yield                                                                     02 drop TEMPORAL_OR_DATASET_ROLE_INELIGIBLE       1508       85        82                                              
+3     yield                                                                                  03 lnRR computable (means > 0)       1507       85        82                                              
+4     yield                                                                                      04 drop DUPLICATE_EXCLUDED       1507       85        82  no contrast carries this flag in this freeze
+5     yield  05 contrast_type in {SB_vs_S, B_vs_C} (SxB/AxB/B_MAIN_EFFECT kept in separate table; S_vs_C -> moderator only)        901       79        78                                              
+6     yield                                                                                    06 drop NON_MARKETABLE yield        875       79        78                                              
+7     yield                                                                                                     tier STRICT        174       16        16                                              
+8     yield                                                                                                    tier ASSUMED        388       46        46                                              
+9     yield                                                                                                      tier BROAD        204       22        22                                              
+10    yield                                                                                            tier UNIT_UNRESOLVED         45        7         7                                              
+11    yield                                                                                                      tier EARLY         24        3         3                                              
+12    yield                                                                                                        tier DRY         40        5         5                                              
+13    yield                                                                                           tier OTHER_DEFINITION          0        0         0                                              
+14    yield                                                                                           contrast_type SB_vs_S        593       74        74                                              
+15    yield                                                                                            contrast_type B_vs_C        282       57        57                                              
+16    yield                                                                          boxplot (BOX_CENTRE_ASSUMED_MEAN) rows         18        3         3                                              
+17  biomass                                                                    00 endpoint=DRY_BIOMASS (all contrast types)       4404      203       202                                              
+18  biomass                                                                                       01 dataset_role TRAIN_DEV       4404      203       202                                              
+19  biomass                                                                     02 drop TEMPORAL_OR_DATASET_ROLE_INELIGIBLE       4394      202       201                                              
+20  biomass                                                                                  03 lnRR computable (means > 0)       4394      202       201                                              
+21  biomass                                                                                      04 drop DUPLICATE_EXCLUDED       4394      202       201  no contrast carries this flag in this freeze
+22  biomass                                                                           05 contrast_type in {SB_vs_S, B_vs_C}       2686      202       201                                              
+23  biomass                                           06 organ_scope in {SHOOT, WHOLE_PLANT} (ROOT/LEAF/STEM/OTHER dropped)       1510      172       171                                              
+24  biomass                                                                        last timepoint per group (default model)       1452      172       171                                              
+25  biomass                                                                                    all timepoints (sensitivity)       1510      172       171                                              
+26  biomass                                                                                                    boxplot rows          0        0         0                                              
+27  biomass                                                                                 contrast_type SB_vs_S (last tp)        963      164       163                                              
+28  biomass                                                                                  contrast_type B_vs_C (last tp)        489      134       134                                              
+29    yield                                                                      07 DEFAULT model table (boxplots excluded)        857       76        75                                              
+30  biomass                                                      07 DEFAULT model table (boxplots excluded, last timepoint)       1452      172       171                                              
+31    yield                                                         default rows with author SD/SE variance (no imputation)        264       29        29                                              
+32  biomass                                                         default rows with author SD/SE variance (no imputation)        661       86        85                                              
+33    yield                                                                      default SB_vs_S rows with S_vs_C moderator        373       53        53                                              
+                                                       0         1
+table                                              yield   biomass
+groups_total                                        1260      2088
+groups_with_author_sd                                411      1059
+studies_with_author_sd                                32        95
+studies_total                                         79       172
+CV_bar                                          0.289628   0.27473
+CV_bar_sq                                       0.083885  0.075476
+median_n                                             4.0       4.0
+cv_study_p05                                    0.033258  0.038757
+cv_study_median                                 0.103709  0.130373
+cv_study_p95                                    0.586313   0.28176
+contrasts_IMPUTED_MEAN_CV                            574       741
+contrasts_AUTHOR_SD_SE                               264       678
+contrasts_STUDY_PRINTED_CV_OR_LSD_OR_N_IMPUTED        37        91
+contrasts_N_IMPUTED_MEDIAN                            93       349
+contrasts_STUDY_CV_PCT                                18        27
+contrasts_STUDY_LSD                                    0        35
+studies_any_imputed                                   55        92

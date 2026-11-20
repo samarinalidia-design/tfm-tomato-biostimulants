@@ -1,0 +1,12 @@
+{
+  "validated_at": "2026-11-18T11:35:53+00:00",
+  "primary_identical_file_hash": true,
+  "primary_same_ids": true,
+  "primary_max_abs_lnRR_diff": 0.0,
+  "quadruples_same_rows": true,
+  "quadruples_max_abs_D_diff": 2.220446049250313e-16,
+  "rows": 766,
+  "studies": 153,
+  "quadruple_rows": 477,
+  "PASS": true
+}

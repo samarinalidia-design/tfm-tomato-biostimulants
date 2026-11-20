@@ -1,0 +1,121 @@
+{
+  "finished": "2026-11-18T11:39:13+00:00",
+  "minutes": 8.4,
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ],
+  "k": 5,
+  "n_outer_fits": 1750,
+  "feature_sets": {
+    "F0": {
+      "num": [
+        "application_count",
+        "relative_dose",
+        "relative_stress_level"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class_v1",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type"
+      ],
+      "missing_ind": false
+    },
+    "F1": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type"
+      ],
+      "missing_ind": true
+    },
+    "F2": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level",
+        "salinity_dSm_equiv",
+        "drought_supply_pct",
+        "stress_duration_days"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type",
+        "stress_timing",
+        "substrate_type"
+      ],
+      "missing_ind": true
+    },
+    "F3": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level",
+        "salinity_dSm_equiv",
+        "drought_supply_pct",
+        "stress_duration_days",
+        "log_measurement_day"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type",
+        "stress_timing",
+        "substrate_type",
+        "organ_scope_v2",
+        "biomass_denominator_v2"
+      ],
+      "missing_ind": true
+    },
+    "F4": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level",
+        "salinity_dSm_equiv",
+        "drought_supply_pct",
+        "stress_duration_days",
+        "log_measurement_day"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type",
+        "stress_timing",
+        "substrate_type",
+        "organ_scope_v2",
+        "biomass_denominator_v2"
+      ],
+      "missing_ind": true,
+      "eb_encode": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Prefer: python tools/tfm.py configure --corpus "/path/TFM_CORPUS_NORMALIZED"
+# Local offline copies of the authorized Google Drive source folder only.
+workbook: "/path/TFM_CORPUS_NORMALIZED/TFM_DATABASE_CLASS_A_WORKING.xlsx"
+fulltext_root: "/path/TFM_CORPUS_NORMALIZED/01_fulltext"
+supplements_root: "/path/TFM_CORPUS_NORMALIZED/02_supplements"
+docling_root: "/path/TFM_CORPUS_NORMALIZED/04_extracted_json/docling_local_sourceqa_v4_3_rerun_380"
+figures_root: "/path/TFM_CORPUS_NORMALIZED/05_exports/figure_extraction_v1_2_queue_aligned"
+docling_map_csv: ""
+docling_study_globs: ["{study_id}", "**/{study_id}"]
+# No fuzzy substring fallback. Missing parsed text is not proof of missing data.
+context: {max_chars: 120000}

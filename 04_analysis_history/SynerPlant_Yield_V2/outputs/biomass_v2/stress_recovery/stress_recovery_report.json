@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-11-18T11:30:31+00:00",
+  "status": "BIOMASS_V2_TRAIN",
+  "coverage": {
+    "primary_contrasts": 766,
+    "primary_studies": 153,
+    "linked_contrasts": 477,
+    "linked_studies": 109,
+    "arm_se_imputed_share": 0.3658280922431866,
+    "pooled_cv": 0.13804713804713803,
+    "median_n": 5.0,
+    "linked_by_stress": {
+      "BIOTIC": 6,
+      "COLD": 7,
+      "COMBINED_MULTI_STRESS": 4,
+      "DROUGHT": 35,
+      "HEAT": 11,
+      "SALINITY": 51,
+      "TOXICITY_CONTAMINANT": 1
+    }
+  },
+  "descriptives": {
+    "y": {
+      "median": 0.2464008321941888,
+      "median_of_study_means": 0.30990395042097924
+    },
+    "D": {
+      "median": -0.3794896217049037,
+      "median_of_study_means": -0.4232218296974234
+    },
+    "eB": {
+      "median": 0.1505728584793744,
+      "median_of_study_means": 0.1913845151977669
+    },
+    "RL": {
+      "median": 0.5699180080093998,
+      "median_of_study_means": 0.6894254599655454
+    }
+  },
+  "slopes_observed": {
+    "D": {
+      "pooled": -0.2769391574252156,
+      "between_studies": -0.32794958294987353,
+      "within_studies": -0.15477835871206524
+    },
+    "eB": {
+      "pooled": 0.6476272267004622,
+      "between_studies": 0.6315991662241577,
+      "within_studies": 0.6816132064887982
+    }
+  },
+  "slopes_ci95_study_bootstrap": {
+    "D": {
+      "pooled": [
+        -0.420106391367231,
+        -0.1499475681722447
+      ],
+      "between_studies": [
+        -0.49020285523953183,
+        -0.18709791820845553
+      ],
+      "within_studies": [
+        -0.277485330799283,
+        0.03132685724367151
+      ]
+    },
+    "eB": {
+      "pooled": [
+        0.40075583497411743,
+        0.8063938244449627
+      ],
+      "between_studies": [
+        0.3403718896855345,
+        0.8062272687394919
+      ],
+      "within_studies": [
+        0.49438662004273265,
+        0.8862238290817381
+      ]
+    }
+  },
+  "slope_D_null_artifact_q025_q50_q975": {
+    "pooled": [
+      -0.15998087489545007,
+      -0.04897364880539214,
+      0.07763746516972497
+    ],
+    "between_studies": [
+      -0.17054245925023928,
+      -0.023564637537505713,
+      0.1324336829187699
+    ],
+    "within_studies": [
+      -0.18928565912202835,
+      -0.12722597336691654,
+      -0.07439042998411566
+    ]
+  },
+  "between_study_variance": {
+    "R2_studymean_y_on_D": 0.1898980017648215,
+    "R2_null_median": 0.0050512703029911375,
+    "R2_null_q975": 0.05203580421595294,
+    "n_studies": 109
+  },
+  "conditional_coefficients_all_train": {
+    "C1": {
+      "intercept": 0.14010311690527005,
+      "b_D": -0.3544210772944779
+    },
+    "C2": {
+      "r": 0.5699180080093998,
+      "fallback_if_D_above_-0.05": 0.2464008321941888
+    },
+    "C3": {
+      "intercept": 0.032769426185549205,
+      "b_D": -0.27954603189480576,
+      "c_eB": 0.7049823621666873
+    },
+    "median_train": 0.2464008321941888
+  }
+}

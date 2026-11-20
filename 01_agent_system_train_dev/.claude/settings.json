@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Agent",
+      "Bash(python tools/tfm.py *)",
+      "Bash(python3 tools/tfm.py *)",
+      "Edit(work/outbox/**)"
+    ],
+    "deny": [
+      "Edit(db/**)",
+      "Edit(manifests/**)",
+      "Edit(work/source_views/**)",
+      "Edit(.claude/hooks/**)",
+      "Edit(.claude/settings*.json)",
+      "WebFetch",
+      "WebSearch",
+      "Bash(sqlite3 *)"
+    ],
+    "defaultMode": "dontAsk"
+  },
+  "env": {
+    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "0"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard_tool.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

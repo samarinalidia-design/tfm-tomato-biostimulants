@@ -1,0 +1,203 @@
+{
+  "old_sha256": "f2085f3f54b4cb51eede35f5e4caf2f93084faa6eead53b5a7303e943275c619",
+  "current_sha256": "ec4d6a4dee50148e5acd05d3da89c4d154951f5b8bec0499f8eeeeb6bfc2026d",
+  "sheets": {
+    "_README": {
+      "old_rows": 57,
+      "current_rows": 57,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "studies": {
+      "old_rows": 399,
+      "current_rows": 399,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "files": {
+      "old_rows": 462,
+      "current_rows": 462,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "extraction_queue": {
+      "old_rows": 461,
+      "current_rows": 461,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "experiments": {
+      "old_rows": 315,
+      "current_rows": 315,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "arms": {
+      "old_rows": 2951,
+      "current_rows": 2951,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "measurements": {
+      "old_rows": 17357,
+      "current_rows": 17357,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "provenance_qa": {
+      "old_rows": 2446,
+      "current_rows": 2446,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "issues": {
+      "old_rows": 426,
+      "current_rows": 426,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "experiment_context": {
+      "old_rows": 264,
+      "current_rows": 264,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "arm_components": {
+      "old_rows": 1874,
+      "current_rows": 1874,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "raw_observations": {
+      "old_rows": 5403,
+      "current_rows": 5403,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "data_assets": {
+      "old_rows": 153,
+      "current_rows": 153,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "outcome_dictionary": {
+      "old_rows": 38,
+      "current_rows": 38,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "risk_of_bias": {
+      "old_rows": 16,
+      "current_rows": 16,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "study_relations": {
+      "old_rows": 2,
+      "current_rows": 2,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "stress_factors": {
+      "old_rows": 1421,
+      "current_rows": 1421,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "reported_effects": {
+      "old_rows": 2394,
+      "current_rows": 2394,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "figure_digitization_queue": {
+      "old_rows": 1468,
+      "current_rows": 1468,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "extraction_runs": {
+      "old_rows": 76,
+      "current_rows": 76,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "vocabularies": {
+      "old_rows": 34,
+      "current_rows": 34,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "analysis_contract": {
+      "old_rows": 27,
+      "current_rows": 27,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "estimand_dictionary": {
+      "old_rows": 13,
+      "current_rows": 13,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "endpoint_measurement_context": {
+      "old_rows": 5422,
+      "current_rows": 5422,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "genotype_context": {
+      "old_rows": 185,
+      "current_rows": 185,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "application_schedule": {
+      "old_rows": 1196,
+      "current_rows": 1196,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    },
+    "feature_availability": {
+      "old_rows": 7,
+      "current_rows": 7,
+      "same_header": true,
+      "changed_positional_rows": 0,
+      "added_rows": 0
+    }
+  },
+  "studies_identity_same": true,
+  "studies_identity_added": [],
+  "studies_identity_removed": [],
+  "files_identity_same": true,
+  "files_identity_added": [],
+  "files_identity_removed": [],
+  "file_manifest_rows_identical": true,
+  "source_sheet_names_identical": true
+}

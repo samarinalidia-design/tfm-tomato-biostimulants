@@ -1,0 +1,204 @@
+{
+  "title": "SynerPlant Biomass V2 - pre-registered analysis of the independent 2024-2026 TEST (dry biomass)",
+  "registered_at_utc": "2026-11-18T11:40:13+00:00",
+  "test_status_at_registration": "Biomass TEST data NOT OPENED by any V2/V3 code. Disclosure: the yield TEST (same TEST project, 12 studies) was evaluated on 2026-11-18 11:03 UTC; biomass values of the TEST were never read before this registration.",
+  "target": "lnRR = ln(dry biomass SB / dry biomass S), shoot or whole plant, one contrast per SB/S arm pair",
+  "primary_hypothesis": {
+    "model": "row_mean|B",
+    "frozen_point_lnRR": 0.3190222743234447,
+    "intervals_90": {
+      "single_contrast_q": 0.5265797418037381,
+      "simultaneous_q": 0.7549122461850549
+    },
+    "train_cv": {
+      "group_mae_mean": 0.2424168170085283,
+      "group_mae_fold_sd": 0.02719266457570474
+    },
+    "success_criteria": {
+      "coverage_single": "observed >= 0.85 (nominal 0.90), study-balanced",
+      "coverage_simultaneous": "observed >= 0.85; exact binomial 95% CI over studies reported",
+      "accuracy": "TEST group-MAE <= TRAIN CV mean + 2 fold-SD = 0.2968; otherwise transport failure"
+    },
+    "accuracy_threshold": 0.2968021461599378
+  },
+  "conditional_models": {
+    "definition": "D = ln(S/C) biomass loss caused by the stress; eB = ln(B/C); taken from factorial TEST arms",
+    "coefficients_frozen_on_TRAIN_quadruples": {
+      "C1": {
+        "intercept": 0.14010311690527008,
+        "b_D": -0.35442107729447764
+      },
+      "C2": {
+        "r": 0.5699180080093998,
+        "fallback_if_D_above_-0.05": 0.2464008321941888
+      },
+      "C3": {
+        "intercept": 0.03276942618554908,
+        "b_D": -0.27954603189480587,
+        "c_eB": 0.7049823621666875
+      },
+      "median_train": 0.2464008321941888
+    },
+    "n_train_studies": 109,
+    "conformal_90": {
+      "C1": {
+        "single_contrast_q": 0.4931673665300308,
+        "simultaneous_q": 0.7041369616177311,
+        "cv_coverage_single": 0.9121194148447839,
+        "cv_coverage_simultaneous": 0.9064220183486239
+      },
+      "C2": {
+        "single_contrast_q": 0.552201918040393,
+        "simultaneous_q": 0.7859413842024415,
+        "cv_coverage_single": 0.9096092351313615,
+        "cv_coverage_simultaneous": 0.908256880733945
+      },
+      "C3": {
+        "single_contrast_q": 0.42596091757016274,
+        "simultaneous_q": 0.5764401117845671,
+        "cv_coverage_single": 0.902535485142069,
+        "cv_coverage_simultaneous": 0.9137614678899083
+      },
+      "median": {
+        "single_contrast_q": 0.5684167564853508,
+        "simultaneous_q": 0.7219073630262466,
+        "cv_coverage_single": 0.906849784189703,
+        "cv_coverage_simultaneous": 0.9119266055045872
+      }
+    },
+    "primary_conditional": "C1",
+    "secondary": [
+      "C2",
+      "C3"
+    ],
+    "minimum_TEST_studies": 8,
+    "success_criteria": {
+      "1_gain": "group-MAE of C1 at least 10% below the frozen TRAIN median on the same TEST rows",
+      "2_beyond_coupling": "gain above the 95th percentile of 500 TEST null worlds",
+      "3_slope": "between-study slope on D: 95% study-bootstrap CI below 0 and outside the null 95% band",
+      "4_coverage": "C1 single-contrast coverage >= 0.85",
+      "verdict": "CONFIRMED only if 1-3 hold; PARTIAL if 3 holds without 1; NOT CONFIRMED otherwise",
+      "C3_secondary": "C3 is reported with the same gain / null criteria (1, 2) as a secondary hypothesis"
+    }
+  },
+  "meta_analysis_TRAIN_frozen": {
+    "PRIMARY_EXPANDED": {
+      "k_studies": 78,
+      "mu_lnRR": 0.30548647363,
+      "pct_effect": 35.728512585,
+      "ci95_CR2": [
+        0.25246124579,
+        0.35851170147
+      ],
+      "pi95_new_study_mean": [
+        -0.079940395865,
+        0.69091334313
+      ]
+    },
+    "STRICT_SENSITIVITY": {
+      "k_studies": 77,
+      "mu_lnRR": 0.30788752864,
+      "pct_effect": 36.054795765,
+      "ci95_CR2": [
+        0.25430188037,
+        0.36147317691
+      ],
+      "pi95_new_study_mean": [
+        -0.077939816026,
+        0.6937148733
+      ]
+    },
+    "REPORTED_VARIANCE_ONLY": {
+      "k_studies": 64,
+      "mu_lnRR": 0.3059398504,
+      "pct_effect": 35.7900626906,
+      "ci95_CR2": [
+        0.2548695772,
+        0.35701012359
+      ],
+      "pi95_new_study_mean": [
+        -0.013518414657,
+        0.62539811545
+      ]
+    },
+    "QUALITY_CORE": {
+      "k_studies": 61,
+      "mu_lnRR": 0.29845810955,
+      "pct_effect": 34.777907694,
+      "ci95_CR2": [
+        0.24081794956,
+        0.35609826954
+      ],
+      "pi95_new_study_mean": [
+        -0.074841140783,
+        0.67175735988
+      ]
+    },
+    "V1_EQUIVALENT": {
+      "k_studies": 79,
+      "mu_lnRR": 0.34027399011,
+      "pct_effect": 40.5332585049,
+      "ci95_CR2": [
+        0.2702196457,
+        0.41032833452
+      ],
+      "pi95_new_study_mean": [
+        -0.20933596945,
+        0.88988394967
+      ]
+    }
+  },
+  "secondary_TEST_meta": "TEST pooled lnRR, TEST - TRAIN difference, TRAIN + TEST (meta_test.R, same model)",
+  "test_rules": {
+    "builder": "b14_build_test_biomass.py --test-sqlite <TEST freeze sqlite>",
+    "year_window": "< 2024 excluded",
+    "study_specific_TRAIN_decisions": "not applied",
+    "test_freeze": "C:\\Users\\lenovo\\Desktop\\master's\\TFM_TEST_2024_2026_Agent_System\\exports\\DATA_FREEZE_20261118T105532769144Z",
+    "test_freeze_manifest_sha256": "9251f7a3e7eb4a630c0e66cc18e978dd5d9364fe8ab504eab3d31691b087bf6d"
+  },
+  "forbidden": [
+    "re-fitting or re-tuning on TEST",
+    "changing biomass rules after opening TEST",
+    "dropping TEST studies after seeing errors",
+    "running b13 more than once"
+  ],
+  "builder_validation": {
+    "validated_at": "2026-11-18T11:35:53+00:00",
+    "primary_identical_file_hash": true,
+    "primary_same_ids": true,
+    "primary_max_abs_lnRR_diff": 0.0,
+    "quadruples_same_rows": true,
+    "quadruples_max_abs_D_diff": 2.220446049250313e-16,
+    "rows": 766,
+    "studies": 153,
+    "quadruple_rows": 477,
+    "PASS": true
+  },
+  "hashes_sha256": {
+    "src/b03_build_biomass.py": "68f83898a11c93e3375d6b3f0206f96915577bd1f53f4670a4413acc1a9b69fc",
+    "src/b04_train.py": "7b77a08fcd1be78a1da8b59c3576899cde5f143b7dcb2bd3f596d9b89d238ee5",
+    "src/b05_evaluate_all.py": "c5d26f1fc102636779d3d6a02cdb835dd24f741c908eaddeb284e330db6cb16f",
+    "src/bx01_biomass_stress.py": "594e84551a61a77af09a84f4eeb0b1370121429f1d14d012eda3f479d92fba9d",
+    "src/b12_preregister_biomass.py": "b88c15c454ee800174d19f3555873fc932c9674fc6117c2d1b54b404e987c616",
+    "src/b13_test_biomass.py": "81c6b0ce97458e9f04f3647de087f16aa0cfc190430fc0e728e98684fc053cae",
+    "src/b14_build_test_biomass.py": "e5f6bc332e9f192ad724acddded630cbdf9ec69766c8348070655e532c324dea",
+    "src/s03_build_dataset.py": "496b52da8958220d780400a1b38f830ed8eb3e68aa76f4b5297a5f3f90322f11",
+    "src/v2_models.py": "9d0805289cfca1b0da7e803916dde244547d4844faec2237b1c40cf4d5b7218c",
+    "src/s04_train.py": "75bd9449c3c597fc45b0a6d2e807f4dd0dbd7cc204b41fae4989c890affcceea",
+    "src/s05_evaluate.py": "6444cc398efffdb3721eef22f78ace318646f0a7d1922f726c87886b1fa42791",
+    "src/s06_uncertainty.py": "90465422344663f89e309ba6959f015f010b824c88e50cd039619a0885557c92",
+    "src/s12_preregister.py": "3036f2b7f86e9a9f5996ff8f490f0b099d190e0b0777d702d0f6a1fecceca8a1",
+    "src/s13_test_evaluation.py": "bd5e05af9310f4e3594633ce8e3fa742f27c3180143fe1f371996caba43bb892",
+    "src/x01_stress_recovery.py": "2c992fa69069ce00afb495fc22b8594e1a045f731bfc447bf00615b660826718",
+    "audit/corrections_register.json": "bed1bb9be3ada6d3b5e48f33f357357a75758421f745867836c23a93f7d7aa37",
+    "audit/v3_register.json": "61fe3a1931ac42390068f0e3f1e7d7c441b69f4bdc489f35ac142e5073951ed1",
+    "outputs/biomass_v2/data/PRIMARY_EXPANDED.csv": "3461eb5c21d25eb1741c5e33b3950bed5691ba22ac0d14678f3eda7bf274711c",
+    "outputs/biomass_v2/data/dataset_build_report.json": "2514a0b85ebbe4f3b8c4d48459b12f4109a1c6a2b1dd3e2918f98d94c08dce2e",
+    "outputs/biomass_v2/ml/selection_report.json": "1161fdeea0bf2277c06a4043555ca1e172c982b1d741cb7f9415dccfd13eb29a",
+    "outputs/biomass_v2/ml/cv_fold_metrics.csv": "2c53312d400396f04ad78e6e1bd85e0ce18c4f20a86622851c5053d48d69b7fc",
+    "outputs/biomass_v2/uncertainty/deployment_intervals.json": "dc177e3618cc8298f7b38fa5a4a439d3bef418f85ad3552b45d0a124a823761d",
+    "outputs/biomass_v2/stress_recovery/quadruples.csv": "c91a6a9d5bcf68724db1d26fc15d0e526129b3fce271193a85aebb64facff7f6",
+    "outputs/biomass_v2/meta/R_confirmatory.json": "9aa67cacf2d9a31f2f3b36cc0c79b2658ea3e8ebe6697309c49bcae6e77e8747",
+    "outputs/biomass_v2/test_inputs_validation.json": "635a42b3e56f6061cf2df37662b297d71f0e36e659fa587b49ad881196a99d55"
+  }
+}

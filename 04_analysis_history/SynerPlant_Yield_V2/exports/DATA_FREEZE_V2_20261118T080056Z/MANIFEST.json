@@ -1,0 +1,367 @@
+{
+  "build": "20261118T080056Z",
+  "status": "READY_TO_USE",
+  "ready_to_use": true,
+  "created_at": "2026-11-18T08:00:57+00:00",
+  "base_release": "DATA_FREEZE_20261113T112939135807Z",
+  "gates": [
+    {
+      "gate": "integrity_checks",
+      "status": "PASS",
+      "value": "PASS; FAIL checks: []"
+    },
+    {
+      "gate": "register_value_corrections_applied",
+      "status": "PASS",
+      "value": "18/18 values AUTO_VERIFIED_V2"
+    },
+    {
+      "gate": "no_agent_human_verdicts",
+      "status": "PASS",
+      "value": "0 agent rows claiming HUMAN status"
+    },
+    {
+      "gate": "primary_train_dev_only",
+      "status": "PASS",
+      "value": "max year 2023.0"
+    },
+    {
+      "gate": "primary_unique_arm_pairs",
+      "status": "PASS",
+      "value": "one contrast per SB/S arm pair"
+    },
+    {
+      "gate": "primary_positive_means",
+      "status": "PASS",
+      "value": "lnRR computable"
+    },
+    {
+      "gate": "v1_sources_unchanged",
+      "status": "PASS",
+      "value": "V1 freeze SQLite hash unchanged"
+    },
+    {
+      "gate": "external_test_untouched",
+      "status": "PASS",
+      "value": "no TEST rows; no TEST file opened by V2 code"
+    },
+    {
+      "gate": "model_selected_by_prespecified_rule",
+      "status": "PASS",
+      "value": "no candidate passed the prespecified rule; best baseline retained"
+    },
+    {
+      "gate": "interval_coverage_verified",
+      "status": "PASS",
+      "value": "held-out coverage single=0.908, simultaneous=0.907 (nominal 0.90, tolerance 0.05)"
+    },
+    {
+      "gate": "human_audit_v2_changed_contrasts",
+      "status": "PASS",
+      "value": "required k=24 of N=158 changed contrasts; 24 CORRECT; complete"
+    }
+  ],
+  "files": [
+    {
+      "path": "audit/corrections_applied.json",
+      "sha256": "3e87447b790da44e6d19a6bae4016f17a9ae2a4d2b31388702f3be7fefc3e522",
+      "bytes": 109
+    },
+    {
+      "path": "audit/corrections_register.json",
+      "sha256": "bed1bb9be3ada6d3b5e48f33f357357a75758421f745867836c23a93f7d7aa37",
+      "bytes": 10677
+    },
+    {
+      "path": "audit/human_audit_v2_package.json",
+      "sha256": "c0d30171348a29c6a0891906aed8c0dbfb3fa77f6ad733328b5652e9e835db89",
+      "bytes": 460
+    },
+    {
+      "path": "audit/HUMAN_AUDIT_V2_PACKAGE.xlsx",
+      "sha256": "90ff8c2b1d62ae7a0ed5a8c1dbb750522d57e5871bce04b33feae5247972b890",
+      "bytes": 33717
+    },
+    {
+      "path": "audit/integrity_report.json",
+      "sha256": "f90899a1803a4de0fed82b646b79795838d457b342989516ab052a972345e034",
+      "bytes": 3906
+    },
+    {
+      "path": "outputs/data/dataset_build_report.json",
+      "sha256": "dfa1fb2299f3d128a6491b2e6a010c8276971e406962894dd3a0b3def6095dce",
+      "bytes": 5120
+    },
+    {
+      "path": "outputs/data/feature_completeness.csv",
+      "sha256": "d61840aa5cf0c05896a8e6a3d01f5b1b06b8460168ae2d309ac947938c02986a",
+      "bytes": 975
+    },
+    {
+      "path": "outputs/data/physiology_feasibility.json",
+      "sha256": "4b255a47db1633d66e468e7e1f3c13f4d47be513b4e48c4d2dcc2e48cbae3e7c",
+      "bytes": 646
+    },
+    {
+      "path": "outputs/data/physiology_linkage_by_trait.csv",
+      "sha256": "9bafc01c879d25b052ebb8db1bdfa3ac510dca0db086af8062ed2853d66bde3b",
+      "bytes": 1964
+    },
+    {
+      "path": "outputs/data/PRIMARY_EXPANDED.csv",
+      "sha256": "de0661818fb53f47ffe74a6238aedc81a0c9039c2ee312f957126cd71ee4ccb0",
+      "bytes": 2949976
+    },
+    {
+      "path": "outputs/data/QUALITY_CORE.csv",
+      "sha256": "ee0c2963361fd29d789bd8c4df9a38cee621ad53fab7c6aeab9fa0aec38609a3",
+      "bytes": 1605999
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_NO_AMBIENT_STRESS.csv",
+      "sha256": "0e783f6cf26a27fd91d9e669401c5599b079d288eb7508a70f99dff648010ccb",
+      "bytes": 2503767
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_NO_ROB_HIGH.csv",
+      "sha256": "ddbf60ee3f889d4c31c683c0b23c95ce15cdec135b0d2c0f9de05725921846c3",
+      "bytes": 2324236
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_NO_SOURCE_FLAGS.csv",
+      "sha256": "12bcd13fe7d8c542a9e978b6e0f6c515a6e404428ff7b22b6de3c7f530747141",
+      "bytes": 2515500
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_PLUS_AMBIENT_BVC.csv",
+      "sha256": "f4951f056e9c12851a59c6eb82cc4fed5ad0e45b94009d3747956341219cd5f3",
+      "bytes": 3096191
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_PLUS_BOX_AMBIG_SYNTH.csv",
+      "sha256": "5b9c73cd8e3db5ab8acdd0dece6808fa2b3e56fa91253e5818faefdaf6ce24f4",
+      "bytes": 3156001
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_REPORTED_VARIANCE.csv",
+      "sha256": "32a48df9f1a4430c6ea80e192de99eca2623f117020f83067aed779bb9599fe2",
+      "bytes": 1231132
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_STRICT_PLUS_ASSUMED.csv",
+      "sha256": "3ad719bf56a506ad36c23fc9c5aaee7ebafb3865a95345e5c1cf28f2911d8b94",
+      "bytes": 2346271
+    },
+    {
+      "path": "outputs/data/SENSITIVITY_TABLE_SOURCED.csv",
+      "sha256": "cb81cee739220fca4e6814da26036542715687be1b775f07afb145408ddb83a1",
+      "bytes": 1811557
+    },
+    {
+      "path": "outputs/data/STRICT_SENSITIVITY.csv",
+      "sha256": "00528d25d14fe806e1fc474c8900be8ce572405e4afd72c96f88ea311fe45342",
+      "bytes": 746302
+    },
+    {
+      "path": "outputs/data/V1_EQUIVALENT.csv",
+      "sha256": "9e9f0735ce1fd0bd437806db8fdb983fc147cae74748dc24ffea42fe516f5ab3",
+      "bytes": 2696454
+    },
+    {
+      "path": "outputs/data/v1_rows_not_in_v2_primary.csv",
+      "sha256": "218541fce1478e1fb4b387eb272fc817d6d00be1240888a70707c7989561f37d",
+      "bytes": 5076
+    },
+    {
+      "path": "outputs/data/v1_v2_comparison.csv",
+      "sha256": "18443cbfde19e745187c2bdb8381d03fdd5da8e13d3ff631a0f5e7998bf1da91",
+      "bytes": 164288
+    },
+    {
+      "path": "outputs/data/v2_yield_contrast_register.csv",
+      "sha256": "b2e907216bb5790fe6f71a60de62c119e8ce902fac74225c7e9f387aa4149e13",
+      "bytes": 322165
+    },
+    {
+      "path": "outputs/meta/meta_subgroups.csv",
+      "sha256": "c9b92240199ca3a9f8f88d7dc841488ed8f4fcd656034303f5023bce831acd37",
+      "bytes": 7269
+    },
+    {
+      "path": "outputs/meta/meta_summary.json",
+      "sha256": "408821fa61d5819d7fddbd5f933f1fce941cd6089944c73182d407291c96bf04",
+      "bytes": 4424
+    },
+    {
+      "path": "outputs/ml/ablation_F0_F4.csv",
+      "sha256": "71326e40c7358eb81a829e12435fa97f965f18bc297b54244e4282e49384cf5d",
+      "bytes": 767
+    },
+    {
+      "path": "outputs/ml/cv_fold_metrics.csv",
+      "sha256": "1d5380b200c58dc4a8a81dbd0f4c3be52a5614def082b38d44eed51e0da2c333",
+      "bytes": 278001
+    },
+    {
+      "path": "outputs/ml/model_comparison.csv",
+      "sha256": "5a6fe284b2035194dd06252311f977d140f41180c2220fc4486fff7ceb292dba",
+      "bytes": 22861
+    },
+    {
+      "path": "outputs/ml/outer_splits.json",
+      "sha256": "1f3c9d33a01a2c56606d33ddf4ee01a0695f8894680e018783f024d06767126f",
+      "bytes": 65147
+    },
+    {
+      "path": "outputs/ml/per_study_errors.csv",
+      "sha256": "2d821c827c9ec351a020fe38fe1f34d0c359cdc95a1f91729de908fe616a9dba",
+      "bytes": 35811
+    },
+    {
+      "path": "outputs/ml/permutation_importance.csv",
+      "sha256": "b62b3f5cc6f8df4074fbb023c49adae37e0d1717e63924fdbc0c0fbbcbc7f20e",
+      "bytes": 1242
+    },
+    {
+      "path": "outputs/ml/permutation_importance_meta.json",
+      "sha256": "084336565ce0a6fafeeb9bef4b98acc8ec22f09fa526f4d2d6986f239d0284c6",
+      "bytes": 152
+    },
+    {
+      "path": "outputs/ml/selection_report.json",
+      "sha256": "f2667081cf4fefad5f79841d4940ef4d249fe81d56984ab394335d199ac00042",
+      "bytes": 4319
+    },
+    {
+      "path": "outputs/ml/subgroup_performance.csv",
+      "sha256": "c2db60f0bc3fe83454685942caccd4e800d5b8c4065dbd56f142edd939df647e",
+      "bytes": 13664
+    },
+    {
+      "path": "outputs/ml/train_run.json",
+      "sha256": "57243e4902aa3194fe7bcf0510acbd75f9f5046bd2dfac7faa0eb97b853fa54e",
+      "bytes": 197
+    },
+    {
+      "path": "outputs/model/MODEL_CARD.md",
+      "sha256": "a3037ec561b38a4fab8cd57095e8bb0b751a648f50cba17f01d50d6995d5f7ad",
+      "bytes": 1584
+    },
+    {
+      "path": "outputs/model/model_manifest.json",
+      "sha256": "7a3015b57e60179abd0be01c98ed1af84937f6dbcb48f5234aa98c8c4bf6680e",
+      "bytes": 1854
+    },
+    {
+      "path": "outputs/model/V2_YIELD_MODEL.joblib",
+      "sha256": "a866607ffbd080b6adaaccc8cd769bfa880fb58781b24b679f184c23d65246a9",
+      "bytes": 645
+    },
+    {
+      "path": "outputs/uncertainty/deployment_intervals.json",
+      "sha256": "d976b7f3e60a59b0e05316dff7e17e3454cd7d68c6075e3f3b1ced3689e3bdc7",
+      "bytes": 734
+    },
+    {
+      "path": "outputs/uncertainty/interval_coverage_by_stress_family.csv",
+      "sha256": "20159f7d4f16d91b2b6e253b6332b05a448a8e1d4deccf2cc1413890aaa07cea",
+      "bytes": 11634
+    },
+    {
+      "path": "outputs/uncertainty/interval_methods_comparison.csv",
+      "sha256": "b1b8569d893196a353a3aead56462c5bf7ea9e69afb5e238a28e5ac354f5b09c",
+      "bytes": 3238
+    },
+    {
+      "path": "outputs/uncertainty/uncertainty_types.json",
+      "sha256": "399720919789c00b00e758d3d0873218b100150d996faefbcad76c1a8e9a4a83",
+      "bytes": 645
+    },
+    {
+      "path": "requirements_v2.txt",
+      "sha256": "629adb3999089df361678c02b2562e2c9826522bbb359c638d5e7ed229806076",
+      "bytes": 1405
+    },
+    {
+      "path": "src/s01_integrity.py",
+      "sha256": "53b6336d6de9517b8a8421d3d5ff73e2ab768b10d1b3580f6493bbf617fbb8d5",
+      "bytes": 11654
+    },
+    {
+      "path": "src/s02_corrections.py",
+      "sha256": "b6fc6fecf80e96d9715afcf2e8d20242c6fefc556b2fb8ae9e8108740d479311",
+      "bytes": 5971
+    },
+    {
+      "path": "src/s03_build_dataset.py",
+      "sha256": "496b52da8958220d780400a1b38f830ed8eb3e68aa76f4b5297a5f3f90322f11",
+      "bytes": 21832
+    },
+    {
+      "path": "src/s03b_physiology_feasibility.py",
+      "sha256": "870be5ee53d2a8f25d709829b4ac99d02c829078e73737016d83baf6b3bc3867",
+      "bytes": 3410
+    },
+    {
+      "path": "src/s04_train.py",
+      "sha256": "75bd9449c3c597fc45b0a6d2e807f4dd0dbd7cc204b41fae4989c890affcceea",
+      "bytes": 6097
+    },
+    {
+      "path": "src/s05_evaluate.py",
+      "sha256": "6444cc398efffdb3721eef22f78ace318646f0a7d1922f726c87886b1fa42791",
+      "bytes": 9437
+    },
+    {
+      "path": "src/s05b_importance.py",
+      "sha256": "5a9459181eaad95032c946e750fd5beefe160457a5aecb1c8bdb445e25fb7155",
+      "bytes": 3115
+    },
+    {
+      "path": "src/s06_uncertainty.py",
+      "sha256": "90465422344663f89e309ba6959f015f010b824c88e50cd039619a0885557c92",
+      "bytes": 9430
+    },
+    {
+      "path": "src/s07_meta.py",
+      "sha256": "4e38fbc44f3b5fd9fb4986bfd16c16bc6e7cb91921c5ee9a769b32d82e2a50f3",
+      "bytes": 5464
+    },
+    {
+      "path": "src/s08_audit_package.py",
+      "sha256": "9921829ee7a0f2fb210e0cd60ba5ffa4502ebfc2961e14cc3ef2121444e53c0a",
+      "bytes": 7202
+    },
+    {
+      "path": "src/s09_figures.py",
+      "sha256": "794844c87b06ad64643b6aed25f97f78f16ed77a5cf38826017daf7bd92f28ca",
+      "bytes": 8057
+    },
+    {
+      "path": "src/s10_final_model.py",
+      "sha256": "fd736df2ba9511bb77055b6e3db47b9dd0a41964a2c82d1eb5db2b6da0a38460",
+      "bytes": 3430
+    },
+    {
+      "path": "src/s11_freeze.py",
+      "sha256": "a0707b248c1b8184b22c389be6778117915d07904783451083a4fb9b4e1c069d",
+      "bytes": 6007
+    },
+    {
+      "path": "src/v2_common.py",
+      "sha256": "e4850b0ed0c7908985817c04566015ac03e510c1a9356148c71457971df2dbc3",
+      "bytes": 1728
+    },
+    {
+      "path": "src/v2_models.py",
+      "sha256": "9d0805289cfca1b0da7e803916dde244547d4844faec2237b1c40cf4d5b7218c",
+      "bytes": 13371
+    },
+    {
+      "path": "db/TFM_V2_WORKING.sqlite",
+      "sha256": "1c35a68057cc6641e5735897d9b95d3f45d4c61f1b1f2f465df3d6dd4712fb70",
+      "bytes": 544985088
+    }
+  ],
+  "test_policy": "the external 2024-2026 TEST has not been opened; it remains the final, one-time judge"
+}

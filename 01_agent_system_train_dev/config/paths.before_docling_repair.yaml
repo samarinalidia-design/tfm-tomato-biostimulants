@@ -1,0 +1,13 @@
+corpus_root: "G:/Мой диск/TFM_CORPUS_NORMALIZED"
+workbook: "G:/Мой диск/TFM_CORPUS_NORMALIZED/TFM_DATABASE_CLASS_A_WORKING.xlsx"
+fulltext_root: "G:/Мой диск/TFM_CORPUS_NORMALIZED/01_fulltext"
+supplements_root: "G:/Мой диск/TFM_CORPUS_NORMALIZED/02_supplements"
+docling_root: "G:/Мой диск/TFM_CORPUS_NORMALIZED/04_extracted_json/docling_local_sourceqa_v4_3_rerun_380"
+figures_root: "G:/Мой диск/TFM_CORPUS_NORMALIZED/05_exports/figure_extraction_v1_2_queue_aligned"
+legacy_figure_json_root: "G:/Мой диск/TFM_CORPUS_NORMALIZED/05_exports/figure_extraction_v1_2_queue_aligned"
+docling_map_csv: ""
+docling_study_globs: ["{study_id}", "**/{study_id}"]
+context:
+  max_chars: 120000
+  keep_sections_regex: "(material|method|experimental|design|treatment|statistic|result|yield|harvest|biomass|table|figure|supplement)"
+  drop_sections_regex: "(introduction|discussion|reference|bibliograph)"

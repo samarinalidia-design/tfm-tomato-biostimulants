@@ -1,0 +1,11 @@
+context,stack,MR0,RIDGE_REF,RIDGE_V3TE,RF_V3TETF,MR2mt
+yield|seed33|fold0,LSTACK_A,0.0,0.6686,0.0,0.3314,
+yield|seed33|fold0,LSTACK_B,0.0,0.6506,0.0,0.0,0.3494
+yield|seed33|fold1,LSTACK_A,0.3557,0.339,0.2935,0.0118,
+yield|seed33|fold1,LSTACK_B,0.0,0.1635,0.1031,0.0,0.7334
+yield|seed33|fold2,LSTACK_A,0.4239,0.5761,0.0,0.0,
+yield|seed33|fold2,LSTACK_B,0.1387,0.3679,0.0,0.0,0.4934
+yield|seed33|fold3,LSTACK_A,0.1719,0.8281,0.0,0.0,
+yield|seed33|fold3,LSTACK_B,0.0,0.531,0.0,0.0,0.469
+yield|seed33|fold4,LSTACK_A,0.0,0.5507,0.0,0.4493,
+yield|seed33|fold4,LSTACK_B,0.0,0.4254,0.0,0.0,0.5746

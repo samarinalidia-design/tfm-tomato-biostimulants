@@ -1,0 +1,70 @@
+{
+ "label": "POST_HOC_TEST_REUSE",
+ "evaluated_at": "2026-11-18T16:51:36+00:00",
+ "registration": "2026-11-18T16:51:28+00:00",
+ "honesty_statement": "The TEST was already evaluated once (V2, 2026-11-18 11:03 UTC) and its V2 results (group-MAE 0.415, bias -0.32, single coverage 0.847) were known when the V4 idea was formed. V4 was selected on TRAIN cross-validation only, and no V4 code has read TEST values, but this evaluation is NOT an independent confirmation. Report it as a second look at a known TEST.",
+ "n_contrasts": 36,
+ "n_studies": 12,
+ "A_new_multilevel_mean": {
+  "group_mae": 0.4246533208985788,
+  "mae": 0.48793860943202894,
+  "rmse": 0.6063472726134689,
+  "bias_study_balanced": -0.10534880818954706,
+  "bias_rows": -0.1754101201836013,
+  "coverage_single": 0.8472222222222222,
+  "coverage_simultaneous": 1.0,
+  "coverage_simultaneous_ci95": [
+   0.7353515306029488,
+   1.0
+  ],
+  "half_width_single_mean": 0.8059977093585589,
+  "half_width_simultaneous": 1.2533575204425529,
+  "interval_score_single": 2.3615064029626613,
+  "interval_score_simultaneous": 2.5067150408851053
+ },
+ "A_secondary_model_PI": {
+  "coverage_single": 0.8472222222222222,
+  "half_width_single_mean": 0.7935887281411234,
+  "interval_score_single": 2.3670411513401306
+ },
+ "B_V31_median": {
+  "group_mae": 0.4154857986643477,
+  "mae": 0.4798846889846938,
+  "rmse": 0.663418687841975,
+  "bias_study_balanced": -0.25124236155326296,
+  "bias_rows": -0.3213036735473172,
+  "coverage_single": 0.8472222222222222,
+  "coverage_simultaneous": 0.9166666666666666,
+  "coverage_simultaneous_ci95": [
+   0.6152038348490559,
+   0.9978924067681397
+  ],
+  "half_width_single_mean": 0.9341125331041028,
+  "half_width_simultaneous": 1.3183742909442693,
+  "interval_score_single": 2.672059946509275,
+  "interval_score_simultaneous": 2.6417136398114125
+ },
+ "paired_bootstrap_by_study": {
+  "group_mae_A_minus_B": {
+   "diff": 0.009167522234231154,
+   "ci95": [
+    -0.06712005980831474,
+    0.08168685199217278
+   ]
+  },
+  "interval_score_single_A_minus_B": {
+   "diff": -0.31055354354661363,
+   "ci95": [
+    -0.38957011962737953,
+    -0.25622964749108706
+   ]
+  }
+ },
+ "criteria": {
+  "H1_primary_interval": false,
+  "H2_simultaneous": true,
+  "H3_bias": true,
+  "H4_accuracy_noninferiority": true
+ },
+ "verdict": "PARTIAL"
+}

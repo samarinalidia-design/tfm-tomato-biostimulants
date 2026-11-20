@@ -1,0 +1,8 @@
+aux FRUIT_NUMBER: 422 contrasts, 56 studies, CV-bar=0.237
+aux MEAN_FRUIT_MASS: 341 contrasts, 41 studies, CV-bar=0.081
+yield seed=11 183s
+yield seed=22 175s
+yield seed=33 168s
+biomass seed=11 192s
+biomass seed=22 189s
+biomass seed=33 190s

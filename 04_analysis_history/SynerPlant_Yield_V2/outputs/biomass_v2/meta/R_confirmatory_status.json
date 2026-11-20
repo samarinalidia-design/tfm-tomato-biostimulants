@@ -1,0 +1,6 @@
+{
+  "run_at": "2026-11-18T11:39:49+00:00",
+  "R": "R version 4.5.0 (2025-04-11 ucrt)",
+  "max_abs_diff_mu_R_vs_python": 4.55399590260086e-09,
+  "status": "CONFIRMATORY_R_DONE"
+}

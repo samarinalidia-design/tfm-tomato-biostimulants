@@ -1,0 +1,4 @@
+[
+{"review_id":917,"decision":"RESOLVE","decision_note":"PDF page 1 prints 2024; temporal_eligibility corrected to EXCLUDE_POST2023_KNOWN through patch 2387. No fruit-yield data in this study"},
+{"review_id":918,"decision":"RESOLVE","decision_note":"Slots #02 and #03 hold one quantity. Author decision 2 keeps the Fig. 5 values; prose values 95.2/57.1/42.3/34 stay as raw source values. No fruit-yield data in this study"}
+]

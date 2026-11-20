@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-11-18T08:00:07+00:00",
+  "selection": {
+    "PRIMARY_EXPANDED": {
+      "chosen": "row_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "row_median|B",
+      "best_baseline_group_mae": 0.36119338996911565,
+      "best_nonbaseline": {
+        "candidate": "quantile_l1|F4",
+        "group_mae": 0.36250014156104027,
+        "gain_vs_best_baseline": -0.0036178723869679796,
+        "diff_ci_lo": -0.003517852651722585,
+        "diff_ci_hi": 0.006371492621758955,
+        "median_fold_wins_of_5": 3
+      }
+    },
+    "QUALITY_CORE": {
+      "chosen": "study_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "study_median|B",
+      "best_baseline_group_mae": 0.3774817614629547,
+      "best_nonbaseline": null
+    },
+    "SENSITIVITY_NO_ROB_HIGH": {
+      "chosen": "study_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "study_median|B",
+      "best_baseline_group_mae": 0.3654486459521546,
+      "best_nonbaseline": null
+    },
+    "SENSITIVITY_NO_SOURCE_FLAGS": {
+      "chosen": "study_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "study_median|B",
+      "best_baseline_group_mae": 0.33514947787747457,
+      "best_nonbaseline": null
+    },
+    "SENSITIVITY_PLUS_BOX_AMBIG_SYNTH": {
+      "chosen": "study_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "study_median|B",
+      "best_baseline_group_mae": 0.37692999998761184,
+      "best_nonbaseline": null
+    },
+    "SENSITIVITY_STRICT_PLUS_ASSUMED": {
+      "chosen": "row_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "row_median|B",
+      "best_baseline_group_mae": 0.39778283640972006,
+      "best_nonbaseline": null
+    },
+    "STRICT_SENSITIVITY": {
+      "chosen": "study_mean|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "study_mean|B",
+      "best_baseline_group_mae": 0.31107797081867655,
+      "best_nonbaseline": null
+    },
+    "V1_EQUIVALENT": {
+      "chosen": "row_median|B",
+      "reason": "no candidate passed the prespecified rule; best baseline retained",
+      "best_baseline": "row_median|B",
+      "best_baseline_group_mae": 0.3943509657711682,
+      "best_nonbaseline": {
+        "candidate": "quantile_l1|F0",
+        "group_mae": 0.4030975751122412,
+        "gain_vs_best_baseline": -0.02217975889565449,
+        "diff_ci_lo": 0.0002996508106101107,
+        "diff_ci_hi": 0.018274916336799507,
+        "median_fold_wins_of_5": 2
+      }
+    }
+  },
+  "variance_decomposition": {
+    "PRIMARY_EXPANDED": {
+      "total_var": 0.24328945364153404,
+      "pooled_within_study_var": 0.08721732386445007,
+      "share_within": 0.35849200431415845,
+      "n_rows": 404,
+      "n_studies": 69,
+      "lnRR_mean": 0.4297491991547342,
+      "lnRR_median": 0.2846648330024649,
+      "share_abs_gt_1": 0.12623762376237624
+    },
+    "V1_EQUIVALENT": {
+      "total_var": 0.2400323119930292,
+      "pooled_within_study_var": 0.09540630095254513,
+      "share_within": 0.397472740900466,
+      "n_rows": 371,
+      "n_studies": 52,
+      "lnRR_mean": 0.4323570398047731,
+      "lnRR_median": 0.2807986905545795,
+      "share_abs_gt_1": 0.11590296495956873
+    },
+    "STRICT_SENSITIVITY": {
+      "total_var": 0.12000497973143122,
+      "pooled_within_study_var": 0.030410373645591546,
+      "share_within": 0.2534092644626028,
+      "n_rows": 105,
+      "n_studies": 12,
+      "lnRR_mean": 0.3589023732315291,
+      "lnRR_median": 0.2807986905545795,
+      "share_abs_gt_1": 0.08571428571428572
+    }
+  },
+  "v1_reference": {
+    "group_mae": 0.43335057420719353,
+    "note": "V1 run (D5), different CV splits/sample/calibration hold-out; not directly comparable"
+  },
+  "rule": {
+    "gain_min": 0.02,
+    "wins_min_of_5": 3,
+    "bootstrap": "paired study-level, 4000 resamples, 95% CI of MAE difference < 0"
+  }
+}

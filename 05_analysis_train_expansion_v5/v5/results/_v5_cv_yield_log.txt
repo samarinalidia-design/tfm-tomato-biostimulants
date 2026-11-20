@@ -1,0 +1,20 @@
+  yield|seed11|fold0 382s
+  yield|seed11|fold1 394s
+  yield|seed11|fold2 400s
+  yield|seed11|fold3 367s
+  yield|seed11|fold4 298s
+yield seed=11 1843s
+  yield|seed22|fold0 332s
+  yield|seed22|fold1 388s
+  yield|seed22|fold2 208s
+  yield|seed22|fold3 363s
+  yield|seed22|fold4 379s
+yield seed=22 1670s
+  yield|seed33|fold0 216s
+  yield|seed33|fold1 297s
+  yield|seed33|fold2 5504s
+  yield|seed33|fold0 104s   yield|seed33|fold1 87s
+  yield|seed33|fold2 95s
+  yield|seed33|fold3 78s
+  yield|seed33|fold4 82s
+yield seed=33 445s

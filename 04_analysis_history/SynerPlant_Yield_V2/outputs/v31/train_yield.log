@@ -1,0 +1,11 @@
+﻿yield 475 outer fits
+..\.venv\Scripts\python.exe : [Parallel(n_jobs=6)]: Using backend LokyBackend with 6 concurrent workers.
+At line:1 char:358
++ ... ET="yield"; ..\.venv\Scripts\python.exe -W ignore -c "import r04_v31_ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([Parallel(n_job...urrent workers.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[Parallel(n_jobs=6)]: Done  29 tasks      | elapsed:    3.1s
+[Parallel(n_jobs=6)]: Done 282 tasks      | elapsed:   59.9s
+[Parallel(n_jobs=6)]: Done 475 out of 475 | elapsed:  2.9min finished

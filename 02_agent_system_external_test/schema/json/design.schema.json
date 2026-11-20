@@ -1,0 +1,274 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "DESIGN output",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "gap_dispositions": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": ["review_id", "disposition", "note"],
+    "additionalProperties": false,
+    "properties": {
+     "review_id": {"type": "integer"},
+     "disposition": {"enum": ["RESOLVED_IN_DESIGN", "SOURCE_LIMIT_RECORDED"]},
+     "note": {"type": "string", "minLength": 10}
+    }
+   }
+  },
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-\\d{6}$"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "const": "tfm-design-mapper"
+  },
+  "model_id": {
+   "type": "string",
+   "minLength": 3
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "experiments": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "properties": {
+     "experiment_key": {
+      "type": "string",
+      "pattern": "^E\\d+$"
+     },
+     "experiment_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "description": {
+      "type": "string",
+      "minLength": 5
+     },
+     "system": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "allocation": {
+      "enum": [
+       "INDEPENDENT_PARALLEL",
+       "REPEATED",
+       "PAIRED",
+       "CLUSTERED",
+       "UNKNOWN"
+      ]
+     },
+     "factorial_verified": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "experiment_key",
+     "description",
+     "allocation",
+     "factorial_verified"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "arms": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "properties": {
+     "arm_key": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:+\\-]{1,80}$"
+     },
+     "experiment_key": {
+      "type": "string",
+      "pattern": "^E\\d+$"
+     },
+     "arm_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "label_in_source": {
+      "type": "string",
+      "minLength": 1
+     },
+     "stress_code": {
+      "type": "string",
+      "minLength": 1
+     },
+     "stress_desc": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "bio_code": {
+      "type": "string",
+      "minLength": 1
+     },
+     "bio_desc": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "n_bio_components": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "genotype": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "season": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "site": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "component_codes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+       "type": "string"
+      }
+     },
+     "background_key": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "arm_key",
+     "experiment_key",
+     "label_in_source",
+     "stress_code",
+     "bio_code",
+     "n_bio_components",
+     "component_codes",
+     "background_key"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "timepoints": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "properties": {
+     "timepoint_key": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.\\-]{1,40}$"
+     },
+     "experiment_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "days": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "kind": {
+      "enum": [
+       "DAS",
+       "DAT",
+       "DAYS_AFTER_STRESS",
+       "DAYS_AFTER_TREATMENT",
+       "HARVEST_CUMULATIVE",
+       "HARVEST_EVENT",
+       "OTHER"
+      ]
+     },
+     "is_terminal": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "timepoint_key",
+     "label",
+     "kind",
+     "is_terminal"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "core_patches": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "table": {
+      "type": "string"
+     },
+     "row_id": {
+      "type": "string"
+     },
+     "field": {
+      "type": "string"
+     },
+     "current": {},
+     "proposed": {},
+     "reason": {
+      "type": "string",
+      "minLength": 5
+     },
+     "locator": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "table",
+     "row_id",
+     "field",
+     "proposed",
+     "reason",
+     "locator"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "experiments",
+  "arms",
+  "timepoints",
+  "core_patches"
+ ]
+}

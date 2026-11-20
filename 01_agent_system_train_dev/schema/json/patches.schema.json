@@ -1,0 +1,60 @@
+{
+ "type": "object",
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "type": "string"
+  },
+  "model_id": {
+   "type": "string"
+  },
+  "decisions": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "patch_id": {
+      "type": "integer"
+     },
+     "decision": {
+      "enum": [
+       "ACCEPT",
+       "REJECT",
+       "ESCALATE"
+      ]
+     },
+     "receipt_id": {
+      "type": "string"
+     },
+     "source_file_id": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "patch_id",
+     "decision",
+     "receipt_id",
+     "source_file_id",
+     "reason"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "decisions"
+ ],
+ "additionalProperties": false
+}

@@ -1,0 +1,177 @@
+{
+  "built_at": "2026-11-18T11:28:11+00:00",
+  "source_db_sha256": "2d011ea5141f5a8b65be312937c648695ced77525a115059e57a378ce9fe42bb",
+  "year_rule": "train",
+  "sets": {
+    "PRIMARY_EXPANDED": {
+      "rows": 766,
+      "studies": 153,
+      "by_tier": {
+        "STRICT": 700,
+        "DRY_LATEST_TIME": 49,
+        "UNIT_UNSTATED": 17
+      },
+      "by_organ": {
+        "SHOOT": 435,
+        "WHOLE_PLANT": 331
+      }
+    },
+    "STRICT_SENSITIVITY": {
+      "rows": 700,
+      "studies": 143,
+      "by_tier": {
+        "STRICT": 700
+      },
+      "by_organ": {
+        "SHOOT": 392,
+        "WHOLE_PLANT": 308
+      }
+    },
+    "SENSITIVITY_WHOLE_PLANT": {
+      "rows": 331,
+      "studies": 59,
+      "by_tier": {
+        "STRICT": 308,
+        "DRY_LATEST_TIME": 18,
+        "UNIT_UNSTATED": 5
+      },
+      "by_organ": {
+        "WHOLE_PLANT": 331
+      }
+    },
+    "SENSITIVITY_SHOOT": {
+      "rows": 435,
+      "studies": 96,
+      "by_tier": {
+        "STRICT": 392,
+        "DRY_LATEST_TIME": 31,
+        "UNIT_UNSTATED": 12
+      },
+      "by_organ": {
+        "SHOOT": 435
+      }
+    },
+    "SENSITIVITY_NO_ROB_HIGH": {
+      "rows": 561,
+      "studies": 119,
+      "by_tier": {
+        "STRICT": 521,
+        "DRY_LATEST_TIME": 23,
+        "UNIT_UNSTATED": 17
+      },
+      "by_organ": {
+        "SHOOT": 333,
+        "WHOLE_PLANT": 228
+      }
+    },
+    "SENSITIVITY_REPORTED_VARIANCE": {
+      "rows": 281,
+      "studies": 64,
+      "by_tier": {
+        "STRICT": 276,
+        "UNIT_UNSTATED": 4,
+        "DRY_LATEST_TIME": 1
+      },
+      "by_organ": {
+        "SHOOT": 148,
+        "WHOLE_PLANT": 133
+      }
+    },
+    "SENSITIVITY_TABLE_SOURCED": {
+      "rows": 391,
+      "studies": 84,
+      "by_tier": {
+        "STRICT": 356,
+        "DRY_LATEST_TIME": 23,
+        "UNIT_UNSTATED": 12
+      },
+      "by_organ": {
+        "SHOOT": 225,
+        "WHOLE_PLANT": 166
+      }
+    },
+    "SENSITIVITY_NO_SUSPICION_FLAGS": {
+      "rows": 586,
+      "studies": 138,
+      "by_tier": {
+        "STRICT": 528,
+        "DRY_LATEST_TIME": 41,
+        "UNIT_UNSTATED": 17
+      },
+      "by_organ": {
+        "SHOOT": 363,
+        "WHOLE_PLANT": 223
+      }
+    },
+    "QUALITY_CORE": {
+      "rows": 510,
+      "studies": 109,
+      "by_tier": {
+        "STRICT": 510
+      },
+      "by_organ": {
+        "SHOOT": 292,
+        "WHOLE_PLANT": 218
+      }
+    },
+    "SENSITIVITY_PLUS_BASIS_UNCONFIRMED_SYNTH": {
+      "rows": 852,
+      "studies": 163,
+      "by_tier": {
+        "STRICT": 706,
+        "BASIS_UNCONFIRMED": 80,
+        "DRY_LATEST_TIME": 49,
+        "UNIT_UNSTATED": 17
+      },
+      "by_organ": {
+        "SHOOT": 491,
+        "WHOLE_PLANT": 361
+      }
+    },
+    "V1_EQUIVALENT": {
+      "rows": 708,
+      "studies": 145,
+      "by_tier": {
+        "STRICT": 708
+      },
+      "by_organ": {
+        "SHOOT": 398,
+        "WHOLE_PLANT": 310
+      }
+    }
+  },
+  "status_counts": {
+    "EXCLUDED": 799,
+    "INCLUDED": 766,
+    "EXCLUDED_DUPLICATE": 155,
+    "SENSITIVITY_ONLY": 86
+  },
+  "integrity": {
+    "lnRR_recompute_mismatch": 0
+  },
+  "suspicion": {
+    "contrasts_flagged": 180,
+    "studies_flagged": 21,
+    "by_flag": {
+      "S_SHARED_BY_GT_6_SB": 162,
+      "ERROR_BARS_CONSTANT": 8,
+      "ABS_LNRR_GT_1.5": 6,
+      "CONTROL_RANGE_GT_50X": 4
+    }
+  },
+  "files": {
+    "biomass_contrast_register.csv": "d82c98e49b59528a6612194947c17d2c82001fd59478c4d35bf589ef6c107ec4",
+    "feature_completeness.csv": "e5b4054b5248b8ec79fed41829ad576b1d2a589ff094f6fe54bd015e6dac0e08",
+    "PRIMARY_EXPANDED.csv": "3461eb5c21d25eb1741c5e33b3950bed5691ba22ac0d14678f3eda7bf274711c",
+    "QUALITY_CORE.csv": "5d514bbe33eedf623c0b9caeb5b22ee866e7969eaff729fc5f04e12d1d22b200",
+    "SENSITIVITY_NO_ROB_HIGH.csv": "8ce476493d53af79d99396e3050baf10b347476f9be4e65f1febd9ec7291aefb",
+    "SENSITIVITY_NO_SUSPICION_FLAGS.csv": "bcfe6dc9eb30af690b5bd8c337cb62e9d697979f062b2e0dbfef2a7a2da01614",
+    "SENSITIVITY_PLUS_BASIS_UNCONFIRMED_SYNTH.csv": "c43d6dc46f7cda0035b7202cddd29abc3b0ae462689777027023198f01ea07d5",
+    "SENSITIVITY_REPORTED_VARIANCE.csv": "f304b1e3bc12c6312a035b9cfc97d29fcc4c1823baa1394e31d3a9cafa5d5345",
+    "SENSITIVITY_SHOOT.csv": "29be176b0552c691432c9294cce0c50df02184314a7a0f801630576689c2f6c1",
+    "SENSITIVITY_TABLE_SOURCED.csv": "19455abf06b5ad9dbc1d9f8c9f58e870c77d0e4b4a625837b2ed305090588ade",
+    "SENSITIVITY_WHOLE_PLANT.csv": "55649a353901423835c0de93c27758204655945310cdb50da73272c664376c97",
+    "STRICT_SENSITIVITY.csv": "9fccd2c849664fee6fe8232d495a76ed161d7842f91ad7bccc42d1a9b156b951",
+    "V1_EQUIVALENT.csv": "32c82b279b5cfcdfa6303e8c5b4fdd04a89784857f0a7793ff9ae51e60ea3f01"
+  }
+}

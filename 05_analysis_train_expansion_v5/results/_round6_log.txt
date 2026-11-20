@@ -1,0 +1,69 @@
+  seed=11 fold=0 RIDGE: PHASE  [["BASE", 0.21856], ["PHASE", 0.21295]]
+  seed=11 fold=0 RF: TE  [["BASE", 0.23046], ["TE", 0.21733]]
+  seed=11 fold=1 RIDGE: PHASE+SOIL_FERT  [["BASE", 0.16274], ["PHASE", 0.15406], ["SOIL_FERT", 0.14699]]
+  seed=11 fold=1 RF: PHASE  [["BASE", 0.16635], ["PHASE", 0.16136]]
+  seed=11 fold=2 RIDGE: STRESS  [["BASE", 0.21358], ["STRESS", 0.21125]]
+  seed=11 fold=2 RF: TE  [["BASE", 0.22345], ["TE", 0.22066]]
+  seed=11 fold=3 RIDGE: ROUTE+PHASE  [["BASE", 0.20883], ["ROUTE", 0.20182], ["PHASE", 0.19885]]
+  seed=11 fold=3 RF: TE  [["BASE", 0.23993], ["TE", 0.21114]]
+  seed=11 fold=4 RIDGE: PHASE+GEO  [["BASE", 0.18579], ["PHASE", 0.17344], ["GEO", 0.16786]]
+  seed=11 fold=4 RF: TFIDF+ROUTE  [["BASE", 0.20225], ["TFIDF", 0.18829], ["ROUTE", 0.18418]]
+yield seed=11 301s
+  seed=22 fold=0 RIDGE: PHASE+GENOTYPE  [["BASE", 0.17007], ["PHASE", 0.16744], ["GENOTYPE", 0.16551]]
+  seed=22 fold=0 RF: (none)  [["BASE", 0.19869]]
+  seed=22 fold=1 RIDGE: PHASE  [["BASE", 0.22033], ["PHASE", 0.20876]]
+  seed=22 fold=1 RF: PHASE+SOIL_FERT  [["BASE", 0.23292], ["PHASE", 0.22612], ["SOIL_FERT", 0.22222]]
+  seed=22 fold=2 RIDGE: TE  [["BASE", 0.2151], ["TE", 0.20485]]
+  seed=22 fold=2 RF: TE+GEO  [["BASE", 0.23326], ["TE", 0.21477], ["GEO", 0.20833]]
+  seed=22 fold=3 RIDGE: GENOTYPE  [["BASE", 0.19354], ["GENOTYPE", 0.1908]]
+  seed=22 fold=3 RF: TFIDF  [["BASE", 0.19993], ["TFIDF", 0.18282]]
+  seed=22 fold=4 RIDGE: PHASE+ACTIVE+STRESS  [["BASE", 0.21678], ["PHASE", 0.21], ["ACTIVE", 0.20709], ["STRESS", 0.20413]]
+  seed=22 fold=4 RF: TFIDF+GEO  [["BASE", 0.22841], ["TFIDF", 0.21074], ["GEO", 0.20808]]
+yield seed=22 300s
+  seed=33 fold=0 RIDGE: STRESS+SOIL_FERT  [["BASE", 0.20604], ["STRESS", 0.20254], ["SOIL_FERT", 0.19966]]
+  seed=33 fold=0 RF: TE+STRESS  [["BASE", 0.22285], ["TE", 0.20162], ["STRESS", 0.19716]]
+  seed=33 fold=1 RIDGE: PHASE  [["BASE", 0.22404], ["PHASE", 0.21971]]
+  seed=33 fold=1 RF: (none)  [["BASE", 0.21513]]
+  seed=33 fold=2 RIDGE: TE+PHASE  [["BASE", 0.22117], ["TE", 0.18671], ["PHASE", 0.18351]]
+  seed=33 fold=2 RF: TE  [["BASE", 0.21662], ["TE", 0.18645]]
+  seed=33 fold=3 RIDGE: SOIL_FERT+PHASE+ACTIVE  [["BASE", 0.195], ["SOIL_FERT", 0.19242], ["PHASE", 0.18919], ["ACTIVE", 0.18595]]
+  seed=33 fold=3 RF: TFIDF+ACTIVE  [["BASE", 0.21076], ["TFIDF", 0.19746], ["ACTIVE", 0.19135]]
+  seed=33 fold=4 RIDGE: ACTIVE+STRESS  [["BASE", 0.18678], ["ACTIVE", 0.17936], ["STRESS", 0.17543]]
+  seed=33 fold=4 RF: TE  [["BASE", 0.19555], ["TE", 0.18747]]
+yield seed=33 305s
+   endpoint                 model feature_set  seeds    RMSE  RMSE_sd     MAE      R2   wRMSE  coverage95  d_vs_mean_pct  d_vs_REF_pct  better_than_REF_all_seeds
+9     yield   STACK_B_RIDGE+MR2mt    REF_V2DJ      3  0.4249   0.0050  0.3078  0.1344  0.4230      0.9642        -7.7507        0.0000                      False
+2     yield    MR2_v2DJ_MULTITASK                  3  0.4368   0.0077  0.3212  0.0853  0.4383      0.9273        -5.1791           NaN                      False
+10    yield   STACK_B_RIDGE+MR2mt    SELECTED      3  0.4394   0.0065  0.3221  0.0741  0.4377      0.9553        -4.5910        3.4235                      False
+5     yield                 RIDGE    REF_V2DJ      3  0.4397   0.0062  0.3114  0.0732  0.4340      0.9545        -4.5378        0.0000                      False
+7     yield      STACK_A_RIDGE+RF    REF_V2DJ      3  0.4404   0.0021  0.3138  0.0700  0.4357      0.9498        -4.3733        0.0000                      False
+3     yield                    RF    REF_V2DJ      3  0.4523   0.0077  0.3260  0.0190  0.4485      0.9459        -1.7984        0.0000                      False
+1     yield  MR0_3level_intercept                  3  0.4604   0.0041  0.3354 -0.0160  0.4553      0.9673        -0.0520           NaN                      False
+0     yield         BASELINE_mean                  3  0.4606   0.0041  0.3334 -0.0171  0.4553      0.9452         0.0000           NaN                      False
+8     yield      STACK_A_RIDGE+RF    SELECTED      3  0.4618   0.0052  0.3365 -0.0223  0.4568      0.9413         0.2577        4.8425                      False
+4     yield                    RF    SELECTED      3  0.4687   0.0093  0.3455 -0.0534  0.4642      0.9393         1.7528        3.6226                      False
+6     yield                 RIDGE    SELECTED      3  0.4694   0.0084  0.3417 -0.0564  0.4640      0.9409         1.9156        6.7542                      False
+model  selected              
+RF     TE                        5
+       (none)                    2
+       PHASE                     1
+       PHASE+SOIL_FERT           1
+       TE+GEO                    1
+       TE+STRESS                 1
+       TFIDF                     1
+       TFIDF+ACTIVE              1
+       TFIDF+GEO                 1
+       TFIDF+ROUTE               1
+RIDGE  PHASE                     3
+       ACTIVE+STRESS             1
+       GENOTYPE                  1
+       PHASE+ACTIVE+STRESS       1
+       PHASE+GENOTYPE            1
+       PHASE+GEO                 1
+       PHASE+SOIL_FERT           1
+       ROUTE+PHASE               1
+       SOIL_FERT+PHASE+ACTIVE    1
+       STRESS                    1
+       STRESS+SOIL_FERT          1
+       TE                        1
+       TE+PHASE                  1

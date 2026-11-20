@@ -1,0 +1,28 @@
+{
+  "date_utc": "2026-10-19T12:17:58.419396+00:00",
+  "tests_run": 72,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 30.663,
+  "success": true,
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "dependencies": {
+    "pandas": "2.2.3",
+    "openpyxl": "3.1.5",
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "PyMuPDF": "1.26.6",
+    "pyarrow": "23.0.1",
+    "python-docx": "1.2.0",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "xlrd": "2.0.2"
+  },
+  "live_claude_session_tested": false,
+  "real_399_source_extraction_run": false,
+  "real_human_audit_completed": false
+}

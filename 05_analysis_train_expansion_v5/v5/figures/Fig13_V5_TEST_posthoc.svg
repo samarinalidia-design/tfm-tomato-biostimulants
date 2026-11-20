@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="504pt" height="290.52pt" viewBox="0 0 504 290.52" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-20T19:37:45.954366</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 290.52 
+L 504 290.52 
+L 504 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 79.906091 48.937922 
+L 140.069054 48.937922 
+L 140.069054 32.288571 
+L 79.906091 32.288571 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="42.213684" transform="rotate(-0 109.987572 42.213684)">Yield</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 140.069054 48.937922 
+L 200.232016 48.937922 
+L 200.232016 32.288571 
+L 140.069054 32.288571 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="42.213684" transform="rotate(-0 170.150535 42.213684)">Biomass</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 5.082829 65.587273 
+L 79.906091 65.587273 
+L 79.906091 48.937922 
+L 5.082829 48.937922 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="58.863035" transform="rotate(-0 12.565155 58.863035)">Selected model (A)</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 79.906091 65.587273 
+L 140.069054 65.587273 
+L 140.069054 48.937922 
+L 79.906091 48.937922 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="58.863035" transform="rotate(-0 109.987572 58.863035)">Ridge (design)</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 140.069054 65.587273 
+L 200.232016 65.587273 
+L 200.232016 48.937922 
+L 140.069054 48.937922 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="58.863035" transform="rotate(-0 170.150535 58.863035)">Mean</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 5.082829 82.236623 
+L 79.906091 82.236623 
+L 79.906091 65.587273 
+L 5.082829 65.587273 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="75.512386" transform="rotate(-0 12.565155 75.512386)">RMSE TEST</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 79.906091 82.236623 
+L 140.069054 82.236623 
+L 140.069054 65.587273 
+L 79.906091 65.587273 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="75.512386" transform="rotate(-0 109.987572 75.512386)">0.524</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 140.069054 82.236623 
+L 200.232016 82.236623 
+L 200.232016 65.587273 
+L 140.069054 65.587273 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="75.512386" transform="rotate(-0 170.150535 75.512386)">0.455</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 5.082829 98.885974 
+L 79.906091 98.885974 
+L 79.906091 82.236623 
+L 5.082829 82.236623 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="92.161736" transform="rotate(-0 12.565155 92.161736)">RMSE CV</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 79.906091 98.885974 
+L 140.069054 98.885974 
+L 140.069054 82.236623 
+L 79.906091 82.236623 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="92.161736" transform="rotate(-0 109.987572 92.161736)">0.438</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 140.069054 98.885974 
+L 200.232016 98.885974 
+L 200.232016 82.236623 
+L 140.069054 82.236623 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="92.161736" transform="rotate(-0 170.150535 92.161736)">0.367</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 5.082829 115.535325 
+L 79.906091 115.535325 
+L 79.906091 98.885974 
+L 5.082829 98.885974 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="108.811087" transform="rotate(-0 12.565155 108.811087)">RMSE mean (TEST)</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 79.906091 115.535325 
+L 140.069054 115.535325 
+L 140.069054 98.885974 
+L 79.906091 98.885974 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="108.811087" transform="rotate(-0 109.987572 108.811087)">0.512</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 140.069054 115.535325 
+L 200.232016 115.535325 
+L 200.232016 98.885974 
+L 140.069054 98.885974 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="108.811087" transform="rotate(-0 170.150535 108.811087)">0.455</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 5.082829 132.184675 
+L 79.906091 132.184675 
+L 79.906091 115.535325 
+L 5.082829 115.535325 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="125.460438" transform="rotate(-0 12.565155 125.460438)">H1 RMSE &lt; mean</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 79.906091 132.184675 
+L 140.069054 132.184675 
+L 140.069054 115.535325 
+L 79.906091 115.535325 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="125.460438" transform="rotate(-0 109.987572 125.460438)">fail</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 140.069054 132.184675 
+L 200.232016 132.184675 
+L 200.232016 115.535325 
+L 140.069054 115.535325 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="125.460438" transform="rotate(-0 170.150535 125.460438)">fail</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 5.082829 148.834026 
+L 79.906091 148.834026 
+L 79.906091 132.184675 
+L 5.082829 132.184675 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="142.109788" transform="rotate(-0 12.565155 142.109788)">H2 TEST ≤ 1.25 × CV</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 79.906091 148.834026 
+L 140.069054 148.834026 
+L 140.069054 132.184675 
+L 79.906091 132.184675 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="142.109788" transform="rotate(-0 109.987572 142.109788)">pass</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 140.069054 148.834026 
+L 200.232016 148.834026 
+L 200.232016 132.184675 
+L 140.069054 132.184675 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="142.109788" transform="rotate(-0 170.150535 142.109788)">pass</text>
+    </g>
+    <g id="patch_22">
+     <path d="M 5.082829 165.483377 
+L 79.906091 165.483377 
+L 79.906091 148.834026 
+L 5.082829 148.834026 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="158.759139" transform="rotate(-0 12.565155 158.759139)">H3 coverage ≥ 0.90</text>
+    </g>
+    <g id="patch_23">
+     <path d="M 79.906091 165.483377 
+L 140.069054 165.483377 
+L 140.069054 148.834026 
+L 79.906091 148.834026 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_22">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="158.759139" transform="rotate(-0 109.987572 158.759139)">fail (0.897)</text>
+    </g>
+    <g id="patch_24">
+     <path d="M 140.069054 165.483377 
+L 200.232016 165.483377 
+L 200.232016 148.834026 
+L 140.069054 148.834026 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_23">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="158.759139" transform="rotate(-0 170.150535 158.759139)">fail (0.899)</text>
+    </g>
+    <g id="patch_25">
+     <path d="M 5.082829 182.132727 
+L 79.906091 182.132727 
+L 79.906091 165.483377 
+L 5.082829 165.483377 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_24">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="175.408489" transform="rotate(-0 12.565155 175.408489)">Verdict (A)</text>
+    </g>
+    <g id="patch_26">
+     <path d="M 79.906091 182.132727 
+L 140.069054 182.132727 
+L 140.069054 165.483377 
+L 79.906091 165.483377 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_25">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="175.408489" transform="rotate(-0 109.987572 175.408489)">PARTIAL</text>
+    </g>
+    <g id="patch_27">
+     <path d="M 140.069054 182.132727 
+L 200.232016 182.132727 
+L 200.232016 165.483377 
+L 140.069054 165.483377 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_26">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="175.408489" transform="rotate(-0 170.150535 175.408489)">PARTIAL</text>
+    </g>
+    <g id="patch_28">
+     <path d="M 5.082829 198.782078 
+L 79.906091 198.782078 
+L 79.906091 182.132727 
+L 5.082829 182.132727 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_27">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="192.05784" transform="rotate(-0 12.565155 192.05784)">Conditional (B)</text>
+    </g>
+    <g id="patch_29">
+     <path d="M 79.906091 198.782078 
+L 140.069054 198.782078 
+L 140.069054 182.132727 
+L 79.906091 182.132727 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_28">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="192.05784" transform="rotate(-0 109.987572 192.05784)">Ridge + MR2 (cond.)</text>
+    </g>
+    <g id="patch_30">
+     <path d="M 140.069054 198.782078 
+L 200.232016 198.782078 
+L 200.232016 182.132727 
+L 140.069054 182.132727 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_29">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="192.05784" transform="rotate(-0 170.150535 192.05784)">MR0 + MR2 (cond.)</text>
+    </g>
+    <g id="patch_31">
+     <path d="M 5.082829 215.431429 
+L 79.906091 215.431429 
+L 79.906091 198.782078 
+L 5.082829 198.782078 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_30">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="12.565155" y="208.707191" transform="rotate(-0 12.565155 208.707191)">RMSE TEST (B)</text>
+    </g>
+    <g id="patch_32">
+     <path d="M 79.906091 215.431429 
+L 140.069054 215.431429 
+L 140.069054 198.782078 
+L 79.906091 198.782078 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_31">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="109.987572" y="208.707191" transform="rotate(-0 109.987572 208.707191)">0.492</text>
+    </g>
+    <g id="patch_33">
+     <path d="M 140.069054 215.431429 
+L 200.232016 215.431429 
+L 200.232016 198.782078 
+L 140.069054 198.782078 
+z
+" style="fill: #ffffff; stroke: #000000; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_32">
+     <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="170.150535" y="208.707191" transform="rotate(-0 170.150535 208.707191)">0.431</text>
+    </g>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="56.509384" y="15.3" transform="rotate(-0 56.509384 15.3)">a  Pre-specified criteria</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_34">
+    <path d="M 336.738724 226.42 
+L 495.9 226.42 
+L 495.9 21.3 
+L 336.738724 21.3 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m41263a1ba7" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m41263a1ba7" x="352.806845" y="226.42" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="352.806845" y="238.586937" transform="rotate(-0 352.806845 238.586937)">−0.10</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m41263a1ba7" x="397.17502" y="226.42" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="397.17502" y="238.586937" transform="rotate(-0 397.17502 238.586937)">−0.05</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m41263a1ba7" x="441.543195" y="226.42" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="441.543195" y="238.586937" transform="rotate(-0 441.543195 238.586937)">0.00</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m41263a1ba7" x="485.91137" y="226.42" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="485.91137" y="238.586937" transform="rotate(-0 485.91137 238.586937)">0.05</text>
+     </g>
+    </g>
+    <g id="text_38">
+     <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="416.319362" y="249.699953" transform="rotate(-0 416.319362 249.699953)">ΔRMSE vs mean, TEST (95 % bootstrap)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <defs>
+       <path id="m93d9b703ff" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="30.623636" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="32.637222" transform="rotate(-0 329.738724 32.637222)">Yield: Ridge, design features ◀</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="49.651466" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="51.665052" transform="rotate(-0 329.738724 51.665052)">Yield: 3-level mean (MR0)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="68.679295" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="70.692881" transform="rotate(-0 329.738724 70.692881)">Yield: Mean (baseline)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="87.707124" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="89.72071" transform="rotate(-0 329.738724 89.72071)">Yield: RF, recoding + TE + text</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="106.734954" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="108.74854" transform="rotate(-0 329.738724 108.74854)">Yield: Ridge + MR2 (conditional) ◀</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="140.985046" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="142.998632" transform="rotate(-0 329.738724 142.998632)">Biomass: Mean (baseline) ◀</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="160.012876" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="162.026462" transform="rotate(-0 329.738724 162.026462)">Biomass: 3-level mean (MR0)</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="179.040705" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="181.054291" transform="rotate(-0 329.738724 181.054291)">Biomass: Ridge, design features</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="198.068534" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_47">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="200.08212" transform="rotate(-0 329.738724 200.08212)">Biomass: RF, recoding + TE + text</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m93d9b703ff" x="336.738724" y="217.096364" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_48">
+      <text style="font-size: 5.3px; font-family: 'DejaVu Sans'; text-anchor: end" x="329.738724" y="219.10995" transform="rotate(-0 329.738724 219.10995)">Biomass: MR0 + MR2 (conditional) ◀</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 392.67556 30.623636 
+L 488.665397 30.623636 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 438.575049 49.651466 
+L 448.034565 49.651466 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_3">
+    <path d="M 441.543195 68.679295 
+L 441.543195 68.679295 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_4">
+    <path d="M 377.717667 87.707124 
+L 438.18502 87.707124 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_5">
+    <path d="M 343.973327 106.734954 
+L 472.731754 106.734954 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #7a5195"/>
+   </g>
+   <g id="LineCollection_6">
+    <path d="M 441.543195 140.985046 
+L 441.543195 140.985046 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_7">
+    <path d="M 440.72783 160.012876 
+L 445.052162 160.012876 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_8">
+    <path d="M 372.277495 179.040705 
+L 470.259447 179.040705 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_9">
+    <path d="M 410.221802 198.068534 
+L 464.054669 198.068534 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #2a6f97"/>
+   </g>
+   <g id="LineCollection_10">
+    <path d="M 405.345878 217.096364 
+L 443.038491 217.096364 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #7a5195"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 441.543195 226.42 
+L 441.543195 21.3 
+" clip-path="url(#p4104647102)" style="fill: none; stroke: #555555; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <defs>
+     <path id="mebb0a27f17" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #2a6f97"/>
+    </defs>
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="451.882233" y="30.623636" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_17">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="444.13804" y="49.651466" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="441.543195" y="68.679295" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="404.331884" y="87.707124" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_20">
+    <defs>
+     <path id="mf4705060cd" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #7a5195"/>
+    </defs>
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mf4705060cd" x="423.939963" y="106.734954" style="fill: #7a5195; stroke: #7a5195"/>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="441.543195" y="140.985046" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_22">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="443.903576" y="160.012876" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="402.2663" y="179.040705" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_24">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mebb0a27f17" x="447.674682" y="198.068534" style="fill: #2a6f97; stroke: #2a6f97"/>
+    </g>
+   </g>
+   <g id="line2d_25">
+    <g clip-path="url(#p4104647102)">
+     <use xlink:href="#mf4705060cd" x="420.52547" y="217.096364" style="fill: #7a5195; stroke: #7a5195"/>
+    </g>
+   </g>
+   <g id="patch_35">
+    <path d="M 336.738724 226.42 
+L 336.738724 21.3 
+" style="fill: none; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 336.738724 226.42 
+L 495.9 226.42 
+" style="fill: none; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_49">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="336.738724" y="15.3" transform="rotate(-0 336.738724 15.3)">b  Gain over the mean on TEST</text>
+   </g>
+  </g>
+  <g id="text_50">
+   <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #333333" transform="translate(5.04 274.097261)">Fig. 13. V5 TEST evaluation, POST_HOC_TEST_REUSE. H1: RMSE below the mean baseline with bootstrap CI of the difference &lt; 0 (for biomass the selected A</text>
+   <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #333333" transform="translate(5.04 280.753305)">model is the mean itself, so H1 cannot pass); H2: RMSE_TEST ≤ 1.25 × RMSE_CV; H3: 95 % interval coverage ≥ 0.90. Criteria were written into</text>
+   <text style="font-size: 5.8px; font-family: 'DejaVu Sans'; fill: #333333" transform="translate(5.04 287.409349)">MODEL_FREEZE_V5.json before TEST was read. ◀ = selected; models without ◀ are shown for transparency, not re-selected on TEST.  [V5 (2026-11-20)]</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4104647102">
+   <rect x="336.738724" y="21.3" width="159.161276" height="205.12"/>
+  </clipPath>
+ </defs>
+</svg>

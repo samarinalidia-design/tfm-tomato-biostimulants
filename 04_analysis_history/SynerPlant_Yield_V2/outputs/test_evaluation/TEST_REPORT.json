@@ -1,0 +1,63 @@
+{
+  "label": "TEST_2024_2026_ONE_TIME",
+  "evaluated_at": "2026-11-18T11:03:51+00:00",
+  "registration": "2026-11-18T09:07:34+00:00",
+  "primary": {
+    "n_contrasts": 36,
+    "n_studies": 12,
+    "group_mae": 0.41548780966643517,
+    "mae": 0.4798866999867813,
+    "rmse": 0.6634362198532436,
+    "bias": -0.32133987158489136,
+    "coverage_single": 0.8472222222222222,
+    "coverage_simultaneous": 0.9166666666666666,
+    "coverage_simultaneous_ci95": [
+      0.6152038348490559,
+      0.9978924067681397
+    ],
+    "pass_coverage_single": false,
+    "pass_coverage_simultaneous": true,
+    "pass_accuracy_transport": true
+  },
+  "conditional": {
+    "n_contrasts": 24,
+    "n_studies": 9,
+    "median_group_mae": 0.2802278386456732,
+    "C1": {
+      "group_mae": 0.32821735769288946,
+      "gain_vs_median": -0.17125179025448412,
+      "null_gain_q95": 0.02920846946234402,
+      "coverage_single": 1.0
+    },
+    "C2": {
+      "group_mae": 0.32704387853640404,
+      "gain_vs_median": -0.1670642007481855,
+      "null_gain_q95": 0.07422800667899378,
+      "coverage_single": 0.8888888888888888
+    },
+    "C3": {
+      "group_mae": 0.25113054018662784,
+      "gain_vs_median": 0.10383443200957876,
+      "null_gain_q95": 0.1128873167189753,
+      "coverage_single": 0.9259259259259258
+    },
+    "between_slope": {
+      "observed": -0.01305831549285025,
+      "ci95": [
+        -2.8754848058015328,
+        1.488563265749265
+      ],
+      "null_band95": [
+        -1.513942326811104,
+        1.3648409484244441
+      ]
+    },
+    "criteria": {
+      "1_gain": false,
+      "2_beyond_coupling": false,
+      "3_slope": false,
+      "4_coverage": true
+    },
+    "verdict": "NOT_CONFIRMED"
+  }
+}

@@ -1,0 +1,539 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "EXTRACT_A / EXTRACT_B output",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-\\d{6}$"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "enum": [
+    "tfm-extractor-a",
+    "tfm-extractor-b"
+   ]
+  },
+  "model_id": {
+   "type": "string",
+   "minLength": 3
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "pass": {
+   "enum": [
+    "A",
+    "B"
+   ]
+  },
+  "values": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "slot_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "arm_key": {
+      "type": "string"
+     },
+     "endpoint": {
+      "enum": [
+       "FRUIT_YIELD",
+       "DRY_BIOMASS",
+       "FRUIT_NUMBER",
+       "MEAN_FRUIT_MASS",
+       "WATER_PRODUCTIVITY",
+       "BIOTIC_SEVERITY",
+       "BIOTIC_INCIDENCE",
+       "BIOTIC_PATHOGEN_LOAD",
+       "BIOTIC_LESION_AREA",
+       "BIOTIC_MORTALITY",
+       "BIOTIC_SURVIVAL",
+       "BIOTIC_ROOT_GALL"
+      ]
+     },
+     "yield_scope": {
+      "enum": [
+       "TOTAL",
+       "MARKETABLE",
+       "EARLY",
+       "NON_MARKETABLE",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "mass_basis": {
+      "enum": [
+       "FRESH",
+       "DRY",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "denominator": {
+      "enum": [
+       "PER_PLANT",
+       "PER_AREA",
+       "PER_POT",
+       "PER_PLOT",
+       "PER_ROW_LENGTH",
+       "OTHER",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "harvest_window": {
+      "enum": [
+       "CUMULATIVE",
+       "SINGLE_HARVEST",
+       "PARTIAL",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "organ_scope": {
+      "enum": [
+       "WHOLE_PLANT",
+       "SHOOT",
+       "ROOT",
+       "LEAF",
+       "STEM",
+       "OTHER",
+       null
+      ]
+     },
+     "timepoint_key": {
+      "type": "string"
+     },
+     "mean": {
+      "type": "number"
+     },
+     "dispersion_type": {
+      "enum": [
+       "SD",
+       "SE",
+       "CI95",
+       "NONE",
+       "UNCLEAR"
+      ]
+     },
+     "dispersion_value": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "n": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "n_unit": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "n_source": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "unit_raw": {
+      "type": "string",
+      "minLength": 1
+     },
+     "sig_letters": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "source_kind": {
+      "enum": [
+       "TABLE",
+       "TEXT",
+       "SUPP_TABLE",
+       "SUPP_DATASET"
+      ]
+     },
+     "source_file_id": {
+      "type": "string",
+      "minLength": 3
+     },
+     "page": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "locator": {
+      "type": "string",
+      "minLength": 5
+     },
+     "verbatim": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+     },
+     "confidence": {
+      "enum": [
+       "HIGH",
+       "MEDIUM",
+       "LOW"
+      ]
+     },
+     "notes": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "receipt_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "source_cell": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "ci": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "target": {
+        "enum": [
+         "ARM_MEAN",
+         "ADJUSTED_MEAN",
+         "DIFFERENCE",
+         "RATIO",
+         "UNKNOWN"
+        ]
+       },
+       "symmetric": {
+        "type": "boolean"
+       },
+       "sidedness": {
+        "enum": [
+         "TWO_SIDED",
+         "ONE_SIDED",
+         "UNKNOWN"
+        ]
+       },
+       "level": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "exclusiveMaximum": 1
+       },
+       "distribution": {
+        "enum": [
+         "t",
+         "normal",
+         "UNKNOWN"
+        ]
+       },
+       "df": {
+        "type": [
+         "number",
+         "null"
+        ],
+        "exclusiveMinimum": 0
+       }
+      },
+      "required": [
+       "target",
+       "symmetric",
+       "sidedness",
+       "level",
+       "distribution"
+      ]
+     },
+     "context_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "outcome_context": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "estimand_id": {
+        "type": "string"
+       },
+       "effect_metric": {
+        "enum": [
+         "lnRR",
+         "MD",
+         "LOG_RR_BINARY",
+         "LOG_OR",
+         "DESCRIPTIVE_ORDINAL"
+        ]
+       },
+       "scale_id": {
+        "type": "string"
+       },
+       "scale_type": {
+        "enum": [
+         "CONTINUOUS",
+         "BINARY",
+         "ORDINAL"
+        ]
+       },
+       "scale_min": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "scale_max": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "assay": {
+        "type": "string"
+       },
+       "pathogen": {
+        "type": "string"
+       },
+       "favorable_direction": {
+        "enum": [
+         "POSITIVE",
+         "NEGATIVE"
+        ]
+       },
+       "events": {
+        "type": [
+         "integer",
+         "null"
+        ],
+        "minimum": 0
+       },
+       "total": {
+        "type": [
+         "integer",
+         "null"
+        ],
+        "minimum": 1
+       },
+       "binomial_independent": {
+        "type": "boolean"
+       }
+      },
+      "required": [
+       "estimand_id",
+       "effect_metric",
+       "scale_id",
+       "scale_type",
+       "assay",
+       "pathogen",
+       "favorable_direction"
+      ]
+     },
+     "dispersion_type_reported": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "dispersion_basis": {
+      "enum": [
+       "SOURCE_REPORTED",
+       "USER_ASSUMED_SE",
+       "NOT_REPORTED",
+       "NOT_READABLE",
+       "ASYMMETRIC_INTERVAL",
+       "OTHER_REPORTED_INTERVAL",
+       "UNRESOLVED_TYPE",
+       null
+      ]
+     },
+     "error_bar_status": {
+      "enum": [
+       "DIGITIZED_BOTH",
+       "DIGITIZED_UPPER_ONLY",
+       "DIGITIZED_LOWER_ONLY",
+       "ABSENT_IN_SOURCE",
+       "NOT_READABLE"
+      ]
+     },
+     "error_bar_bounds_json": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "error_bar_relative_uncertainty": {
+      "type": [
+       "number",
+       "null"
+      ],
+      "minimum": 0
+     }
+    },
+    "required": [
+     "arm_key",
+     "endpoint",
+     "timepoint_key",
+     "mean",
+     "dispersion_type",
+     "n",
+     "unit_raw",
+     "source_kind",
+     "source_file_id",
+     "locator",
+     "verbatim",
+     "confidence"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "slot_status": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "slot_id": {
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "EXTRACTED",
+       "NOT_EXTRACTABLE"
+      ]
+     },
+     "reason": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "n_values": {
+      "type": "integer",
+      "minimum": 0
+     }
+    },
+    "required": [
+     "slot_id",
+     "status",
+     "n_values"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "design_gaps": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "issue": {
+      "type": "string"
+     },
+     "locator": {
+      "type": "string"
+     },
+     "kind": {
+      "enum": [
+       "STRUCTURAL",
+       "SOURCE_LIMIT"
+      ],
+      "description": "STRUCTURAL only when an arm, timepoint, experiment, genotype, season, site or factorial cell is missing or wrong in the current design. SOURCE_LIMIT when the original was read and does not state n, unit, denominator, basis or harvest detail, or a bar is unreadable."
+     }
+    },
+    "required": [
+     "issue",
+     "locator",
+     "kind"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "not_found": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "description": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "description",
+     "reason"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "inventory_corrections": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "slot_id": {
+      "type": "string"
+     },
+     "expected_n_values": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "source_file_id": {
+      "type": "string"
+     },
+     "receipt_id": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string",
+      "minLength": 10
+     }
+    },
+    "required": [
+     "slot_id",
+     "expected_n_values",
+     "source_file_id",
+     "receipt_id",
+     "reason"
+    ]
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "pass",
+  "values",
+  "slot_status",
+  "design_gaps"
+ ]
+}

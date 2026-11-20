@@ -1,0 +1,16 @@
+{
+  "built_at": "2026-11-18T11:42:37+00:00",
+  "source_sqlite": "C:\\Users\\lenovo\\Desktop\\master's\\TFM_TEST_2024_2026_Agent_System\\exports\\DATA_FREEZE_20261118T105532769144Z\\TFM_DATABASE_CLASS_A_FINAL.sqlite",
+  "source_sha256": "106ef154d01a1164acd51a8d19dfb52cc15e7c60b4a41a40b1ff9f8dfd89593b",
+  "rows": 144,
+  "studies": 28,
+  "quadruple_rows": 104,
+  "quadruple_studies": 20,
+  "status_counts": {
+    "INCLUDED": 146,
+    "EXCLUDED": 124,
+    "EXCLUDED_DUPLICATE": 33
+  },
+  "builder_sha256": "e5f6bc332e9f192ad724acddded630cbdf9ec69766c8348070655e532c324dea",
+  "b03_sha256": "68f83898a11c93e3375d6b3f0206f96915577bd1f53f4670a4413acc1a9b69fc"
+}

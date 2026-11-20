@@ -1,0 +1,11 @@
+endpoint,role,type,study_id,effect,k
+dry_biomass,train,AxB,279,-0.276254603351517,2
+dry_biomass,train,AxB,298,-0.368159378282893,2
+dry_biomass,train,AxB,653,-0.00951124055084411,12
+dry_biomass,train,AxB,806,0.0450810850406973,9
+dry_biomass,train,AxB,D_2163ffa1e2913fd5,-0.20675274100984,3
+dry_biomass,train,AxB,D_2423b3aa1d392fc9,-0.269110160900491,3
+dry_biomass,train,AxB,D_39c9836cba1eed39,-0.448197030171655,2
+dry_biomass,train,AxB,D_58588b3ac1277c44,0.129991386346693,16
+dry_biomass,train,AxB,D_787a2af6e69899c4,-0.212956475109898,6
+dry_biomass,train,AxB,D_f3c00040a8fabdde,-0.25029832833255,2

@@ -1,0 +1,417 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "TRIAGE / TRIAGE_2ND output",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-\\d{6}$"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "const": "tfm-triage"
+  },
+  "model_id": {
+   "type": "string",
+   "minLength": 3
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "pass": {
+   "enum": [
+    "P1",
+    "P2"
+   ]
+  },
+  "scope": {
+   "type": "object",
+   "properties": {
+    "class_A_ok": {
+     "type": "boolean"
+    },
+    "flag": {
+     "enum": [
+      "NONE",
+      "REVIEW_ARTICLE",
+      "NO_BIOSTIMULANT",
+      "NO_IMPOSED_STRESS",
+      "NOT_TOMATO",
+      "NO_PLANT_EXPERIMENT",
+      "GENOMICS_OR_INVITRO_ONLY",
+      "POSTHARVEST_ONLY",
+      "MICROBIOME_ONLY",
+      "DUPLICATE_SUSPECTED",
+      "OTHER"
+     ]
+    },
+    "reason": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   },
+   "required": [
+    "class_A_ok",
+    "flag"
+   ],
+   "additionalProperties": false
+  },
+  "design": {
+   "type": "object",
+   "properties": {
+    "n_experiments": {
+     "type": "integer",
+     "minimum": 0
+    },
+    "summary": {
+     "type": "string",
+     "minLength": 10
+    },
+    "has_C": {
+     "enum": [
+      "YES",
+      "NO",
+      "UNCLEAR"
+     ]
+    },
+    "has_S": {
+     "enum": [
+      "YES",
+      "NO",
+      "UNCLEAR"
+     ]
+    },
+    "has_B": {
+     "enum": [
+      "YES",
+      "NO",
+      "UNCLEAR"
+     ]
+    },
+    "has_SB": {
+     "enum": [
+      "YES",
+      "NO",
+      "UNCLEAR"
+     ]
+    },
+    "has_AxB": {
+     "enum": [
+      "YES",
+      "NO",
+      "UNCLEAR"
+     ]
+    },
+    "stress_domains": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "DROUGHT",
+       "SALINITY",
+       "HEAT",
+       "COLD",
+       "NUTRIENT",
+       "WATERLOGGING",
+       "TOXIC_ELEMENT",
+       "OSMOTIC",
+       "RADIATION",
+       "BIOTIC",
+       "COMBINED",
+       "OTHER"
+      ]
+     }
+    },
+    "system": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "seasons_sites": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   },
+   "required": [
+    "n_experiments",
+    "summary",
+    "has_C",
+    "has_S",
+    "has_B",
+    "has_SB",
+    "has_AxB",
+    "stress_domains"
+   ],
+   "additionalProperties": false
+  },
+  "targets": {
+   "type": "object",
+   "properties": {
+    "fruit_yield": {
+     "enum": [
+      "PRESENT",
+      "ABSENT",
+      "UNCLEAR"
+     ]
+    },
+    "dry_biomass": {
+     "enum": [
+      "PRESENT",
+      "ABSENT",
+      "UNCLEAR"
+     ]
+    },
+    "yield_components": {
+     "enum": [
+      "PRESENT",
+      "ABSENT",
+      "UNCLEAR"
+     ]
+    }
+   },
+   "required": [
+    "fruit_yield",
+    "dry_biomass",
+    "yield_components"
+   ],
+   "additionalProperties": false
+  },
+  "slots": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "endpoint": {
+      "enum": [
+       "FRUIT_YIELD",
+       "DRY_BIOMASS",
+       "FRUIT_NUMBER",
+       "MEAN_FRUIT_MASS",
+       "WATER_PRODUCTIVITY",
+       "BIOTIC_SEVERITY",
+       "BIOTIC_INCIDENCE",
+       "BIOTIC_PATHOGEN_LOAD",
+       "BIOTIC_LESION_AREA",
+       "BIOTIC_MORTALITY",
+       "BIOTIC_SURVIVAL",
+       "BIOTIC_ROOT_GALL"
+      ]
+     },
+     "source_kind": {
+      "enum": [
+       "TABLE",
+       "TEXT",
+       "FIGURE",
+       "SUPP_TABLE",
+       "SUPP_DATASET"
+      ]
+     },
+     "source_file_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "locator_label": {
+      "type": "string",
+      "minLength": 2
+     },
+     "page": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "figure_item_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "expected_n_values": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "has_dispersion": {
+      "enum": [
+       "YES",
+       "NO",
+       "UNCLEAR"
+      ]
+     },
+     "description": {
+      "type": "string",
+      "minLength": 5
+     },
+     "duplicate_of_locator": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "endpoint",
+     "source_kind",
+     "locator_label",
+     "expected_n_values",
+     "has_dispersion",
+     "description"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "negative_evidence": {
+   "type": "object",
+   "properties": {
+    "sections_read": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "tables_checked": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "figures_checked": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "supplements_checked": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "search_terms": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   },
+   "required": [
+    "sections_read",
+    "tables_checked",
+    "figures_checked",
+    "supplements_checked",
+    "search_terms"
+   ],
+   "additionalProperties": false
+  },
+  "source_checks": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "source_file_id": {
+      "type": "string"
+     },
+     "disposition": {
+      "enum": [
+       "CHECKED",
+       "IRRELEVANT",
+       "MISSING",
+       "UNREADABLE"
+      ]
+     },
+     "receipt_ids": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "docling_findings": {
+      "type": "string"
+     },
+     "relevance": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "source_file_id",
+     "disposition",
+     "receipt_ids",
+     "docling_findings",
+     "relevance"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "asset_inventory": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "asset_key": {
+      "type": "string"
+     },
+     "source_file_id": {
+      "type": "string"
+     },
+     "locator": {
+      "type": "string"
+     },
+     "relevance": {
+      "enum": [
+       "TARGET",
+       "CONTEXT",
+       "QA",
+       "SUPPORTING_PRODUCTIVITY",
+       "IRRELEVANT"
+      ]
+     },
+     "disposition": {
+      "enum": [
+       "SLOT",
+       "CONTEXT_EXTRACTION",
+       "DUPLICATE",
+       "NOT_ELIGIBLE"
+      ]
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "asset_key",
+     "source_file_id",
+     "locator",
+     "relevance",
+     "disposition",
+     "reason"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "pass",
+  "scope",
+  "design",
+  "targets",
+  "slots",
+  "negative_evidence",
+  "source_checks",
+  "asset_inventory"
+ ]
+}

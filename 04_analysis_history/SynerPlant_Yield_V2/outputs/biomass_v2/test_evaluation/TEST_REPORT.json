@@ -1,0 +1,64 @@
+{
+  "label": "BIOMASS_TEST_2024_2026_ONE_TIME",
+  "evaluated_at": "2026-11-18T11:42:45+00:00",
+  "registration": "2026-11-18T11:40:13+00:00",
+  "primary": {
+    "n_contrasts": 144,
+    "n_studies": 28,
+    "group_mae": 0.2852067498637584,
+    "mae": 0.3207620141631522,
+    "rmse": 0.46401148096290384,
+    "bias": 0.10311024442170516,
+    "coverage_single": 0.9090136054421769,
+    "coverage_simultaneous": 0.8928571428571429,
+    "coverage_simultaneous_ci95": [
+      0.7177356042846756,
+      0.977334909360941
+    ],
+    "pass_coverage_single": true,
+    "pass_coverage_simultaneous": true,
+    "pass_accuracy_transport": true
+  },
+  "conditional": {
+    "n_contrasts": 104,
+    "n_studies": 20,
+    "median_group_mae": 0.3035850418927214,
+    "C1": {
+      "group_mae": 0.24813293967012942,
+      "gain_vs_median": 0.18265755742401568,
+      "null_gain_q95": 0.08107821483498456,
+      "coverage_single": 0.868452380952381
+    },
+    "C2": {
+      "group_mae": 0.26935333132527395,
+      "gain_vs_median": 0.11275822535269708,
+      "null_gain_q95": 0.0750422949558304,
+      "coverage_single": 0.8988095238095237
+    },
+    "C3": {
+      "group_mae": 0.20010814630012877,
+      "gain_vs_median": 0.34084978280701494,
+      "null_gain_q95": 0.07807990576224332,
+      "coverage_single": 0.9029761904761904
+    },
+    "between_slope": {
+      "observed": -0.5374180358949363,
+      "ci95": [
+        -0.6806453491935497,
+        -0.13936857826225454
+      ],
+      "null_band95": [
+        -0.4091522633091611,
+        0.3550898315845586
+      ]
+    },
+    "criteria": {
+      "1_gain": true,
+      "2_beyond_coupling": true,
+      "3_slope": false,
+      "4_coverage": true
+    },
+    "verdict": "NOT_CONFIRMED",
+    "C3_secondary_pass": true
+  }
+}

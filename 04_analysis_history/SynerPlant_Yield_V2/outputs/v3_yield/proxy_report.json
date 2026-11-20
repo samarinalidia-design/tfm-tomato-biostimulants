@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-11-18T11:36:52+00:00",
+  "status": "EXPLORATORY_POST_TEST_SENSITIVITY_ONLY",
+  "proxy_contrasts": 27,
+  "proxy_studies": 6,
+  "proxy_lnRR_median": 0.3091175713010492,
+  "primary_studies": 69,
+  "combined_studies": 75
+}

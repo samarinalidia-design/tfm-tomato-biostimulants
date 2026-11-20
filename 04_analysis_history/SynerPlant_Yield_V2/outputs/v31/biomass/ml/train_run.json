@@ -1,0 +1,86 @@
+{
+  "finished": "2026-11-18T13:40:37+00:00",
+  "minutes": 5.1,
+  "target": "biomass",
+  "feature_sets": {
+    "F1": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type"
+      ],
+      "missing_ind": true
+    },
+    "F2": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level",
+        "salinity_dSm_equiv",
+        "drought_supply_pct",
+        "stress_duration_days"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type",
+        "stress_timing",
+        "substrate_type"
+      ],
+      "missing_ind": true
+    },
+    "F2v3": {
+      "num": [
+        "log_application_count",
+        "relative_dose",
+        "relative_stress_level",
+        "salinity_dSm_equiv_v3",
+        "drought_supply_pct_v3",
+        "stress_duration_days_v3"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "application_timing",
+        "genotype_type",
+        "stress_timing_v3",
+        "substrate_type",
+        "organ_scope_v2"
+      ],
+      "missing_ind": true
+    },
+    "F5": {
+      "num": [
+        "log_application_count",
+        "stress_duration_days_v3",
+        "salinity_dSm_equiv_v3",
+        "drought_supply_pct_v3",
+        "log_dose_within_family_v3"
+      ],
+      "cat": [
+        "stress_family",
+        "biostimulant_class",
+        "application_route",
+        "cultivation_system",
+        "stress_timing_v3",
+        "dose_family_v3",
+        "organ_scope_v2"
+      ],
+      "missing_ind": true
+    }
+  },
+  "n_outer_fits": 475
+}

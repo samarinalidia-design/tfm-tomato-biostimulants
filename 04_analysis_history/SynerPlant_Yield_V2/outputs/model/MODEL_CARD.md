@@ -1,0 +1,27 @@
+# Model card — SynerPlant Yield V2
+
+- **Task:** predict lnRR of tomato fruit yield (stress + biostimulant vs same stress) for a new experiment.
+- **Selected model:** Row Median of 404 TRAIN_DEV contrasts from 69 studies (≤ 2023).
+  - Prediction: lnRR = median (see `model_manifest.json`).
+  - Chosen by a pre-specified rule after 7 ML families × 5 feature sets failed to beat it.
+- **Interval (90 %, conformal, cross-fitted on 69 studies):**
+  - ± 0.92 lnRR for one new contrast.
+  - ± 1.32 for all contrasts of a new study at once.
+  - Coverage measured on held-out studies: 90.8 % / 90.7 %.
+- **Applicability:**
+  - tomato
+  - abiotic stresses (salinity, drought, heat, cold, nutrient, toxicity) and 4 biotic studies
+  - biostimulant classes as in the training data
+  - synthetic PGRs excluded
+- **Not valid for:**
+  - other crops
+  - synthetic growth regulators
+  - fruit quality or biomass endpoints
+  - claims of stress × biostimulant interaction or synergy (SB vs S is not an interaction test)
+- **Known limits:**
+  - Extreme responses (|lnRR| > 1, 13 % of the data) are under-predicted by ≈ 1.1 lnRR.
+  - HEAT is the worst-predicted family.
+  - Intervals hold on average over studies, not within each stress family.
+- **Training data:** `outputs/data/PRIMARY_EXPANDED.csv`, with SHA-256 hashes in `exports/DATA_FREEZE_V2_*/MANIFEST.json`.
+- **TEST:** the 2024–2026 external TEST is untouched and must be evaluated once, after the human audit.
+- **Loading:** `joblib.load(V2_YIELD_MODEL.joblib)` with `src/` on the Python path. Only load files you created yourself.

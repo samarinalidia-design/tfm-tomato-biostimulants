@@ -1,0 +1,326 @@
+contract_version: AC-2.2-EXTERNAL_TEST-2024-2026-source-verified
+schema_version: wf-2.1
+db_path: db/tfm_test_2024_2026.sqlite
+work_dir: work
+target_discovery:
+  old_extraction_focus: NONE_NEW_CORPUS
+  old_primary_target_recall: NOT_APPLICABLE
+  full_original_inventory_required: true
+  search_mode: SEMANTIC_PLUS_NON_EXHAUSTIVE_TERMS
+  primary: FRUIT_YIELD
+  secondary: DRY_BIOMASS
+  candidate_terms:
+  - yield
+  - harvest
+  - harvested fruit mass
+  - fruit production
+  - crop production
+  - crop productivity
+  - fruit productivity
+  - total fruit weight
+  - total fruit fresh weight
+  - cumulative fruit mass
+  - marketable production
+  - marketable fruit weight
+  - commercial yield
+  - economic yield
+  - early production
+  - fruit mass per plant
+  - harvested mass per plot
+  - rendimiento
+  - cosecha
+  - producción de frutos
+  - produtividade
+  - produção de frutos
+  - colheita
+  - rendement
+  - récolte
+  - Ertrag
+  - Ernte
+  - урожайность
+  - сбор плодов
+  lexicon_is_exhaustive: false
+  qualification_rule: Interpret the original measurement, units, plant/area/plot denominator and harvest period; a keyword alone never defines fruit yield.
+  non_substitutes:
+  - harvest date or days to harvest
+  - harvest index or a ratio alone
+  - fruit number alone
+  - mean individual fruit mass alone
+  - vegetative fresh or dry biomass
+  - extract, DNA or metabolite yield
+  all_registered_originals_required: true
+  old_extraction_completeness: NOT_APPLICABLE
+targets:
+  primary: FRUIT_YIELD
+  secondary: DRY_BIOMASS
+  secondary_productivity:
+  - FRUIT_NUMBER
+  - MEAN_FRUIT_MASS
+  - WATER_PRODUCTIVITY
+  extract_secondary_productivity: true
+  digitize_auxiliary_figures: false
+  relevance_rule: Keep targets, required context, estimands, QA and pre-treatment
+    predictors only; exclude omics arrays and unrelated numerical outcomes.
+  exclude_payloads:
+  - transcriptomics_matrix
+  - metabolomics_matrix
+  - proteomics_matrix
+  - sequencing_reads
+  - unrelated_physiology
+  biotic_secondary:
+  - BIOTIC_SEVERITY
+  - BIOTIC_INCIDENCE
+  - BIOTIC_PATHOGEN_LOAD
+  - BIOTIC_LESION_AREA
+  - BIOTIC_MORTALITY
+  - BIOTIC_SURVIVAL
+  - BIOTIC_ROOT_GALL
+endpoints:
+  FRUIT_YIELD:
+    required_attrs:
+    - yield_scope
+    - mass_basis
+    - denominator
+    - harvest_window
+    yield_scope:
+    - TOTAL
+    - MARKETABLE
+    - EARLY
+    - NON_MARKETABLE
+    - UNSPECIFIED
+    mass_basis:
+    - FRESH
+    - DRY
+    - UNSPECIFIED
+    denominator:
+    - PER_PLANT
+    - PER_AREA
+    - PER_POT
+    - PER_PLOT
+    - PER_ROW_LENGTH
+    - OTHER
+    - UNSPECIFIED
+    harvest_window:
+    - CUMULATIVE
+    - SINGLE_HARVEST
+    - PARTIAL
+    - UNSPECIFIED
+  DRY_BIOMASS:
+    required_attrs:
+    - organ_scope
+    organ_scope:
+    - WHOLE_PLANT
+    - SHOOT
+    - ROOT
+    - LEAF
+    - STEM
+    - OTHER
+    - UNSPECIFIED
+  FRUIT_NUMBER:
+    required_attrs:
+    - denominator
+  MEAN_FRUIT_MASS:
+    required_attrs: []
+  WATER_PRODUCTIVITY:
+    required_attrs:
+    - denominator
+  BIOTIC_SEVERITY:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+  BIOTIC_INCIDENCE:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+  BIOTIC_PATHOGEN_LOAD:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+  BIOTIC_LESION_AREA:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+  BIOTIC_MORTALITY:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+  BIOTIC_SURVIVAL:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+  BIOTIC_ROOT_GALL:
+    required_attrs:
+    - context_key
+    scope: separate biotic estimand; never pool with yield/dry biomass
+source_priority:
+- SUPP_DATASET
+- SUPP_TABLE
+- TABLE
+- FIGURE
+- TEXT
+queue:
+  primary_absence_requires_second_review: true
+  lease_minutes: 45
+  max_attempts: 3
+  second_triage_fraction_no_target: 1.0
+  second_triage_always_if_title_signal: true
+  figure_twin_validation_max: 15
+  random_seed: 20261018
+  figure_recheck_rounds: 2
+agents:
+  TRIAGE: tfm-triage
+  TRIAGE_2ND: tfm-triage
+  SCOPE: tfm-scope-auditor
+  DESIGN: tfm-design-mapper
+  EXTRACT_A: tfm-extractor-a
+  EXTRACT_B: tfm-extractor-b
+  FIGURE_A: tfm-figure-digitizer
+  FIGURE_B: tfm-figure-digitizer
+  ADJUDICATE: tfm-adjudicator
+  MODERATORS: tfm-moderator-extractor
+  ROB: tfm-rob-assessor
+  DEDUP: tfm-dedup-linker
+  AUDIT: tfm-qa-auditor
+  PATCH_REVIEW: tfm-patch-reviewer
+  QA_REVIEW: tfm-qa-auditor
+  TEMPORAL: tfm-scope-auditor
+  MODERATORS_VERIFY: tfm-qa-auditor
+  MODERATORS_ADJ: tfm-adjudicator
+  DRY_BASIS: tfm-qa-auditor
+reconcile:
+  table_rel_tol: 1.0e-09
+  figure_abs_frac_of_axis: 0.0
+  figure_rel_tol: 0.05
+  figure_agree_value: mean
+  compare_fields:
+  - mean
+  - dispersion_type
+  - dispersion_value
+  - n
+  - unit_norm
+figures:
+  min_ticks: 3
+  recommended_ticks: 3
+  max_resid_frac: 0.015
+  snap_search_px: 6
+  max_rel_uncertainty: 0.05
+  digitize_error_bars: true
+  unlabelled_error_bars: SE
+  unlabelled_error_bars_basis: USER_DIRECTIVE_2026-10-19
+  error_bar_recovery_attempts: 2
+  max_error_bar_rel_uncertainty: 0.05
+  two_tick_axis_slots: []
+validation:
+  cv_warn: 1.5
+  n_max_plausible: 500
+  mad_z_flag: 4.5
+  source_check_blocking_passes:
+  - A
+acceptance:
+  gold_standard_studies: 0
+  table_mean_exact: 0.98
+  dispersion_exact: 0.95
+  n_exact: 0.95
+  arm_mapping_exact: 0.98
+  recall_values: 0.95
+  figure_median_rel_err: 0.03
+  figure_p95_rel_err: 0.05
+  audit_formula: min(N, max(20, ceil(0.15*N)))
+  gold_standard_required: false
+  human_audit_required: true
+  human_audit_unit: retained_contrast
+  figure_max_rel_err: 0.05
+contrasts:
+  require_positive_means: true
+  min_studies_confirmatory_interaction: 5
+  ci_t_quantiles: true
+exports:
+  out_dir: exports
+  parquet: true
+  marts:
+  - evidence_long
+  - A_direct_yield
+  - A_direct_dry_biomass
+  - A_strict_SxB
+  - A_strict_AxB
+  - A_descriptive
+  - A_biotic_secondary
+  - A_meta_yield_weighted
+  - A_meta_dry_biomass_weighted
+  - A_meta_SxB_weighted
+  - A_meta_AxB_weighted
+  - A_direct_yield_assumed
+  - A_meta_yield_assumed_weighted
+  - A_direct_yield_broad
+  - A_meta_yield_broad_weighted
+  - A_main_effect_yield
+  - A_direct_yield_unit_unresolved
+  - A_meta_yield_unit_unresolved_weighted
+  - A_box_centre_assumed
+  final_requires_all_gates: true
+assumptions:
+  # Study-specific A399 author decisions do not carry over. New exceptions need a recorded author decision.
+  # Author decision 2026-11-15 (Lidiia Samarina): boxplot centre lines are used as the mean
+  # (BOX_CENTRE_ASSUMED_MEAN, separate A_box_centre_assumed mart). P2 duplicate slots stay closed as duplicates.
+  box_centre_as_mean_slots: [T021#02, T081#02, T081#06, T081#07, T081#09, T081#11, T087#01, T087#02, T110#01, T110#02]
+  per_plant_context_assumed: []
+  # Author decision 2026-11-15 (Lidiia Samarina): when the original does not print a first-online date,
+  # the printed final publication (issue) date is used and the article is retained, not quarantined.
+  temporal_final_publication_date:
+    T022: {issue: 'Journal of Basic Microbiology 2025; 65:e2400595', year: 2025}
+    T053: {issue: 'Turkish Journal of Agricultural and Natural Sciences 12(4):1120-1128, 2025', year: 2025}
+    T057: {issue: 'The Plant Journal (2025) 123, e70432 (issue 4)', year: 2025}
+    T068: {issue: 'Physiologia Plantarum 2026; 178:e70762', year: 2026}
+    T082: {issue: 'Revista Argentina de Microbiologia 59 (2027) 100743; accepted 13 July 2026', year: 2027, note: 'volume year after window end; retained by explicit author instruction'}
+  # Author decision 2026-11-15: supplements cited but not registered in the source manifest are not
+  # included; slots whose only source is such a supplement are closed NOT_EXTRACTABLE.
+  missing_supplements_excluded: true
+  # Author decision 2026-11-18: assets whose only source is an unregistered supplement are not
+  # counted by the relevant_assets_represented gate.
+  unregistered_supplement_assets: [T104_ESM_FigS1S2_shoot_DM, T104_ESM_FigS1S2_root_DM]
+  # Author decision 2026-11-15: on a contradiction between figure/table data and prose, figure and
+  # table values take priority (table/supplementary table over figure, figure over prose).
+  contradiction_priority: [SUPP_TABLE, TABLE, FIGURE, TEXT]
+scope:
+  label: EXTERNAL_TEST_2024_2026
+  manifest: manifests/scope_TEST.csv
+  source_manifest: manifests/source_manifest_TEST.csv
+  train_dev_identity: manifests/train_dev_identity.csv
+  expected_count: 80
+  scope_sha256: '718ab156d01481e011da93b56481d83949772eb13dfc523bd0dba888a31190ea'
+  enforce_frozen_ids: true
+  allow_new_studies: false
+  dataset_role: EXTERNAL_TEST
+  temporal_cutoff: '2023-12-31'
+  temporal_window_start: '2024-01-01'
+  temporal_window_end: '2026-11-03'
+  # Same eligibility screening as the TRAIN_DEV corpus (TFM 3.3/3.4) and an exact-version first-online check.
+  screen_all: true
+  temporal_review_all: true
+test_protocol:
+  require_model_freeze: true
+  model_freeze_path: "C:\\Users\\lenovo\\Desktop\\SynerPlant_Local_ML_Starter\\SynerPlant_Local_ML\\outputs\\MODEL_FREEZE.json"
+  note: TFM 3.1 - publications from 2024 are processed with the TRAIN_DEV protocol only after MODEL_FREEZE; no TEST result may change the model.
+autonomy:
+  max_parallel_agents: 4
+  batch_size: 4
+  continue_until_no_ready_tasks: true
+  retry_limit: 3
+  checkpoint_every_batch: true
+  consolidate_human_questions: true
+  require_human_for_routine_corrections: false
+  pilot_studies: 10
+  source_resolution_before_human: true
+source_qa:
+  docling_initial_status: UNVERIFIED
+  original_check_required_for:
+  - critical_mean
+  - dispersion
+  - n
+  - unit
+  - arm_mapping
+  - timepoint
+  - target_definition
+  - disputes
+  no_source_no_verification: true
+audited_baseline_sha256: ['dafba23da5b75791d48470f8a443e990e774e86eb203f51d08e5f5663e015d60']

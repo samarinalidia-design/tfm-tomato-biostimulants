@@ -1,0 +1,723 @@
+stress,biostimulant,count
+Al2O3-NPs,UNKNOWN,15
+Al2O3-NPs,bacterial inoculant (Azotobacter salinestris),30
+BIOTIC,MICROBIAL_FUNGAL,6
+BIOTIC,Trichoderma-fortified compost + microbial (T. harzianum),3
+BIOTIC,Trichoderma-fortified compost + microbial (T. harzianum) + natural aminopolysaccharide (chitosan),9
+BIOTIC,Trichoderma-fortified compost + natural aminopolysaccharide (chitosan),6
+BIOTIC,UNKNOWN,3
+BIOTIC,microbial (T. harzianum),3
+BIOTIC,natural aminopolysaccharide (chitosan),6
+BIOTIC,organic amendment fortified with T. harzianum (Trichoderma-fortified compost),3
+BIOTIC: fungal crown and root rot pathogen inoculation,chitosan (biopolymer; potential elicitor of plant defence responses),9
+"BIOTIC: late blight, foliar inoculation with Phytophthora infestans","plant growth-promoting rhizobacteria (PGPR), microbial",16
+"Biotic: Fusarium wilt pathogen, root inoculation",Plant growth-promoting rhizobacterium (PGPR),8
+Cadmium (CdCl2 in nutrient solution),Plant growth-promoting rhizobacteria (PGPR),12
+Cadmium (CdCl2 in nutrient solution),UNKNOWN,3
+CuO-NPs,UNKNOWN,15
+CuO-NPs,bacterial inoculant (Azotobacter salinestris),30
+Drought (water withholding),Melatonin (bioactive compound; authors state no class label),2
+Drought (water withholding),UNKNOWN,1
+NONE,microbial inoculant (endophytic bacteria),36
+NONE (farm usual fertilization; reference level),arbuscular_mycorrhizal_fungus,3
+NONE (no NaCl added),vermicompost leachate,2
+NONE (usual farm irrigation; reference),arbuscular_mycorrhizal_fungus,2
+NONE: no pathogen or stress described in the PGPR assay,"plant growth-promoting rhizobacteria (PGPR), microbial",14
+NaCl,Plant growth promoting bacteria (PGPB) endophytes that express 1-aminocyclopropane-1-carboxylate (ACC) deaminase,12
+NaCl,UNKNOWN,9
+NaCl,vermicompost leachate (VCL),12
+NaCl salinity,UNKNOWN,2
+NaCl salinity,vesicular-arbuscular mycorrhizal fungus (VAMF),5
+P deficiency (poorly soluble rock phosphate),PGPR (phosphate-solubilizing rhizobacteria),21
+"PEG-6000-induced water deficit stress (osmotic, simulated)",UNKNOWN,1
+"PEG-6000-induced water deficit stress (osmotic, simulated)",silicon,2
+"Petrochemical-containing, nutrient-poor, hydrophobic oil-sand coarse tailings substrate",beneficial_fungus (fungal endophyte),1
+Salinity (NaCl in nutrient solution),Silicon supplement,7
+Salinity (NaCl irrigation),Microbial inoculant (actinobacterial spores),1
+Salinity (NaCl irrigation),None (non-inoculated soil),1
+Salinity (NaCl),Bacterial endophyte (isolated from Avicennia marina leaves),8
+Salinity (NaCl),Osmoprotectant,4
+Salinity (NaCl),UNKNOWN,2
+TiO2-NPs,UNKNOWN,15
+TiO2-NPs,bacterial inoculant (Azotobacter salinestris),30
+UNKNOWN,AMF,5
+UNKNOWN,"AMF-based microbial consortium (arbuscular mycorrhizal fungi plus Trichoderma, Streptomyces, Bacillus, Pseudomonas)",6
+UNKNOWN,AMF_COMPOST,10
+UNKNOWN,Bacterial endophyte (isolated from Avicennia marina leaves),4
+UNKNOWN,COMPOST,5
+UNKNOWN,MICROBIAL_FUNGAL,3
+UNKNOWN,Melatonin (bioactive compound; authors state no class label),1
+UNKNOWN,Osmoprotectant,2
+UNKNOWN,PGPB,2
+UNKNOWN,PGPB immobilized in chitosan carrier,2
+UNKNOWN,PGPR,4
+UNKNOWN,PGPR (plant growth promoting rhizobacteria),8
+UNKNOWN,PGPR (plant growth-promoting rhizobacteria),14
+UNKNOWN,PGPR (plant growth-promoting rhizobacterium),1
+UNKNOWN,Plant growth promoting bacteria (PGPB) endophytes that express 1-aminocyclopropane-1-carboxylate (ACC) deaminase,6
+UNKNOWN,Plant growth-promoting rhizobacteria (PGPR),6
+UNKNOWN,UNKNOWN,24
+UNKNOWN,VAM (AMF) + rhizosphere bacteria (PGPR) + saprophytic fungi commercial formulation,4
+UNKNOWN,VAM (AMF) single Glomus spp. commercial inoculum,4
+UNKNOWN,arbuscular mycorrhizal fungi,12
+UNKNOWN,arbuscular mycorrhizal fungi (AMF),16
+UNKNOWN,"arbuscular mycorrhizal fungi (AMF) consortium, trap culture inoculum",2
+UNKNOWN,arbuscular mycorrhizal fungi + compost,10
+UNKNOWN,arbuscular mycorrhizal fungus,4
+UNKNOWN,arbuscular mycorrhizal fungus (AMF),4
+UNKNOWN,"arbuscular mycorrhizal fungus (AMF) inoculant, in vitro-produced gel",6
+UNKNOWN,"arbuscular mycorrhizal fungus (AMF) inoculum - factor-level marginal, pooled over soil T/M and water S/C",1
+UNKNOWN,bacterial single-strain inoculant,10
+UNKNOWN,bacterial strain combination,7
+UNKNOWN,beneficial fungal inoculant (Trichoderma),4
+UNKNOWN,biochar (wood-derived soil amendment),2
+UNKNOWN,blend of plant growth regulators (cytokinin + gibberellin + auxin) (source wording); called a biostimulant by the authors,7
+UNKNOWN,chitosan,5
+UNKNOWN,compost,5
+UNKNOWN,concentrate containing the active ingredients of the biocompost product (further class not specified),1
+UNKNOWN,endophytic bacterium,2
+UNKNOWN,endophytic mold,2
+UNKNOWN,fungal (Trichoderma) suspension,1
+UNKNOWN,fungal single-strain inoculant,7
+UNKNOWN,"humic/fulvic-substance-based multi-component product containing microorganisms (bacteria, actinobacteria, fungi), mineral nutrients, enzymes and phytohormones",1
+UNKNOWN,"humic/fulvic-substance-based product without microorganisms (with polysaccharides, Ca, P, enzymes, phytohormones)",1
+UNKNOWN,indoleamine (exogenous melatonin),1
+UNKNOWN,melatonin,1
+UNKNOWN,microalgal exopolysaccharides,2
+UNKNOWN,microbial,4
+UNKNOWN,microbial (Trichoderma fungus-based product; plant phytostimulant / biological control agent),36
+UNKNOWN,microbial (biofilm-producing PGPR),14
+UNKNOWN,"microbial (fungal, Trichoderma spp.)",28
+UNKNOWN,microbial PGPR (plant-growth-promoting rhizobacterium),2
+UNKNOWN,microbial biological reference treatment (Bacillus amyloliquefaciens QST713); PGPR class not stated for this product,2
+UNKNOWN,"microbial biostimulant: plant growth-promoting rhizobacterium (PGPR), live Enterobacter sp. suspension",1
+UNKNOWN,microbial consortium product,7
+UNKNOWN,"microbial inoculant (fungus, Trichoderma)",3
+UNKNOWN,"microbial inoculant, beneficial fungus (Trichoderma)",1
+UNKNOWN,microbial inoculant: fungal mycelium,2
+UNKNOWN,microbial inoculant: psychrotolerant plant growth-promoting bacterium (Pseudomonas),2
+UNKNOWN,microbial-derived: bacterial water extract,2
+UNKNOWN,microbial: endophytic fungus,5
+UNKNOWN,microbial: fungal biofertilizer and biocontrol agent (Trichoderma spp.),9
+UNKNOWN,microbial: plant growth-promoting rhizobacterium (PGPR),1
+UNKNOWN,microbial: rhizosphere fungus (PGPF),2
+UNKNOWN,microbial_inoculant (PGPB bacterium),2
+UNKNOWN,microbial_inoculant (PGPR),36
+UNKNOWN,"microbial_mixture (PGPR) with humic substance, amino acid and Zn",4
+UNKNOWN,mixture of the biocompost and biofertilizer products (70:30),1
+UNKNOWN,mixture of the biofertilizer and biocompost products (70:30),1
+UNKNOWN,nano-nutrient solution of biochar (carbon-based nanomaterial),9
+UNKNOWN,non-enzymatic antioxidant compound (glutathione),3
+UNKNOWN,"organomineral foliar fertilizer from fish, crustacean shells, sugarcane molasses and algal extract (source registration wording); called a biostimulant by the authors",7
+UNKNOWN,phytohormone (gibberellin),16
+UNKNOWN,plant extracts-based biostimulant,3
+UNKNOWN,plant growth promoting bacteria,1
+UNKNOWN,plant growth promoting bacterium (ACC deaminase-producing endophyte),2
+UNKNOWN,"plant growth promoting bacterium (PGPB), microbial inoculant",1
+UNKNOWN,plant growth promoting rhizobacteria (PGPR),7
+UNKNOWN,plant growth retardant (gibberellin antagonist) and tri-azole fungicide (as printed; not described as a biostimulant),12
+UNKNOWN,plant growth-promoting bacteria (PGPB),4
+UNKNOWN,plant probiotics,12
+UNKNOWN,plant-growth-promoting bacteria (Streptomyces),4
+UNKNOWN,polyamine,3
+UNKNOWN,protein hydrolysate,6
+UNKNOWN,protein-based biostimulant (amino acids from enzymatic hydrolysis of vegetable proteins),3
+UNKNOWN,protein_hydrolysate (plant-derived),4
+UNKNOWN,"protein_hydrolysate (plant-derived, commercial)",4
+UNKNOWN,seaweed (Ecklonia maxima) algal extract with molybdenum and zinc (source wording); called a biostimulant by the authors,7
+UNKNOWN,seaweed extract,3
+UNKNOWN,seaweed extract (Ascophyllum nodosum algal derivative),2
+UNKNOWN,"seaweed extract (Ascophyllum nodosum, liquid formulation); factor-level marginal pooled over N and S, not a treatment cell",2
+UNKNOWN,seaweed extract (brown seaweed),4
+UNKNOWN,"seaweed extract, protein hydrolysate-rich",2
+UNKNOWN,seaweed_extract,4
+UNKNOWN,signaling molecule (melatonin),2
+UNKNOWN,silicon,49
+UNKNOWN,"silicon (inorganic beneficial element, supplied as sodium silicate)",2
+UNKNOWN,"silicon (inorganic, supplied as calcium silicate)",16
+UNKNOWN,silicon (potassium silicate) supplied in the nutrient solution,3
+UNKNOWN,strigolactone-based biostimulant,3
+UNKNOWN,sucrose,36
+UNKNOWN,vermicompost leachate (VCL),2
+UNKNOWN,vermicompost leachate (compost-derived organic biostimulant; humic acids reported),4
+WASTEWATER_IRRIGATION (untreated wastewater),UNKNOWN,3
+WASTEWATER_IRRIGATION (untreated wastewater),silicon supplementation,9
+ZnO-NPs,UNKNOWN,15
+ZnO-NPs,bacterial inoculant (Azotobacter salinestris),30
+abiotic moderate water stress combined with biotic root-knot nematode,"Myco: microbial mixture, AMF + BCF + PGPR",8
+allelochemical stress: benzoic acid,UNKNOWN,2
+allelochemical stress: benzoic acid,plant growth regulator (auxin phytohormone),2
+"biotic (Fusarium wilt, Fusarium oxysporum)","microbial, beneficial fungus / biocontrol agent (Trichoderma)",4
+biotic (Rhizoctonia solani soil pre-inoculation),UNKNOWN,2
+biotic (Rhizoctonia solani soil pre-inoculation),biocontrol,4
+biotic (Verticillium wilt; Verticillium dahliae root-dip inoculation),microbial biostimulant: PGPR strain (Pr7 or Pr8) seed pre-treatment,11
+"biotic, bacterial spot","microbial (fungal, Trichoderma spp.)",16
+"biotic, bacterial wilt pathogen inoculation",UNKNOWN,4
+"biotic, bacterial wilt pathogen inoculation",plant growth-promoting rhizobacteria (PGPR),24
+"biotic, bacterial wilt, Ralstonia solanacearum inoculation",silicon (potassium silicate),9
+"biotic, early blight","microbial (fungal, Trichoderma spp.)",16
+biotic: Fusarium wilt (Fusarium oxysporum f. sp. lycopersici root-dip inoculation),UNKNOWN,2
+biotic: Fusarium wilt (Fusarium oxysporum f. sp. lycopersici root-dip inoculation),"arbuscular mycorrhizal fungi (AMF) consortium, trap culture inoculum",5
+biotic: Fusarium wilt (substrate infestation); all arms infested,microbial: PGPR / biocontrol bacteria (Bacillus),10
+"biotic: Fusarium wilt, F. solani-infested soil (with and without)",inorganic nanoparticle: foliar ZnO-NPs,3
+"biotic: Fusarium wilt, F. solani-infested soil (with and without)",microbial plus inorganic nanoparticle: Trichoderma seed biopriming and foliar ZnO-NPs,12
+"biotic: Fusarium wilt, F. solani-infested soil (with and without)",microbial: antagonistic Trichoderma seed biopriming,2
+"biotic: Fusarium wilt, soil infestation with Fusarium solani",UNKNOWN,3
+"biotic: Fusarium wilt, soil infestation with Fusarium solani",microbial: fungal biofertilizer and biocontrol agent (Trichoderma spp.),21
+biotic: artificial soil infestation with Pythium aphanidermatum (damping-off),"microbial inoculant: antagonistic/plant-growth-promoting rhizobacterium Bacillus subtilis, seed-applied formulations (applies to SB arms only)",16
+biotic: bacterial pathogen,microbial-derived: bacterial water extract,8
+biotic: bacterial speck,"microbial: PGPR and foliar bacterial biological control agent, alone or combined",14
+biotic: bacterial speck,"microbial: PGPR and foliar bacterial biological control agents, alone or combined",84
+biotic: bacterial spot,"microbial: PGPR and foliar bacterial biological control agents, alone or combined",88
+biotic: bacterial vascular pathogen (bacterial canker),UNKNOWN,4
+biotic: bacterial vascular pathogen (bacterial canker),plant growth-promoting bacteria (PGPB),8
+biotic: bacterial wilt of tomato (no abiotic stress imposed in any experiment),PGPR live bacterial suspension,3
+biotic: bacterial wilt of tomato (no abiotic stress imposed in any experiment),PGPR live bacterial suspension mixed into organic fertilizer,12
+biotic: bacterial wilt of tomato (no abiotic stress imposed in any experiment),"PGPR living bacterial products in water formulation (J2, J3, BB11), fresh or stored 1 or 2 years at room temperature",9
+biotic: bacterial wilt of tomato (no abiotic stress imposed in any experiment),"cell-free bacterial culture supernatant (microbial-derived, no living cells)",3
+biotic: bacterial wilt of tomato (no abiotic stress imposed in any experiment),vehicle control (Control 2): diluted fresh culture medium without bacteria; not a biostimulant,1
+biotic: early blight leaf inoculation (Alternaria solani),microbial: plant growth-promoting fungus (PGPF),1
+biotic: early blight leaf inoculation (Alternaria solani),microbial: plant growth-promoting rhizobacterium (PGPR),1
+biotic: foliar fungal pathogen infection (Botrytis cinerea),microbial inoculant: beneficial rhizobacterium (PGPR),10
+biotic: late blight leaf inoculation (Phytophthora infestans),microbial: plant growth-promoting fungus (PGPF),1
+biotic: late blight leaf inoculation (Phytophthora infestans),microbial: plant growth-promoting rhizobacterium (PGPR),1
+biotic: miner insect,"Myco: microbial mixture, AMF + BCF + PGPR",4
+"biotic: natural soil infestation, Pythium damping-off (fields with previous history of severe incidence)","microbial inoculant: antagonistic/plant-growth-promoting rhizobacterium Bacillus subtilis, seed-applied formulations (applies to SB arms only)",21
+"biotic: root-knot nematode (Meloidogyne javanica) infection, artificial inoculation of all plants",biogenic selenium nanoparticles (nanomaterial); described by the authors as nano-fertilizers and a nematicidal booster,18
+biotic: root-knot nematode (nematode-inoculated experiments),"Myco: microbial mixture, AMF + BCF + PGPR",63
+biotic: root-knot nematode (nematode-inoculated experiments),arbuscular mycorrhizal fungi,4
+biotic: root-knot nematode (nematode-inoculated experiments),"plant growth-promoting rhizobacteria, single species",23
+"biotic: viral disease (tomato yellow leaf curl virus), natural infection with whiteflies",microbial inoculant: beneficial bacterium applied as biocontrol agent,5
+"biotic: viral disease, tomato yellow leaf curl virus (TYLCV) transmitted by whiteflies (Bemisia tabaci)",microbial: bacterial inoculant (author term: biocontrol strain),1
+biotic; early blight under natural infection,fungal culture filtrate (Trichoderma),12
+"biotic; early blight, artificial foliar inoculation with Alternaria solani (not applied to healthy control H. CK)",fungal culture filtrate (Trichoderma),12
+biotic; root-knot nematode infection,UNKNOWN,6
+biotic; root-knot nematode infection,brassinosteroid (plant growth regulator),23
+boron toxicity (H3BO3 in nutrient solution),UNKNOWN,3
+boron toxicity (H3BO3 in nutrient solution),"plant hormone (gibberellin, GA3)",3
+boron toxicity (H3BO3 in nutrient solution),"plant hormone (gibberellin, GA3) + H2S donor (NaHS)",3
+chilling,UNKNOWN,1
+chilling,microbial inoculant: psychrotolerant plant growth-promoting bacterium (Pseudomonas),4
+chilling (low temperature),arbuscular mycorrhizal fungus inoculum,6
+chilling (low temperature),none (non-AMF; same weight of autoclaved inocula),3
+cold (imposed low temperature during successive nights),UNKNOWN,4
+cold (imposed low temperature during successive nights),seaweed extract (brown seaweed),8
+cold (low temperature),PGPR (plant growth-promoting rhizobacterium),2
+cold (low temperature),UNKNOWN,1
+"cold stress (ambient winter low temperature, sub-optimal temperature; open field; intensity not stated)",UNKNOWN,72
+combined P deficiency and salinity,PGPR (phosphate-solubilizing rhizobacteria),42
+combined drought and high temperature,melatonin (indoleamine compound),2
+combined drought and high temperature,none (no spray),1
+combined heat + water deficit,microbial: arbuscular mycorrhizal fungus inoculant,4
+combined heat + water deficit,none (nonmycorrhizal; received autoclaved inoculant),2
+combined water and nutrient (N and P) deficit,PGPR (plant growth-promoting rhizobacteria),8
+combined water deficit and nitrogen deficiency,UNKNOWN,2
+combined water deficit and nitrogen deficiency,microbial consortium (microbial biostimulant),4
+deficit irrigation (70% ETc water replacement),UNKNOWN,6
+deficit irrigation (70% ETc water replacement),"seaweed extract (Ascophyllum nodosum extract, ANE)",48
+drought,ACC deaminase-producing plant growth-promoting rhizobacterium,4
+drought,UNKNOWN,37
+drought,arbuscular mycorrhizal fungi (AM) inoculum,8
+drought,arbuscular mycorrhizal fungus,8
+drought,arbuscular mycorrhizal fungus inoculum,42
+drought,fungal (Trichoderma) suspension,2
+drought,fungal endophyte (dark septate endophytic fungus),2
+drought,melatonin (indoleamine compound),2
+drought,microbial,8
+drought,microbial inoculant: fungal mycelium,4
+drought,microbial: arbuscular mycorrhizal fungi,45
+drought,none (no spray),1
+drought,plant extracts-based biostimulant,6
+drought,plant-growth-promoting bacteria (PGPB); mock-inoculated control arms have none,30
+drought,"seaweed extract, protein hydrolysate-rich",4
+drought (cyclic dry-down to wilting with partial rewatering),microbial inoculant: root-colonizing fungal endophyte,4
+drought (deficit irrigation),UNKNOWN,3
+drought (deficit irrigation),arbuscular mycorrhizal fungi; silicon; AMF + silicon,76
+drought (deficit irrigation),microbial consortium (hexa-PGPM: five bacteria plus the fungus Trichoderma harzianum),6
+drought (deficit irrigation),"microbial inoculant (PGPR, Bacillus pumilus)",3
+drought (deficit irrigation),"none (0 mM Si, T0)",8
+drought (deficit irrigation),silicon,16
+"drought (deficit irrigation), fresh water",biochar (soil amendment),18
+"drought (deficit irrigation), fresh water","none (untreated soil, BC0%)",9
+drought (irrigation water deficit),UNKNOWN,16
+drought (irrigation water deficit),selenium (as Na2SeO4),64
+drought (irrigation withholding plus reduced water volume),UNKNOWN,1
+drought (irrigation withholding plus reduced water volume),plant-growth-promoting bacteria (Streptomyces),4
+"drought (irrigation withholding plus reduced water volume), two stages",UNKNOWN,1
+"drought (irrigation withholding plus reduced water volume), two stages",plant-growth-promoting bacteria (Streptomyces),4
+drought (mild water stress by reduced irrigation frequency),microbial (arbuscular mycorrhizal fungus inoculum),4
+drought (mild water stress by reduced irrigation frequency),"none (non-mycorrhizal control, autoclaved inoculum)",2
+drought (moderate; controlled soil water content),arbuscular mycorrhizal fungus inoculum (AMF),6
+drought (moderate; controlled soil water content),none (non-inoculated control: 10 g autoclaved mycorrhizal inoculum + 3 ml <20 um filtrate of the AM inoculum),3
+drought (progressive; cyclic water withholding),PGPR (ACC deaminase producing plant growth promoting rhizobacteria),13
+"drought (prolonged 35% FC, severe drought stress)",AMF,10
+"drought (prolonged 35% FC, severe drought stress)",AMF_COMPOST,15
+"drought (prolonged 35% FC, severe drought stress)",COMPOST,10
+"drought (prolonged 35% FC, severe drought stress)",NONE,5
+drought (reduced irrigation),arbuscular mycorrhizal fungus (AMF) inoculum,24
+drought (reduced irrigation),none (control without AM fungi),6
+"drought (reduced irrigation); stressed control and the four biostimulant arms, not the well-watered control",UNKNOWN,4
+"drought (reduced irrigation); stressed control and the four biostimulant arms, not the well-watered control",seaweed extract,16
+drought (reduced soil water content),UNKNOWN,3
+drought (reduced soil water content),biochar (wood-derived soil amendment),6
+drought (severe; controlled soil water content),arbuscular mycorrhizal fungus inoculum (AMF),6
+drought (severe; controlled soil water content),none (non-inoculated control: 10 g autoclaved mycorrhizal inoculum + 3 ml <20 um filtrate of the AM inoculum),3
+drought (simulated by PEG-6000 in nutrient solution),UNKNOWN,3
+drought (simulated by PEG-6000 in nutrient solution),selenium (sodium selenite),6
+drought (water deficit),UNKNOWN,3
+drought (water deficit),"microbial_mixture (PGPR) with humic substance, amino acid and Zn",10
+drought (water deficit),nano-nutrient solution of biochar (carbon-based nanomaterial),18
+drought (water deficit; soil moisture regimes at 75% and 50% FC vs 100% FC),"none (control, 100% NP only)",14
+drought (water deficit; soil moisture regimes at 75% and 50% FC vs 100% FC),organic manure (cow dung) + silicon (monosilicic acid),56
+drought (water deficit; soil moisture regimes at 75% and 50% FC vs 100% FC),"organic manure (cow dung), soil-applied",35
+drought (water deficit; soil moisture regimes at 75% and 50% FC vs 100% FC),"silicon (monosilicic acid), soil-applied",35
+drought (water stress by withholding irrigation),arbuscular mycorrhizal fungus (microbial inoculant),8
+drought (water stress by withholding irrigation),none (non-inoculated control),4
+drought (water withholding),AMF (arbuscular mycorrhizal fungus inoculant),4
+drought (water withholding),UNKNOWN,2
+drought (water withholding),"melatonin (nontoxic regulatory biomolecule, as described by the authors; formal biostimulant class not stated)",2
+drought (water withholding),microbial inoculant (endophytic bacteria),3
+drought (water-limiting irrigation by reduced watering frequency),"microbial inoculant: potassium solubilizing microorganisms (KSMs), rice husk carrier-based; applies to inoculated arms T2-T4 only (T1 mock-inoculated)",39
+drought + chronic heat (climate chamber 2),AMF,28
+drought + chronic heat (climate chamber 2),UNKNOWN,2
+drought + heat shock (climate chamber 3); drought only at the 2 d sampling,AMF,28
+drought + heat shock (climate chamber 3); drought only at the 2 d sampling,UNKNOWN,2
+drought / water deficit (deficit irrigation),microbial: PGPR (plant growth promoting rhizobacteria) consortium B1,16
+drought / water deficit (deficit irrigation),microbial: PGPR (plant growth promoting rhizobacteria) consortium B2,16
+drought / water deficit (deficit irrigation),microbial: PGPR (plant growth promoting rhizobacteria) consortium B3,16
+drought / water deficit (deficit irrigation),none (bacteria-free B0),8
+"drought / water deficit (non-irrigated, rainfed)",microbial: PGPR (plant growth promoting rhizobacteria) consortium B1,16
+"drought / water deficit (non-irrigated, rainfed)",microbial: PGPR (plant growth promoting rhizobacteria) consortium B2,16
+"drought / water deficit (non-irrigated, rainfed)",microbial: PGPR (plant growth promoting rhizobacteria) consortium B3,16
+"drought / water deficit (non-irrigated, rainfed)",none (bacteria-free B0),8
+drought induced by PEG-6000,UNKNOWN,5
+drought induced by PEG-6000,microbial: endophytic fungus,10
+drought simulated with polyethylene glycol (PEG 6000 Da),UNKNOWN,2
+drought simulated with polyethylene glycol (PEG 6000 Da),microbial: rhizosphere fungus (PGPF),4
+drought stress (withholding water),UNKNOWN,1
+drought stress (withholding water),commercially available liquid seaweed extract of A. nodosum,3
+drought stress by polyethylene glycol (PEG-8000),UNKNOWN,2
+drought stress by polyethylene glycol (PEG-8000),endophytic mold,4
+drought+heat,UNKNOWN,2
+drought+heat,arbuscular mycorrhizal fungi (AM) inoculum,8
+drought: progressive water deficit by withholding irrigation (FTSW-monitored dry-down),"arbuscular mycorrhizal fungus (AMF) inoculant, commercial single-species product",12
+drought: progressive water deficit by withholding irrigation (FTSW-monitored dry-down),none (non-inoculated M-; no inoculum added; no carrier/mock control described),6
+heat,PGPR,8
+heat,UNKNOWN,14
+heat,arbuscular mycorrhizal fungi (AM) inoculum,8
+heat,combined microbial (PGP endophytic bacterium) + humic substances,6
+heat,fulvic acid,18
+heat,humic substances (humic acid),4
+heat,microbial: arbuscular mycorrhizal fungus inoculant,4
+heat,microbial: plant growth-promoting endophytic bacterium,4
+heat,mineral nutrient (elemental sulfur),36
+heat,mineral silicon (silicate; sodium metasilicate),4
+heat,none (autoclaved double-distilled water control),2
+heat,none (nonmycorrhizal; received autoclaved inoculant),2
+heat,phytohormone (gibberellin),32
+heat,plant growth regulator (brassinosteroid),2
+heat,silicate,18
+heat,silicate + fulvic acid,36
+heat (high temperature),UNKNOWN,4
+heat (high temperature),polyamine,4
+heat (high temperature),signaling molecule (melatonin),4
+"heat (moderate, long-term, imposed in growth chamber)",none (distilled water control),1
+"heat (moderate, long-term, imposed in growth chamber)","seaweed_extract (Ascophyllum nodosum extract, carbohydrate-rich fraction)",4
+heat stress (ambient summer-season high temperature as framed by authors; not experimentally imposed; no unstressed comparator),"chitosan-containing commercial product (with B, amino acids, Mo), listed by authors as a biostimulant",12
+heat stress (ambient summer-season high temperature as framed by authors; not experimentally imposed; no unstressed comparator),labelled '(Chemical control)' by authors; synthetic NAA + sodium nitrophenolate product; not classified as a biostimulant in this record,12
+heat stress (ambient summer-season high temperature as framed by authors; not experimentally imposed; no unstressed comparator),"pollen grain extract (bee pollen grains), listed by authors as a biostimulant",12
+heat stress (ambient summer-season high temperature as framed by authors; not experimentally imposed; no unstressed comparator),"pollen grain extract (date palm pollen grains), listed by authors as a biostimulant",12
+heat stress (ambient summer-season high temperature as framed by authors; not experimentally imposed; no unstressed comparator),"potassium alginate-based commercial product with micronutrients and 'cytokines' (as printed), listed by authors as a biostimulant",12
+heat stress (maintained using a transparent plastic sheet),UNKNOWN,6
+heat stress (maintained using a transparent plastic sheet),plant growth promoting bacteria (PGPB),12
+heavy metal (cadmium),UNKNOWN,2
+heavy metal (cadmium),microbial: rhizosphere fungus (PGPF),4
+heavy metal (lead),UNKNOWN,2
+heavy metal (lead),microbial: rhizosphere fungus (PGPF),4
+high temperature,UNKNOWN,1
+high temperature,melatonin (indoleamine compound),2
+high temperature,none (no spray),1
+high temperature,polyamine,2
+inoculated with M. incognita eggs,endophytic bacterium,1
+"iron deficiency (nutrient) under simulated calcareous conditions, pH 7.5",seaweed extract,8
+irrigation water salinity (NaCl-adjusted ECw),UNKNOWN,36
+irrigation water salinity (NaCl-adjusted ECw),microbial (Trichoderma fungus-based product; plant phytostimulant / biological control agent),73
+low night temperature (night chilling),UNKNOWN,4
+low night temperature (night chilling),plant growth promoting bacterium (ACC deaminase-producing endophyte),8
+low temperature (chilling),5-aminolevulinic acid (ALA),20
+low temperature (chilling),UNKNOWN,5
+low temperature (chilling),"microbial inoculant, beneficial fungus (Trichoderma)",2
+"low temperature (chilling), ambient winter conditions, all arms; no unstressed arm","plant growth regulator, salicylate (acetylsalicylic acid)",12
+low temperature (cold stress),UNKNOWN,7
+low temperature (cold stress),plant growth promoting rhizobacteria (PGPR),14
+low temperature (cold),non-enzymatic antioxidant compound (glutathione),7
+low temperature (cold),phytohormone (jasmonate),10
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)",PGPR (plant growth promoting rhizobacteria),3
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)","organic manure (cattle FYM) + PGPR, combined",6
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)","organic manure (cattle farmyard manure, FYM)",3
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)",silicon (potassium silicate),3
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)","silicon (potassium silicate) + PGPR, combined",6
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)","silicon (potassium silicate) + organic manure (cattle FYM) + PGPR, combined",3
+"municipal wastewater (MWW) irrigation, applied to all treatments including the MWW control (T1)","silicon (potassium silicate) + organic manure (cattle FYM), combined",6
+"natural multi-property stressed soil: high salinity, high CaCO3, low organic matter (not isolated salinity)",commercial blend: fulvic and humic acids + microorganisms,8
+"natural multi-property stressed soil: high salinity, high CaCO3, low organic matter (not isolated salinity)",commercial blend: humic substance (potassium humate) + microorganisms,8
+"natural multi-property stressed soil: high salinity, high CaCO3, low organic matter (not isolated salinity)",commercial blend: humic substance (potassium humate) + microorganisms + ZnO/P + IAA/cytokinin,16
+"natural multi-property stressed soil: high salinity, high CaCO3, low organic matter (not isolated salinity)",humic substance (potassium humate) commercial product; no microorganisms listed,16
+"natural multi-property stressed soil: high salinity, high CaCO3, low organic matter (not isolated salinity)","none (control: no seed coating, no drench; NPK applied)",4
+"no heat stress (T1 bacterial inoculation, non-heat); printed control temperature 30 oC without day/night label",plant growth promoting bacteria (PGPB),6
+"no imposed stress treatment; ambient high temperature (heat) of a hot continental summer common to all arms, with no non-heat reference","humic acid preparation (humic substances; commercial product with 68% HA and 15% fulvic acids, plus K, N, Fe, Mn, Zn)",48
+non-stress,arbuscular mycorrhizal fungi (AM) inoculum,4
+none,PGPR (plant growth-promoting rhizobacteria),6
+none,biocontrol,2
+none,microbial: PGPR / biocontrol bacteria (Bacillus),10
+none,mineral nutrient (elemental sulfur),16
+none,nonmicrobial: Ascophyllum nodosum seaweed with amino acid and organic-mineral liquid fertilizer,2
+none,nonmicrobial: amino acid and organic-mineral (Cu) liquid fertilizer,2
+none,plant growth promoting bacteria,8
+none,plant growth promoting halotolerant strains,2
+none,selenium (sodium selenite),3
+none,"silicon (potassium silicate, labelled positive control)",1
+none,silicon (silicic acid),3
+none (0% NaCl control),arbuscular mycorrhizal fungi (microbial inoculant),2
+"none (0% NaCl, tap water)",arbuscular mycorrhizal fungus (AMF) inoculum,2
+none (100% ETc; authors describe as unstressed plants),"seaweed extract (Ascophyllum nodosum extract, ANE)",24
+none (100% PAW irrigation control),"glycinebetaine (GB)-based biostimulant, sugar beet extract",2
+none (I1 35% v/v SWC well-watered reference),"microbial inoculant (PGPR, Bacillus pumilus)",1
+none (Without Stress),chitosan–polyvinyl alcohol (Cs–PVA) hydrogel,4
+none (Without Stress),copper nanoparticles (Cu NPs) absorbed on chitosan–PVA hydrogel,4
+"none (control conditions, same as growth conditions)",microbial: arbuscular mycorrhizal fungus inoculant,2
+none (control irrigation),microbial consortium (hexa-PGPM: five bacteria plus the fungus Trichoderma harzianum),3
+none (control temperature 25/15 C day/night),arbuscular mycorrhizal fungus inoculum,3
+none (deionized water irrigation),bacterial inoculant (plant growth-promoting bacterium),3
+none (fertile soil condition),commercial blend: fulvic and humic acids + microorganisms,4
+none (fertile soil condition),commercial blend: humic substance (potassium humate) + microorganisms,4
+none (fertile soil condition),commercial blend: humic substance (potassium humate) + microorganisms + ZnO/P + IAA/cytokinin,8
+none (fertile soil condition),humic substance (potassium humate) commercial product; no microorganisms listed,8
+"none (fresh water, full irrigation 100% ETc)",biochar (soil amendment),3
+none (full irrigation regime),plant growth-promoting bacterial strain,15
+none (full/optimum water supply reference),PGPR liquid bacterial fertilizer,2
+none (fully-watered control regime),arbuscular mycorrhizal fungus (AMF) inoculum,12
+none (no NPs; inoculated control C2),bacterial inoculant (Azotobacter salinestris),5
+none (no NaCl added),amino_acid,3
+none (no NaCl added),mineral/beneficial element: selenium supplied as sodium selenite,2
+none (no NaCl),"seaweed extract (Ascophyllum nodosum, commercial product)",3
+none (no NaCl),"seaweed extract (Sargassum spp., hydroalcoholic)",3
+none (no NaCl),"seaweed extract (brown alga Padina gymnospora, aqueous extract)",2
+none (no added NaCl),PGPR (free-living N2-fixing rhizobacterium; microbial root-zone inoculant),4
+"none (no drought, well watered)",arbuscular mycorrhizal fungus inoculum,7
+none (no salt stress),microbial; actinobacteria (Dermacoccus),6
+none (no salt),plant-derived (vegetal-derived) protein hydrolysate,8
+none (non-saline control site),plant growth promoting bacteria,8
+none (non-saline soil),PGPR / microbial inoculant (rhizospheric Actinobacteria with ACC deaminase activity),12
+none (non-saline),arbuscular mycorrhizal fungi inoculant,5
+none (non-saline; distilled water irrigation),PGPR (ACC deaminase-producing rhizobacterium; microbial inoculant),10
+none (non-saline; no NaCl added; printed level 0 dsm-1),PGPR (live Bacillus inoculant),10
+"none (non-salinized control, no NaCl added)",microbial inoculant: dark septate endophytic (DSE) root-colonizing fungi; controls mock-inoculated,8
+"none (non-salinized, 0 mM NaCl)",seaweed extract (Ascophyllum nodosum algal derivative),6
+"none (non-stressed, irrigated)",arbuscular mycorrhizal fungus (microbial inoculant),6
+none (nonsaline tap water),microbial: arbuscular mycorrhizal fungus inoculant (nursery pre-inoculation),5
+none (normal conditions),endophytic bacteria (microbial inoculant),2
+none (normal greenhouse),plant growth regulator (brassinosteroid),2
+none (normal growth),mineral silicon (silicate; sodium metasilicate),2
+none (normal temperature regime),combined microbial (PGP endophytic bacterium) + humic substances,4
+none (normal temperature regime),humic substances (humic acid),2
+none (normal temperature regime),microbial: plant growth-promoting endophytic bacterium,2
+"none (pre-stress first-harvest cohort, irrigated to field capacity)","microbial inoculant (PGPR, Bacillus pumilus)",1
+"none (reference cell: S0 initial soil salinity 0.1%, I1 90-100% field capacity)",silicon,4
+"none (regular irrigation, 100% ET; non-stressed water-supply reference)",microbial: PGPR (plant growth promoting rhizobacteria) consortium B1,8
+"none (regular irrigation, 100% ET; non-stressed water-supply reference)",microbial: PGPR (plant growth promoting rhizobacteria) consortium B2,8
+"none (regular irrigation, 100% ET; non-stressed water-supply reference)",microbial: PGPR (plant growth promoting rhizobacteria) consortium B3,8
+"none (salt free, 0 mM NaCl)",microbial: plant growth-promoting actinomycete,1
+none (standard greenhouse conditions),PGPR (cytokinin-deficient mutant),4
+none (standard greenhouse conditions),PGPR (cytokinin-producing wild type),2
+"none (unstressed condition, growth room 27/22 C)","seaweed_extract (Ascophyllum nodosum extract, carbohydrate-rich fraction)",2
+"none (unstressed, tap water irrigation)",protein hydrolysate and Ascophyllum nodosum-derived (seaweed extract) biostimulant,3
+none (well watered),selenium (as Na2SeO4),32
+"none (well watered, WW; harvested day 36)",AMF (arbuscular mycorrhizal fungus inoculant),2
+"none (well-watered 100% FC, climate chamber 1)",AMF,14
+none (well-watered control),microbial (arbuscular mycorrhizal fungus inoculum),3
+none (well-watered field),microbial inoculant: root-colonizing fungal endophyte,4
+none (well-watered),PGPR (ACC deaminase producing plant growth promoting rhizobacteria),10
+none (well-watered),"arbuscular mycorrhizal fungus (AMF) inoculant, commercial single-species product",6
+none (well-watered),arbuscular mycorrhizal fungus inoculum (AMF),3
+none (well-watered),"microbial: plant growth promoting bacteria (PGPB), single strains",22
+"none (well-watered, 100% WHC)",plant-growth-promoting bacteria (PGPB); mock-inoculated control arms have none,12
+none (without salt),microbial: PGPR / biocontrol bacteria (Bacillus),10
+"none imposed (100% BNS, 0 mM NaCl)",seaweed extract (Ascophyllum nodosum),8
+none imposed (optimal input: 100% water and 100% N),microbial consortium (microbial biostimulant),2
+"none imposed (salinity not manipulated; all four arms share the same soil, which the authors describe as saline in the Abstract; no non-saline comparator)","combination of two foliar biostimulants (TF: seaweed extract + L-amino acids + B, N, P2O5, Mo; TB: seaweed extract + K, B)",6
+"none imposed (salinity not manipulated; all four arms share the same soil, which the authors describe as saline in the Abstract; no non-saline comparator)","foliar biostimulant: seaweed extract + L-amino acids (Introduction: amino acids of plant origin) + mineral nutrients (B, N, P2O5, Mo)",3
+"none imposed (salinity not manipulated; all four arms share the same soil, which the authors describe as saline in the Abstract; no non-saline comparator)","foliar biostimulant: seaweed extract + mineral nutrients (K, B)",3
+none: no nematode inoculation,"Myco: microbial mixture, AMF + BCF + PGPR",2
+none: no nematode inoculation,arbuscular mycorrhizal fungi,2
+none; no pathogen inoculation described,microbial-derived; cell-free bacterial culture filtrate,6
+none; no pathogen inoculation described,microbial; bacterial cell suspension,6
+osmotic stress simulated by polyethylene glycol (PEG-6000) in nutrient solution,UNKNOWN,2
+osmotic stress simulated by polyethylene glycol (PEG-6000) in nutrient solution,"silicon (mineral Si nutrition, monosilicic acid)",2
+phosphorus limitation (low-P alkaline soil with graded TSP supply as a design factor),bacterial single-strain inoculant,40
+phosphorus limitation (low-P alkaline soil with graded TSP supply as a design factor),fungal-bacterial combination product enriched with Zn and Mn,20
+phosphorus limitation (low-P alkaline soil with graded TSP supply as a design factor),microbial consortium product,20
+phosphorus limitation (low-P alkaline soil with graded TSP supply as a design factor),none; untreated control (control handling not further described),8
+reduced fertilization (reduced N-P-K nutrient-input regime; not a designated stress severity),UNKNOWN,3
+reduced fertilization (reduced N-P-K nutrient-input regime; not a designated stress severity),arbuscular_mycorrhizal_fungus,6
+reduced nutrient strength (70% BNS),UNKNOWN,4
+reduced nutrient strength (70% BNS),seaweed extract (Ascophyllum nodosum),16
+"saline irrigation water (NaCl in nutrient solution), continuous",FGD gypsum (soil amendment),10
+"saline irrigation water (NaCl in nutrient solution), continuous",UNKNOWN,10
+"saline irrigation water (NaCl in nutrient solution), continuous",co-composted FGD gypsum-straw (soil amendment),10
+"saline irrigation water (NaCl in nutrient solution), continuous",straw compost (soil amendment),10
+"saline irrigation water (NaCl in nutrient solution), continuous",straw compost mixed on site with FGD gypsum (soil amendment mixture),20
+salinity,PGPB,6
+salinity,PGPB with ZnO-NPs,12
+salinity,PGPR (phosphate-solubilizing rhizobacteria),6
+salinity,UNKNOWN,3
+salinity,melatonin,2
+salinity,plant growth-promoting bacteria (PGPB),16
+salinity (NaCl added to NS irrigation),UNKNOWN,2
+salinity (NaCl added to NS irrigation),plant-derived (vegetal-derived) protein hydrolysate,16
+salinity (NaCl added to fertigation nutrient solution),PGPR (free-living N2-fixing rhizobacterium; microbial root-zone inoculant),16
+salinity (NaCl added to fertigation nutrient solution),UNKNOWN,8
+salinity (NaCl added to growth medium),humic substances (humic acid),6
+salinity (NaCl added to irrigation water),UNKNOWN,4
+salinity (NaCl added to irrigation water),arbuscular mycorrhizal fungus inoculum,10
+salinity (NaCl added to nutrient solution),UNKNOWN,3
+salinity (NaCl added to nutrient solution),silicon (potassium silicate) supplied in the nutrient solution,6
+salinity (NaCl added to soil),PGPR (plant growth promoting rhizobacteria),5
+salinity (NaCl added to soil),humic substances (leonardite-derived humic and fulvic acids),52
+salinity (NaCl added to soil),none (no PGPR),1
+salinity (NaCl added to soil),silicon nanoparticles (Si-NPs),14
+salinity (NaCl added to substrate),UNKNOWN,4
+salinity (NaCl added to substrate),microalgal exopolysaccharides,8
+salinity (NaCl added to the growth substrate),UNKNOWN,2
+salinity (NaCl added to the growth substrate),"microbial inoculant, fungal (Trichoderma spore suspension)",10
+salinity (NaCl added to the nutrient solution),UNKNOWN,3
+salinity (NaCl added to the nutrient solution),"free amino acid, binary mixture",9
+salinity (NaCl added to the nutrient solution),"free amino acid, single",15
+salinity (NaCl and CaCl2 in equal molar ratios added to soil through irrigation water),UNKNOWN,10
+salinity (NaCl and CaCl2 in equal molar ratios added to soil through irrigation water),arbuscular mycorrhizal fungi (AMF),20
+salinity (NaCl and CaCl2 solution added to soil with the irrigation water),UNKNOWN,8
+salinity (NaCl and CaCl2 solution added to soil with the irrigation water),arbuscular mycorrhizal fungus (AMF),16
+salinity (NaCl applied via irrigation),UNKNOWN,10
+salinity (NaCl applied via irrigation),arbuscular mycorrhizal fungi (AMF) inoculum,25
+salinity (NaCl in MS agar medium),UNKNOWN,2
+salinity (NaCl in MS agar medium),"microbial inoculant (fungus, Trichoderma)",4
+salinity (NaCl in drip irrigation water),UNKNOWN,3
+salinity (NaCl in drip irrigation water),seaweed extract (Ascophyllum nodosum algal derivative),12
+salinity (NaCl in hydroponic nutrient solution),UNKNOWN,2
+salinity (NaCl in hydroponic nutrient solution),vermicompost leachate,4
+salinity (NaCl in irrigation solution),UNKNOWN,2
+salinity (NaCl in irrigation solution),plant growth-promoting bacteria (PGPB),5
+salinity (NaCl in irrigation water),UNKNOWN,4
+salinity (NaCl in irrigation water),"microbial biostimulant: plant growth-promoting rhizobacterium (PGPR), live Enterobacter sp. suspension",2
+salinity (NaCl in irrigation water),none (non-inoculated Control),6
+salinity (NaCl in irrigation water),plant growth-promoting bacteria (halophilic PGPB consortium),14
+salinity (NaCl in irrigation water),plant growth-promoting bacteria (halophilic PGPB),42
+salinity (NaCl in irrigation water),protein hydrolysate + Ascophyllum nodosum-derived biostimulant,40
+salinity (NaCl in irrigation water),protein hydrolysate and Ascophyllum nodosum-derived (seaweed extract) biostimulant,6
+"salinity (NaCl in irrigation water, 150 mM stress vs 50 mM source control)",UNKNOWN,1
+"salinity (NaCl in irrigation water, 150 mM stress vs 50 mM source control)",root fungal endophyte mix (two Antarctic Penicillium species),3
+salinity (NaCl in nutrient solution),UNKNOWN,7
+salinity (NaCl in nutrient solution),chitosan–polyvinyl alcohol (Cs–PVA) hydrogel,4
+salinity (NaCl in nutrient solution),copper nanoparticles (Cu NPs) absorbed on chitosan–PVA hydrogel,4
+salinity (NaCl in nutrient solution),inorganic nanomaterial (SiO2 nanoparticles),10
+salinity (NaCl in nutrient solution),inorganic silicon compound (silicate),10
+salinity (NaCl in nutrient solution),microbial_inoculant (PGPB bacterium),4
+salinity (NaCl in nutrient solution),mineral/beneficial element: selenium supplied as sodium selenite,4
+salinity (NaCl in nutrient solution),none (water-sprayed control),2
+salinity (NaCl in nutrient solution),none (witness + NaCl; no hydrogel),4
+salinity (NaCl in nutrient solution),protein_hydrolysate (plant-derived),8
+salinity (NaCl in nutrient solution),"protein_hydrolysate (plant-derived, commercial)",8
+salinity (NaCl in nutrient solution),"seaweed extract (Ascophyllum nodosum, commercial product)",6
+salinity (NaCl in nutrient solution),"seaweed extract (Sargassum spp., hydroalcoholic)",6
+salinity (NaCl in nutrient solution),"silicon (inorganic, supplied as calcium silicate)",40
+salinity (NaCl in nutrient solution),vermicompost leachate (compost-derived organic biostimulant; humic acids reported),10
+salinity (NaCl irrigation solution; factor levels 0 and 150 mM),PGPR,24
+salinity (NaCl irrigation solution; factor levels 0 and 150 mM),UNKNOWN,3
+salinity (NaCl irrigation),PGPR (ACC deaminase-producing rhizobacterium; microbial inoculant),18
+salinity (NaCl irrigation),UNKNOWN,13
+salinity (NaCl irrigation),arbuscular mycorrhizal fungi (microbial inoculant),8
+salinity (NaCl irrigation),bacterial inoculant (plant growth-promoting bacterium),12
+salinity (NaCl irrigation),biopolymer (chitosan),72
+salinity (NaCl irrigation),microbial inoculant (plant growth-promoting rhizobacteria: Arthrobacter and Bacillus megaterium isolates),37
+salinity (NaCl irrigation),microbial: plant growth-promoting actinomycete,2
+salinity (NaCl irrigation),microbial: plant growth-promoting bacterium with ACC deaminase activity,10
+salinity (NaCl irrigation),none,2
+salinity (NaCl irrigation),none (uninoculated; seeds treated with 0.03 M MgSO4 only),2
+salinity (NaCl irrigation),nonmicrobial: Ascophyllum nodosum seaweed with amino acid and organic-mineral liquid fertilizer,4
+salinity (NaCl irrigation),nonmicrobial: amino acid and organic-mineral (Cu) liquid fertilizer,4
+salinity (NaCl irrigation),"seaweed extract (brown alga Padina gymnospora, aqueous extract)",4
+"salinity (NaCl irrigation, simulated seawater)",UNKNOWN,24
+"salinity (NaCl irrigation, simulated seawater)",microbial_inoculant (PGPR),144
+salinity (NaCl root drench),UNKNOWN,6
+salinity (NaCl root drench),chitosan,8
+salinity (NaCl solution added to pot soil),UNKNOWN,4
+salinity (NaCl solution added to pot soil),"microbial inoculant (fungus, Trichoderma)",8
+salinity (NaCl solution applied to soil); control and L-GLU-only groups without NaCl,amino acid (L-glutamic acid),51
+salinity (NaCl solution applied to trays),UNKNOWN,4
+salinity (NaCl solution applied to trays),beneficial fungal inoculant (Trichoderma),8
+salinity (NaCl solution irrigation),UNKNOWN,4
+salinity (NaCl solution irrigation),arbuscular mycorrhizal fungus (AMF) inoculum,8
+salinity (NaCl solution),concentrate containing the active ingredients of the biocompost product (further class not specified),2
+salinity (NaCl solution),"humic/fulvic-substance-based multi-component product containing microorganisms (bacteria, actinobacteria, fungi), mineral nutrients, enzymes and phytohormones",2
+salinity (NaCl solution),"humic/fulvic-substance-based product without microorganisms (with polysaccharides, Ca, P, enzymes, phytohormones)",2
+salinity (NaCl solution),mixture of the biocompost and biofertilizer products (70:30),2
+salinity (NaCl solution),mixture of the biofertilizer and biocompost products (70:30),2
+salinity (NaCl),NO donor,4
+salinity (NaCl),PGPB,8
+salinity (NaCl),PGPB immobilized in chitosan carrier,8
+salinity (NaCl),PGPR (plant growth promoting rhizobacteria),32
+salinity (NaCl),PGPR (plant growth-promoting rhizobacteria),40
+salinity (NaCl),UNKNOWN,55
+salinity (NaCl),amino_acid,6
+salinity (NaCl),arbuscular mycorrhizal fungi (AMF),24
+salinity (NaCl),arbuscular mycorrhizal fungi (AMF) inoculum,144
+salinity (NaCl),arbuscular mycorrhizal fungi inoculant,10
+salinity (NaCl),arbuscular mycorrhizal fungus,3
+salinity (NaCl),bacterial endophyte,8
+salinity (NaCl),biosynthesized ZnO nanoparticles (Withania somnifera aqueous leaf extract),38
+salinity (NaCl),chitosan,4
+salinity (NaCl),endophytic bacteria (microbial inoculant),2
+salinity (NaCl),endophytic bacteria (microbial inoculant) on a plant growth regulator GA4 background co-treatment,2
+salinity (NaCl),endophytic inoculant,8
+salinity (NaCl),microalgae-cyanobacteria extract formulation,48
+salinity (NaCl),microbial consortium - PGPR bacterium (wild type) + yeast co-inoculant,2
+salinity (NaCl),microbial consortium - salt-adapted PGPR bacterium + yeast co-inoculant,2
+salinity (NaCl),"microbial inoculant - PGPR bacterium (single strain, salt-adapted)",2
+salinity (NaCl),"microbial inoculant - PGPR bacterium (single strain, wild type)",2
+salinity (NaCl),microbial inoculant - beneficial yeast (single strain),2
+salinity (NaCl),microbial inoculant: dark septate endophytic (DSE) root-colonizing fungi; controls mock-inoculated,36
+salinity (NaCl),microbial inoculant: plant growth promoting actinobacterium,1
+salinity (NaCl),microbial inoculant: root-colonizing fungal endophyte,4
+salinity (NaCl),microbial: PGPR / biocontrol bacteria (Bacillus),20
+salinity (NaCl),microbial: endophytic fungus,4
+salinity (NaCl),microbial: rhizosphere fungus (PGPF),4
+salinity (NaCl),microbial; actinobacteria (Dermacoccus),4
+salinity (NaCl),mixed (protein hydrolysate + seaweed extract),2
+salinity (NaCl),none,2
+salinity (NaCl),"none (NaCl-only treatment, no Se NPs)",4
+salinity (NaCl),none (no biostimulant),1
+salinity (NaCl),plant growth promoting bacteria,40
+salinity (NaCl),plant growth promoting halotolerant strains,6
+salinity (NaCl),"plant growth regulator (gibberellin); background co-treatment, not a biostimulant component in the design",2
+salinity (NaCl),protein_hydrolysate,2
+salinity (NaCl),seaweed extract (Ascophyllum nodosum),32
+salinity (NaCl),seaweed_extract,10
+salinity (NaCl),selenium nanoparticles (Se NPs),16
+salinity (NaCl),"silicon (inorganic beneficial element, supplied as sodium silicate)",4
+salinity (NaCl) + biotic (Fusarium oxysporum),microbial inoculant: endophytic bacteria,24
+salinity (NaCl) and reduced nutrient strength (70% BNS),UNKNOWN,8
+salinity (NaCl) and reduced nutrient strength (70% BNS),seaweed extract (Ascophyllum nodosum),32
+salinity (NaCl) applied to the root system,polyphenol-based nitrophenolate biostimulant,32
+salinity (NaCl) in nutrient solution,UNKNOWN,1
+salinity (NaCl) in nutrient solution,indoleamine (exogenous melatonin),3
+salinity (NaCl) in the nutrient solution,"plant growth regulator (melatonin, a biological indolamine hormone)",16
+salinity (NaCl-adjusted soil),plant growth-promoting bacterial endophyte,4
+salinity (NaCl-amended soil),PGPR (live Bacillus inoculant),20
+salinity (NaCl-amended soil),"none (non-inoculated; 30 min sterile-water seed soak, no culture poured)",2
+salinity (NaCl-salinized irrigation water) + drought (deficit irrigation),biochar (soil amendment),18
+salinity (NaCl-salinized irrigation water) + drought (deficit irrigation),"none (untreated soil, BC0%)",9
+"salinity (NaCl-salinized irrigation water), full irrigation 100% ETc",biochar (soil amendment),6
+"salinity (NaCl-salinized irrigation water), full irrigation 100% ETc","none (untreated soil, BC0%)",3
+salinity (Rashidi salt dissolved in irrigation water),amino acids,24
+salinity (Rashidi salt dissolved in irrigation water),plant growth regulator (thidiazuron),24
+"salinity (ambient moderately saline greenhouse soil EC 5.6 dS/m; not a manipulated factor, no non-saline arm)","PGPR (Pseudomonas plant growth-promoting rhizobacteria, single-strain inoculants)",2
+salinity (natural salt-affected field patch),plant growth promoting bacteria,8
+"salinity (naturally saline field soil; site background shared by both arms, not imposed)","seaweed extract + mineral (potassium, boron) commercial formulation",3
+salinity (naturally saline soil; no NaCl addition reported),PGPR / microbial inoculant (rhizospheric Actinobacteria with ACC deaminase activity),12
+salinity (naturally saline soil; no NaCl addition reported),none (chemical fertilizer comparator without Actinobacteria),4
+salinity (naturally saline soil; no NaCl addition reported),"none (uninoculated control: distilled water for seeds, dechlorinated water for root dip)",4
+salinity (saline irrigation water),HA control (none); SA pooled over 0 and 1.5 mM (salicylic acid in half of pooled plots),6
+salinity (saline irrigation water),UNKNOWN,5
+salinity (saline irrigation water),exopolysaccharide-producing bacterium; extracted bacterial EPS; silicon nanoparticles; and their combinations,130
+salinity (saline irrigation water),humic acid (SA pooled over 0 and 1.5 mM),18
+salinity (saline irrigation water),microbial: arbuscular mycorrhizal fungus inoculant (nursery pre-inoculation),10
+"salinity (saline well irrigation water; two saline levels S1 and S2, no non-saline control)",arbuscular mycorrhizal fungi (vesicular arbuscular mycorrhiza) inoculant,32
+salinity (seawater-induced; sterile seawater irrigation),UNKNOWN,2
+salinity (seawater-induced; sterile seawater irrigation),microbial (biofilm-producing PGPR),28
+salinity (sodium chloride and calcium chloride in equal ratio),PGPR,10
+salinity (soil NaCl),"none (0 mM Si, T0)",4
+salinity (soil NaCl),silicon,8
+salinity (soil NaCl) + drought (deficit irrigation),"none (0 mM Si, T0)",8
+salinity (soil NaCl) + drought (deficit irrigation),silicon,16
+"salinity: irrigation with diluted saline agricultural drainage water (Karoun Lake, El-Fayoum; 28000 ppm before dilution); control tap water",seaweed extract (SWE),186
+sensor-regulated (intended reduced) irrigation/fertigation; not a fixed deficit level,UNKNOWN,2
+sensor-regulated (intended reduced) irrigation/fertigation; not a fixed deficit level,arbuscular_mycorrhizal_fungus,4
+soil moisture (matric potential) gradient,"plant growth-promoting rhizobacteria (PGPR), bacterial inoculant",15
+soil salinity (soil EC) induced by drip fertigation with more concentrated balanced nutrient solutions; salinity confounded with nutrient supply,"AMF-based microbial consortium (arbuscular mycorrhizal fungi plus Trichoderma, Streptomyces, Bacillus, Pseudomonas)",36
+soil salinity (soil EC) induced by drip fertigation with more concentrated balanced nutrient solutions; salinity confounded with nutrient supply,none (non-inoculated control),9
+soil salinity induced by NaCl added to reach target soil EC,beneficial fungi consortium (AM fungus + root endophyte),16
+soil salinity induced by NaCl added to reach target soil EC,beneficial fungus (arbuscular mycorrhizal fungus),10
+soil salinity induced by NaCl added to reach target soil EC,beneficial fungus (root endophyte),10
+soil salinity induced by NaCl added to reach target soil EC,none (non-inoculated; mock sterile MS medium),4
+soil temperature gradient,"plant growth-promoting rhizobacteria (PGPR), bacterial inoculant",15
+soil water deficit (50% vs 100% soil water holding capacity),UNKNOWN,2
+soil water deficit (50% vs 100% soil water holding capacity),seaweed extract (Ascophyllum nodosum) with micro and macronutrients,18
+soil water deficit (50% vs 100% soil water holding capacity),seaweed extract (Ascophyllum nodosum) with micro and macronutrients (Seed+ plus Crop+),20
+"transient water stress by withholding watering, then re-watering",ACC deaminase-containing plant growth-promoting bacteria,22
+water (moisture) stress,UNKNOWN,3
+water (moisture) stress,bacterial bioinoculant (single water-stress-tolerant plant-growth-promoting strain per arm),12
+water deficit,UNKNOWN,2
+water deficit,microbial: arbuscular mycorrhizal fungus inoculant,4
+water deficit,none (nonmycorrhizal; received autoclaved inoculant),2
+water deficit,protein hydrolysate,4
+water deficit (WD) vs well-watered (WW) controls; WD defined in Sec 2.1 as reduced daily irrigation volume,UNKNOWN,1
+water deficit (WD) vs well-watered (WW) controls; WD defined in Sec 2.1 as reduced daily irrigation volume,amino acid (Table 1 group: Amino Acids),3
+water deficit (deficit irrigation; V50 and V0 regimes),VAM (AMF) + rhizosphere bacteria (PGPR) + saprophytic fungi commercial formulation,9
+water deficit (deficit irrigation; V50 and V0 regimes),VAM (AMF) single Glomus spp. commercial inoculum,9
+water deficit (drought),seaweed extract,14
+water deficit (drought) for G. rugosa extract arms 1-3,seaweed (macroalgal) aqueous extract,4
+water deficit (drought) in WD and A-WD arms,seaweed (macroalgal) aqueous extract,4
+water deficit (drought); all arms except WW,commercial seaweed product (composition not reported),1
+water deficit (drought); all arms except WW,commercial seaweed product (composition not reported); used as positive control,1
+water deficit (drought); all arms except WW,seaweed (macroalgal) aqueous extract (nine laboratory extracts),10
+water deficit (half water supply),PGPR liquid bacterial fertilizer,4
+water deficit (half water supply),none (non-inoculated control),1
+"water deficit (rainfed, no irrigation; authors label W0 'rainfed control')",PGPR liquid bacterial fertilizer,4
+"water deficit (rainfed, no irrigation; authors label W0 'rainfed control')",none (non-inoculated control),1
+water deficit (reduced daily irrigation volume),UNKNOWN,2
+water deficit (reduced daily irrigation volume),amino acid (Table 1 group: Amino Acids),2
+water deficit (reduced daily irrigation volume),betaine (Table 1 group: Betaines),1
+water deficit (reduced daily irrigation volume),inorganic silicate (Table 1 group: Inorganic),2
+water deficit (reduced daily irrigation volume),melatonin (Table 1 group: Hormones),1
+water deficit (reduced daily irrigation volume),polyamine (Sec 2.2 text); Table 1 group: Hormones,5
+water deficit (reduced daily irrigation volume),seaweed (macroalgal) extract (Table 1 group printed: Seawed extract),1
+water deficit (reduced irrigation),seaweed extract,4
+water deficit (severe induced water deficit),"none (non-bacterized negative control, sterile distilled water)",3
+water deficit (severe induced water deficit),plant growth-promoting bacterial strain,30
+water deficit by withholding irrigation (WS arms),microbial: PGPB single strains and consortia,44
+water deficit imposed by withholding irrigation until the target soil moisture level (% field capacity),"seaweed extract (Ascophyllum nodosum, alkaline-hydrolysis water-soluble extract powder)",110
+water deficit imposed by withholding irrigation until the target soil moisture level (% field capacity); same procedure as Experiment 1,"seaweed extract (Ascophyllum nodosum, alkaline-hydrolysis water-soluble extract powder; same formulation as Experiment 1)",110
+water deficit in DI and I0 (rainfed); RI is regular irrigation with no imposed deficit,UNKNOWN,8
+"water limitation (rainfed field, no irrigation after the first 2 weeks)",microbial inoculant: root-colonizing fungal endophyte,4
+water stress,AMF (exogenous) + PGPR Bacillus consortium,5
+water stress,AMF (exogenous) + actinomycete PGPR,5
+water stress,AMF (indigenous consortium) + PGPR Bacillus consortium,5
+water stress,AMF (indigenous consortium) + actinomycete PGPR,5
+water stress,AMF inoculant (exogenous),3
+water stress,AMF inoculant (indigenous consortium),3
+water stress,PGPR Bacillus consortium inoculant,3
+water stress,UNKNOWN,1
+water stress,actinomycete PGPR inoculant,3
+water stress,organic amendment (OMWW compost),3
+water stress,organic amendment + AMF (exogenous),5
+water stress,organic amendment + AMF (exogenous) + PGPR Bacillus consortium,3
+water stress,organic amendment + AMF (exogenous) + actinomycete PGPR,3
+water stress,organic amendment + AMF (indigenous consortium),5
+water stress,organic amendment + AMF (indigenous consortium) + PGPR Bacillus consortium,3
+water stress,organic amendment + AMF (indigenous consortium) + actinomycete PGPR,3
+water stress,organic amendment + PGPR Bacillus consortium,5
+water stress,organic amendment + actinomycete PGPR,5
+water stress (artificial soil-moisture deficit; irrigation withheld until target soil moisture reached),none (control: no ASE and no Si),10
+water stress (artificial soil-moisture deficit; irrigation withheld until target soil moisture reached),"seaweed extract (Ascophyllum nodosum, ASE) + soluble silicon",100
+water stress (artificial soil-moisture deficit; irrigation withheld until target soil moisture reached),"soluble silicon (monosilicic acid), no ASE",25
+water stress (deficit irrigation),UNKNOWN,2
+water stress (deficit irrigation),"glycinebetaine (GB)-based biostimulant, sugar beet extract",8
+water stress (drought),UNKNOWN,3
+water stress (drought),arbuscular mycorrhizal fungi,5
+water stress (drought),arbuscular mycorrhizal fungi + compost,15
+water stress (drought),compost,10
+water stress (drought) imposed by water stress intervals,chitosan,24
+"water stress (drought, reduced soil water content)",UNKNOWN,112
+water stress (reduced watering relative to field capacity),arbuscular mycorrhizal fungi (AMF) inoculum (inoculated arms only),102
+water stress by withholding water,"plant growth promoting bacterium (PGPB), microbial inoculant",1
+water-deficit (drought) stress by withholding irrigation,microbial: plant growth-promoting rhizobacteria (PGPR),16

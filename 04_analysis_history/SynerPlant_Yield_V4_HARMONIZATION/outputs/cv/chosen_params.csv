@@ -1,0 +1,41 @@
+candidate,params,n_folds
+mixed_ri|FHc|none|robust,"{""alpha"": 100}",6
+mixed_ri|FHc|none|robust,"{""alpha"": 10}",2
+mixed_ri|FHc|none|robust,"{""alpha"": 300}",11
+mixed_ri|FHc|none|robust,"{""alpha"": 30}",6
+mixed_ri|FH|none|robust,"{""alpha"": 100}",7
+mixed_ri|FH|none|robust,"{""alpha"": 10}",3
+mixed_ri|FH|none|robust,"{""alpha"": 300}",12
+mixed_ri|FH|none|robust,"{""alpha"": 30}",3
+pp_hier|B|none|z,"{""kmult"": 0.5}",2
+pp_hier|B|none|z,"{""kmult"": 4.0}",23
+quantile_l1|F1|hybrid|z,"{""alpha"": 0.03}",3
+quantile_l1|F1|hybrid|z,"{""alpha"": 0.1}",22
+quantile_l1|F1|mlre|z,"{""alpha"": 0.03}",3
+quantile_l1|F1|mlre|z,"{""alpha"": 0.1}",22
+quantile_l1|F1|study|z,"{""alpha"": 0.03}",4
+quantile_l1|F1|study|z,"{""alpha"": 0.1}",21
+quantile_l1|F2v3|study|z,"{""alpha"": 0.03}",3
+quantile_l1|F2v3|study|z,"{""alpha"": 0.1}",22
+quantile_l1|FHc|study|robust,"{""alpha"": 0.03}",2
+quantile_l1|FHc|study|robust,"{""alpha"": 0.1}",23
+quantile_l1|FHc|study|z,"{""alpha"": 0.03}",1
+quantile_l1|FHc|study|z,"{""alpha"": 0.1}",24
+quantile_l1|FH|hybrid|robust,"{""alpha"": 0.03}",2
+quantile_l1|FH|hybrid|robust,"{""alpha"": 0.1}",23
+quantile_l1|FH|mlre|robust,"{""alpha"": 0.03}",2
+quantile_l1|FH|mlre|robust,"{""alpha"": 0.1}",23
+quantile_l1|FH|study|robust,"{""alpha"": 0.03}",2
+quantile_l1|FH|study|robust,"{""alpha"": 0.1}",23
+quantile_l1|FH|study|z,"{""alpha"": 0.03}",1
+quantile_l1|FH|study|z,"{""alpha"": 0.1}",24
+rf_meta|FHc|mlre|z,"{""min_samples_leaf"": 10, ""max_features"": 0.33}",3
+rf_meta|FHc|mlre|z,"{""min_samples_leaf"": 25, ""max_features"": 0.33}",22
+rf_meta|FH|mlre|z,"{""min_samples_leaf"": 10, ""max_features"": 0.33}",2
+rf_meta|FH|mlre|z,"{""min_samples_leaf"": 25, ""max_features"": 0.33}",23
+rf_meta|FH|study|z,"{""min_samples_leaf"": 10, ""max_features"": 0.33}",2
+rf_meta|FH|study|z,"{""min_samples_leaf"": 10, ""max_features"": 0.66}",1
+rf_meta|FH|study|z,"{""min_samples_leaf"": 25, ""max_features"": 0.33}",21
+rf_meta|FH|study|z,"{""min_samples_leaf"": 25, ""max_features"": 0.66}",1
+row_median|B|none|z,{},25
+study_median|B|none|z,{},25

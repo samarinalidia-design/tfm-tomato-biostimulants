@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-11-18T08:49:59+00:00",
+  "status": "EXPLORATORY_POST_FREEZE_PRE_TEST",
+  "coverage": {
+    "SALINITY": {
+      "studies": 28,
+      "studies_with_intensity_V2_frozen": 20,
+      "studies_with_intensity_now": 26,
+      "studies_with_external_damage_model": 26
+    },
+    "DROUGHT": {
+      "studies": 26,
+      "studies_with_intensity_V2_frozen": 16,
+      "studies_with_intensity_now": 19,
+      "studies_with_external_damage_model": 9
+    },
+    "all_primary_studies_with_D_exp": 36,
+    "coded_rows": 98,
+    "verification_counts": {
+      "AUTO_VERIFIED_V2": 94,
+      "CODED_FROM_VERIFIED_ARM_ONLY": 4
+    },
+    "not_comparable_rows": 11
+  },
+  "validation": {
+    "D_exp_vs_observed_D": {
+      "studies": 25,
+      "spearman_with_observed_D": 0.020805271108094343,
+      "p": 0.9213677678177525,
+      "spearman_with_effect_lnRR": -0.16220405808347624,
+      "p_effect": 0.4385463805966144,
+      "median_abs_error_D_exp_minus_D": 0.5533082884713864
+    },
+    "D_exp_no_1.5_factor_vs_observed_D": {
+      "studies": 25,
+      "spearman_with_observed_D": 0.09015617480174215,
+      "p": 0.6682309364552724,
+      "spearman_with_effect_lnRR": -0.24157231453287317,
+      "p_effect": 0.24468593901940075,
+      "median_abs_error_D_exp_minus_D": 0.5027885525965695
+    },
+    "ECe_vs_observed_D (salinity)": {
+      "studies": 17,
+      "spearman_with_observed_D": 0.04901960784313726,
+      "p": 0.8517943990009383,
+      "spearman_with_effect_lnRR": 0.14950980392156862,
+      "p_effect": 0.5668307307163287
+    },
+    "ET_supply_vs_observed_D (drought)": {
+      "studies": 9,
+      "spearman_with_observed_D": 0.22132669799727464,
+      "p": 0.5671192192933091,
+      "spearman_with_effect_lnRR": -0.3915780041490244,
+      "p_effect": 0.29731141496184826
+    },
+    "soil_water_FC_vs_observed_D (drought)": {
+      "studies": 10,
+      "spearman_with_observed_D": -0.27165152174476653,
+      "p": 0.4477063127181063,
+      "spearman_with_effect_lnRR": 0.049391185771775745,
+      "p_effect": 0.892219965831249
+    }
+  },
+  "within_study_concordance": {
+    "studies_with_2plus_levels": 14,
+    "pairs": 49,
+    "share_more_severe_level_has_larger_damage": 0.8571428571428571,
+    "share_more_severe_level_has_larger_biostimulant_effect": 0.3877551020408163
+  },
+  "cv": {
+    "PRIMARY_all_69": [
+      {
+        "model": "external_damage",
+        "mean": 0.3723,
+        "std": 0.0082,
+        "diff_vs_median": 0.0098,
+        "ci_lo": -0.0051,
+        "ci_hi": 0.025,
+        "gain_vs_median": -0.0273
+      },
+      {
+        "model": "intensity",
+        "mean": 0.3866,
+        "std": 0.0219,
+        "diff_vs_median": 0.0245,
+        "ci_lo": -0.0025,
+        "ci_hi": 0.0576,
+        "gain_vs_median": -0.0666
+      },
+      {
+        "model": "median",
+        "mean": 0.3624,
+        "std": 0.0075,
+        "diff_vs_median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "gain_vs_median": 0.0
+      }
+    ],
+    "subset_with_intensity": [
+      {
+        "model": "external_damage",
+        "mean": 0.391,
+        "std": 0.0134,
+        "diff_vs_median": 0.006,
+        "ci_lo": -0.0297,
+        "ci_hi": 0.0421,
+        "gain_vs_median": -0.0142
+      },
+      {
+        "model": "intensity",
+        "mean": 0.4043,
+        "std": 0.0105,
+        "diff_vs_median": 0.0191,
+        "ci_lo": -0.017,
+        "ci_hi": 0.06,
+        "gain_vs_median": -0.0484
+      },
+      {
+        "model": "median",
+        "mean": 0.3856,
+        "std": 0.0058,
+        "diff_vs_median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "gain_vs_median": 0.0
+      }
+    ]
+  },
+  "subset_size": {
+    "rows": 245,
+    "studies": 46
+  }
+}

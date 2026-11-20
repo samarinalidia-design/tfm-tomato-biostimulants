@@ -1,0 +1,64 @@
+{
+  "label": "DRY_RUN_ON_TRAINING_DATA (code check only)",
+  "evaluated_at": "2026-11-18T11:40:16+00:00",
+  "registration": "2026-11-18T11:40:13+00:00",
+  "primary": {
+    "n_contrasts": 766,
+    "n_studies": 153,
+    "group_mae": 0.2406714431664558,
+    "mae": 0.2624007348781233,
+    "rmse": 0.34804670044397384,
+    "bias": -1.0435516680549774e-17,
+    "coverage_single": 0.9076715596724623,
+    "coverage_simultaneous": 0.9019607843137255,
+    "coverage_simultaneous_ci95": [
+      0.8434574416297788,
+      0.9440831038275929
+    ],
+    "pass_coverage_single": true,
+    "pass_coverage_simultaneous": true,
+    "pass_accuracy_transport": true
+  },
+  "conditional": {
+    "n_contrasts": 477,
+    "n_studies": 109,
+    "median_group_mae": 0.24251883898339793,
+    "C1": {
+      "group_mae": 0.22164726024818399,
+      "gain_vs_median": 0.08606168008516135,
+      "null_gain_q95": 0.004743763633566813,
+      "coverage_single": 0.9179653738905482
+    },
+    "C2": {
+      "group_mae": 0.23517658083938675,
+      "gain_vs_median": 0.03027500121140614,
+      "null_gain_q95": -0.07703714331585011,
+      "coverage_single": 0.9113336160152135
+    },
+    "C3": {
+      "group_mae": 0.17632518146189397,
+      "gain_vs_median": 0.2729423322286124,
+      "null_gain_q95": -0.09321573321707566,
+      "coverage_single": 0.9093402804546895
+    },
+    "between_slope": {
+      "observed": -0.32794958294987353,
+      "ci95": [
+        -0.4903641705096113,
+        -0.17823598146987948
+      ],
+      "null_band95": [
+        -0.17494826465199,
+        0.12749426711394438
+      ]
+    },
+    "criteria": {
+      "1_gain": false,
+      "2_beyond_coupling": true,
+      "3_slope": true,
+      "4_coverage": true
+    },
+    "verdict": "PARTIAL",
+    "C3_secondary_pass": true
+  }
+}

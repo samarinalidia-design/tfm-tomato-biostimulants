@@ -1,0 +1,15 @@
+corpus_root: C:\Users\lenovo\Desktop\master's\TFM_TEST_2024_2026_CORPUS
+workbook: C:\Users\lenovo\Desktop\master's\TFM_TEST_2024_2026_Agent_System\work\baseline\TFM_TEST_BASELINE.xlsx
+fulltext_root: C:\Users\lenovo\Desktop\master's\TFM_TEST_2024_2026_CORPUS\01_fulltext
+supplements_root: C:\Users\lenovo\Desktop\master's\TFM_TEST_2024_2026_CORPUS\02_supplements
+docling_root: ''
+figures_root: ''
+legacy_figure_json_root: ''
+docling_map_csv: ''
+docling_study_globs:
+- '{study_id}'
+- '**/{study_id}'
+context:
+  max_chars: 120000
+  keep_sections_regex: (material|method|experimental|design|treatment|statistic|result|yield|harvest|biomass|table|figure|supplement)
+  drop_sections_regex: (introduction|discussion|reference|bibliograph)

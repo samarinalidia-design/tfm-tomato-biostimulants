@@ -1,0 +1,65 @@
+{
+  "_about": "SynerPlant Yield V2 decision register. Every entry is applied by src/s02_corrections.py (DB layer) or src/s03_build_dataset.py (analysis layer). Policy codes: A confirmed error, B ambiguous -> safe choice + sensitivity, C not determinable -> NA/UNRESOLVED, D methodological decision, E execution issue. Status AUTO_VERIFIED_V2 = two independent calibrated checks against the original source by the V2 agent; it is NEVER a human verification.",
+  "value_corrections": [
+    {
+      "id": "V2-C001",
+      "policy": "A",
+      "study_id": "D_6b5d82abb9f7e388",
+      "doi": "10.1155/2023/2581608",
+      "locator": "Figure 3 panel k, PDF page 6",
+      "issue": "P0 audit flag: 15 contrasts show only two yield levels (0.999503 / 1.999005 kg/plant).",
+      "check_1": "Vector probe of the original PDF (PyMuPDF get_drawings): y-axis line 607.241-627.351 pt for 0-5 kg/plant => 4.022 pt per kg; every bar rectangle is 4.022-4.023 pt (1.000 kg) or 8.044 pt (2.000 kg); evidence audit/evidence/D_6b5d82abb9f7e388/",
+      "check_2": "Independent 1200-dpi raster measurement (colour-segmented bar tops, baseline = x-axis line centre, scale from the y-axis top): 0.994 kg and 1.996 kg (raster_check.json).",
+      "finding": "The extraction was correct to 0.05%. The published figure itself plots integer means (1.000 or 2.000 kg/plant) for all 18 groups, i.e. the source data are quantised (probably rounded to whole kg by the authors). lnRR values 0 and ln 2 are what the source shows; they cannot be refined from the paper.",
+      "action": "Set the 18 means to the exact vector values 1.000 / 2.000 kg/plant (lnRR unchanged); verification=AUTO_VERIFIED_V2; flag SOURCE_VALUES_QUANTIZED on the 15 yield contrasts. Kept in PRIMARY_EXPANDED (published data, matched design); excluded from QUALITY_SENSITIVITY (precision limited: whole-kg rounding means up to +-50% relative error on a 1 kg value).",
+      "tv_values": {"8565": 1.0, "8566": 1.0, "8567": 1.0, "8568": 1.0, "8569": 1.0, "8570": 2.0, "8571": 1.0, "8572": 1.0, "8573": 1.0, "8574": 1.0, "8575": 1.0, "8576": 1.0, "8577": 1.0, "8578": 1.0, "8579": 1.0, "8580": 2.0, "8581": 2.0, "8582": 2.0}
+    }
+  ],
+  "contrast_exclusions": [
+    {
+      "id": "V2-X001", "policy": "A", "study_id": "199", "doi": "10.1016/j.scienta.2021.110337",
+      "match": {"study_id": "199", "stress_code": "FERTIG_SENSOR_MODULATED"},
+      "reason": "NOT_A_MATCHED_STRESS_CONTRAST",
+      "evidence": "Table 3 / Methods (arms E3.SENS.*): sensor-modulated irrigation-fertigation; realised water supply 614 L m-2 for Myc vs 754 L m-2 for NM (Farm reference 704). The 'stressed' control received MORE water than the reference and a different amount than the treated arm, so the contrast is neither under stress nor matched. It is an agronomic management variant. Was stress_family=UNMAPPED in V1."
+    },
+    {
+      "id": "V2-X002", "policy": "B", "study_id": "231", "doi": "10.1590/1807-1929/agriambi.v25n2p90-95",
+      "match": {"study_id": "231"},
+      "reason": "YIELD_IDENTITY_AMBIGUOUS",
+      "evidence": "Table 6 caption reads 'Mean values of total fruit production (g)' but Results text describes the same values as 'average mass' of fruits (28-95 g). One of the two readings is wrong in the source; average fruit mass is not yield (author decision 2026-11-06 #5). Not reclassified in the DB (error not confirmed). Excluded from PRIMARY; included only in sensitivity PLUS_AMBIGUOUS."
+    },
+    {
+      "id": "V2-X003", "policy": "C", "study_id": "D_952eb99fc48d3753",
+      "match": {"study_id": "D_952eb99fc48d3753", "in_mart": "A_direct_yield_unit_unresolved"},
+      "reason": "YIELD_IDENTITY_UNRESOLVED",
+      "evidence": "Fig. 5b has no y-axis title/unit; panel a is 'Fruit Weight (g)' and the text calls 5b 'average fruit weight', yet values (531-3601) are impossible for a single tomato fruit. Identity cannot be established from the source. UNRESOLVED."
+    }
+  ],
+  "relative_unit_inclusions": [
+    {"id": "V2-R001", "policy": "B", "study_id": "D_1c70767428261b78", "evidence": "Table 1 'Actual yield (kg/treatment)'; Methods: cumulative yield of 3 harvests per plot, 10 replications per treatment of the same design. Same column for SB and S => lnRR unit-free. denominator=PER_PLOT_EQUAL_DESIGN.", "denominator_v2": "PER_PLOT"},
+    {"id": "V2-R002", "policy": "A", "study_id": "D_9f55f313bda6b2a2", "evidence": "Fig. 6B fruit yield 'kg/treatment'; Methods p6: total yield per treatment from six replicates x nine plants (54 plants every treatment). Equal plant number verified => ratio equals per-plant ratio. Biotic (early blight, natural infection, open field).", "denominator_v2": "PER_PLOT"},
+    {"id": "V2-R003", "policy": "B", "study_id": "72", "evidence": "Fig. 6b fruit yield (Kg); Methods p5: randomized blocks, three replicate plots of 50 plants each, total yield over harvests. Same axis for SB and S.", "denominator_v2": "PER_PLOT"},
+    {"id": "V2-R004", "policy": "B", "study_id": "D_02c169e1e8857349", "evidence": "Table 3 'Fruit yield, g' (pot experiment, 7-kg pots, sets of nine plants). Bare 'g' is never read as per plant (author rule); the ratio uses one column of one table.", "denominator_v2": "UNSPECIFIED"}
+  ],
+  "biostimulant_class_overrides": [
+    {"id": "V2-M001", "policy": "A", "study_id": "D_d2cc590a442913d8", "bio_code": "SG1e7_SEEDSOAK", "class": "PGPR_BACTERIA", "subclass": "ACTINOBACTERIA_STREPTOMYCES", "evidence": "Streptomyces griseus MT210913 spore suspension (living plant-growth-promoting actinobacterium; EU 2019/1009 microbial biostimulant). Was missing (NaN) in V1."},
+    {"id": "V2-M002", "policy": "A", "study_id": "D_d2cc590a442913d8", "bio_code": "SA60_SEEDPRIME", "class": "SMALL_MOLECULE_OSMOLYTE_ANTIOXIDANT", "subclass": "SHIKIMIC_ACID", "evidence": "'SA' in this paper = shikimic acid (10 mg/mL stock, seed priming), a primary-metabolism intermediate of the shikimate pathway; NOT salicylic acid and not a phytohormone. Mapped to the project class for natural small bioactive molecules. Was missing (NaN) in V1."},
+    {"id": "V2-M003", "policy": "D", "match_composition_regex": "NAA|naphthalene ?acetic|nitrophenolate|thidiazuron|triazole|paclobutrazol|uniconazole", "class": "SYNTHETIC_PGR_NOT_BIOSTIMULANT", "evidence": "FastTunic (2.5% NAA + 0.6% sodium nitrophenolate) is labelled '(Chemical control)' by the authors; synthetic auxins, nitrophenolates and triazole retardants are plant-protection/PGR active substances under EU 1107/2009, explicitly outside the EU 2019/1009 biostimulant definition. V1 excluded FastTunic but kept thidiazuron and a triazole retardant inside PHYTOHORMONE_PGR: V2 applies one rule to all. Natural signalling molecules (GA3, melatonin, brassinosteroid, jasmonate, salicylates, polyamines) stay PHYTOHORMONE_PGR. Synthetic-PGR contrasts leave PRIMARY and enter sensitivity PLUS_SYNTHETIC_PGR."}
+  ],
+  "source_quality_flags": [
+    {"id": "V2-Q001", "policy": "B", "study_id": "D_174774a4b9476fb1", "flag": "ERROR_BARS_CONSTANT_ACROSS_GROUPS", "evidence": "P1 check of Fig. 9 (p13): means verified independently - averages of the six Irrig60 / Irrig100 cells reproduce Table 10 marginal means (1.683 vs 1.69; 2.047 vs 2.05; 4.533 vs 4.54; 5.131 vs 5.13 kg/plant). n=15 pots per treatment (Methods 2.11, mean +- SE). But every bar carries an identical ~0.51 kg error bar from 0.38 to 6.0 kg means, which is not plausible as a per-group SE (likely a constant/pooled bar). Means and lnRR kept; variance treated as unreliable (excluded from QUALITY_SENSITIVITY and from reported-variance weighting). Methods state both 'split-split' and 'completely randomized' designs (RoB note)."},
+    {"id": "V2-Q002", "policy": "B", "study_id": "D_d2cc590a442913d8", "flag": "SOURCE_INTERNAL_INCONSISTENCY", "evidence": "Fig. 1C (kg/plant) vs Fig. 1D (kg/m2) are mutually inconsistent: implied density varies 2.1-3.0 plants/m2 between arms although spacing is fixed (35 cm on 1.5 m ridges, ~1.9 plants/m2). DB readings of both panels are correct. V2 uses the per-plant panel (directly recorded total yield per plant, Methods 4.4.1). Study flagged; excluded from QUALITY_SENSITIVITY. Also: stress is an ambient winter cold background without a non-cold comparator (AMBIENT_STRESS)."},
+    {"id": "V2-Q003", "policy": "A", "study_id": "D_19afb23b32e7648a", "flag": "EXTREME_EFFECT_SOURCE_CONFIRMED", "evidence": "P1: Table 2 (p6) prints fruit yield 42.0+-3.0 (control, 200 mM NaCl) to 1166.6+-46.2 g/plant (A+S), means of 3 replicates +- SD; DB matches exactly. Control is the uninoculated arm under the same 200 mM NaCl => matched SB/S. lnRR 3.324 kept in all main sets (no trimming). Note: fruit yield exceeds the reported plant fresh weight (382 g) - biologically unusual, recorded as RoB comment, not a reason to delete."},
+    {"id": "V2-Q004", "policy": "A", "study_id": "D_21039dcd27f07732", "flag": "DUPLICATE_CELL_EXTRACTION", "evidence": "Table 2 'Red Fruits t ha-1' cells extracted 2-3 times as separate records with conflicting definitions (TOTAL/CUMULATIVE vs UNSPECIFIED vs PARTIAL). V2 keeps one contrast per SB/S arm pair (tier priority) - no double counting."},
+    {"id": "V2-Q005", "policy": "A", "study_id": "D_2163ffa1e2913fd5", "flag": "DUPLICATE_CELL_EXTRACTION", "evidence": "Table 4 'Fruit yield (g plant-1)' extracted twice (TOTAL vs UNSPECIFIED scope). One contrast per arm pair kept."},
+    {"id": "V2-Q006", "policy": "A", "study_id": "D_b205610597d43dda", "flag": "REPEATED_CUMULATIVE_TIMEPOINTS", "evidence": "Fig. 6 cumulative yield at harvests H1..H9 for the same arm pair. Intermediate cumulative sums are dependent repeated measures of one outcome; V2 keeps only the terminal cumulative harvest (H9)."}
+  ],
+  "ambient_stress_bvc_sensitivity": [
+    {"id": "V2-D001", "policy": "D", "study_id": "D_9bc3fcf52e29fb63", "evidence": "No imposed stress but documented ambient greenhouse heat common to all arms (82.5 h > 30 C on 12 days from flower-bud onset; Figure 1 p3). B_vs_C here is structurally SB_vs_S under ambient heat. Proposed for sensitivity PLUS_AMBIENT only (needs author approval to enter PRIMARY)."},
+    {"id": "V2-D002", "policy": "D", "study_id": "D_20a634225c88d15a", "evidence": "Humic acid under a 'hot continental summer' (ambient heat, not quantified in the extracted record). Sensitivity PLUS_AMBIENT only."}
+  ],
+  "rejected_proposals": [
+    {"study_id": "D_8a246bc169c4b812", "evidence": "Authors call the soil saline, but EC 1.07 mS/cm is below the tomato salinity threshold (~2.5 dS/m): not a stress background. Stays out."},
+    {"study_id": "D_e8e2e6fbeb301530", "evidence": "Has SB arms (AMF + NaCl) but no salt-without-AMF arm: no SB_vs_S contrast exists."}
+  ]
+}

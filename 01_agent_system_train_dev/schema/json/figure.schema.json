@@ -1,0 +1,571 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "FIGURE_A / FIGURE_B output (calibrated digitisation)",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-\\d{6}$"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "const": "tfm-figure-digitizer"
+  },
+  "model_id": {
+   "type": "string",
+   "minLength": 3
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "pass": {
+   "enum": [
+    "FA",
+    "FB"
+   ]
+  },
+  "panels": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "figure_item_id": {
+      "type": "string",
+      "minLength": 3
+     },
+     "slot_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "source_file_id": {
+      "type": "string",
+      "minLength": 3
+     },
+     "page": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "figure_label": {
+      "type": "string"
+     },
+     "panel": {
+      "type": "string"
+     },
+     "image_path": {
+      "type": "string",
+      "minLength": 3
+     },
+     "coord_space": {
+      "enum": [
+       "image_px",
+       "pdf_pt"
+      ]
+     },
+     "value_axis": {
+      "enum": [
+       "y",
+       "x"
+      ]
+     },
+     "endpoint": {
+      "enum": [
+       "FRUIT_YIELD",
+       "DRY_BIOMASS",
+       "FRUIT_NUMBER",
+       "MEAN_FRUIT_MASS",
+       "WATER_PRODUCTIVITY",
+       "BIOTIC_SEVERITY",
+       "BIOTIC_INCIDENCE",
+       "BIOTIC_PATHOGEN_LOAD",
+       "BIOTIC_LESION_AREA",
+       "BIOTIC_MORTALITY",
+       "BIOTIC_SURVIVAL",
+       "BIOTIC_ROOT_GALL"
+      ]
+     },
+     "yield_scope": {
+      "enum": [
+       "TOTAL",
+       "MARKETABLE",
+       "EARLY",
+       "NON_MARKETABLE",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "mass_basis": {
+      "enum": [
+       "FRESH",
+       "DRY",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "denominator": {
+      "enum": [
+       "PER_PLANT",
+       "PER_AREA",
+       "PER_POT",
+       "PER_PLOT",
+       "PER_ROW_LENGTH",
+       "OTHER",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "harvest_window": {
+      "enum": [
+       "CUMULATIVE",
+       "SINGLE_HARVEST",
+       "PARTIAL",
+       "UNSPECIFIED",
+       null
+      ]
+     },
+     "organ_scope": {
+      "enum": [
+       "WHOLE_PLANT",
+       "SHOOT",
+       "ROOT",
+       "LEAF",
+       "STEM",
+       "OTHER",
+       null
+      ]
+     },
+     "unit_raw": {
+      "type": "string",
+      "minLength": 1
+     },
+     "axis": {
+      "type": "object",
+      "properties": {
+       "scale": {
+        "enum": [
+         "linear",
+         "log10"
+        ]
+       },
+       "ticks": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+         "type": "object",
+         "properties": {
+          "px": {
+           "type": "number"
+          },
+          "value": {
+           "type": "number"
+          },
+          "label_text": {
+           "type": [
+            "string",
+            "null"
+           ]
+          }
+         },
+         "required": [
+          "px",
+          "value"
+         ],
+         "additionalProperties": false
+        }
+       }
+      },
+      "required": [
+       "scale",
+       "ticks"
+      ],
+      "additionalProperties": false
+     },
+     "error_bar_type": {
+      "enum": [
+       "SD",
+       "SE",
+       "CI95",
+       "NONE",
+       "UNCLEAR",
+       "OTHER_INTERVAL"
+      ]
+     },
+     "n": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "n_unit": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "n_source": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "points": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "properties": {
+        "arm_key": {
+         "type": "string"
+        },
+        "timepoint_key": {
+         "type": "string"
+        },
+        "px_mean": {
+         "type": "number"
+        },
+        "px_err_hi": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "px_err_lo": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "x_px": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "notes": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "error_bar_status": {
+         "enum": [
+          "DIGITIZED_BOTH",
+          "DIGITIZED_UPPER_ONLY",
+          "DIGITIZED_LOWER_ONLY",
+          "ABSENT_IN_SOURCE",
+          "NOT_READABLE"
+         ]
+        },
+        "error_bar_note": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "recovery_attempts": {
+         "type": "integer",
+         "minimum": 0
+        },
+        "true_zero": {
+         "type": "boolean",
+         "description": "True only when the original shows a real zero at the baseline, for example no fruit produced. Requires ABSENT_IN_SOURCE and error_bar_note citing the source."
+        },
+        "coordinate_uncertainty": {
+         "type": [
+          "number",
+          "null"
+         ],
+         "exclusiveMinimum": 0
+        },
+        "error_bar_relative_uncertainty": {
+         "type": [
+          "number",
+          "null"
+         ],
+         "minimum": 0
+        }
+       },
+       "required": [
+        "arm_key",
+        "timepoint_key",
+        "px_mean",
+        "error_bar_status",
+        "coordinate_uncertainty"
+       ],
+       "additionalProperties": false
+      }
+     },
+     "verbatim_caption": {
+      "type": "string",
+      "minLength": 3
+     },
+     "confidence": {
+      "enum": [
+       "HIGH",
+       "MEDIUM",
+       "LOW"
+      ]
+     },
+     "notes": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "probe_used": {
+      "enum": [
+       "vector_probe",
+       "grid_overlay",
+       "snap",
+       "manual",
+       null
+      ]
+     },
+     "receipt_id": {
+      "type": "string"
+     },
+     "relative_uncertainty": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.05
+     },
+     "source_cell": {
+      "type": "string"
+     },
+     "ci": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "target": {
+        "enum": [
+         "ARM_MEAN",
+         "ADJUSTED_MEAN",
+         "DIFFERENCE",
+         "RATIO",
+         "UNKNOWN"
+        ]
+       },
+       "symmetric": {
+        "type": "boolean"
+       },
+       "sidedness": {
+        "enum": [
+         "TWO_SIDED",
+         "ONE_SIDED",
+         "UNKNOWN"
+        ]
+       },
+       "level": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "exclusiveMaximum": 1
+       },
+       "distribution": {
+        "enum": [
+         "t",
+         "normal",
+         "UNKNOWN"
+        ]
+       },
+       "df": {
+        "type": [
+         "number",
+         "null"
+        ],
+        "exclusiveMinimum": 0
+       }
+      },
+      "required": [
+       "target",
+       "symmetric",
+       "sidedness",
+       "level",
+       "distribution"
+      ]
+     },
+     "context_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "outcome_context": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "estimand_id": {
+        "type": "string"
+       },
+       "effect_metric": {
+        "enum": [
+         "lnRR",
+         "MD",
+         "LOG_RR_BINARY",
+         "LOG_OR",
+         "DESCRIPTIVE_ORDINAL"
+        ]
+       },
+       "scale_id": {
+        "type": "string"
+       },
+       "scale_type": {
+        "enum": [
+         "CONTINUOUS",
+         "BINARY",
+         "ORDINAL"
+        ]
+       },
+       "scale_min": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "scale_max": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "assay": {
+        "type": "string"
+       },
+       "pathogen": {
+        "type": "string"
+       },
+       "favorable_direction": {
+        "enum": [
+         "POSITIVE",
+         "NEGATIVE"
+        ]
+       },
+       "events": {
+        "type": [
+         "integer",
+         "null"
+        ],
+        "minimum": 0
+       },
+       "total": {
+        "type": [
+         "integer",
+         "null"
+        ],
+        "minimum": 1
+       },
+       "binomial_independent": {
+        "type": "boolean"
+       }
+      },
+      "required": [
+       "estimand_id",
+       "effect_metric",
+       "scale_id",
+       "scale_type",
+       "assay",
+       "pathogen",
+       "favorable_direction"
+      ]
+     }
+    },
+    "required": [
+     "figure_item_id",
+     "source_file_id",
+     "figure_label",
+     "panel",
+     "image_path",
+     "coord_space",
+     "value_axis",
+     "endpoint",
+     "unit_raw",
+     "axis",
+     "error_bar_type",
+     "n",
+     "points",
+     "verbatim_caption",
+     "confidence",
+     "receipt_id",
+     "relative_uncertainty",
+     "source_cell"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "slot_status": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "slot_id": {
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "EXTRACTED",
+       "NOT_EXTRACTABLE"
+      ]
+     },
+     "reason": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "n_values": {
+      "type": "integer",
+      "minimum": 0
+     }
+    },
+    "required": [
+     "slot_id",
+     "status",
+     "n_values"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "design_gaps": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "issue": {
+      "type": "string"
+     },
+     "locator": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "issue",
+     "locator"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "pass",
+  "panels",
+  "slot_status"
+ ]
+}

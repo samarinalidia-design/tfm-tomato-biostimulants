@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-11-18T11:39:42+00:00",
+  "overall": [
+    {
+      "set": "PRIMARY_EXPANDED",
+      "n": 346,
+      "k_studies": 78,
+      "mu_lnRR": 0.3054864702029721,
+      "pct_effect": 35.728512119769064,
+      "C_ci95_model": [
+        0.25251355585783125,
+        0.35845938454811294
+      ],
+      "C_ci95_cluster_robust": [
+        0.2525381445194676,
+        0.3584347958864766
+      ],
+      "tau2_between": 0.03675768944601985,
+      "tau2_within": 0.03680471236131598,
+      "I2_total_approx": 0.7859277663222314,
+      "share_between_of_tau2": 0.49968038757476074,
+      "D_pi95_new_study_mean": [
+        -0.07994033996843258,
+        0.6909132803743767
+      ],
+      "D_pi95_new_contrast_true_effect": [
+        -0.23718099024223588,
+        0.84815393064818
+      ],
+      "converged": true,
+      "df_t": 77
+    },
+    {
+      "set": "STRICT_SENSITIVITY",
+      "n": 341,
+      "k_studies": 77,
+      "mu_lnRR": 0.3078875267628727,
+      "pct_effect": 36.0547955098429,
+      "C_ci95_model": [
+        0.25435718093046633,
+        0.361417872595279
+      ],
+      "C_ci95_cluster_robust": [
+        0.25438288945053844,
+        0.3613921640752069
+      ],
+      "tau2_between": 0.036805156010906434,
+      "tau2_within": 0.0374246938706642,
+      "I2_total_approx": 0.7856602626820011,
+      "share_between_of_tau2": 0.49582689537466257,
+      "D_pi95_new_study_mean": [
+        -0.07793977998610524,
+        0.6937148335118506
+      ],
+      "D_pi95_new_contrast_true_effect": [
+        -0.23738073859662978,
+        0.8531557921223751
+      ],
+      "converged": true,
+      "df_t": 76
+    },
+    {
+      "set": "REPORTED_VARIANCE_ONLY",
+      "n": 281,
+      "k_studies": 64,
+      "mu_lnRR": 0.3059398458460041,
+      "pct_effect": 35.7900620727996,
+      "C_ci95_model": [
+        0.2549709732289696,
+        0.35690871846303857
+      ],
+      "C_ci95_cluster_robust": [
+        0.25501251813746806,
+        0.3568671735545401
+      ],
+      "tau2_between": 0.024905242558486626,
+      "tau2_within": 0.03660704597712549,
+      "I2_total_approx": 0.8409194698705554,
+      "share_between_of_tau2": 0.4048823926306677,
+      "D_pi95_new_study_mean": [
+        -0.013518364299998309,
+        0.6253980559920065
+      ],
+      "D_pi95_new_contrast_true_effect": [
+        -0.19229588290262678,
+        0.804175574594635
+      ],
+      "converged": true,
+      "df_t": 63
+    },
+    {
+      "set": "QUALITY_CORE",
+      "n": 289,
+      "k_studies": 61,
+      "mu_lnRR": 0.29845810525532107,
+      "pct_effect": 34.77790711539102,
+      "C_ci95_model": [
+        0.2408997244094253,
+        0.35601648610121683
+      ],
+      "C_ci95_cluster_robust": [
+        0.24093707451249832,
+        0.3559791359981438
+      ],
+      "tau2_between": 0.033999701975589124,
+      "tau2_within": 0.03164197663303892,
+      "I2_total_approx": 0.759216228273408,
+      "share_between_of_tau2": 0.517959057359026,
+      "D_pi95_new_study_mean": [
+        -0.07484107979946586,
+        0.671757290310108
+      ],
+      "D_pi95_new_contrast_true_effect": [
+        -0.21725294330788975,
+        0.8141691538185318
+      ],
+      "converged": true,
+      "df_t": 60
+    },
+    {
+      "set": "V1_EQUIVALENT",
+      "n": 347,
+      "k_studies": 79,
+      "mu_lnRR": 0.3402739887316024,
+      "pct_effect": 40.53325831113017,
+      "C_ci95_model": [
+        0.2702687053885071,
+        0.4102792720746977
+      ],
+      "C_ci95_cluster_robust": [
+        0.27028413927680883,
+        0.410263838186396
+      ],
+      "tau2_between": 0.07497727727615133,
+      "tau2_within": 0.04361304855928978,
+      "I2_total_approx": 0.8562555641773653,
+      "share_between_of_tau2": 0.6322377204713281,
+      "D_pi95_new_study_mean": [
+        -0.2093359481051954,
+        0.8898839255684002
+      ],
+      "D_pi95_new_contrast_true_effect": [
+        -0.348877795500779,
+        1.0294257729639837
+      ],
+      "converged": true,
+      "df_t": 78
+    }
+  ],
+  "unweighted_study_level": {
+    "k_studies": 153,
+    "mean_of_study_means": 0.34335195699232807,
+    "median_of_study_means": 0.30958933779850967,
+    "sd_of_study_means": 0.27666018552220895,
+    "studies_with_variance": 78
+  },
+  "note": "exploratory 3-level REML (Python); confirmatory: R metafor rma.mv + clubSandwich CR2"
+}

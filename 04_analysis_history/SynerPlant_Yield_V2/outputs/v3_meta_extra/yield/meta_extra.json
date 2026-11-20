@@ -1,0 +1,82 @@
+{
+  "overall": {
+    "k": 31,
+    "n": 183,
+    "mu": 0.54391696,
+    "ci": [0.35396938, 0.73386455]
+  },
+  "moderator_tests": [
+    {
+      "moderator": "stress_family",
+      "levels": 3,
+      "F_HTZ": 2.17388786,
+      "df_num": 2,
+      "df_den": 5.77083629,
+      "p_HTZ": 0.19783262,
+      "pseudo_R2_tau2": 0.00169224,
+      "tau2_between_without": 0.21868402,
+      "tau2_between_with": 0.21774772
+    },
+    {
+      "moderator": "biostimulant_class",
+      "levels": 5,
+      "F_HTZ": 0.97003274,
+      "df_num": 4,
+      "df_den": 3.47783127,
+      "p_HTZ": 0.52082608,
+      "pseudo_R2_tau2": 0,
+      "tau2_between_without": 0.21868402,
+      "tau2_between_with": 0.22510208
+    },
+    {
+      "moderator": "application_route",
+      "levels": 4,
+      "F_HTZ": 1.51048839,
+      "df_num": 3,
+      "df_den": 4.76511904,
+      "p_HTZ": 0.32410778,
+      "pseudo_R2_tau2": 0,
+      "tau2_between_without": 0.21868402,
+      "tau2_between_with": 0.2307079
+    },
+    {
+      "moderator": "cultivation_system",
+      "levels": 4,
+      "F_HTZ": 1.30622096,
+      "df_num": 3,
+      "df_den": 3.28716304,
+      "p_HTZ": 0.40651032,
+      "pseudo_R2_tau2": 0.0240524,
+      "tau2_between_without": 0.21868402,
+      "tau2_between_with": 0.21090397
+    }
+  ],
+  "egger_multilevel": {
+    "slope_on_SE": 0.6778221,
+    "slope_p_CR2": 0.21131193,
+    "slope_ci": [-0.50051862, 1.85616282],
+    "PET_intercept": 0.46642727,
+    "PET_ci": [0.23951894, 0.6933356],
+    "PET_p": 0.00031506,
+    "PEESE_intercept": 0.50408785,
+    "PEESE_ci": [0.3177443, 0.6904314],
+    "PET_PEESE_estimate": 0.50408785,
+    "rule": "PET-PEESE: PEESE intercept if the PET intercept is significant (p<0.05), else PET"
+  },
+  "study_level": {
+    "k": 31,
+    "mu": 0.5895718,
+    "ci": [0.37923661, 0.79990698],
+    "tau2": 0.3393894,
+    "I2": 99.7283086,
+    "egger_z": 1.66597471,
+    "egger_p": 0.09571845,
+    "begg_tau": 0.22150538,
+    "begg_p": 0.08295417,
+    "trimfill_k0": 0,
+    "trimfill_side": "left",
+    "trimfill_mu": 0.5895718,
+    "trimfill_ci": [0.37923661, 0.79990698]
+  },
+  "R_version": "R version 4.5.0 (2025-04-11 ucrt)"
+}

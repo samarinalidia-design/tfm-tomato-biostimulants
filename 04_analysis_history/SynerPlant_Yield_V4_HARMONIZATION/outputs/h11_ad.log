@@ -1,0 +1,27 @@
+{
+ "cv": {
+  "in_domain": {
+   "share_rows": 0.9275434243176178,
+   "group_mae_v4": 0.38522593830465873,
+   "coverage_v4": 0.9266987693953986,
+   "n_rows": 1869
+  },
+  "out_of_domain": {
+   "share_rows": 0.07245657568238213,
+   "group_mae_v4": 0.557337605385607,
+   "coverage_v4": 0.863013698630137,
+   "n_rows": 146
+  }
+ },
+ "test": {
+  "in_domain": {
+   "n_rows": 36,
+   "n_studies": 12,
+   "mae_v4": 0.48793860943202894,
+   "coverage_v4": 0.75
+  }
+ },
+ "threshold_full_train": 10.183552835378967,
+ "k": 5,
+ "generated": "2026-11-18T17:16:59+00:00"
+}

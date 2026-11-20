@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-11-18T07:47:02+00:00",
+  "primary_studies": 69,
+  "contrasts_with_any_matched_trait": 89,
+  "studies_with_any_matched_trait": 12,
+  "max_studies_sharing_one_trait": 3,
+  "decision": "NOT_FEASIBLE",
+  "reason": "largest number of independent studies sharing one trait = 3 (< 8 required); source layer raw_measurements is unverified legacy import; most timepoints are at harvest/terminal (post-treatment, would not be an early predictor)",
+  "data_needed": "verified early (pre-flowering / <=30 d after stress onset) leaf RWC, Fv/Fm, SPAD, proline, Na+/K+ and MDA on the same SB and S arms of the yield studies"
+}

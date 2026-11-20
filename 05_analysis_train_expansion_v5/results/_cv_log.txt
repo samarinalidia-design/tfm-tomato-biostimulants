@@ -1,0 +1,7 @@
+[59/64] biomass MULTITASK_yield+biomass study seed=11 116s
+[60/64] biomass MULTITASK_yield+biomass study seed=22 117s
+[61/64] biomass FEATURES_raw_only study seed=11 61s
+[62/64] biomass FEATURES_raw_only study seed=22 62s
+[63/64] biomass FEATURES_harmonised_only study seed=11 49s
+[64/64] biomass FEATURES_harmonised_only study seed=22 50s
+total 454.93731784820557

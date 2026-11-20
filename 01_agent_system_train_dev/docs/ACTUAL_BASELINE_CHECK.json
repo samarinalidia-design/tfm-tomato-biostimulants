@@ -1,0 +1,100 @@
+{
+  "input_hash": "ec4d6a4dee50148e5acd05d3da89c4d154951f5b8bec0499f8eeeeb6bfc2026d",
+  "imported": {
+    "_readme": 57,
+    "studies": 399,
+    "files": 462,
+    "extraction_queue": 461,
+    "experiments": 312,
+    "arms": 2951,
+    "measurements": 17357,
+    "provenance_qa": 2446,
+    "issues": 426,
+    "experiment_context": 264,
+    "arm_components": 1874,
+    "raw_observations": 5403,
+    "data_assets": 153,
+    "outcome_dictionary": 38,
+    "risk_of_bias": 16,
+    "study_relations": 2,
+    "stress_factors": 1421,
+    "reported_effects": 2394,
+    "figure_digitization_queue": 1468,
+    "extraction_runs": 76,
+    "vocabularies": 34,
+    "analysis_contract": 27,
+    "estimand_dictionary": 13,
+    "endpoint_measurement_context": 5422,
+    "genotype_context": 185,
+    "application_schedule": 1196,
+    "feature_availability": 7
+  },
+  "seeded": {
+    "created": 399,
+    "priority_0": 59,
+    "priority_1": 52,
+    "priority_3": 288
+  },
+  "metadata_normalization": {
+    "metadata_fields_normalized": 198
+  },
+  "relations": {
+    "imported": 2,
+    "note": "baseline links require source verification; they are not silently ignored or automatically assumed correct"
+  },
+  "validation": {
+    "G003:WARN": 1
+  },
+  "relations_pending": [
+    {
+      "study_a": "829",
+      "study_b": "324",
+      "relation": "COMPANION_SHARED_EXPERIMENT",
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "study_a": "764",
+      "study_b": "304",
+      "relation": "PREPRINT_OF",
+      "status": "REFERENCE_ONLY"
+    }
+  ],
+  "workflow_studies": 399,
+  "export_check": {
+    "status": "BLOCKED",
+    "ready_to_use": false,
+    "failed_gates": [
+      {
+        "gate": "real_source_pilot",
+        "status": "FAIL",
+        "value": "PENDING"
+      },
+      {
+        "gate": "all_399_scientifically_closed",
+        "status": "FAIL",
+        "value": "399 unfinished"
+      },
+      {
+        "gate": "primary_target_absence_independently_reviewed",
+        "status": "FAIL",
+        "value": "399 gaps: ['72: no new original-source inventory', '112: no new original-source inventory', '126: no new original-source inventory', '141: no new original-source inventory', '150: no new original-source inventory', '220: no new original-source inventory', '278: no new original-source inventory', '296: no new original-source inventory', '373: no new original-source inventory', '397: no new original-source inventory', '398: no new original-source inventory', '482: no new original-source inventory', '632: no new original-source inventory', '653: no new original-source inventory', '697: no new original-source inventory', '699: no new original-source inventory', '705: no new original-source inventory', '706: no new original-source inventory', '717: no new original-source inventory', '745: no new original-source inventory']"
+      },
+      {
+        "gate": "task_queue_closed",
+        "status": "FAIL",
+        "value": "2 ready/leased/failed tasks"
+      },
+      {
+        "gate": "original_sources_available",
+        "status": "FAIL",
+        "value": "0/462 originals with unchanged bytes"
+      },
+      {
+        "gate": "docling_and_original_source_review",
+        "status": "FAIL",
+        "value": "0/462 source dispositions"
+      }
+    ],
+    "note": "No final files were written; use --draft for a clearly labelled diagnostic preview."
+  }
+}

@@ -1,0 +1,133 @@
+column,description
+yield_tier,"Yield definition tier (STRICT/ASSUMED/BROAD/UNIT_UNRESOLVED per export.py rules; EARLY; DRY; OTHER_DEFINITION). Feature, not a filter."
+is_dry_yield,1 if mass_basis == DRY (yield table).
+is_early_yield,1 if yield_scope == EARLY (yield table).
+is_boxplot,1 if flag BOX_CENTRE_ASSUMED_MEAN (box centre assumed to be a mean). Excluded from default model.
+is_duplicate,1 if flag DUPLICATE_EXCLUDED. None in this freeze.
+in_default,1 if the row belongs to the default model table (no boxplot; biomass: last timepoint per group).
+sig_no_tp,Biomass: measurement signature with the timepoint removed.
+tp_group_id,Biomass: group of the same contrast measured at several timepoints.
+n_timepoints_in_group,Biomass: number of timepoints available for the group.
+is_last_timepoint,"Biomass: 1 for the last timepoint of the group (terminal first, then max days)."
+var_effect_original,Sampling variance of lnRR as delivered in the freeze (may include USER_ASSUMED_SE). Untouched.
+effect_bc_original,Bias-corrected lnRR as delivered in the freeze (only where SD known).
+n_imp_t / n_imp_c,Group n; missing n replaced by the median n of the endpoint table (flag N_IMPUTED_MEDIAN).
+n_imputed_t / n_imputed_c,1 if n was imputed.
+cv_used_t / cv_used_c,CV (sd/mean) used for the variance of each group.
+cv_source_t / cv_source_c,"AUTHOR_SD (authors' SD/SE, SOURCE_REPORTED) | STUDY_PRINTED_CV_PCT (study ANOVA CV%) | STUDY_PRINTED_LSD | IMPUTED_MEAN_CV (pooled CV-bar, NOT reported by authors)."
+var_lnrr_imp,"var(lnRR) = CV_t^2/n_t + CV_c^2/n_c with own CV where author SD exists, else study CV%/LSD, else CV-bar (Nakagawa et al. 2023 mixed approach)."
+var_lnrr_meancv_all,"var(lnRR) using CV-bar for every group (Nakagawa et al. 2023 method 1), sensitivity only."
+effect_bc_imp,Bias-corrected lnRR: lnRR + 0.5*(CV_t^2/n_t - CV_c^2/n_c) using cv_used and n_imp.
+variance_from_author_sd,1 if both groups have author SD/SE and reported n (no imputation of any kind).
+variance_flags,"JSON list: VARIANCE_IMPUTED_MEAN_CV, VARIANCE_FROM_STUDY_CV_PCT, VARIANCE_FROM_STUDY_LSD, N_IMPUTED_MEDIAN, USER_ASSUMED_SE_NOT_USED_FOR_VARIANCE, INDEPENDENT_ARMS_ASSUMED_FOR_VARIANCE."
+variance_status,AUTHOR_SD_SE | IMPUTED_MEAN_CV | STUDY_PRINTED_CV_OR_LSD_OR_N_IMPUTED.
+w_n,Sample-size weight n_t*n_c/(n_t+n_c) (imputed n where missing).
+mod_lnrr_stress_SvsC,lnRR of S vs C for the matching stressed control arm (0 for B_vs_C). META-REGRESSION MODERATOR ONLY. Never an ML feature (post-stress outcome).
+is_B_vs_C,1 for contrasts without stress (B vs C).
+stress,stress_code; NONE for B_vs_C.
+is_terminal,is_terminal_t.
+year_num,"Publication year as number (descriptive only, not a feature)."
+h_dujardin,"Primary biostimulant category after du Jardin (2015): HUMIC_FULVIC, PROTEIN_N, SEAWEED_BOTANICAL, CHITOSAN_BIOPOLYMER, INORGANIC, BENEFICIAL_FUNGI, BENEFICIAL_BACTERIA; MIXTURE if >1; OTHER_NON_DUJARDIN; UNCLASSIFIED. Regex over f_biostimulant_class/bio_code/f_microorganism/f_composition/f_strain."
+h_dj_*,Multi-hot du Jardin categories (a product can belong to several).
+h_dose_class,"Harmonised dose unit class (CFU, MOLAR_mM, MOLAR_uM, CONC_gL_or_mLL, PER_PLANT_OR_POT, PER_AREA, PER_SOIL_MASS, UNKNOWN, NOT_REPORTED)."
+h_log10_dose,"log10 of dose on the canonical scale of its class (mg/L->g/L, uM->mM, 1 % = 10 g/L)."
+h_dose_rel_study,Dose rescaled 0..1 within study and dose class (design only).
+h_stress_class,"Harmonised stress class (NONE, SALINITY, DROUGHT, HEAT, COLD, NUTRIENT, HEAVY_METAL, BIOTIC, ...)."
+h_stress_intensity,Design-based relative stress intensity: salinity NaCl-equivalent mM / 200 (EC dS/m*10; 1 % w/v = 171 mM); drought 1 - FC/100; NONE = 0. Never uses an outcome.
+h_stress_rank_study,Within-study dense rank of the stress level / max rank (0..1).
+h_nacl_equiv_mm,"NaCl-equivalent concentration (mM), salinity only."
+h_crop_group,"Tomato market group from f_fruit_type/f_cultivar: CHERRY_COCKTAIL, PROCESSING, BEEF_LARGE, ROUND_FRESH_MARKET, UNSPECIFIED."
+h_growth_habit,DETERMINATE / SEMI_DETERMINATE / INDETERMINATE / UNSPECIFIED.
+h_hybrid,HYBRID / OP_CULTIVAR_LINE / UNSPECIFIED.
+h_system,Growing system: FIELD / GREENHOUSE / CHAMBER / SOILLESS / UNSPECIFIED.
+h_potted,1 if grown in pots/bags/containers.
+h_route,Application route: FOLIAR / SEED / ROOT_DIP / FERTIGATION / SOIL_SUBSTRATE / UNSPECIFIED.
+h_n_applications,Number of applications (numeric f_n_applications).
+h2_dujardin,du Jardin class v2: cell-free filtrates -> DJ_MICROBIAL_DERIVED_NONLIVING; single-component preparations take the first-named category; MIXTURE only for >=2 components (db_arms.n_bio_components) spanning >=2 categories.
+h2_n_components,Number of biostimulant components of the treated arm (db_arms.n_bio_components).
+h2_live_microorganism,1 if the product contains living microorganisms (0 for cell-free filtrates/extracts).
+h2_nonliving_microbial_product,"1 for cell-free filtrates, supernatants, microbial water extracts."
+h2_drought_supply_type,"FIELD_CAPACITY_PCT | ETC_OR_IRRIGATION_PCT | UNKNOWN_TYPE (drought, not reported) | NOT_APPLICABLE (not drought)."
+h2_drought_fc_pct / h2_drought_etc_pct,"Water supply of the drought treatment by measurement type; 100 when not drought (no deficit); NaN = drought, not reported."
+h2_drought_supply_reported,"Within drought rows only: 1 reported, 0 not reported; NaN = not applicable."
+h2_salinity_measure_type,NACL_CONCENTRATION | EC_WATER_MEASURED | NACL_AND_EC | UNKNOWN_TYPE | NOT_APPLICABLE.
+h2_salinity_nacl_mm / h2_salinity_ecw_dsm,NaCl concentration (mM; % w/v*171.1; g/L*17.11) and measured irrigation-water EC (dS/m) kept separate; 0 when not saline.
+h2_salinity_reported,"Within salinity rows only: 1 reported, 0 not; NaN = not applicable."
+h2_stress_duration_days,"Stress duration in days (weeks*7, months*30.4, h/24); 0 when no stress; NaN = not reported."
+h2_stress_duration_reported,Within stressed rows: 1/0; NaN for no-stress rows.
+h2_days_application_before_stress,Days between first application and stress onset (unit converted); NaN without stress.
+h2_application_phase / h2_stress_onset_phase,"Development phase: SEED, NURSERY_SEEDLING, TRANSPLANT, VEGETATIVE, FLOWERING, FRUITING, MULTIPLE_STAGES, UNSPECIFIED (onset: NOT_APPLICABLE without stress)."
+h2_substrate_type,"SOILLESS_INERT, PEAT_POTTING_MIX, STERILISED_SOIL, SAND_OR_SANDY, FIELD_OR_NATURAL_SOIL, UNSPECIFIED."
+h2_soil_ec_dsm,Soil EC normalised to dS/m (uS/cm / 1000).
+h2_plant_density_m2,"Plants per m2: printed value, plants/ha / 10000, plants per plot area, or 1/(row x plant spacing). Range-checked 0.2-40."
+h2_density_source,"Provenance of the density value (F_PLANT_DENSITY_M2, PLANTS_PER_HA, PLANTS_PER_PLOT_AREA, SPACING_GEOMETRY, PRINTED_PER_M2)."
+h2_density_status,REPORTED_OR_DERIVED | NOT_APPLICABLE_POTS | NOT_REPORTED.
+h2_yield_scope / h2_harvest_window,Yield definition with UNSPECIFIED refined only when the printed locator/source cell states it.
+h2_definition_refined_from_locator,1 if a definition field was refined from the locator text.
+h3_taxon_bacillus,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_pseudomonas,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_azoto_azospir,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_trichoderma,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_amf,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_rhizobia,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_streptomyces,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_other_bacteria,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_taxon_yeast,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_seaweed,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_humic,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_protein_amino,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_chitosan,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_silicon,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_selenium,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_hormone_like,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_botanical_extract,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_active_nano,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_n_taxa,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_n_actives,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_genus_main,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_route_foliar,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_route_soil_drench,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_route_seed,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_route_root_dip,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_route_fertigation,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_route_substrate_mix,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_n_routes,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_n_applications,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_n_applications_source,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_log_n_applications,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_salinity,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_drought,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_heat,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_cold,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_nutrient,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_biotic,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_metal,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_other,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_n_stresses,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_combined,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_ambient,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_application_phase_ord,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_stress_onset_phase_ord,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_phase_app_minus_stress,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_sand_pct,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_clay_pct,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_soil_texture_source,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_fert_none,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_fert_nutrient_solution,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_fert_n_kg_ha,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_fert_reported,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_start_month_sin,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_start_month_cos,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_experiment_year,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_warm_season,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_country,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_abs_latitude,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_latitude_source,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_arid_country,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_region,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_hybrid,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_declared_tolerance,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_small_fruited,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_processing_type,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_cultivar_key,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block
+h3_class_key,v3 recoding of raw FEATURE text (scripts/11_features_v3.py); see module docstring for block

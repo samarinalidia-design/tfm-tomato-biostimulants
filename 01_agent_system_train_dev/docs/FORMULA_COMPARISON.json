@@ -1,0 +1,32 @@
+{
+  "all_formula_raw_cells_equal": true,
+  "sheets": {
+    "_README": true,
+    "studies": true,
+    "files": true,
+    "extraction_queue": true,
+    "experiments": true,
+    "arms": true,
+    "measurements": true,
+    "provenance_qa": true,
+    "issues": true,
+    "experiment_context": true,
+    "arm_components": true,
+    "raw_observations": true,
+    "data_assets": true,
+    "outcome_dictionary": true,
+    "risk_of_bias": true,
+    "study_relations": true,
+    "stress_factors": true,
+    "reported_effects": true,
+    "figure_digitization_queue": true,
+    "extraction_runs": true,
+    "vocabularies": true,
+    "analysis_contract": true,
+    "estimand_dictionary": true,
+    "endpoint_measurement_context": true,
+    "genotype_context": true,
+    "application_schedule": true,
+    "feature_availability": true
+  }
+}

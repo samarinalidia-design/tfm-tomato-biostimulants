@@ -1,0 +1,9 @@
+﻿quantity,V3.1 / V4 (historical),V5 (this version),note
+Yield TRAIN contrasts / studies,403 / 69,831 / 76,V5 keeps all yield tiers as features; corrections in corrections_register.csv
+Yield TEST contrasts / studies,36 / 12,117 / 16,same rules as TRAIN (V3.1 TEST used stricter rules)
+Biomass TRAIN contrasts / studies,762 / 153,1452 / 172,"shoot/whole plant, last timepoint"
+Biomass TEST contrasts / studies,144 / 28,378 / 31,
+Pooled yield effect (TRAIN),"+54 % (V4 rma.mv mean, lnRR 0.431)","+45 % [+33, +59]","V5: rma.mv, CR2"
+Pooled biomass effect (TRAIN),"+36 % [+29, +43] (V2)","+35 % [+30, +40]",
+CV grouping,study (5 folds × 5 seeds),"dependency_cluster_id (outer 5 × 3 seeds, inner 3)",
+Variance imputation,per V2 rules,"Nakagawa 2023 CV-bar from TRAIN only, applied to TEST",imputed variances are not author-reported

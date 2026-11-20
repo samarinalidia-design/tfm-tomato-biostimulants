@@ -1,0 +1,29 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "DRY_BASIS output",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["task_id", "study_id", "agent", "items"],
+ "properties": {
+  "task_id": {"type": "string", "pattern": "^T-\\d{6}$"},
+  "study_id": {"type": "string"},
+  "agent": {"const": "tfm-qa-auditor"},
+  "model_id": {"type": "string"},
+  "items": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["record_keys", "basis", "source_file_id", "receipt_id", "evidence"],
+    "properties": {
+     "record_keys": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+     "basis": {"enum": ["DRY_CONFIRMED", "FRESH_OR_OTHER", "UNSPECIFIED"]},
+     "source_file_id": {"type": "string"},
+     "receipt_id": {"type": "string"},
+     "evidence": {"type": "string", "minLength": 10}
+    }
+   }
+  }
+ }
+}

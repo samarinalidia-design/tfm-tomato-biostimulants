@@ -1,0 +1,363 @@
+{
+  "version": "V5",
+  "created_utc": "2026-11-20T13:14:16.398102Z",
+  "cv_scheme": "nested, outer 5 folds x seeds 11/22/33 and inner 3 folds, grouped by dependency_cluster_id",
+  "selection_rule": "per endpoint and category, the candidate with the lowest mean RMSE over the 3 seeds; if another candidate is\n  within 1 % of it, the simpler one (fewer fitted components) is chosen. BASELINE_mean and MR0 are always reported.",
+  "train_sha256": {
+    "train_dry_biomass.parquet": "cb4f6495f2a76a1f2d27aad6b82eb6a36dfd105f6e77a716bb71a12700f4015d",
+    "train_dry_biomass_interactions.parquet": "dd4504d39d9e6bda2aa2572cd1956c79fe09b0d2a602d64cbba5a8e5f19c8938",
+    "train_dry_biomass_SvsC.parquet": "b06154c6b1c525ddcce47d0251ff41d8d70dadd840c7d91518b8a2c47bfb094e",
+    "train_yield.parquet": "63edbcffed4ef52d8eb2451f7a68b146cea6ee02c89685ba13a022b852a7609c",
+    "train_yield_interactions.parquet": "a9b506f61e6d9879cf8d78e405a19a6c9a7ddad1983b7944bffea061663c8ad5",
+    "train_yield_SvsC.parquet": "3c6108ec9c241475055e3ae63311089b06301044e345ba530b4832d8c0b84ca3"
+  },
+  "variance_imputation": [
+    {
+      "table": "yield",
+      "CV_bar": 0.2896283500480253,
+      "median_n": 4.0,
+      "groups_with_author_sd": 411,
+      "studies_with_author_sd": 32,
+      "groups_total": 1225,
+      "learnt_on": "TRAIN only"
+    },
+    {
+      "table": "biomass",
+      "CV_bar": 0.2747297703317219,
+      "median_n": 4.0,
+      "groups_with_author_sd": 1059,
+      "studies_with_author_sd": 95,
+      "groups_total": 2088,
+      "learnt_on": "TRAIN only"
+    }
+  ],
+  "endpoints": {
+    "yield": {
+      "n_train_contrasts": 831,
+      "n_train_studies": 76,
+      "n_train_clusters": 75,
+      "tau2_MR0": 0.20068705404774323,
+      "baseline_mean": 0.3696204277029734,
+      "baseline_half_width": 0.847893146838382,
+      "selected": {
+        "A": "RIDGE_REF",
+        "B": "STACK_B_REF"
+      },
+      "ml": {
+        "RIDGE_REF": {
+          "feature_set": "REF",
+          "hyperparameters": {
+            "alpha": 1000
+          },
+          "interval_half_width_95": 0.8816938580722082,
+          "n_model_columns": 154,
+          "target_encoding_keys": [],
+          "tfidf": false
+        },
+        "RF_REF": {
+          "feature_set": "REF",
+          "hyperparameters": {
+            "max_features": 0.33,
+            "min_samples_leaf": 10
+          },
+          "interval_half_width_95": 0.8776383653941249,
+          "n_model_columns": 154,
+          "target_encoding_keys": [],
+          "tfidf": false
+        },
+        "RIDGE_V3TE": {
+          "feature_set": "V3TE",
+          "hyperparameters": {
+            "alpha": 1000
+          },
+          "interval_half_width_95": 0.8766708020120233,
+          "n_model_columns": 245,
+          "target_encoding_keys": [
+            "h3_class_key",
+            "h3_cultivar_key",
+            "h3_country",
+            "h3_genus_main",
+            "h2_dujardin",
+            "h_stress_class"
+          ],
+          "tfidf": false
+        },
+        "RF_V3TETF": {
+          "feature_set": "V3TETF",
+          "hyperparameters": {
+            "max_features": 0.33,
+            "min_samples_leaf": 10
+          },
+          "interval_half_width_95": 0.8575784916632937,
+          "n_model_columns": 255,
+          "target_encoding_keys": [
+            "h3_class_key",
+            "h3_cultivar_key",
+            "h3_country",
+            "h3_genus_main",
+            "h2_dujardin",
+            "h_stress_class"
+          ],
+          "tfidf": true
+        }
+      },
+      "learned_stacks": {
+        "LSTACK_A": {
+          "members": [
+            "MR0",
+            "RIDGE_REF",
+            "RIDGE_V3TE",
+            "RF_V3TETF"
+          ],
+          "weights": [
+            0.2361,
+            0.7639,
+            0.0,
+            0.0
+          ],
+          "interval_half_width_95": 0.868195361154344
+        },
+        "LSTACK_B": {
+          "members": [
+            "MR0",
+            "RIDGE_REF",
+            "RIDGE_V3TE",
+            "RF_V3TETF",
+            "MR2mt"
+          ],
+          "weights": [
+            0.0,
+            0.5166,
+            0.0,
+            0.0,
+            0.4834
+          ],
+          "interval_half_width_95": 0.7840236775355582
+        }
+      },
+      "equal_stacks": {
+        "STACK_A_REF": [
+          "RIDGE_REF",
+          "RF_REF"
+        ],
+        "STACK_A_V3": [
+          "RIDGE_V3TE",
+          "RF_V3TETF"
+        ],
+        "STACK_B_REF": [
+          "RIDGE_REF",
+          "MR2mt"
+        ],
+        "STACK_B_MR0": [
+          "MR0",
+          "MR2mt"
+        ],
+        "STACK_B_V3": [
+          "RIDGE_V3TE",
+          "MR2mt"
+        ]
+      },
+      "MR2_moderators": [
+        "intercept",
+        "is_B_vs_C",
+        "is_terminal",
+        "dry_basis_confirmed",
+        "endpoint_is_yield",
+        "h_stress_class==SALINITY",
+        "h_stress_class==DROUGHT",
+        "h_stress_class==BIOTIC",
+        "h_stress_class==HEAT",
+        "h_stress_class==COLD",
+        "h_stress_class==COMBINED",
+        "h_dujardin==DJ_BENEFICIAL_FUNGI",
+        "h_dujardin==DJ_INORGANIC",
+        "h_dujardin==DJ_SEAWEED_BOTANICAL",
+        "h_dujardin==DJ_OTHER_NON_DUJARDIN",
+        "h_dujardin==DJ_PROTEIN_N",
+        "h_dujardin==DJ_MIXTURE",
+        "h_dujardin==DJ_CHITOSAN_BIOPOLYMER",
+        "h_dujardin==DJ_HUMIC_FULVIC",
+        "yield_tier==ASSUMED",
+        "yield_tier==BROAD",
+        "yield_tier==STRICT",
+        "yield_tier==UNIT_UNRESOLVED",
+        "organ_scope==None",
+        "organ_scope==WHOLE_PLANT",
+        "mod_lnrr_stress_SvsC",
+        "mod_lnrr_stress_SvsC__missing"
+      ]
+    },
+    "biomass": {
+      "n_train_contrasts": 1452,
+      "n_train_studies": 172,
+      "n_train_clusters": 171,
+      "tau2_MR0": 0.10367558493878921,
+      "baseline_mean": 0.29308252750001734,
+      "baseline_half_width": 0.7377743492096702,
+      "selected": {
+        "A": "BASELINE_mean",
+        "B": "STACK_B_MR0"
+      },
+      "ml": {
+        "RIDGE_REF": {
+          "feature_set": "REF",
+          "hyperparameters": {
+            "alpha": 1000
+          },
+          "interval_half_width_95": 0.8587786585060325,
+          "n_model_columns": 202,
+          "target_encoding_keys": [],
+          "tfidf": false
+        },
+        "RF_REF": {
+          "feature_set": "REF",
+          "hyperparameters": {
+            "max_features": 0.33,
+            "min_samples_leaf": 10
+          },
+          "interval_half_width_95": 0.7619499485360783,
+          "n_model_columns": 202,
+          "target_encoding_keys": [],
+          "tfidf": false
+        },
+        "RIDGE_V3TE": {
+          "feature_set": "V3TE",
+          "hyperparameters": {
+            "alpha": 1000
+          },
+          "interval_half_width_95": 0.7480661044030109,
+          "n_model_columns": 237,
+          "target_encoding_keys": [
+            "h3_class_key",
+            "h3_cultivar_key",
+            "h3_country",
+            "h3_genus_main",
+            "h2_dujardin",
+            "h_stress_class"
+          ],
+          "tfidf": false
+        },
+        "RF_V3TETF": {
+          "feature_set": "V3TETF",
+          "hyperparameters": {
+            "max_features": 0.33,
+            "min_samples_leaf": 10
+          },
+          "interval_half_width_95": 0.7096961082711631,
+          "n_model_columns": 247,
+          "target_encoding_keys": [
+            "h3_class_key",
+            "h3_cultivar_key",
+            "h3_country",
+            "h3_genus_main",
+            "h2_dujardin",
+            "h_stress_class"
+          ],
+          "tfidf": true
+        }
+      },
+      "learned_stacks": {
+        "LSTACK_A": {
+          "members": [
+            "MR0",
+            "RIDGE_REF",
+            "RIDGE_V3TE",
+            "RF_V3TETF"
+          ],
+          "weights": [
+            0.6671,
+            0.0,
+            0.0,
+            0.3329
+          ],
+          "interval_half_width_95": 0.7171966395153637
+        },
+        "LSTACK_B": {
+          "members": [
+            "MR0",
+            "RIDGE_REF",
+            "RIDGE_V3TE",
+            "RF_V3TETF",
+            "MR2mt"
+          ],
+          "weights": [
+            0.3349,
+            0.0,
+            0.0,
+            0.1698,
+            0.4954
+          ],
+          "interval_half_width_95": 0.6966154062369868
+        }
+      },
+      "equal_stacks": {
+        "STACK_A_REF": [
+          "RIDGE_REF",
+          "RF_REF"
+        ],
+        "STACK_A_V3": [
+          "RIDGE_V3TE",
+          "RF_V3TETF"
+        ],
+        "STACK_B_REF": [
+          "RIDGE_REF",
+          "MR2mt"
+        ],
+        "STACK_B_MR0": [
+          "MR0",
+          "MR2mt"
+        ],
+        "STACK_B_V3": [
+          "RIDGE_V3TE",
+          "MR2mt"
+        ]
+      },
+      "MR2_moderators": [
+        "intercept",
+        "is_B_vs_C",
+        "is_terminal",
+        "dry_basis_confirmed",
+        "endpoint_is_yield",
+        "h_stress_class==SALINITY",
+        "h_stress_class==DROUGHT",
+        "h_stress_class==BIOTIC",
+        "h_stress_class==HEAT",
+        "h_stress_class==COLD",
+        "h_stress_class==COMBINED",
+        "h_dujardin==DJ_BENEFICIAL_FUNGI",
+        "h_dujardin==DJ_INORGANIC",
+        "h_dujardin==DJ_SEAWEED_BOTANICAL",
+        "h_dujardin==DJ_OTHER_NON_DUJARDIN",
+        "h_dujardin==DJ_PROTEIN_N",
+        "h_dujardin==DJ_MIXTURE",
+        "h_dujardin==DJ_CHITOSAN_BIOPOLYMER",
+        "h_dujardin==DJ_HUMIC_FULVIC",
+        "yield_tier==ASSUMED",
+        "yield_tier==BROAD",
+        "yield_tier==STRICT",
+        "yield_tier==UNIT_UNRESOLVED",
+        "organ_scope==None",
+        "organ_scope==WHOLE_PLANT",
+        "mod_lnrr_stress_SvsC",
+        "mod_lnrr_stress_SvsC__missing"
+      ]
+    }
+  },
+  "evaluation_rules": {
+    "label": "POST_HOC_TEST_REUSE (the 2024-2026 TEST corpus was already used in earlier versions V2/V4; this is not a first, blind test)",
+    "primary_endpoint": "yield",
+    "secondary_endpoint": "dry biomass",
+    "test_rows": "same selection as TRAIN DEFAULT (no box-plot centres; biomass: last timepoint per group); TEST variance imputation uses TRAIN CV-bar",
+    "no_tuning_on_test": "models, hyper-parameters, stack weights, encoders and intervals are fixed in this file; TEST is predicted once",
+    "category_A": "a-priori prediction from design features only (primary claim)",
+    "category_B": "CONDITIONAL: requires the observed stress effect S_vs_C of the new study (meta-regression moderator); reported separately",
+    "metrics": "RMSE, MAE, R2 (1 - SSE/SST around the TEST mean), bias (mean pred - obs), 95 % interval coverage and mean width, all on contrast level; 2000 study-cluster bootstrap resamples for 95 % CIs and for differences vs BASELINE_mean and MR0",
+    "criteria": {
+      "H1_point": "selected category-A model: RMSE_TEST < RMSE_TEST(BASELINE_mean) with bootstrap 95 % CI of the difference < 0",
+      "H2_transfer": "RMSE_TEST <= 1.25 x RMSE_CV of the same model",
+      "H3_intervals": "95 % interval coverage on TEST >= 0.90",
+      "H4_conditional": "selected category-B model: RMSE_TEST < RMSE_TEST of the selected category-A model (reported, conditional only)"
+    },
+    "verdict_rule": "CONFIRMED if H1-H3 pass; PARTIAL if 1-2 of H1-H3 pass; NOT_CONFIRMED otherwise"
+  }
+}

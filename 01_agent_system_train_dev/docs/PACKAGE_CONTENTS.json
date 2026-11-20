@@ -1,0 +1,466 @@
+{
+  "version": "2.2.0",
+  "assembled_utc": "2026-10-19T12:21:30.705031+00:00",
+  "studies": 399,
+  "source_files": 462,
+  "agent_roles": 12,
+  "tests_passed": 72,
+  "manifest_excludes_itself": true,
+  "files": [
+    {
+      "path": ".claude/agents/tfm-adjudicator.md",
+      "size_bytes": 4383,
+      "sha256": "9522c580a49af1e8721e53981baf0e1626d819c59d43de5e384d1f926189f25f"
+    },
+    {
+      "path": ".claude/agents/tfm-dedup-linker.md",
+      "size_bytes": 1650,
+      "sha256": "1ff732faa033d1ad5cf90a5743205ee28e43a69505338ed53718347f67d666bb"
+    },
+    {
+      "path": ".claude/agents/tfm-design-mapper.md",
+      "size_bytes": 2095,
+      "sha256": "5fa97c7e0a6d56ea175fa492e5a2548eff120a46fd85e139dff8ac57ab13c1f1"
+    },
+    {
+      "path": ".claude/agents/tfm-extractor-a.md",
+      "size_bytes": 3794,
+      "sha256": "b0c4455e188cd8457dd8cdd01043bdeaa11f5d77f927ad437696917270f4493a"
+    },
+    {
+      "path": ".claude/agents/tfm-extractor-b.md",
+      "size_bytes": 3336,
+      "sha256": "37cc39e1ec01a302167bde3ee5470d57cea178ea283f3ff9cdbe4bf6382a009d"
+    },
+    {
+      "path": ".claude/agents/tfm-figure-digitizer.md",
+      "size_bytes": 3202,
+      "sha256": "e412f701c5681a2d03d8de18b2e8a3678eebf21d15d81343fcc73b18ca216775"
+    },
+    {
+      "path": ".claude/agents/tfm-moderator-extractor.md",
+      "size_bytes": 2018,
+      "sha256": "92d61621143a00621c3bbd28c2a4795068b6653a14fa5254bcf5641c91bbbd1d"
+    },
+    {
+      "path": ".claude/agents/tfm-patch-reviewer.md",
+      "size_bytes": 1483,
+      "sha256": "d40a196a49055feb73648a51c6fff19a712adb6e68bfee77fa1253b74ee1d4fb"
+    },
+    {
+      "path": ".claude/agents/tfm-qa-auditor.md",
+      "size_bytes": 1936,
+      "sha256": "d5fc6d9a4d1005a0aa8318810ae548904a0526d5f36bed618fc77849286b4e2f"
+    },
+    {
+      "path": ".claude/agents/tfm-rob-assessor.md",
+      "size_bytes": 1447,
+      "sha256": "a611a8e2b3b891c8024ffbee2726626ef981e37693654ddb3dac47157b669d5d"
+    },
+    {
+      "path": ".claude/agents/tfm-scope-auditor.md",
+      "size_bytes": 1639,
+      "sha256": "76ce0cab3cd10db0d8a8841e569a88fb6210b037ec8067d022d725bcc1edc622"
+    },
+    {
+      "path": ".claude/agents/tfm-triage.md",
+      "size_bytes": 5749,
+      "sha256": "bec931ae1c00b7a4b9387b75ee19153fd75a820986fa80b2978a179d3806f311"
+    },
+    {
+      "path": ".claude/hooks/guard_blind.py",
+      "size_bytes": 461,
+      "sha256": "85bddaa5dcd63ff232316f508ffbe597dcea40aef00c9ea86480e77109ec9e39"
+    },
+    {
+      "path": ".claude/hooks/guard_tool.py",
+      "size_bytes": 1859,
+      "sha256": "1b354dc97e17d2b2874b2d4d493f8939d685978ec90a4edeb1a35702deb8d5c8"
+    },
+    {
+      "path": ".claude/settings.json",
+      "size_bytes": 996,
+      "sha256": "31d526f302af1cbe69f7f0935234e4543679f2a42497d3aa6d4f01612bc09ad9"
+    },
+    {
+      "path": ".claude/skills/tfm-export/SKILL.md",
+      "size_bytes": 685,
+      "sha256": "249703766893ca34fb46d523b1217b44ae8200614a870aa08fbfb81483c03fc1"
+    },
+    {
+      "path": ".claude/skills/tfm-finalize/SKILL.md",
+      "size_bytes": 3879,
+      "sha256": "69b5e27157f8a8745d4923f6961a5d1209d3f45c083a0457d1da1773476d9af3"
+    },
+    {
+      "path": ".claude/skills/tfm-review/SKILL.md",
+      "size_bytes": 717,
+      "sha256": "68f57be26bb1839854308da294549421bb5f7313974f9dc7613b04518194c5a0"
+    },
+    {
+      "path": ".claude/skills/tfm-run-batch/SKILL.md",
+      "size_bytes": 546,
+      "sha256": "0b494585e3abd2b6312e2b9282e67781f91e39a4b1111366d9914090aaf40f1e"
+    },
+    {
+      "path": ".claude/skills/tfm-setup/SKILL.md",
+      "size_bytes": 727,
+      "sha256": "92eeb3f4997acebf1de52c09df92b19477ef030c672cfaa6dcb6da2ce3d0cced"
+    },
+    {
+      "path": ".claude/skills/tfm-status/SKILL.md",
+      "size_bytes": 560,
+      "sha256": "56c2e3ef21dd15c42563327628c52dc08f72bac30ca756cde98635595a0eafa0"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 9844,
+      "sha256": "bb9ba42bd2592cd775b6f4cff1b213780539124a2c64acc48f6cb062e9d76bea"
+    },
+    {
+      "path": "INSTALL_RU.md",
+      "size_bytes": 27153,
+      "sha256": "6885089ae8f824b03c6e5c7947a0430b6170995f16ac98cf21cdfdc963374d90"
+    },
+    {
+      "path": "README_RU.md",
+      "size_bytes": 4663,
+      "sha256": "c2b93ef0b1388720cf5cb995a91122458d244678e42cfe8f915bc4c7ec27a2ed"
+    },
+    {
+      "path": "config/column_map.yaml",
+      "size_bytes": 2543,
+      "sha256": "2e26039c53f233dae915ae7a7d10ac164ccc1c40817788b4a11b4b69dc53e443"
+    },
+    {
+      "path": "config/paths.example.yaml",
+      "size_bytes": 722,
+      "sha256": "a589ed420bb27638990b3802d51aea905d73179ce22476a45ccb98d58c6e2f7c"
+    },
+    {
+      "path": "config/pipeline.yaml",
+      "size_bytes": 6993,
+      "sha256": "831e070cf683555cae48b59c1d4468cfb9cdd6ff7b49443eed30e16592a7f5ed"
+    },
+    {
+      "path": "docs/ACTUAL_BASELINE_CHECK.json",
+      "size_bytes": 3359,
+      "sha256": "15d0437c89c589a3176edc12f34c89f944396c86469777433c824e66b9c63ea6"
+    },
+    {
+      "path": "docs/BASELINE_COMPARISON_2026-10-19.json",
+      "size_bytes": 4956,
+      "sha256": "78a8b7c12b71a832c96fb6053a526c58587e53452d05532a494a3c659d1f649c"
+    },
+    {
+      "path": "docs/BINDING_ADDENDUM_2_1_RU.md",
+      "size_bytes": 6430,
+      "sha256": "699492cbba9e8aaca60a83ce2acc4fb8d9f1cda568b5504bc31d5692337852de"
+    },
+    {
+      "path": "docs/BINDING_ADDENDUM_2_2_RU.md",
+      "size_bytes": 10132,
+      "sha256": "e824b7745164128268c4b9b9ed2ed162937428dc12c703285672b99e2f67f329"
+    },
+    {
+      "path": "docs/CHANGES_RU.md",
+      "size_bytes": 7306,
+      "sha256": "7a420af60ac912f50117d0b1b24106daae7ba4bccbff35e3f5284356eb830c70"
+    },
+    {
+      "path": "docs/FORMULA_COMPARISON.json",
+      "size_bytes": 825,
+      "sha256": "c0dc56f7c0b45205249f5c84c0a8778060fefc847be6db6568d177750e05427e"
+    },
+    {
+      "path": "docs/TEST_LOG.txt",
+      "size_bytes": 10421,
+      "sha256": "eef2bfe1b152d8c301aea51e72548283a9b5eaf6a94938e8aacb4bd4ad5fefea"
+    },
+    {
+      "path": "docs/TEST_RESULTS.json",
+      "size_bytes": 675,
+      "sha256": "d5cabe467c7ab8ba66423be1e6952f35972dfd2be8d0f583afab24451cf0a152"
+    },
+    {
+      "path": "docs/TFM_A399_Installation_Guide_RU_v2_2.docx",
+      "size_bytes": 48285,
+      "sha256": "84af9993c262c639515b322b5fb6304a73131d0e4bb51f911fd7ef09ac60c788"
+    },
+    {
+      "path": "docs/TFM_A399_Technical_Specification_v2_2026-10-18.docx",
+      "size_bytes": 77794,
+      "sha256": "8fb369121f670c6cdd06144357f93821ad4e8805e05727e63c9a758afd954bb0"
+    },
+    {
+      "path": "docs/TFM_ALIGNMENT_RECHECK_RU.md",
+      "size_bytes": 4913,
+      "sha256": "2f5b2045386b1506922538b7715e32240a047fe286f692629b4a326886f15d50"
+    },
+    {
+      "path": "docs/TFM_source_snapshot.txt",
+      "size_bytes": 110610,
+      "sha256": "4d9b6af0bc41736ba13d3e36067fdc0fe80bd017cc49f411c240e40b23c335ae"
+    },
+    {
+      "path": "docs/VALIDATION_STATUS_RU.md",
+      "size_bytes": 9579,
+      "sha256": "16c001fb7e684114663a2f502d20911878a550a5e090ec439bf33d46b67b72a9"
+    },
+    {
+      "path": "install_macos_linux.sh",
+      "size_bytes": 409,
+      "sha256": "d0c3892e59832b9f6c74d4f0c65fb5a4766d976f5148cf082583fe5d312c8190"
+    },
+    {
+      "path": "install_windows.ps1",
+      "size_bytes": 593,
+      "sha256": "5818f78ad435f28edb5ba46d7dba698dd1ce36d45a0d015ee8f0873381256b80"
+    },
+    {
+      "path": "manifests/scope_A_399.csv",
+      "size_bytes": 85938,
+      "sha256": "7994c9a68ba54e35a0c983bb9956e58d0eacc1987079af74a02761ad60b5d421"
+    },
+    {
+      "path": "manifests/source_manifest_A_462.csv",
+      "size_bytes": 95549,
+      "sha256": "59cdfc3fe388de9d8769ddd81059f5cf406886cc57ec49ce21183bbb34c01b34"
+    },
+    {
+      "path": "requirements-test.txt",
+      "size_bytes": 39,
+      "sha256": "4e6b6ed76477a40ffc634a83f132a29b1d425385e26b988c6f8cc2b8cb34be04"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 263,
+      "sha256": "18aaed87babb06e3df7b3379ec9ddfa8edd242879de32b5288acfba77d051b73"
+    },
+    {
+      "path": "schema/json/adjudication.schema.json",
+      "size_bytes": 9068,
+      "sha256": "1869278910b5d91fab5d1b294e5e51c66c6e8361b1d45b162d38a3d17f27bf45"
+    },
+    {
+      "path": "schema/json/audit.schema.json",
+      "size_bytes": 1356,
+      "sha256": "a468d76de0fb472e8bc6add8bd9d6a1d27610c603a7ae9b3bbfe5c3efffa2530"
+    },
+    {
+      "path": "schema/json/design.schema.json",
+      "size_bytes": 4313,
+      "sha256": "f6487b19f7fa17da14d8f97961e2c27388262171c5452c614cf808eadd1041fd"
+    },
+    {
+      "path": "schema/json/figure.schema.json",
+      "size_bytes": 9794,
+      "sha256": "c02aa102b5c3570246c1ed2823616f1257cc12083221a813ef77d30e79fd0914"
+    },
+    {
+      "path": "schema/json/moderators.schema.json",
+      "size_bytes": 4184,
+      "sha256": "36f371a4fafc9604566386aba954735e9a0d898c70f7fb5cfd69e72e0516d1b1"
+    },
+    {
+      "path": "schema/json/patches.schema.json",
+      "size_bytes": 886,
+      "sha256": "bbc119df8fdcc13f6e4ca24f91c19d64208ea08b3dab90590881f620883ed164"
+    },
+    {
+      "path": "schema/json/qa_review.schema.json",
+      "size_bytes": 878,
+      "sha256": "352e471ac6b6fd07cd2d20ac28a3bc8153faa464c19b540862568cb5f61c94dc"
+    },
+    {
+      "path": "schema/json/relations.schema.json",
+      "size_bytes": 1424,
+      "sha256": "d6c84cd80292642ca09e9095ba156b17886b7e84e7675bab463fd95a2e7e5aee"
+    },
+    {
+      "path": "schema/json/rob.schema.json",
+      "size_bytes": 1497,
+      "sha256": "ddef89c642178a08411922e441dd258771d6696d35921b6c3916cc00278fe163"
+    },
+    {
+      "path": "schema/json/scope.schema.json",
+      "size_bytes": 1139,
+      "sha256": "41aa56655c914df624faf85aa83f422ee57c95f19c873f99e39db646059b27bb"
+    },
+    {
+      "path": "schema/json/temporal.schema.json",
+      "size_bytes": 730,
+      "sha256": "f6cbecc79237845d7ddabfe751fa827952013dd945f92d52e787745e63367014"
+    },
+    {
+      "path": "schema/json/triage.schema.json",
+      "size_bytes": 6726,
+      "sha256": "f9534b2aa4de844826905f9a4c249a10707ab079f6b30820f946cb28f3d65c44"
+    },
+    {
+      "path": "schema/json/values.schema.json",
+      "size_bytes": 8847,
+      "sha256": "654720ba8ec142543eb529ceeadd532314b143ab5b3f42132866910b6ef0a20d"
+    },
+    {
+      "path": "schema/wf_schema.sql",
+      "size_bytes": 20966,
+      "sha256": "124fb595dc2ecd6f3c45d6d562ac98df047f92d1478fbb7b3799ce10756221af"
+    },
+    {
+      "path": "tests/fixtures/legacy_source.xls",
+      "size_bytes": 5632,
+      "sha256": "ad84cf711b8c299b595416e5250895a9d86725890c7422a10ca6c61c79c7fe47"
+    },
+    {
+      "path": "tests/fixtures/legacy_supplement.doc",
+      "size_bytes": 18432,
+      "sha256": "f76e6bb0e865d560b160b61b244e98a8c711735539c5fd4bf1fd7526485d6525"
+    },
+    {
+      "path": "tests/test_v2.py",
+      "size_bytes": 52122,
+      "sha256": "7a3a548f5d0908e2d3d3a96d9d3ac704c5c7fd54af11805d6fe8e36be03b7422"
+    },
+    {
+      "path": "tools/bootstrap.py",
+      "size_bytes": 1840,
+      "sha256": "32b8b9db9dcf4a15c279a23f376c0d028a49c9784e15a282f6a32432f2464999"
+    },
+    {
+      "path": "tools/tfm.py",
+      "size_bytes": 22793,
+      "sha256": "2c1ee983e7e769f8dc242fbeef018412fb2cb484663b7f44d62c90cc1ba0e9ae"
+    },
+    {
+      "path": "tools/tfmlib/__init__.py",
+      "size_bytes": 22,
+      "sha256": "0ca93ed5bfab66c245c458b526827b4e612f204434adff82f470195b0be3b8cd"
+    },
+    {
+      "path": "tools/tfmlib/config.py",
+      "size_bytes": 2908,
+      "sha256": "c4335d4f3da01dd7a3a4ed8e8e8bfb11e2e840dd40320a199782a95edaba8211"
+    },
+    {
+      "path": "tools/tfmlib/context.py",
+      "size_bytes": 18778,
+      "sha256": "b2efdc244c83845cc328af95a31a2c0c07e47bde7b9af8d3f25f42e01887f9ee"
+    },
+    {
+      "path": "tools/tfmlib/contrasts.py",
+      "size_bytes": 10218,
+      "sha256": "57cda9ca88891bc262d34068396fc2f99ace5b98c301aeae37c3eabf901c5ec7"
+    },
+    {
+      "path": "tools/tfmlib/db.py",
+      "size_bytes": 7692,
+      "sha256": "342b062b9d3dde470c208e821193ab21fbacfd1630fef7afb78206f7a6708826"
+    },
+    {
+      "path": "tools/tfmlib/dedup.py",
+      "size_bytes": 5716,
+      "sha256": "7638165a89a20274bab09d9a7d4169106cdb79003b117e3df393ab0a021c9a98"
+    },
+    {
+      "path": "tools/tfmlib/derive.py",
+      "size_bytes": 3352,
+      "sha256": "43a952f33ebccd6d0f3673c8ac33771d421ffa2ad64e5138d1cac2e9514ec1ec"
+    },
+    {
+      "path": "tools/tfmlib/diagnostics.py",
+      "size_bytes": 4840,
+      "sha256": "38cffca78c349376b8edae613e6c64567bbf8e35cb9873f43bd7799d66813417"
+    },
+    {
+      "path": "tools/tfmlib/errorbars.py",
+      "size_bytes": 5632,
+      "sha256": "2267619c845f4d1b36bed360e12e0bfbfb206cbe0d72e192e04152a22dbcf840"
+    },
+    {
+      "path": "tools/tfmlib/export.py",
+      "size_bytes": 19190,
+      "sha256": "e912d4367ed092e48907bba308905d10f59e619a04a7db5fe6c141e1a6d568f1"
+    },
+    {
+      "path": "tools/tfmlib/figures.py",
+      "size_bytes": 10581,
+      "sha256": "99a55f05948d83dd3d3f10c86f2527ae916028d8a2cc0e43b9cee624e63612a8"
+    },
+    {
+      "path": "tools/tfmlib/gates.py",
+      "size_bytes": 6438,
+      "sha256": "ba61b87af3d8c7255805c37d98d188b87ff8d01affe56057da426f6398f137e0"
+    },
+    {
+      "path": "tools/tfmlib/importer.py",
+      "size_bytes": 14270,
+      "sha256": "ceb3b33a2c334eabeebfb6234720adfc6289136a357b1919c24fbe0208719d44"
+    },
+    {
+      "path": "tools/tfmlib/maintenance.py",
+      "size_bytes": 6723,
+      "sha256": "54e73b6aab9ae88e5fff194b84c805ca54721dafd8685f0a2438f4eb72586c22"
+    },
+    {
+      "path": "tools/tfmlib/numbers.py",
+      "size_bytes": 5028,
+      "sha256": "d6046a8a771cda67d9c4aed1a3cdfb346af723c0e2d1c6c523e562cafbb0c4a9"
+    },
+    {
+      "path": "tools/tfmlib/reconcile.py",
+      "size_bytes": 19451,
+      "sha256": "21df8dbc1dcfcc8e410283cfb32eea89851c4bd7b28f5310ca6304e707731005"
+    },
+    {
+      "path": "tools/tfmlib/release.py",
+      "size_bytes": 18519,
+      "sha256": "7f79df9794c2e74e9c4b5967cc32ebf119736b6776e83bbb0ce29bb36671740b"
+    },
+    {
+      "path": "tools/tfmlib/review.py",
+      "size_bytes": 6847,
+      "sha256": "d44801331c416fa92ee2907b777a394fc33c88bc47955236290b4150c2b5dfbe"
+    },
+    {
+      "path": "tools/tfmlib/sampling.py",
+      "size_bytes": 11366,
+      "sha256": "8bd772a3014a3a526271d176d5938846c9938a605a3f996405aeb9cc03712135"
+    },
+    {
+      "path": "tools/tfmlib/setup.py",
+      "size_bytes": 7020,
+      "sha256": "0c4103c70aaaac90a5f71a91e8bb657bbec4f74b1bc3623696cf83af4c1e8a4e"
+    },
+    {
+      "path": "tools/tfmlib/sourceqa.py",
+      "size_bytes": 10165,
+      "sha256": "7175d8a364fc0232ab53356470e656bc349c1680c25b0d1ad853f323a6f56d54"
+    },
+    {
+      "path": "tools/tfmlib/stats.py",
+      "size_bytes": 3502,
+      "sha256": "e31630bcf5754dd22b9689ba5152967c1f6d03285a4254bb8b6e9dcd6f7c6d96"
+    },
+    {
+      "path": "tools/tfmlib/submit.py",
+      "size_bytes": 69792,
+      "sha256": "e727f7494d35fdaf7647ec1f0e06f6d64cdec79fd4b5a87a68ba6d161c878bcf"
+    },
+    {
+      "path": "tools/tfmlib/tasks.py",
+      "size_bytes": 6966,
+      "sha256": "378475ce61604ccd71d4cf5ca5742cc42fb92241345ec13bfcf2b05e76e2e6bb"
+    },
+    {
+      "path": "tools/tfmlib/units.py",
+      "size_bytes": 3478,
+      "sha256": "440b3f6134ca0f5257d436a82ed9435b9d08140d1df191348f22f3acba88393e"
+    },
+    {
+      "path": "tools/tfmlib/validate.py",
+      "size_bytes": 9094,
+      "sha256": "0877f3b040c61dea56218bccd26d5d765a0b0a415c800799cf9669222e1d67f0"
+    }
+  ]
+}

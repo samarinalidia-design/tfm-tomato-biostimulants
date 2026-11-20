@@ -1,0 +1,140 @@
+{
+  "ready_to_use": true,
+  "gates": [
+    {
+      "gate": "execution_contract_unchanged",
+      "status": "PASS",
+      "value": "code/schema/prompts/scientific configuration fingerprint"
+    },
+    {
+      "gate": "frozen_399_scope",
+      "status": "PASS",
+      "value": "399 studies; exact frozen ID equality"
+    },
+    {
+      "gate": "real_source_pilot",
+      "status": "PASS",
+      "value": "PASS"
+    },
+    {
+      "gate": "relational_and_blocking_qa",
+      "status": "PASS",
+      "value": "0 blockers"
+    },
+    {
+      "gate": "all_399_scientifically_closed",
+      "status": "PASS",
+      "value": "0 unfinished"
+    },
+    {
+      "gate": "primary_target_absence_independently_reviewed",
+      "status": "PASS",
+      "value": "0 gaps: []"
+    },
+    {
+      "gate": "task_queue_closed",
+      "status": "PASS",
+      "value": "0 ready/leased/failed tasks"
+    },
+    {
+      "gate": "original_sources_available",
+      "status": "PASS",
+      "value": "462/462 originals with unchanged bytes"
+    },
+    {
+      "gate": "docling_and_original_source_review",
+      "status": "PASS",
+      "value": "462/462 source dispositions"
+    },
+    {
+      "gate": "critical_values_checked_in_original",
+      "status": "PASS",
+      "value": "0 targets without current exact-source receipt/cell"
+    },
+    {
+      "gate": "figure_error_bars_accounted_for",
+      "status": "PASS",
+      "value": "0 missing error-bar dispositions/bounds"
+    },
+    {
+      "gate": "uncertainty_original_provenance",
+      "status": "PASS",
+      "value": "0 uncertainty values without original evidence"
+    },
+    {
+      "gate": "expected_slots_complete",
+      "status": "PASS",
+      "value": "0 incomplete slots"
+    },
+    {
+      "gate": "dry_basis_checked",
+      "status": "PASS",
+      "value": "0 dry-biomass values without a basis check"
+    },
+    {
+      "gate": "relevant_assets_represented",
+      "status": "PASS",
+      "value": "0 relevant assets without target slot"
+    },
+    {
+      "gate": "questions_patches_relations_resolved",
+      "status": "PASS",
+      "value": "0 questions; 0 patches; 0 relations"
+    },
+    {
+      "gate": "risk_of_bias_10_domains",
+      "status": "PASS",
+      "value": "0 target studies incomplete"
+    },
+    {
+      "gate": "used_moderators_independently_verified",
+      "status": "PASS",
+      "value": "0 unverified/stale moderator facts"
+    },
+    {
+      "gate": "outliers_reviewed_without_deletion",
+      "status": "PASS",
+      "value": "0 unresolved outliers"
+    },
+    {
+      "gate": "no_inspected_confirmatory_test",
+      "status": "PASS",
+      "value": "0 TEST labels"
+    },
+    {
+      "gate": "relevant_features_and_no_leakage",
+      "status": "PASS",
+      "value": "[]"
+    },
+    {
+      "gate": "human_contrast_audit",
+      "status": "PASS",
+      "value": "1178/1178 required of N=7848"
+    }
+  ],
+  "rows": {
+    "biotic_measurements_verified": 1062,
+    "contrast_candidates": 8322,
+    "evidence_long": 7848,
+    "arm_values_verified": 8012,
+    "A_direct_yield": 115,
+    "A_direct_dry_biomass": 708,
+    "A_strict_SxB": 557,
+    "A_strict_AxB": 64,
+    "A_descriptive": 7157,
+    "A_productivity_components": 590,
+    "A_biotic_secondary": 410,
+    "A_meta_yield_weighted": 46,
+    "A_meta_dry_biomass_weighted": 347,
+    "A_meta_SxB_weighted": 254,
+    "A_meta_AxB_weighted": 44,
+    "A_direct_yield_assumed": 286,
+    "A_meta_yield_assumed_weighted": 133,
+    "A_direct_yield_broad": 116,
+    "A_meta_yield_broad_weighted": 39,
+    "A_main_effect_yield": 22,
+    "A_direct_yield_unit_unresolved": 27,
+    "A_meta_yield_unit_unresolved_weighted": 2,
+    "A_box_centre_assumed": 134
+  }
+}

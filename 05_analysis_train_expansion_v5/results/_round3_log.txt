@@ -1,0 +1,5 @@
+yield seed=11 455s
+yield seed=22 444s
+yield seed=33 444s
+biomass seed=11 430s
+biomass seed=22 440s

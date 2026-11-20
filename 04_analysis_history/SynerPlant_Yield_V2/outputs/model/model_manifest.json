@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-11-18T08:00:50+00:00",
+  "family": "row_median",
+  "feature_set": "B",
+  "params": {},
+  "tuning_cv_group_mae": null,
+  "features_used": [],
+  "n_rows": 404,
+  "n_studies": 69,
+  "selection": {
+    "chosen": "row_median|B",
+    "reason": "no candidate passed the prespecified rule; best baseline retained",
+    "best_baseline": "row_median|B",
+    "best_baseline_group_mae": 0.36119338996911565,
+    "best_nonbaseline": {
+      "candidate": "quantile_l1|F4",
+      "group_mae": 0.36250014156104027,
+      "gain_vs_best_baseline": -0.0036178723869679796,
+      "diff_ci_lo": -0.003517852651722585,
+      "diff_ci_hi": 0.006371492621758955,
+      "median_fold_wins_of_5": 3
+    }
+  },
+  "intervals": {
+    "single_contrast_q": 0.9202360444190809,
+    "simultaneous_q": 1.3183742909442693,
+    "subsample_q": 0.898365493324904,
+    "adaptive_unit_q": 2.2658251691344513,
+    "adaptive_sigma_by_stress_family": {
+      "BIOTIC": 0.31545442296884424,
+      "COLD": 0.23975034912777282,
+      "COMBINED_MULTI_STRESS": 0.3175679634902108,
+      "DROUGHT": 0.3979390864270615,
+      "HEAT": 0.48451136933839223,
+      "NUTRIENT_LIMITATION": 0.3074183356034545,
+      "SALINITY": 0.32967086224216086,
+      "TOXICITY_CONTAMINANT": 0.3129010576449794
+    },
+    "adaptive_sigma_global": 0.35836012069370604,
+    "calibration_studies": 69,
+    "alpha": 0.1,
+    "model": "row_median|B",
+    "v1_half_width": 2.8570517090811203,
+    "v1_calibration_studies": 13
+  },
+  "model_sha256": "a866607ffbd080b6adaaccc8cd769bfa880fb58781b24b679f184c23d65246a9",
+  "data_sha256": "de0661818fb53f47ffe74a6238aedc81a0c9039c2ee312f957126cd71ee4ccb0",
+  "python": "3.12.10",
+  "sklearn": "1.9.1",
+  "optuna": "5.0.0",
+  "test_policy": "external 2024-2026 TEST never read; no tuning or selection on TEST"
+}

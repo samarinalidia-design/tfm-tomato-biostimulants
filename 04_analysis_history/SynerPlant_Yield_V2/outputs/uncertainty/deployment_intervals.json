@@ -1,0 +1,22 @@
+{
+  "single_contrast_q": 0.9202360444190809,
+  "simultaneous_q": 1.3183742909442693,
+  "subsample_q": 0.898365493324904,
+  "adaptive_unit_q": 2.2658251691344513,
+  "adaptive_sigma_by_stress_family": {
+    "BIOTIC": 0.31545442296884424,
+    "COLD": 0.23975034912777282,
+    "COMBINED_MULTI_STRESS": 0.3175679634902108,
+    "DROUGHT": 0.3979390864270615,
+    "HEAT": 0.48451136933839223,
+    "NUTRIENT_LIMITATION": 0.3074183356034545,
+    "SALINITY": 0.32967086224216086,
+    "TOXICITY_CONTAMINANT": 0.3129010576449794
+  },
+  "adaptive_sigma_global": 0.35836012069370604,
+  "calibration_studies": 69,
+  "alpha": 0.1,
+  "model": "row_median|B",
+  "v1_half_width": 2.8570517090811203,
+  "v1_calibration_studies": 13
+}

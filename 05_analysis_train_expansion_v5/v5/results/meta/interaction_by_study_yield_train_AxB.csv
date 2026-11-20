@@ -1,0 +1,9 @@
+endpoint,role,type,study_id,effect,k
+yield,train,AxB,231,-0.807569234352064,8
+yield,train,AxB,D_2163ffa1e2913fd5,-0.725703988311719,6
+yield,train,AxB,D_3820e62f48e751e4,0.0247875258733432,3
+yield,train,AxB,D_39c9836cba1eed39,-2.08985038825041,2
+yield,train,AxB,D_61bafda8e5809db9,-1.39251726951448,6
+yield,train,AxB,D_787a2af6e69899c4,-0.566705220414301,6
+yield,train,AxB,D_8a246bc169c4b812,-0.217969153645528,1
+yield,train,AxB,D_f3c00040a8fabdde,-0.142127745298121,2

@@ -1,0 +1,25 @@
+450 outer fits
+[Parallel(n_jobs=6)]: Using backend LokyBackend with 6 concurrent workers.
+[Parallel(n_jobs=6)]: Done  29 tasks      | elapsed:    2.6s
+[Parallel(n_jobs=6)]: Done 198 tasks      | elapsed:   37.3s
+[Parallel(n_jobs=6)]: Done 401 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=6)]: Done 450 out of 450 | elapsed:  2.8min finished
+                   candidate  group_mae  group_mae_sd_seeds  gain_vs_ref  diff_ci_lo  diff_ci_hi  median_fold_wins_of_5  bias_study_balanced  passes_rule
+         row_median|B|none|z   0.361303            0.006150     0.000000    0.000000    0.000000                      0            -0.166436        False
+       study_median|B|none|z   0.361717            0.007444    -0.001146   -0.002243    0.002929                      2            -0.158254        False
+  quantile_l1|FH|mlre|robust   0.361757            0.003074    -0.001256   -0.010236    0.014220                      3            -0.172611        False
+       quantile_l1|F1|mlre|z   0.362251            0.006738    -0.002624   -0.002131    0.004161                      3            -0.175520        False
+quantile_l1|FH|hybrid|robust   0.362656            0.003472    -0.003745   -0.009111    0.015088                      2            -0.169684        False
+     quantile_l1|F1|hybrid|z   0.362756            0.007197    -0.004021   -0.001196    0.004293                      3            -0.170645        False
+    quantile_l1|F2v3|study|z   0.362818            0.007333    -0.004194   -0.001606    0.004681                      3            -0.160629        False
+      quantile_l1|F1|study|z   0.363504            0.006632    -0.006092   -0.000717    0.005139                      3            -0.162059        False
+      quantile_l1|FH|study|z   0.363878            0.006341    -0.007128   -0.004096    0.012588                      2            -0.156730        False
+     quantile_l1|FHc|study|z   0.363878            0.006341    -0.007128   -0.004096    0.012588                      2            -0.156730        False
+ quantile_l1|FH|study|robust   0.364094            0.005537    -0.007724   -0.007588    0.017188                      3            -0.161094        False
+quantile_l1|FHc|study|robust   0.364094            0.005537    -0.007724   -0.007588    0.017188                      3            -0.161094        False
+            pp_hier|B|none|z   0.375374            0.012307    -0.038946   -0.001627    0.030033                      2            -0.094791        False
+     mixed_ri|FH|none|robust   0.396191            0.009944    -0.096563    0.001082    0.066792                      1            -0.005488        False
+    mixed_ri|FHc|none|robust   0.396417            0.010037    -0.097187    0.000936    0.069006                      1            -0.004640        False
+           rf_meta|FH|mlre|z   0.399048            0.009732    -0.104470    0.004498    0.070365                      1            -0.016524        False
+          rf_meta|FHc|mlre|z   0.399721            0.009925    -0.106333    0.005824    0.070578                      1            -0.017071        False
+          rf_meta|FH|study|z   0.405543            0.010744    -0.122447    0.008184    0.079999                      1            -0.000569        False

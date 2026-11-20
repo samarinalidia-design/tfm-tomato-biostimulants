@@ -1,0 +1,19 @@
+{
+ "finished": "2026-11-18T15:15:00+00:00",
+ "minutes": 2.8,
+ "seeds": [
+  20261111,
+  20261112,
+  20261113,
+  20261114,
+  20261115
+ ],
+ "n_outer_fits": 450,
+ "reference": "row_median|B|none|z",
+ "rule": {
+  "gain_min": 0.02,
+  "wins_min_of_5": 3,
+  "bootstrap_ci_hi_lt_0": true
+ },
+ "test_read": false
+}

@@ -1,0 +1,51 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "const": "tfm-scope-auditor"
+  },
+  "model_id": {
+   "type": "string"
+  },
+  "eligibility": {
+   "enum": [
+    "ELIGIBLE_PRE2024",
+    "INELIGIBLE_POST2023",
+    "UNRESOLVED_QUARANTINE"
+   ]
+  },
+  "source_file_id": {
+   "type": "string"
+  },
+  "receipt_id": {
+   "type": "string"
+  },
+  "first_online_date": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "evidence": {
+   "type": "string"
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "eligibility",
+  "source_file_id",
+  "receipt_id",
+  "first_online_date",
+  "evidence"
+ ]
+}

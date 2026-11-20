@@ -1,0 +1,11 @@
+context,stack,MR0,RIDGE_REF,RIDGE_V3TE,RF_V3TETF,MR2mt
+biomass|seed33|fold0,LSTACK_A,0.9828,0.0,0.0,0.0172,
+biomass|seed33|fold0,LSTACK_B,0.4425,0.0,0.0,0.0,0.5575
+biomass|seed33|fold1,LSTACK_A,0.8029,0.0,0.1971,0.0,
+biomass|seed33|fold1,LSTACK_B,0.349,0.0,0.1485,0.0,0.5026
+biomass|seed33|fold2,LSTACK_A,1.0,0.0,0.0,0.0,
+biomass|seed33|fold2,LSTACK_B,0.4095,0.0,0.0,0.0,0.5905
+biomass|seed33|fold3,LSTACK_A,0.477,0.2794,0.2436,0.0,
+biomass|seed33|fold3,LSTACK_B,0.0925,0.1341,0.0502,0.0,0.7232
+biomass|seed33|fold4,LSTACK_A,0.5689,0.0,0.0,0.4311,
+biomass|seed33|fold4,LSTACK_B,0.4224,0.0,0.0,0.1287,0.4489

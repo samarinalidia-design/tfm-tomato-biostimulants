@@ -1,0 +1,9 @@
+endpoint,role,type,study_id,effect,k
+dry_biomass,test,AxB,T018,0.0406127638131091,2
+dry_biomass,test,AxB,T041,0.148553006693545,1
+dry_biomass,test,AxB,T042,0.129523844748741,6
+dry_biomass,test,AxB,T043,-0.462010416978065,1
+dry_biomass,test,AxB,T048,-0.0144225069021444,2
+dry_biomass,test,AxB,T084,0.0305357422515074,4
+dry_biomass,test,AxB,T092,-0.19636461590622,12
+dry_biomass,test,AxB,T096,-0.298941787056833,2

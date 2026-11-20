@@ -1,0 +1,155 @@
+{
+  "ready_to_use": true,
+  "gates": [
+    {
+      "gate": "execution_contract_unchanged",
+      "status": "PASS",
+      "value": "code/schema/prompts/scientific configuration fingerprint"
+    },
+    {
+      "gate": "frozen_scope",
+      "status": "PASS",
+      "value": "80 studies; exact frozen ID equality"
+    },
+    {
+      "gate": "real_source_pilot",
+      "status": "PASS",
+      "value": "PASS"
+    },
+    {
+      "gate": "relational_and_blocking_qa",
+      "status": "PASS",
+      "value": "0 blockers"
+    },
+    {
+      "gate": "all_scope_scientifically_closed",
+      "status": "PASS",
+      "value": "0 unfinished"
+    },
+    {
+      "gate": "primary_target_absence_independently_reviewed",
+      "status": "PASS",
+      "value": "0 gaps: []"
+    },
+    {
+      "gate": "task_queue_closed",
+      "status": "PASS",
+      "value": "0 ready/leased/failed tasks"
+    },
+    {
+      "gate": "original_sources_available",
+      "status": "PASS",
+      "value": "108/108 originals with unchanged bytes"
+    },
+    {
+      "gate": "docling_and_original_source_review",
+      "status": "PASS",
+      "value": "101/101 source dispositions (7 files of excluded studies skipped)"
+    },
+    {
+      "gate": "critical_values_checked_in_original",
+      "status": "PASS",
+      "value": "0 targets without current exact-source receipt/cell"
+    },
+    {
+      "gate": "figure_error_bars_accounted_for",
+      "status": "PASS",
+      "value": "0 missing error-bar dispositions/bounds"
+    },
+    {
+      "gate": "uncertainty_original_provenance",
+      "status": "PASS",
+      "value": "0 uncertainty values without original evidence"
+    },
+    {
+      "gate": "expected_slots_complete",
+      "status": "PASS",
+      "value": "0 incomplete slots"
+    },
+    {
+      "gate": "dry_basis_checked",
+      "status": "PASS",
+      "value": "0 dry-biomass values without a basis check"
+    },
+    {
+      "gate": "relevant_assets_represented",
+      "status": "PASS",
+      "value": "0 relevant assets without target slot (2 unregistered-supplement assets skipped)"
+    },
+    {
+      "gate": "questions_patches_relations_resolved",
+      "status": "PASS",
+      "value": "0 questions; 0 patches; 0 relations"
+    },
+    {
+      "gate": "risk_of_bias_10_domains",
+      "status": "PASS",
+      "value": "0 target studies incomplete"
+    },
+    {
+      "gate": "used_moderators_independently_verified",
+      "status": "PASS",
+      "value": "0 unverified/stale moderator facts"
+    },
+    {
+      "gate": "outliers_reviewed_without_deletion",
+      "status": "PASS",
+      "value": "0 unresolved outliers"
+    },
+    {
+      "gate": "dataset_role_external_test",
+      "status": "PASS",
+      "value": "0 studies without dataset_role=EXTERNAL_TEST: []"
+    },
+    {
+      "gate": "temporal_window_source_verified",
+      "status": "PASS",
+      "value": "0 retained studies without ELIGIBLE_TEST_WINDOW in ('2024-01-01', '2026-11-03'): []"
+    },
+    {
+      "gate": "no_overlap_with_train_dev",
+      "status": "PASS",
+      "value": "0 retained TEST studies match a TRAIN_DEV DOI/title: []"
+    },
+    {
+      "gate": "model_frozen_before_test_extraction",
+      "status": "PASS",
+      "value": "freeze_at=2026-11-14T15:35:46+00:00; recorded=2026-11-14T16:04:23+00:00; first task=2026-11-14T16:04:24+00:00"
+    },
+    {
+      "gate": "relevant_features_and_no_leakage",
+      "status": "PASS",
+      "value": "[]"
+    },
+    {
+      "gate": "human_contrast_audit",
+      "status": "PASS",
+      "value": "243/243 required of N=1617"
+    }
+  ],
+  "rows": {
+    "biotic_measurements_verified": 816,
+    "contrast_candidates": 2001,
+    "evidence_long": 1617,
+    "arm_values_verified": 1951,
+    "A_direct_yield": 22,
+    "A_direct_dry_biomass": 109,
+    "A_strict_SxB": 118,
+    "A_strict_AxB": 29,
+    "A_descriptive": 1416,
+    "A_productivity_components": 68,
+    "A_biotic_secondary": 266,
+    "A_meta_yield_weighted": 16,
+    "A_meta_dry_biomass_weighted": 75,
+    "A_meta_SxB_weighted": 93,
+    "A_meta_AxB_weighted": 17,
+    "A_direct_yield_assumed": 7,
+    "A_meta_yield_assumed_weighted": 7,
+    "A_direct_yield_broad": 12,
+    "A_meta_yield_broad_weighted": 9,
+    "A_main_effect_yield": 0,
+    "A_direct_yield_unit_unresolved": 36,
+    "A_meta_yield_unit_unresolved_weighted": 5,
+    "A_box_centre_assumed": 27
+  }
+}

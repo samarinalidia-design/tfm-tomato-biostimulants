@@ -1,0 +1,54 @@
+{
+  "_about": "V3.1 decision register (post-TEST corrections after the external review of the V3.0 Excel export, and PDF checks of influential/extreme values). Separate from audit/v3_register.json, which is locked by the biomass pre-registration. PDF_CHECKED_VISUAL = the figure of the original article was inspected (PDFs supplied by the author on 2026-11-18). Confirmed extreme values are never removed.",
+  "v31_control_rebasing": [
+    {
+      "id": "V31-RB01",
+      "policy": "A",
+      "study_id": "706",
+      "treated_arms": "E1\\.S\\.CH00[35]",
+      "vehicle_arm": "E1\\.S\\.VEH",
+      "reason": "CHITOSAN_DISSOLVED_IN_SOLVENT_COMPARED_WITH_SOLVENT_CONTROL",
+      "evidence": "Chitosan is dissolved in 2% acetic acid; the article defines the acetic-acid spray as the solvent control (external review 2026-11-18, confirmed in the original). lnRR = ln(SB.chitosan / S.vehicle)."
+    },
+    {
+      "id": "V31-RB02",
+      "policy": "A",
+      "study_id": "653",
+      "treated_arms": "E1\\.SB\\.AMF\\+NPK",
+      "vehicle_arm": "E1\\.SB\\.NPK",
+      "reason": "BIOSTIMULANT_PLUS_FERTILIZER_COMPARED_WITH_FERTILIZER_ARM",
+      "evidence": "AMF+NPK vs S confounds the fertilizer; the matching control is the NPK-only arm under the same drought (E1.SB.NPK)."
+    }
+  ],
+  "v31_contrast_exclusions": [],
+  "pdf_checks": [
+    {
+      "study_id": "23",
+      "flag": "ABS_LNRR_GT_1.5",
+      "outcome": "NO_ERROR_CONFIRMED_IN_ORIGINAL",
+      "evidence": "Original PDF (Frontiers, fpls.2023.1114288) Fig. 3A/3C p7 inspected: shoot DW T1 vs T4 0.19->0.96, 0.23->1.29, 0.42->2.0 g/plant as extracted; text reports up to 8.04-fold.",
+      "status": "PDF_CHECKED_VISUAL_2026-11-18"
+    },
+    {
+      "study_id": "75",
+      "flag": "ABS_LNRR_GT_1.5",
+      "outcome": "NO_ERROR_CONFIRMED_IN_ORIGINAL",
+      "evidence": "Original PDF (J. Fungi 9:384) Fig. 1b p6 inspected: tomato under drought, control ~0.79 vs Z. erostrata 2 ~5.0 g/plant, as extracted.",
+      "status": "PDF_CHECKED_VISUAL_2026-11-18"
+    },
+    {
+      "study_id": "D_3a8befa8fa7cb22d",
+      "flag": "ABS_LNRR_GT_1.5",
+      "outcome": "NO_ERROR_CONFIRMED_IN_ORIGINAL",
+      "evidence": "Original PDF (HortScience 56(4):414) Fig. 1 SDW p4 inspected: soil II control ~3.9 vs FU ~18 g, as extracted.",
+      "status": "PDF_CHECKED_VISUAL_2026-11-18"
+    },
+    {
+      "study_id": "D_24fe4181e5a0c693",
+      "flag": "INFLUENTIAL_EXTREME_EFFECT",
+      "outcome": "NO_ERROR_CONFIRMED_IN_ORIGINAL",
+      "status": "PDF_CHECKED_VISUAL_2026-11-18",
+      "evidence": "Original PDF (Agriculture 13:6) Fig. 7 p10: yield T5 (S150 mM) ~0.56, T4 (commercial seaweed PC + S) ~3.68, T7 (SWE + S) ~3.18 kg/plant, as extracted. Control choice checked in Methods 2.2/Table 1: NC = NH4H2PO4 starter fertilizer (not a vehicle); SWE applied in distilled water -> T5 is the correct stressed control."
+    }
+  ]
+}

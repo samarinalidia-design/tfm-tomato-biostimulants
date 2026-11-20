@@ -1,0 +1,23 @@
+{
+  "_about": "V3 decision register (biomass V2 and yield V3; created after the one-time yield TEST). The V2 register audit/corrections_register.json is locked by the pre-registration and is not edited. Flagging criteria are pre-specified (b03_build_biomass.py: |lnRR|>1.5, control range >50x within a study, constant error bars, S shared by >6 SB, conference/abstract) and never based on model residuals. Status PROVENANCE_QUOTE_CHECKED = the extracted value equals the verbatim source quote stored in provenance_qa; PDF_CHECK_PENDING = the original PDF was not reachable (Google Drive corpus offline on 2026-11-18). Confirmed extreme values are never removed.",
+  "biomass_decisions": [
+    {
+      "id": "B-S001",
+      "policy": "B",
+      "study_id": "279",
+      "doi": "10.1038/s41598-020-77850-0",
+      "match": {"study_id": "279", "organ_scope": "SHOOT"},
+      "action": "SENSITIVITY_ONLY",
+      "reason": "SOURCE_INTERNALLY_INCONSISTENT",
+      "evidence": "Table 1 p7, shoot dry weight (g), saline block: positive control 0.23 ± 0.001 'b' vs treatments 1.85 'c', 1.94 'c', 2.80 ± 0.018 'e', 0.58 'd'. Duncan letters contradict the means (the largest mean carries the last letter), and all saline treatments exceed the unstressed negative control (0.98 'a') 2-3-fold. Extraction equals the source quotes (provenance_qa), so the inconsistency is in the source. lnRR 2.08-2.50 kept for sensitivity only.",
+      "status": "PROVENANCE_QUOTE_CHECKED; PDF_CHECK_PENDING"
+    }
+  ],
+  "biomass_flag_reviews": [
+    {"study_id": "18", "flag": "CONTROL_RANGE_GT_50X", "outcome": "NO_ERROR", "evidence": "Fig. 5c = in-vitro seedlings on MS medium, axis 'Seedling DW (mg/seedling)' (0.002 g after mg->g); Table 5 = pot plants, shoot DW in g. Different experiments and organ scopes; lnRR is within-experiment and unit-free.", "status": "PROVENANCE_QUOTE_CHECKED"},
+    {"study_id": "170", "flag": "ABS_LNRR_GT_1.5", "outcome": "NO_ERROR_PLAUSIBLE", "evidence": "Table 4 p13 TDW (g): Xewel control T30 0.61 vs R. fasciculatus T30 2.88; the same pattern for all three AMF species and both cultivars at T30 (severe stress): 2.41, 2.60, 1.15, 1.57, 2.55 vs controls 0.61/0.74. Values equal the source quotes.", "status": "PROVENANCE_QUOTE_CHECKED"},
+    {"study_id": "23", "flag": "ABS_LNRR_GT_1.5", "outcome": "KEPT", "evidence": "Figure 3 panels A/C (digitised shoot DW). No inconsistency detectable without the PDF.", "status": "PDF_CHECK_PENDING"},
+    {"study_id": "75", "flag": "ABS_LNRR_GT_1.5", "outcome": "KEPT", "evidence": "Figure 1b (digitised shoot DW).", "status": "PDF_CHECK_PENDING"},
+    {"study_id": "D_3a8befa8fa7cb22d", "flag": "ABS_LNRR_GT_1.5", "outcome": "KEPT", "evidence": "Fig. 1 SDW (digitised).", "status": "PDF_CHECK_PENDING"}
+  ]
+}

@@ -1,0 +1,10 @@
+﻿quantity,V1,V2,note
+Training contrasts,371,404,"one per arm pair; definitions coded, not filtered"
+Independent studies,52,69,+17
+Biotic studies with yield,3,4,corpus contains no more
+Selected predictor,mean (V1 rule),median,no ML model passed the pre-specified rule
+Group-MAE on V1 contrasts (same splits),0.432,0.394,−9 %; bootstrap CI includes 0
+Group-MAE on V2 data,—,0.361,different sample: not a model gain
+"90 % interval, one new contrast",±2.86,±0.92,coverage verified 90.8 %
+"90 % interval, whole new study",±2.86,±1.32,coverage verified 90.7 %
+Conditional model (known expected loss),—,MAE 0.279; ±0.78,"42 factorial studies; exploratory, pre-registered for TEST"

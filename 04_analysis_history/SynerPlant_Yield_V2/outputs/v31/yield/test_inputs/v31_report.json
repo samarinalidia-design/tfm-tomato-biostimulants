@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-11-18T13:41:05+00:00",
+  "target": "yield",
+  "split": "test",
+  "rows_in": 36,
+  "studies_in": 12,
+  "rows_out": 36,
+  "studies_out": 12,
+  "aux_removed": 0,
+  "aux_by_reason": {},
+  "rebased": 0,
+  "features": {
+    "stress_duration_days": {
+      "v2_rows": 0,
+      "v31_rows": 5,
+      "v31_studies": 2
+    },
+    "drought_supply_pct": {
+      "v2_rows": 5,
+      "v31_rows": 4,
+      "v31_studies": 1
+    },
+    "drought_pattern_withheld": 0,
+    "drought_ftsw": 0,
+    "substrate_whc_kept_apart": 0,
+    "salinity_dSm_equiv": {
+      "v2_rows": 12,
+      "v31_rows": 12,
+      "v31_studies": 4
+    },
+    "ec_soil_separate": 0,
+    "stress_timing_changed": 0,
+    "dose_unit_recovered": 21,
+    "log_dose": {
+      "v2_rows": 0,
+      "v31_rows": 26,
+      "v31_studies": 9
+    },
+    "dose_family": {
+      "PER_AREA": 7,
+      "CONC_mL_per_L": 5,
+      "PER_PLANT_OR_POT": 5,
+      "CFU_PER_ML": 5,
+      "CONC_g_per_L": 2,
+      "MOLAR_mM": 2
+    }
+  },
+  "variance": {
+    "vi_available": 27,
+    "vi_reported_not_assumed": 27
+  }
+}

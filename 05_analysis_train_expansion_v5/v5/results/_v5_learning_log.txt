@@ -1,0 +1,41 @@
+yield fold 0
+yield fold 1
+yield fold 2
+yield fold 3
+yield fold 4
+biomass fold 0
+biomass fold 1
+biomass fold 2
+biomass fold 3
+biomass fold 4
+   endpoint  frac          model  n_train_studies   RMSE  RMSE_se    MAE
+0   biomass   0.2  BASELINE_mean           27.867  0.364    0.020  0.273
+1   biomass   0.2            MR0           27.867  0.362    0.019  0.274
+2   biomass   0.2      RIDGE_REF           27.867  0.390    0.021  0.294
+3   biomass   0.4  BASELINE_mean           55.000  0.356    0.020  0.262
+4   biomass   0.4            MR0           55.000  0.354    0.020  0.262
+5   biomass   0.4      RIDGE_REF           55.000  0.391    0.017  0.286
+6   biomass   0.6  BASELINE_mean           82.667  0.355    0.022  0.261
+7   biomass   0.6            MR0           82.667  0.354    0.021  0.261
+8   biomass   0.6      RIDGE_REF           82.667  0.377    0.021  0.276
+9   biomass   0.8  BASELINE_mean          109.867  0.357    0.021  0.264
+10  biomass   0.8            MR0          109.867  0.355    0.020  0.263
+11  biomass   0.8      RIDGE_REF          109.867  0.383    0.020  0.277
+12  biomass   1.0  BASELINE_mean          137.600  0.356    0.039  0.263
+13  biomass   1.0            MR0          137.600  0.354    0.038  0.262
+14  biomass   1.0      RIDGE_REF          137.600  0.374    0.041  0.273
+15    yield   0.2  BASELINE_mean           12.067  0.468    0.020  0.353
+16    yield   0.2            MR0           12.067  0.472    0.018  0.354
+17    yield   0.2      RIDGE_REF           12.067  0.481    0.024  0.351
+18    yield   0.4  BASELINE_mean           24.000  0.460    0.018  0.338
+19    yield   0.4            MR0           24.000  0.460    0.018  0.343
+20    yield   0.4      RIDGE_REF           24.000  0.448    0.017  0.325
+21    yield   0.6  BASELINE_mean           36.600  0.457    0.018  0.327
+22    yield   0.6            MR0           36.600  0.456    0.018  0.331
+23    yield   0.6      RIDGE_REF           36.600  0.444    0.017  0.315
+24    yield   0.8  BASELINE_mean           48.467  0.457    0.018  0.332
+25    yield   0.8            MR0           48.467  0.457    0.018  0.335
+26    yield   0.8      RIDGE_REF           48.467  0.429    0.018  0.306
+27    yield   1.0  BASELINE_mean           60.800  0.455    0.034  0.330
+28    yield   1.0            MR0           60.800  0.456    0.034  0.333
+29    yield   1.0      RIDGE_REF           60.800  0.425    0.034  0.300

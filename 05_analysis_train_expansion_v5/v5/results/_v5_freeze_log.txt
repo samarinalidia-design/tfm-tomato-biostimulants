@@ -1,0 +1,233 @@
+   endpoint category          model  seeds    RMSE  RMSE_sd     MAE      R2    bias   wRMSE  coverage95  PI_width  d_vs_mean_pct  better_than_mean_all_seeds
+2   biomass        A            MR0      3  0.3656   0.0013  0.2625 -0.0113  0.0077  0.3607      0.9435    1.4072        -0.4431                        True
+0   biomass        A  BASELINE_mean      3  0.3672   0.0020  0.2626 -0.0204 -0.0003  0.3622      0.9454    1.4708         0.0000                       False
+1   biomass        A       LSTACK_A      3  0.3684   0.0042  0.2648 -0.0272  0.0083  0.3635      0.9454    1.4621         0.3315                       False
+4   biomass        A      RF_V3TETF      3  0.3749   0.0048  0.2746 -0.0637  0.0135  0.3711      0.9444    1.4842         2.0952                       False
+8   biomass        A     STACK_A_V3      3  0.3782   0.0021  0.2793 -0.0825  0.0230  0.3747      0.9532    1.5549         3.0013                       False
+7   biomass        A    STACK_A_REF      3  0.3863   0.0038  0.2768 -0.1289  0.0290  0.3803      0.9490    1.5691         5.1886                       False
+3   biomass        A         RF_REF      3  0.3870   0.0010  0.2809 -0.1335  0.0363  0.3819      0.9451    1.4843         5.3984                       False
+6   biomass        A     RIDGE_V3TE      3  0.3925   0.0046  0.2939 -0.1654  0.0325  0.3894      0.9555    1.6256         6.8754                       False
+5   biomass        A      RIDGE_REF      3  0.3954   0.0078  0.2815 -0.1834  0.0218  0.3887      0.9472    1.6539         7.6890                       False
+11  biomass        B    STACK_B_MR0      3  0.3532   0.0030  0.2502  0.0560  0.0051  0.3485      0.9488    1.4730        -3.8161                        True
+13  biomass        B     STACK_B_V3      3  0.3578   0.0013  0.2607  0.0316  0.0175  0.3539      0.9573    1.5822        -2.5770                        True
+9   biomass        B       LSTACK_B      3  0.3591   0.0047  0.2544  0.0243  0.0067  0.3545      0.9447    1.4007        -2.2176                        True
+10  biomass        B          MR2mt      3  0.3605   0.0047  0.2554  0.0166  0.0025  0.3568      0.9433    1.5389        -1.8361                        True
+12  biomass        B    STACK_B_REF      3  0.3667   0.0011  0.2586 -0.0173  0.0121  0.3610      0.9527    1.5964        -0.1460                       False
+19    yield        A      RIDGE_REF      3  0.4380   0.0096  0.3086  0.0847 -0.0022  0.4334      0.9491    1.7285        -4.5345                        True
+21    yield        A    STACK_A_REF      3  0.4403   0.0074  0.3102  0.0754  0.0012  0.4354      0.9471    1.7376        -4.0443                        True
+15    yield        A       LSTACK_A      3  0.4449   0.0038  0.3185  0.0558  0.0100  0.4401      0.9422    1.6537        -3.0283                        True
+17    yield        A         RF_REF      3  0.4514   0.0098  0.3206  0.0281  0.0047  0.4462      0.9442    1.7467        -1.6262                       False
+18    yield        A      RF_V3TETF      3  0.4558   0.0116  0.3315  0.0089  0.0172  0.4485      0.9507    1.7061        -0.6638                       False
+16    yield        A            MR0      3  0.4584   0.0009  0.3309 -0.0023  0.0110  0.4527      0.9643    1.9366        -0.0837                       False
+14    yield        A  BASELINE_mean      3  0.4588   0.0005  0.3290 -0.0040 -0.0009  0.4525      0.9454    1.7027         0.0000                       False
+22    yield        A     STACK_A_V3      3  0.4590   0.0133  0.3372 -0.0055  0.0248  0.4532      0.9507    1.7146         0.0480                       False
+20    yield        A     RIDGE_V3TE      3  0.4724   0.0164  0.3533 -0.0654  0.0323  0.4679      0.9495    1.7232         2.9702                       False
+26    yield        B    STACK_B_REF      3  0.4244   0.0032  0.3028  0.1410  0.0207  0.4225      0.9535    1.6478        -7.5048                        True
+23    yield        B       LSTACK_B      3  0.4318   0.0044  0.3102  0.1108  0.0257  0.4302      0.9454    1.5432        -5.8954                        True
+25    yield        B    STACK_B_MR0      3  0.4394   0.0027  0.3174  0.0793  0.0273  0.4370      0.9591    1.7519        -4.2405                        True
+24    yield        B          MR2mt      3  0.4408   0.0060  0.3223  0.0730  0.0436  0.4416      0.9286    1.5672        -3.9145                        True
+27    yield        B     STACK_B_V3      3  0.4434   0.0107  0.3247  0.0621  0.0380  0.4415      0.9547    1.6452        -3.3669                        True
+  endpoint category       selected      RMSE best_by_RMSE  best_RMSE                 within_1pct
+0  biomass        A  BASELINE_mean  0.367228          MR0   0.365598  MR0;BASELINE_mean;LSTACK_A
+1  biomass        B    STACK_B_MR0  0.353217  STACK_B_MR0   0.353217                 STACK_B_MR0
+2    yield        A      RIDGE_REF  0.438012    RIDGE_REF   0.438012       RIDGE_REF;STACK_A_REF
+3    yield        B    STACK_B_REF  0.424378  STACK_B_REF   0.424378                 STACK_B_REF
+yield RIDGE_REF {'alpha': 1000} 0.882
+yield RF_REF {'max_features': 0.33, 'min_samples_leaf': 10} 0.878
+yield RIDGE_V3TE {'alpha': 1000} 0.877
+yield RF_V3TETF {'max_features': 0.33, 'min_samples_leaf': 10} 0.858
+biomass RIDGE_REF {'alpha': 1000} 0.859
+biomass RF_REF {'max_features': 0.33, 'min_samples_leaf': 10} 0.762
+biomass RIDGE_V3TE {'alpha': 1000} 0.748
+biomass RF_V3TETF {'max_features': 0.33, 'min_samples_leaf': 10} 0.71
+{
+ "yield": {
+  "n_train_contrasts": 831,
+  "n_train_studies": 76,
+  "n_train_clusters": 75,
+  "tau2_MR0": 0.20068705404774323,
+  "baseline_mean": 0.3696204277029734,
+  "baseline_half_width": 0.847893146838382,
+  "selected": {
+   "A": "RIDGE_REF",
+   "B": "STACK_B_REF"
+  },
+  "ml": {
+   "RIDGE_REF": {
+    "feature_set": "REF",
+    "hyperparameters": {
+     "alpha": 1000
+    },
+    "interval_half_width_95": 0.8816938580722082,
+    "n_model_columns": 154,
+    "target_encoding_keys": [],
+    "tfidf": false
+   },
+   "RF_REF": {
+    "feature_set": "REF",
+    "hyperparameters": {
+     "max_features": 0.33,
+     "min_samples_leaf": 10
+    },
+    "interval_half_width_95": 0.8776383653941249,
+    "n_model_columns": 154,
+    "target_encoding_keys": [],
+    "tfidf": false
+   },
+   "RIDGE_V3TE": {
+    "feature_set": "V3TE",
+    "hyperparameters": {
+     "alpha": 1000
+    },
+    "interval_half_width_95": 0.8766708020120233,
+    "n_model_columns": 245,
+    "target_encoding_keys": [
+     "h3_class_key",
+     "h3_cultivar_key",
+     "h3_country",
+     "h3_genus_main",
+     "h2_dujardin",
+     "h_stress_class"
+    ],
+    "tfidf": false
+   },
+   "RF_V3TETF": {
+    "feature_set": "V3TETF",
+    "hyperparameters": {
+     "max_features": 0.33,
+     "min_samples_leaf": 10
+    },
+    "interval_half_width_95": 0.8575784916632937,
+    "n_model_columns": 255,
+    "target_encoding_keys": [
+     "h3_class_key",
+     "h3_cultivar_key",
+     "h3_country",
+     "h3_genus_main",
+     "h2_dujardin",
+     "h_stress_class"
+    ],
+    "tfidf": true
+   }
+  },
+  "learned_stacks": {
+   "LSTACK_A": {
+    "members": [
+     "MR0",
+     "RIDGE_REF",
+     "RIDGE_V3TE",
+     "RF_V3TETF"
+    ],
+    "weights": [
+     0.2361,
+     0.7639,
+     0.0,
+     0.0
+    ],
+    "interval_half_width_95": 0.868195361154344
+   },
+   "LSTACK_B": {
+    "members": [
+     "MR0",
+     "RIDGE_REF",
+     "RIDGE_V3TE",
+     "RF_V3TETF",
+     "MR2mt"
+    ],
+    "weights": [
+     0.0,
+     0.5166,
+     0.0,
+     0.0,
+     0.4834
+    ],
+    "interval_half_width_95": 0.7840236775355582
+   }
+  },
+  "equal_stacks": {
+   "STACK_A_REF": [
+    "RIDGE_REF",
+    "RF_REF"
+   ],
+   "STACK_A_V3": [
+    "RIDGE_V3TE",
+    "RF_V3TETF"
+   ],
+   "STACK_B_REF": [
+    "RIDGE_REF",
+    "MR2mt"
+   ],
+   "STACK_B_MR0": [
+    "MR0",
+    "MR2mt"
+   ],
+   "STACK_B_V3": [
+    "RIDGE_V3TE",
+    "MR2mt"
+   ]
+  },
+  "MR2_moderators": [
+   "intercept",
+   "is_B_vs_C",
+   "is_terminal",
+   "dry_basis_confirmed",
+   "endpoint_is_yield",
+   "h_stress_class==SALINITY",
+   "h_stress_class==DROUGHT",
+   "h_stress_class==BIOTIC",
+   "h_stress_class==HEAT",
+   "h_stress_class==COLD",
+   "h_stress_class==COMBINED",
+   "h_dujardin==DJ_BENEFICIAL_FUNGI",
+   "h_dujardin==DJ_INORGANIC",
+   "h_dujardin==DJ_SEAWEED_BOTANICAL",
+   "h_dujardin==DJ_OTHER_NON_DUJARDIN",
+   "h_dujardin==DJ_PROTEIN_N",
+   "h_dujardin==DJ_MIXTURE",
+   "h_dujardin==DJ_CHITOSAN_BIOPOLYMER",
+   "h_dujardin==DJ_HUMIC_FULVIC",
+   "yield_tier==ASSUMED",
+   "yield_tier==BROAD",
+   "yield_tier==STRICT",
+   "yield_tier==UNIT_UNRESOLVED",
+   "organ_scope==None",
+   "organ_scope==WHOLE_PLANT",
+   "mod_lnrr_stress_SvsC",
+   "mod_lnrr_stress_SvsC__missing"
+  ]
+ },
+ "biomass": {
+  "n_train_contrasts": 1452,
+  "n_train_studies": 172,
+  "n_train_clusters": 171,
+  "tau2_MR0": 0.10367558493878921,
+  "baseline_mean": 0.29308252750001734,
+  "baseline_half_width": 0.7377743492096702,
+  "selected": {
+   "A": "BASELINE_mean",
+   "B": "STACK_B_MR0"
+  },
+  "ml": {
+   "RIDGE_REF": {
+    "feature_set": "REF",
+    "hyperparameters": {
+     "alpha": 1000
+    },
+    "interval_half_width_95": 0.8587786585060325,
+    "n_model_columns": 202,
+    "target_encoding_keys": [],
+    "tfidf": false
+   },
+   "RF_REF": {
+    "feature_set": "REF",
+    "hyperparameters": {
+     "max_features": 0.33,
+     "min_samples_leaf": 10
+    },
+    "interval_half_width_95": 0.7619499485360783,
+    "n_model_columns": 202,
+    "target_encoding_keys": [],
+    "tfidf": false
+   },
+   "RIDGE_V3TE": {
+    "feature_set": "V3T

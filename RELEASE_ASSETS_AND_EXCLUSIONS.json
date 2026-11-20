@@ -1,0 +1,66 @@
+{
+ "release_assets": [
+  {
+   "asset": "TFM_DATABASE_TRAIN_DEV_DATA_FREEZE_20261113.zip",
+   "bytes_zip": 191326224,
+   "sha256_of_contents": {
+    "TFM_DATABASE_CLASS_A_FINAL.sqlite": "a7f473fdf248174c5c53e4173ea0a7bcd09905331dda9ad13c934e31c2dfd4de",
+    "TFM_DATABASE_CLASS_A_FINAL.xlsx": "5219f6744e9c1841c0e1d5d78de444a6c056976a660d8a851b31c3d780499dcc"
+   }
+  },
+  {
+   "asset": "TFM_DATABASE_EXTERNAL_TEST_DATA_FREEZE_20261118.zip",
+   "bytes_zip": 43457802,
+   "sha256_of_contents": {
+    "TFM_DATABASE_CLASS_A_FINAL.sqlite": "106ef154d01a1164acd51a8d19dfb52cc15e7c60b4a41a40b1ff9f8dfd89593b",
+    "TFM_DATABASE_CLASS_A_FINAL.xlsx": "6b149ee81237b019b37414ab9dfc6ff98f6776209212b3f5ad184b9f039d221e"
+   }
+  }
+ ],
+ "skipped_files": [
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\TFM_AGENT_SYSTEM_v2_2\\exports\\DATA_FREEZE_20261113T112939135807Z\\A_descriptive.csv",
+   "parquet twin kept"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\TFM_AGENT_SYSTEM_v2_2\\exports\\DATA_FREEZE_20261113T112939135807Z\\contrast_candidates.csv",
+   "parquet twin kept"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\TFM_AGENT_SYSTEM_v2_2\\exports\\DATA_FREEZE_20261113T112939135807Z\\db_covariance.csv",
+   "parquet twin kept"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\TFM_AGENT_SYSTEM_v2_2\\exports\\DATA_FREEZE_20261113T112939135807Z\\evidence_long.csv",
+   "parquet twin kept"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\TFM_AGENT_SYSTEM_v2_2\\exports\\DATA_FREEZE_20261113T112939135807Z\\TFM_DATABASE_CLASS_A_FINAL.xlsx",
+   "in release asset"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_TEST_2024_2026_Agent_System\\exports\\DATA_FREEZE_20261118T105532769144Z\\TFM_DATABASE_CLASS_A_FINAL.xlsx",
+   "in release asset"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\SynerPlant_Yield_V2\\agriculture-13-00006-v2.pdf",
+   "pdf"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\SynerPlant_Yield_V2\\Effect_of_Biostimulants_on_Yield_and_Quality_of_Ch.pdf",
+   "pdf"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_A399_Agent_System_v2_2_2026-10-19\\SynerPlant_Yield_V2\\jof-09-00384-v2.pdf",
+   "pdf"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_TRAIN_EXPANSION\\results\\_round5_log.txt",
+   "large log"
+  ],
+  [
+   "C:\\Users\\lenovo\\Desktop\\master's\\TFM_TRAIN_EXPANSION\\v5\\results\\_v5_cv_biomass_log.txt",
+   "large log"
+  ]
+ ]
+}

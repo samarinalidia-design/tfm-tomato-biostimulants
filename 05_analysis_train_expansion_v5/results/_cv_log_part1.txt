@@ -1,0 +1,83 @@
+[1/64] yield DEFAULT study seed=11 113s
+[2/64] yield DEFAULT study seed=22 64s
+[3/64] yield DEFAULT study seed=33 64s
+[4/64] yield DEFAULT cluster seed=11 64s
+[5/64] yield DEFAULT cluster seed=22 84s
+[6/64] yield DEFAULT cluster seed=33 94s
+[7/64] yield TARGET_effect_bc study seed=11 91s
+[8/64] yield TARGET_effect_bc study seed=22 75s
+[9/64] yield TARGET_effect_bc study seed=33 110s
+[10/64] yield NO_IMPUTATION_author_SD_only study seed=11 72s
+[11/64] yield NO_IMPUTATION_author_SD_only study seed=22 128s
+[12/64] yield IMPUTATION_meanCV_all_groups study seed=11 203s
+[13/64] yield IMPUTATION_meanCV_all_groups study seed=22 175s
+[14/64] yield NO_B_vs_C study seed=11 188s
+[15/64] yield NO_B_vs_C study seed=22 175s
+[16/64] yield STRICT_yield_only study seed=11 141s
+[17/64] yield STRICT_yield_only study seed=22 137s
+[18/64] yield WITH_boxplots study seed=11 70s
+[19/64] yield WITH_boxplots study seed=22 111s
+[20/64] yield NO_dry_early_yield study seed=11 188s
+[21/64] yield NO_dry_early_yield study seed=22 188s
+[22/64] yield WEIGHTS_ivw_fixed study seed=11 226s
+[23/64] yield WEIGHTS_ivw_fixed study seed=22 68s
+[24/64] yield WEIGHTS_n study seed=11 70s
+[25/64] yield WEIGHTS_n study seed=22 70s
+[26/64] yield WEIGHTS_none study seed=11 198s
+[27/64] yield WEIGHTS_none study seed=22 207s
+[28/64] yield MULTITASK_yield+biomass study seed=11 357s
+[29/64] yield MULTITASK_yield+biomass study seed=22 351s
+[30/64] yield FEATURES_raw_only study seed=11 110s
+[31/64] yield FEATURES_raw_only study seed=22 96s
+[32/64] yield FEATURES_harmonised_only study seed=11 84s
+[33/64] yield FEATURES_harmonised_only study seed=22 86s
+[34/64] biomass DEFAULT study seed=11 120s
+[35/64] biomass DEFAULT study seed=22 254s
+[36/64] biomass DEFAULT study seed=33 208s
+[37/64] biomass DEFAULT cluster seed=11 119s
+[38/64] biomass DEFAULT cluster seed=22 122s
+[39/64] biomass DEFAULT cluster seed=33 122s
+[40/64] biomass TARGET_effect_bc study seed=11 121s
+[41/64] biomass TARGET_effect_bc study seed=22 119s
+[42/64] biomass TARGET_effect_bc study seed=33 121s
+[43/64] biomass NO_IMPUTATION_author_SD_only study seed=11 108s
+[44/64] biomass NO_IMPUTATION_author_SD_only study seed=22 105s
+[45/64] biomass IMPUTATION_meanCV_all_groups study seed=11 122s
+[46/64] biomass IMPUTATION_meanCV_all_groups study seed=22 126s
+[47/64] biomass NO_B_vs_C study seed=11 122s
+[48/64] biomass NO_B_vs_C study seed=22 118s
+[49/64] biomass ALL_timepoints study seed=11 122s
+[50/64] biomass ALL_timepoints study seed=22 124s
+[51/64] biomass WITH_boxplots study seed=11 123s
+[52/64] biomass WITH_boxplots study seed=22 94s
+[53/64] biomass WEIGHTS_ivw_fixed study seed=11 111s
+[54/64] biomass WEIGHTS_ivw_fixed study seed=22 129s
+[55/64] biomass WEIGHTS_n study seed=11 124s
+[56/64] biomass WEIGHTS_n study seed=22 123s
+[57/64] biomass WEIGHTS_none study seed=11 121s
+[58/64] biomass WEIGHTS_none study seed=22 93s
+MR fail MULTITASK_yield+biomass MR1 'yield_tier'
+MR fail MULTITASK_yield+biomass MR2 'yield_tier'
+Traceback (most recent call last):
+  File "C:\Users\lenovo\Desktop\master's\TFM_TRAIN_EXPANSION\scripts\02_cv_models.py", line 414, in <module>
+    main()
+  File "C:\Users\lenovo\Desktop\master's\TFM_TRAIN_EXPANSION\scripts\02_cv_models.py", line 405, in main
+    m, p = run_variant(ep, vname, vopt, sc, s, tau2_ref[ep])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\Desktop\master's\TFM_TRAIN_EXPANSION\scripts\02_cv_models.py", line 364, in run_variant
+    p, lo, hi, hp, _ = fit_predict_ml(key, tr, te, cat, num, v['weights'], tau2, scheme, seed + f)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\Desktop\master's\TFM_TRAIN_EXPANSION\scripts\02_cv_models.py", line 190, in fit_predict_ml
+    Xa, cols = fz.transform(tr, kind); Xb, _ = fz.transform(te, kind)
+                                               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\Desktop\master's\TFM_TRAIN_EXPANSION\scripts\02_cv_models.py", line 88, in transform
+    nd = df[self.num_keep].apply(pd.to_numeric, errors='coerce').clip(self.lo, self.hi, axis=1)
+         ~~^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['is_dry_yield', 'is_early_yield'] not in index"

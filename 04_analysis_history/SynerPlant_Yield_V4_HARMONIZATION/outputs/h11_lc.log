@@ -1,0 +1,48 @@
+[Parallel(n_jobs=6)]: Using backend LokyBackend with 6 concurrent workers.
+[Parallel(n_jobs=6)]: Done  38 tasks      | elapsed:    4.9s
+[Parallel(n_jobs=6)]: Done 188 tasks      | elapsed:   14.5s
+[Parallel(n_jobs=6)]: Done 400 out of 400 | elapsed:   27.6s finished
+                               model  frac  n_train_studies   mae    sd  n
+                         median (V2)  0.20             11.0 0.381 0.111 75
+                         median (V2)  0.35             19.2 0.371 0.112 75
+                         median (V2)  0.50             28.0 0.369 0.108 75
+                         median (V2)  0.65             36.0 0.365 0.110 75
+                         median (V2)  0.80             44.2 0.365 0.112 75
+                         median (V2)  1.00             55.2 0.363 0.113 25
+                multilevel mean (V4)  0.20             11.0 0.392 0.098 75
+                multilevel mean (V4)  0.35             19.2 0.390 0.102 75
+                multilevel mean (V4)  0.50             28.0 0.388 0.093 75
+                multilevel mean (V4)  0.65             36.0 0.383 0.089 75
+                multilevel mean (V4)  0.80             44.2 0.384 0.089 75
+                multilevel mean (V4)  1.00             55.2 0.383 0.089 25
+    quantile L1, harmonized features  0.20             11.0 0.610 0.166 75
+    quantile L1, harmonized features  0.35             19.2 0.550 0.148 75
+    quantile L1, harmonized features  0.50             28.0 0.536 0.120 75
+    quantile L1, harmonized features  0.65             36.0 0.485 0.104 75
+    quantile L1, harmonized features  0.80             44.2 0.462 0.102 75
+    quantile L1, harmonized features  1.00             55.2 0.444 0.088 25
+weighted forest, harmonized features  0.20             11.0 0.405 0.091 75
+weighted forest, harmonized features  0.35             19.2 0.406 0.096 75
+weighted forest, harmonized features  0.50             28.0 0.410 0.085 75
+weighted forest, harmonized features  0.65             36.0 0.407 0.082 75
+weighted forest, harmonized features  0.80             44.2 0.411 0.077 75
+weighted forest, harmonized features  1.00             55.2 0.410 0.080 25
+ frac                                model  gain_mean  gain_lo  gain_hi
+ 0.20                 multilevel mean (V4)     -0.011   -0.089    0.044
+ 0.35                 multilevel mean (V4)     -0.019   -0.067    0.029
+ 0.50                 multilevel mean (V4)     -0.019   -0.077    0.026
+ 0.65                 multilevel mean (V4)     -0.018   -0.070    0.023
+ 0.80                 multilevel mean (V4)     -0.018   -0.064    0.027
+ 1.00                 multilevel mean (V4)     -0.020   -0.073    0.023
+ 0.20     quantile L1, harmonized features     -0.228   -0.449   -0.019
+ 0.35     quantile L1, harmonized features     -0.179   -0.351   -0.021
+ 0.50     quantile L1, harmonized features     -0.167   -0.335   -0.031
+ 0.65     quantile L1, harmonized features     -0.120   -0.273    0.003
+ 0.80     quantile L1, harmonized features     -0.097   -0.179   -0.005
+ 1.00     quantile L1, harmonized features     -0.082   -0.182    0.008
+ 0.20 weighted forest, harmonized features     -0.024   -0.097    0.036
+ 0.35 weighted forest, harmonized features     -0.035   -0.122    0.031
+ 0.50 weighted forest, harmonized features     -0.041   -0.115    0.029
+ 0.65 weighted forest, harmonized features     -0.042   -0.112    0.028
+ 0.80 weighted forest, harmonized features     -0.045   -0.111    0.021
+ 1.00 weighted forest, harmonized features     -0.047   -0.111    0.026

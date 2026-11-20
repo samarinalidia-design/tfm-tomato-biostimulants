@@ -1,0 +1,31 @@
+seed,fold,model,selected,hp,trace,sec
+11,0,RIDGE,PHASE,"{""alpha"": 1000}","[[""BASE"", 0.21856], [""PHASE"", 0.21295]]",14
+11,0,RF,TE,"{""max_features"": 0.66, ""min_samples_leaf"": 3}","[[""BASE"", 0.23046], [""TE"", 0.21733]]",31
+11,1,RIDGE,PHASE+SOIL_FERT,"{""alpha"": 1000}","[[""BASE"", 0.16274], [""PHASE"", 0.15406], [""SOIL_FERT"", 0.14699]]",18
+11,1,RF,PHASE,"{""max_features"": 0.33, ""min_samples_leaf"": 10}","[[""BASE"", 0.16635], [""PHASE"", 0.16136]]",28
+11,2,RIDGE,STRESS,"{""alpha"": 1000}","[[""BASE"", 0.21358], [""STRESS"", 0.21125]]",14
+11,2,RF,TE,"{""max_features"": 0.33, ""min_samples_leaf"": 10}","[[""BASE"", 0.22345], [""TE"", 0.22066]]",31
+11,3,RIDGE,ROUTE+PHASE,"{""alpha"": 1000}","[[""BASE"", 0.20883], [""ROUTE"", 0.20182], [""PHASE"", 0.19885]]",18
+11,3,RF,TE,"{""max_features"": 0.33, ""min_samples_leaf"": 10}","[[""BASE"", 0.23993], [""TE"", 0.21114]]",31
+11,4,RIDGE,PHASE+GEO,"{""alpha"": 1000}","[[""BASE"", 0.18579], [""PHASE"", 0.17344], [""GEO"", 0.16786]]",18
+11,4,RF,TFIDF+ROUTE,"{""max_features"": 0.66, ""min_samples_leaf"": 10}","[[""BASE"", 0.20225], [""TFIDF"", 0.18829], [""ROUTE"", 0.18418]]",42
+22,0,RIDGE,PHASE+GENOTYPE,"{""alpha"": 1000}","[[""BASE"", 0.17007], [""PHASE"", 0.16744], [""GENOTYPE"", 0.16551]]",19
+22,0,RF,(none),"{""max_features"": 0.66, ""min_samples_leaf"": 10}","[[""BASE"", 0.19869]]",18
+22,1,RIDGE,PHASE,"{""alpha"": 1000}","[[""BASE"", 0.22033], [""PHASE"", 0.20876]]",14
+22,1,RF,PHASE+SOIL_FERT,"{""max_features"": 0.33, ""min_samples_leaf"": 10}","[[""BASE"", 0.23292], [""PHASE"", 0.22612], [""SOIL_FERT"", 0.22222]]",37
+22,2,RIDGE,TE,"{""alpha"": 1000}","[[""BASE"", 0.2151], [""TE"", 0.20485]]",17
+22,2,RF,TE+GEO,"{""max_features"": 0.66, ""min_samples_leaf"": 3}","[[""BASE"", 0.23326], [""TE"", 0.21477], [""GEO"", 0.20833]]",42
+22,3,RIDGE,GENOTYPE,"{""alpha"": 1000}","[[""BASE"", 0.19354], [""GENOTYPE"", 0.1908]]",14
+22,3,RF,TFIDF,"{""max_features"": 0.33, ""min_samples_leaf"": 3}","[[""BASE"", 0.19993], [""TFIDF"", 0.18282]]",31
+22,4,RIDGE,PHASE+ACTIVE+STRESS,"{""alpha"": 1000}","[[""BASE"", 0.21678], [""PHASE"", 0.21], [""ACTIVE"", 0.20709], [""STRESS"", 0.20413]]",18
+22,4,RF,TFIDF+GEO,"{""max_features"": 0.33, ""min_samples_leaf"": 3}","[[""BASE"", 0.22841], [""TFIDF"", 0.21074], [""GEO"", 0.20808]]",41
+33,0,RIDGE,STRESS+SOIL_FERT,"{""alpha"": 1000}","[[""BASE"", 0.20604], [""STRESS"", 0.20254], [""SOIL_FERT"", 0.19966]]",19
+33,0,RF,TE+STRESS,"{""max_features"": 0.66, ""min_samples_leaf"": 3}","[[""BASE"", 0.22285], [""TE"", 0.20162], [""STRESS"", 0.19716]]",43
+33,1,RIDGE,PHASE,"{""alpha"": 1000}","[[""BASE"", 0.22404], [""PHASE"", 0.21971]]",13
+33,1,RF,(none),"{""max_features"": 0.33, ""min_samples_leaf"": 3}","[[""BASE"", 0.21513]]",17
+33,2,RIDGE,TE+PHASE,"{""alpha"": 1000}","[[""BASE"", 0.22117], [""TE"", 0.18671], [""PHASE"", 0.18351]]",24
+33,2,RF,TE,"{""max_features"": 0.33, ""min_samples_leaf"": 3}","[[""BASE"", 0.21662], [""TE"", 0.18645]]",31
+33,3,RIDGE,SOIL_FERT+PHASE+ACTIVE,"{""alpha"": 1000}","[[""BASE"", 0.195], [""SOIL_FERT"", 0.19242], [""PHASE"", 0.18919], [""ACTIVE"", 0.18595]]",18
+33,3,RF,TFIDF+ACTIVE,"{""max_features"": 0.66, ""min_samples_leaf"": 10}","[[""BASE"", 0.21076], [""TFIDF"", 0.19746], [""ACTIVE"", 0.19135]]",40
+33,4,RIDGE,ACTIVE+STRESS,"{""alpha"": 1000}","[[""BASE"", 0.18678], [""ACTIVE"", 0.17936], [""STRESS"", 0.17543]]",19
+33,4,RF,TE,"{""max_features"": 0.33, ""min_samples_leaf"": 10}","[[""BASE"", 0.19555], [""TE"", 0.18747]]",31

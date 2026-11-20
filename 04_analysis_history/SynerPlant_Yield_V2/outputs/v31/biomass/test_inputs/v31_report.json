@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-11-18T13:41:05+00:00",
+  "target": "biomass",
+  "split": "test",
+  "rows_in": 144,
+  "studies_in": 28,
+  "rows_out": 144,
+  "studies_out": 28,
+  "aux_removed": 0,
+  "aux_by_reason": {},
+  "rebased": 0,
+  "features": {
+    "stress_duration_days": {
+      "v2_rows": 29,
+      "v31_rows": 104,
+      "v31_studies": 16
+    },
+    "drought_supply_pct": {
+      "v2_rows": 2,
+      "v31_rows": 0,
+      "v31_studies": 0
+    },
+    "drought_pattern_withheld": 0,
+    "drought_ftsw": 0,
+    "substrate_whc_kept_apart": 0,
+    "salinity_dSm_equiv": {
+      "v2_rows": 59,
+      "v31_rows": 59,
+      "v31_studies": 10
+    },
+    "ec_soil_separate": 0,
+    "stress_timing_changed": 29,
+    "dose_unit_recovered": 97,
+    "log_dose": {
+      "v2_rows": 0,
+      "v31_rows": 102,
+      "v31_studies": 20
+    },
+    "dose_family": {
+      "MOLAR_mM": 36,
+      "CFU_PER_ML": 36,
+      "PER_PLANT_OR_POT": 16,
+      "CONC_g_per_L": 8,
+      "PER_AREA": 8,
+      "CONC_mL_per_L": 1,
+      "OTHER": 1
+    }
+  },
+  "variance": {
+    "vi_available": 110,
+    "vi_reported_not_assumed": 104
+  }
+}

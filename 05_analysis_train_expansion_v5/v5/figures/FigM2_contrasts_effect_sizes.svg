@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="504pt" height="259.2pt" viewBox="0 0 504 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-20T19:24:49.377395</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2 
+L 504 259.2 
+L 504 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 52.416 75.71232 
+L 122.2704 75.71232 
+Q 137.2392 75.71232 137.2392 68.01408 
+L 137.2392 37.22112 
+Q 137.2392 29.52288 122.2704 29.52288 
+L 52.416 29.52288 
+Q 37.4472 29.52288 37.4472 37.22112 
+L 37.4472 68.01408 
+Q 37.4472 75.71232 52.416 75.71232 
+z
+" clip-path="url(#pab4caed438)" style="fill: #f3f4f6; stroke: #9ca3af; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 52.416 204.01632 
+L 122.2704 204.01632 
+Q 137.2392 204.01632 137.2392 196.31808 
+L 137.2392 165.52512 
+Q 137.2392 157.82688 122.2704 157.82688 
+L 52.416 157.82688 
+Q 37.4472 157.82688 37.4472 165.52512 
+L 37.4472 196.31808 
+Q 37.4472 204.01632 52.416 204.01632 
+z
+" clip-path="url(#pab4caed438)" style="fill: #ecfdf5; stroke: #9ca3af; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 212.0832 75.71232 
+L 281.9376 75.71232 
+Q 296.9064 75.71232 296.9064 68.01408 
+L 296.9064 37.22112 
+Q 296.9064 29.52288 281.9376 29.52288 
+L 212.0832 29.52288 
+Q 197.1144 29.52288 197.1144 37.22112 
+L 197.1144 68.01408 
+Q 197.1144 75.71232 212.0832 75.71232 
+z
+" clip-path="url(#pab4caed438)" style="fill: #fef2f2; stroke: #9ca3af; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 212.0832 204.01632 
+L 281.9376 204.01632 
+Q 296.9064 204.01632 296.9064 196.31808 
+L 296.9064 165.52512 
+Q 296.9064 157.82688 281.9376 157.82688 
+L 212.0832 157.82688 
+Q 197.1144 157.82688 197.1144 165.52512 
+L 197.1144 196.31808 
+Q 197.1144 204.01632 212.0832 204.01632 
+z
+" clip-path="url(#pab4caed438)" style="fill: #eff6ff; stroke: #9ca3af; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 134.249216 52.6176 
+Q 167.176429 52.6176 198.873805 52.6176 
+" clip-path="url(#pab4caed438)" style="fill: none; stroke: #dc2626; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 194.873805 50.6176 
+L 198.873805 52.6176 
+L 194.873805 54.6176 
+z
+" clip-path="url(#pab4caed438)" style="fill: #dc2626; stroke: #dc2626; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 247.0104 75.145822 
+Q 247.0104 116.7691 247.0104 157.162541 
+" clip-path="url(#pab4caed438)" style="fill: none; stroke: #2563eb; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 249.0104 153.162541 
+L 247.0104 157.162541 
+L 245.0104 153.162541 
+z
+" clip-path="url(#pab4caed438)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 87.3432 75.145822 
+Q 87.3432 116.7691 87.3432 157.162541 
+" clip-path="url(#pab4caed438)" style="fill: none; stroke: #16a34a; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 89.3432 153.162541 
+L 87.3432 157.162541 
+L 85.3432 153.162541 
+z
+" clip-path="url(#pab4caed438)" style="fill: #16a34a; stroke: #16a34a; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(74.332012 50.573138)">Control</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(49.301887 58.635563)">no stress, no product</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(84.873262 178.877138)">B</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(56.121637 186.939562)">biostimulant only</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(244.724963 50.573138)">S</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(227.59965 58.635563)">stress only</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(242.255025 178.877138)">SB</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(208.59165 186.939562)">stress + biostimulant</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_9">
+     <path d="M 137.429988 42.772859 
+L 196.923613 42.772859 
+L 196.923613 26.537221 
+L 137.429988 26.537221 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #dc2626" transform="translate(155.746425 32.724159)">ln(S/C)</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #dc2626" transform="translate(138.449988 40.338671)">stress damage D</text>
+   </g>
+   <g id="text_6">
+    <g id="patch_10">
+     <path d="M 262.6597 124.887419 
+L 311.1947 124.887419 
+L 311.1947 108.651781 
+L 262.6597 108.651781 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #2563eb" transform="translate(273.379794 114.838719)">ln(SB/S)</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #2563eb" transform="translate(263.6797 122.453231)">MAIN TARGET</text>
+   </g>
+   <g id="text_7">
+    <g id="patch_11">
+     <path d="M 51.5412 124.887419 
+L 123.1452 124.887419 
+L 123.1452 108.651781 
+L 51.5412 108.651781 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #16a34a" transform="translate(75.738575 114.838719)">ln(B/C)</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #16a34a" transform="translate(52.5612 122.453231)">effect without stress</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f2937" x="152.208" y="237.37536" transform="rotate(-0 152.208 237.37536)">S×B interaction = ln(SB/S) − ln(B/C)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2937" x="334.3284" y="26.9568" transform="rotate(-0 334.3284 26.9568)">Effect size (log response ratio)</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 47.064311)">lnRR = ln(mean treated / mean reference)</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 54.949161)">effect (%) = 100 × (e^lnRR − 1)</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 62.834011)">lnRR = 0.37 ≈ +45 %;  lnRR = −0.22 ≈ −20 %</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 70.718861)"/>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 78.603711)">sampling variance</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 86.488561)">v = CV_t²/n_t + CV_c²/n_c   (CV = SD/mean)</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2937" x="334.3284" y="155.2608" transform="rotate(-0 334.3284 155.2608)">Two biostimulants A and B</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 175.368311)">A×B = ln(AB) − ln(A) − ln(B) + ln(C)</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 183.253161)">&gt; 0 synergy · ≈ 0 additive · &lt; 0 antagonism</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 191.138011)"/>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 199.022861)">Contrasts used for prediction:</text>
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(334.3284 206.907711)">SB vs S (stressed) and B vs C (no stress)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pab4caed438">
+   <rect x="2.52" y="1.296" width="498.96" height="256.608"/>
+  </clipPath>
+ </defs>
+</svg>

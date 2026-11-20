@@ -1,0 +1,59 @@
+{
+ "type": "object",
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "type": "string"
+  },
+  "model_id": {
+   "type": "string"
+  },
+  "decisions": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "issue_id": {
+      "type": "integer"
+     },
+     "decision": {
+      "enum": [
+       "RETAIN_FLAG",
+       "ESCALATE"
+      ]
+     },
+     "receipt_id": {
+      "type": "string"
+     },
+     "source_file_id": {
+      "type": "string"
+     },
+     "evidence": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "issue_id",
+     "decision",
+     "receipt_id",
+     "source_file_id",
+     "evidence"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "decisions"
+ ],
+ "additionalProperties": false
+}

@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-11-18T13:31:57+00:00",
+  "target": "yield",
+  "split": "train",
+  "rows_in": 404,
+  "studies_in": 69,
+  "rows_out": 403,
+  "studies_out": 69,
+  "aux_removed": 1,
+  "aux_by_reason": {
+    "R2_NOT_A_BIOSTIMULANT(vehicle/solvent/fertilizer)": 1
+  },
+  "rebased": 0,
+  "features": {
+    "stress_duration_days": {
+      "v2_rows": 44,
+      "v31_rows": 61,
+      "v31_studies": 14
+    },
+    "drought_supply_pct": {
+      "v2_rows": 82,
+      "v31_rows": 70,
+      "v31_studies": 13
+    },
+    "drought_pattern_withheld": 2,
+    "drought_ftsw": 1,
+    "substrate_whc_kept_apart": 18,
+    "salinity_dSm_equiv": {
+      "v2_rows": 97,
+      "v31_rows": 89,
+      "v31_studies": 18
+    },
+    "ec_soil_separate": 10,
+    "stress_timing_changed": 13,
+    "dose_unit_recovered": 88,
+    "log_dose": {
+      "v2_rows": 0,
+      "v31_rows": 284,
+      "v31_studies": 54
+    },
+    "dose_family": {
+      "CONC_g_per_L": 82,
+      "PER_PLANT_OR_POT": 52,
+      "CONC_mL_per_L": 48,
+      "CFU_PER_ML": 35,
+      "PER_AREA": 30,
+      "MOLAR_mM": 30,
+      "PERCENT_UNSPECIFIED": 8,
+      "OTHER": 7
+    }
+  },
+  "variance": {
+    "vi_available": 183,
+    "vi_reported_not_assumed": 153
+  }
+}

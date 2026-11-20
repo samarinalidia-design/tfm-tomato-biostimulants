@@ -1,0 +1,88 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "ROB output",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-\\d{6}$"
+  },
+  "study_id": {
+   "type": "string"
+  },
+  "agent": {
+   "const": "tfm-rob-assessor"
+  },
+  "model_id": {
+   "type": "string",
+   "minLength": 3
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "assessments": {
+   "type": "array",
+   "minItems": 10,
+   "items": {
+    "type": "object",
+    "properties": {
+     "experiment_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "domain": {
+      "enum": [
+       "randomization_allocation",
+       "experimental_unit",
+       "pseudoreplication",
+       "baseline_comparability",
+       "intervention_fidelity",
+       "measurement_objectivity",
+       "missing_data",
+       "selective_reporting",
+       "co_interventions",
+       "unit_of_analysis"
+      ]
+     },
+     "judgement": {
+      "enum": [
+       "low",
+       "some_concerns",
+       "high",
+       "unclear"
+      ]
+     },
+     "support": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 600
+     },
+     "locator": {
+      "type": "string",
+      "minLength": 3
+     }
+    },
+    "required": [
+     "domain",
+     "judgement",
+     "support",
+     "locator"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "task_id",
+  "study_id",
+  "agent",
+  "model_id",
+  "assessments"
+ ]
+}

@@ -1,0 +1,12 @@
+category,count
+source TABLE,4919
+source FIGURE,3013
+source SUPP_TABLE,40
+source TEXT,24
+source SUPP_DATASET,16
+values with n,6318
+values with SD,3783
+RoB high,195
+RoB low,345
+RoB some_concerns,2094
+RoB unclear,1327

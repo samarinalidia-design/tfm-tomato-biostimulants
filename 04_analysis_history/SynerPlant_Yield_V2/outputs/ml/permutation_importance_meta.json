@@ -1,0 +1,5 @@
+{
+  "generated_at": "2026-11-18T08:00:39+00:00",
+  "candidate": "quantile_l1|F4",
+  "method": "grouped held-out permutation, 5 repeats x 25 folds"
+}

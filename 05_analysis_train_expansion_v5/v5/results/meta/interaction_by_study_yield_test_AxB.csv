@@ -1,0 +1,4 @@
+endpoint,role,type,study_id,effect,k
+yield,test,AxB,T041,0.101819092987009,1
+yield,test,AxB,T043,-0.133680251684561,2
+yield,test,AxB,T096,-1.05540448325307,2

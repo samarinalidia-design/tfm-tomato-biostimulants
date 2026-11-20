@@ -1,0 +1,6 @@
+
+The TEST analysis is PRE-REGISTERED: the V2 model, data and freeze are locked and are NOT rebuilt.
+Checking that every pre-registered file is unchanged...
+Pre-registration 2026-11-18T09:07:34+00:00: 11 hashed files INTACT; TEST evaluated: False
+To evaluate the TEST once, see outputs\preregistration\PREREG_TEST_V2.md
+Press any key to continue . . . 

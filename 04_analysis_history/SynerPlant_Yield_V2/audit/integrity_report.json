@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-11-18T07:46:58+00:00",
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "fk_study",
+      "status": "PASS",
+      "count": 0,
+      "detail": "rows referencing unknown study_id"
+    },
+    {
+      "check": "fk_value_arm",
+      "status": "PASS",
+      "count": 0,
+      "detail": "target values whose arm is not in arms"
+    },
+    {
+      "check": "fk_arm_experiment",
+      "status": "PASS",
+      "count": 0,
+      "detail": "arms whose experiment_key is absent from experiments (design table may use wf_design_experiments)"
+    },
+    {
+      "check": "contrast_value_consistency",
+      "status": "PASS",
+      "count": 0,
+      "detail": "contrast arms/endpoint/unit/timepoint must match its two target values"
+    },
+    {
+      "check": "lnrr_recompute",
+      "status": "PASS",
+      "count": 0,
+      "detail": "pairwise lnRR contrasts (n=5560): |effect - ln(mean_t/mean_c)| > 1e-6 (interaction and MD metrics use other formulas)"
+    },
+    {
+      "check": "duplicate_contrast_id",
+      "status": "PASS",
+      "count": 0,
+      "detail": "duplicated contrast_id"
+    },
+    {
+      "check": "duplicate_contrast_definition",
+      "status": "PASS",
+      "count": 0,
+      "detail": "identical arm pair + values twice"
+    },
+    {
+      "check": "yield_same_numbers_different_ids",
+      "status": "WARN",
+      "count": 48,
+      "detail": "yield SB_vs_S contrasts with identical (mean_t, mean_c) in one study: check double inclusion"
+    },
+    {
+      "check": "cross_study_duplicate_values",
+      "status": "WARN",
+      "count": 1,
+      "detail": "pairs of studies sharing >=3 identical yield means (possible duplicate publication)"
+    },
+    {
+      "check": "sb_vs_s_role_matching",
+      "status": "PASS",
+      "count": 0,
+      "detail": "SB_vs_S: SB arm must be SB, control must be S with same stress code and no biostimulant"
+    },
+    {
+      "check": "positive_means",
+      "status": "PASS",
+      "count": 0,
+      "detail": "lnRR requires positive means"
+    },
+    {
+      "check": "dependency_cluster_present",
+      "status": "PASS",
+      "count": 0,
+      "detail": "contrasts without dependency_cluster_id"
+    },
+    {
+      "check": "cluster_within_one_study",
+      "status": "WARN",
+      "count": 4,
+      "detail": "dependency clusters spanning several studies (expected only for linked publications)"
+    },
+    {
+      "check": "shared_controls_present",
+      "status": "INFO",
+      "count": 697,
+      "detail": "control arms shared by >1 SB_vs_S contrast (dependence handled by grouping on study)"
+    },
+    {
+      "check": "human_audit_stale_items",
+      "status": "WARN",
+      "count": 8,
+      "detail": "audit verdicts whose contrast/value/moderator content changed after the verdict"
+    },
+    {
+      "check": "human_audit_entry_pattern",
+      "status": "INFO",
+      "count": 1290,
+      "detail": "1290 verdicts, all 'CORRECT', entered in 22 distinct seconds (max 111 per second): bulk import; per-item review time cannot be established from the DB"
+    },
+    {
+      "check": "legacy_wf_audit_table",
+      "status": "INFO",
+      "count": 0,
+      "detail": "accuracy() reads the legacy per-value table wf_audit (0 rows), so 'audit.items=0'; the release gate human_contrast_audit reads wf_contrast_audit. The two numbers measure different tables, not a contradiction."
+    },
+    {
+      "check": "audit_correct_with_problem_notes",
+      "status": "WARN",
+      "count": 313,
+      "detail": "verdict CORRECT although the note describes a data problem"
+    },
+    {
+      "check": "post2023_without_first_online",
+      "status": "PASS",
+      "count": 0,
+      "detail": "yield studies with journal year >2023 and no verified first-online date (excluded from TRAIN_DEV)"
+    }
+  ]
+}
