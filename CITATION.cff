@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this database or code, please cite it as below."
+title: "tfm-tomato-biostimulants: evidence database, AI-assisted extraction system and analysis code for biostimulant efficacy in tomato under stress (data freeze V5)"
+type: dataset
+authors:
+  - family-names: Samarina
+    given-names: Lidiia
+version: data-freeze-v5
+date-released: 2026-11-20
+license: [MIT, CC-BY-4.0]
+repository-code: "https://github.com/samarinalidia-design/tfm-tomato-biostimulants"

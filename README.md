@@ -41,6 +41,18 @@ Unzip the databases into the corresponding `03_data_freeze/` folders, adjust the
 `05_analysis_train_expansion_v5/v5/scripts/v5_common.py` / `v5_01_build.py`, and run the steps listed in
 `05_analysis_train_expansion_v5/v5/README_V5.md`.
 
+## Licence
+
+* **Code** (Python, R, notebooks, agent definitions, hooks, configuration, schemas and tests): MIT License, see [`LICENSE`](LICENSE).
+* **Data** (frozen database exports in `03_data_freeze/`, the databases attached to the release `data-freeze-v5`, analysis tables,
+  results and figures): Creative Commons Attribution 4.0 International (CC BY 4.0), see [`LICENSE-DATA`](LICENSE-DATA).
+* The licences do not cover the source articles, which are not included; extracted values remain attributable to their original publications (DOI in the database).
+
+## How to cite
+
+Samarina, L. (2026). *tfm-tomato-biostimulants: evidence database, AI-assisted extraction system and analysis code for biostimulant
+efficacy in tomato under stress (data freeze V5)* [Data set and software]. GitHub. https://github.com/samarinalidia-design/tfm-tomato-biostimulants
+
 ## Notes on interpretation
 
 * Variances imputed from the coefficient of variation are flagged; they are never presented as reported by the authors.
