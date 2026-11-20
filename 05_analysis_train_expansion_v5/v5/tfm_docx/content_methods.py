@@ -2,10 +2,11 @@
 """Methods (section 3) of the TFM: English version of the original Spanish methodology with targeted updates to the
 work actually performed (V5, 2026-11-20). Markup: **bold**, *italic*, `path/code`. {F:key}/{T:key} = figure/table numbers."""
 
-R = "TFM_TRAIN_EXPANSION/v5"          # all project paths are relative to C:\Users\lenovo\Desktop\master's
-TRAIN_DB = "TFM_A399_Agent_System_v2_2_2026-10-19/TFM_AGENT_SYSTEM_v2_2/exports/DATA_FREEZE_20261113T112939135807Z"
-TEST_DB = "TFM_TEST_2024_2026_Agent_System/exports/DATA_FREEZE_20261118T105532769144Z"
-FIG = "TFM_TRAIN_EXPANSION/v5/figures"
+GH = "https://github.com/samarinalidia-design/tfm-tomato-biostimulants"
+R = "05_analysis_train_expansion_v5/v5"          # all paths are relative to the root of the GitHub repository GH
+TRAIN_DB = "03_data_freeze/train_dev_DATA_FREEZE_20261113T112939135807Z"
+TEST_DB = "03_data_freeze/external_test_DATA_FREEZE_20261118T105532769144Z"
+FIG = "05_analysis_train_expansion_v5/v5/figures"
 
 METHODS = [
     ('h1', '3. Research methodology'),
@@ -21,7 +22,8 @@ METHODS = [
           '**EXTERNAL_TEST** corpus (2024–2026), processed with the same screening, extraction, harmonisation and QA protocol, and frozen as an independent '
           'database. Because this test corpus had already been inspected in earlier model versions (V2, V4), its use for the final models is labelled '
           '**POST_HOC_TEST_REUSE** and is not presented as a first, blind confirmatory test (Section 3.17).'),
-    ('p', 'All file paths in this chapter are relative to the project folder `C:\\Users\\lenovo\\Desktop\\master\'s`. The final analysis version is **V5** '
+    ('p', f'All code, frozen databases and analysis outputs are openly available in the GitHub repository {GH} (release `data-freeze-v5`); every file '
+          'path given in this chapter is relative to the root of that repository. The final analysis version is **V5** '
           f'(`{R}`); its scripts are in `{R}/scripts`, the analysis tables in `{R}/data`, the frozen models in `{R}/freeze`, the numerical results in '
           f'`{R}/results` and all figures in `{FIG}`. A step-by-step description of how to rerun the analyses is given in `{R}/README_V5.md`.'),
 
@@ -70,7 +72,7 @@ METHODS = [
           'search restricted to publications first online from 1 January 2024: 108 records were identified, 80 were in scope and 58 were fully processed '
           '(16 had no eligible target and 6 were out of scope). The resulting EXTERNAL_TEST database contains 80 studies, 57 of which yield computable '
           f'contrasts (2 001 candidate contrasts), and was frozen on 18 November 2026 (`{TEST_DB}`, `MANIFEST.json`, `acceptance_report.json`). The '
-          'system and its rules are documented in `TFM_TEST_2024_2026_Agent_System/CLAUDE.md`.'),
+          'system and its rules are documented in `02_agent_system_external_test/CLAUDE.md`.'),
 
     ('h2', '3.3. Historical screening, current canonical corpus and PRISMA-style reporting'),
     ('p', 'In the historical flow, the 7 331 records then assigned to the ≤ 2023 block were screened on title and abstract. 1 732 were tagged '
@@ -157,7 +159,7 @@ METHODS = [
     ('p', 'The second layer is the semantic structuring of the hand-off. An initial attempt with ChatGPT did not produce usable structured output, so '
           'structuring was carried out with a multi-agent system built on Claude large language models (Anthropic; Claude Opus for extraction, figure '
           'digitisation and adjudication, Claude Sonnet for the independent verification pass), run through Claude Code '
-          '(TRAIN_DEV: `TFM_A399_Agent_System_v2_2_2026-10-19/TFM_AGENT_SYSTEM_v2_2`; EXTERNAL_TEST: `TFM_TEST_2024_2026_Agent_System`). '
+          '(TRAIN_DEV: `01_agent_system_train_dev`; EXTERNAL_TEST: `02_agent_system_external_test`). '
           'All workflow state is kept in SQLite and agents submit results only through a validating command-line tool (`tools/tfm.py`). Each value is '
           'extracted twice and independently: pass A (semantic extraction) and pass B (verification against the original source, blind to pass A); figures '
           'are read twice from calibrated axes (at least three ticks). The two passes are reconciled in code: agreeing values are accepted automatically, '
@@ -172,8 +174,9 @@ METHODS = [
           'than exploded into thousands of agronomic observations. In TFM_ML_DATABASE_V3 (schema 3.6.0) stress_factors is the source of truth for stress '
           'exposure. {F:schema} shows the relational model and {T:layers} its layers; {F:extraction} summarises the extraction and verification pipeline.'),
     ('fig', f'{FIG}/FigM4_relational_schema.png', 'schema', 'Relational schema of the evidence database.',
-     'Raw, QA and effect entities are kept separate; analysis exports are derived, versioned products. The frozen databases are '
-     f'`{TRAIN_DB}/TFM_DATABASE_CLASS_A_FINAL.sqlite` (TRAIN_DEV) and `{TEST_DB}/TFM_DATABASE_CLASS_A_FINAL.sqlite` (EXTERNAL_TEST).'),
+     'Raw, QA and effect entities are kept separate; analysis exports are derived, versioned products. The frozen databases '
+     '(`TFM_DATABASE_CLASS_A_FINAL.sqlite`, TRAIN_DEV and EXTERNAL_TEST) are available from the release '
+     f'{GH}/releases/tag/data-freeze-v5 and their exported tables from `{TRAIN_DB}` and `{TEST_DB}`.'),
     ('tab', 'layers', 'Layers of the relational model and associated unit of observation.',
      ['Layer', 'Main tables', 'Row unit', 'Function'],
      [['Identity', 'studies, files, screening, study_relations', 'publication / file', 'Identity, class, links and document traceability.'],
@@ -228,8 +231,8 @@ METHODS = [
           'provenance. Missing information is marked as not reported and is never inferred. Ambiguous cases, conflicts between sources, quantitative figures '
           'and complex designs are sent to human review. Discrepancies are never averaged. When an omission is detected later, the correction is applied as a '
           'versioned patch on the study record, preserving the raw value, the original source and the verification history. For every verified page a '
-          f'rendered page image and its extracted text are stored as a *source receipt* (`wf_source_receipts`; images in '
-          '`TFM_A399_Agent_System_v2_2_2026-10-19/TFM_AGENT_SYSTEM_v2_2/work/source_views`), which allows any value to be checked against the original page.'),
+          f'rendered page image and its extracted text are stored as a *source receipt* (`wf_source_receipts`; the page images '
+          'are kept locally and are not redistributed because the articles are copyrighted), which allows any value to be checked against the original page.'),
     ('p', 'Randomised units, biological replicates, technical replicates, subsamples and independent repetitions are distinguished. The inferential n is the '
           'unit that was actually randomised; an additional technical reading does not increase n. When a supplement contains identifiable biological '
           'replicates, raw values are kept and mean, SD and n are recomputed reproducibly. Conversions of uncertainty are applied only when the required '
@@ -490,7 +493,7 @@ METHODS = [
           f'versioned artefacts and are never edited by hand. Figures are stored in `{FIG}` and produced by `{R}/scripts/v5_07_figures_data.py` '
           '(data and meta-analysis figures), `v5_08_figures_models.py` (models and TEST), `v5_11_fig_selective.py`, `v5_15_block_panels.py` (additional '
           'checks) and `v5_16_methods_figs.py` (methods schematics). The earlier V4 figure set '
-          '(`TFM_A399_Agent_System_v2_2_2026-10-19/SynerPlant_Yield_V4_HARMONIZATION/outputs/figures_TFM_A4_V4`) was fully recomputed on the V5 data and is '
+          '(`04_analysis_history/SynerPlant_Yield_V4_HARMONIZATION/outputs/figures_TFM_A4_V4`) was fully recomputed on the V5 data and is '
           'superseded.'),
 
     ('h2', '3.17. MODEL_FREEZE and external validation'),
@@ -511,12 +514,24 @@ METHODS = [
 
     ('h2', '3.18. Software, versioning and reproducibility'),
     ('p', 'Document management used Google Drive/Google Sheets and reproducible inventory scripts; the relational databases are SQLite files produced by the '
-          'agent systems (TRAIN_DEV: `TFM_A399_Agent_System_v2_2_2026-10-19/TFM_AGENT_SYSTEM_v2_2`; EXTERNAL_TEST: `TFM_TEST_2024_2026_Agent_System`). '
+          'agent systems (TRAIN_DEV: `01_agent_system_train_dev`; EXTERNAL_TEST: `02_agent_system_external_test`). '
           'Analyses were run in Python 3.12 (pandas, NumPy, SciPy, scikit-learn (Pedregosa et al., 2011), joblib, matplotlib) and R 4.5.0 with metafor 5.2.1 '
           'and clubSandwich. The analysis scripts are listed in {T:scripts}. Every build records date/time, configuration and SHA-256 fingerprints; the '
           f'complete V5 version is described by `{R}/MANIFEST_V5_sha256.csv`, so that any value of a final table or figure can be traced back to the contrast, '
           'the raw measurement and its exact location in the article or supplement. Copyrighted documents remain outside any public repository.'),
-    ('tab', 'scripts', 'Analysis scripts of version V5 (folder TFM_TRAIN_EXPANSION/v5/scripts).',
+    ('p', '**Data and code availability.** The repository is organised as follows: '
+          f'extraction notebooks of the deterministic document layer V4.3 ({GH}/tree/main/00_extraction_notebooks_v4_3); '
+          'the multi-agent extraction and verification system for TRAIN_DEV, including agent definitions, guard hooks, the validating command-line tool, '
+          f'configuration, JSON schemas and tests ({GH}/tree/main/01_agent_system_train_dev); '
+          f'the same system for EXTERNAL_TEST ({GH}/tree/main/02_agent_system_external_test); '
+          'the frozen exports of both databases (analysis marts, evidence_long, contrast_candidates, covariance of shared controls, QA tables and freeze '
+          f'manifests with SHA-256; {GH}/tree/main/03_data_freeze); '
+          f'earlier analysis stages V2 and V4 ({GH}/tree/main/04_analysis_history); '
+          f'and the V5 analysis with scripts, analysis tables, frozen models, results and figures ({GH}/tree/main/05_analysis_train_expansion_v5/v5). '
+          f'The complete relational databases (SQLite and Excel, TRAIN_DEV and EXTERNAL_TEST) are attached to the release {GH}/releases/tag/data-freeze-v5. '
+          'Full texts, supplements and page images of the source articles are not redistributed; each value can be located in the original publication '
+          'through its DOI, page and locator.'),
+    ('tab', 'scripts', 'Analysis scripts of version V5 (repository folder 05_analysis_train_expansion_v5/v5/scripts).',
      ['Script', 'Purpose', 'Main outputs'],
      [['v5_01_build.py', 'Corrections, TRAIN/TEST tables, variance imputation, overlap check', 'data/*.csv|parquet, corrections_register.csv, build_flow_v5.csv'],
       ['v5_common.py / v5_02_cv_select.py', 'Feature sets, duplicate removal, nested grouped CV of 14 candidates', 'results/v5_cv_*.csv, v5_cv_oof_*.parquet'],

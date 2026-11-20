@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Results (section 4) of the TFM, written for biologists. Each subsection: purpose (1-2 sentences) -> results -> significance.
 Figures from TFM_TRAIN_EXPANSION/v5/figures (V5 recomputation of the V4 figure set + additional checks)."""
-FIG = "TFM_TRAIN_EXPANSION/v5/figures"
-R = "TFM_TRAIN_EXPANSION/v5"
+FIG = "05_analysis_train_expansion_v5/v5/figures"
+R = "05_analysis_train_expansion_v5/v5"
 
 RESULTS = [
     ('h1', '4. Results'),

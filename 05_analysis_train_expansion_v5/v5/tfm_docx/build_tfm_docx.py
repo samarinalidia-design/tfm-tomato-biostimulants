@@ -38,7 +38,21 @@ def subst(text, figs, tabs):
     return re.sub(r'\{T:(\w+)\}', lambda m: f'Table {tabs[m.group(1)]}', text)
 
 
-TOKEN = re.compile(r'(`[^`]+`|\*\*[^*]+\*\*|\*[^*\s][^*]*\*)')
+TOKEN = re.compile(r'(https://[^\s;,()]+[^\s;,().]|`[^`]+`|\*\*[^*]+\*\*|\*[^*\s][^*]*\*)')
+
+
+def add_hyperlink(par, url, size):
+    from docx.opc.constants import RELATIONSHIP_TYPE as RT
+    rid = par.part.relate_to(url, RT.HYPERLINK, is_external=True)
+    h = OxmlElement('w:hyperlink'); h.set(qn('r:id'), rid)
+    r = OxmlElement('w:r'); rpr = OxmlElement('w:rPr')
+    c = OxmlElement('w:color'); c.set(qn('w:val'), '1F4E79'); rpr.append(c)
+    u = OxmlElement('w:u'); u.set(qn('w:val'), 'single'); rpr.append(u)
+    if size:
+        sz = OxmlElement('w:sz'); sz.set(qn('w:val'), str(int(size * 2))); rpr.append(sz)
+    f = OxmlElement('w:rFonts'); f.set(qn('w:ascii'), 'Times New Roman'); f.set(qn('w:hAnsi'), 'Times New Roman'); rpr.append(f)
+    r.append(rpr); t = OxmlElement('w:t'); t.text = url; t.set(qn('xml:space'), 'preserve'); r.append(t); h.append(r)
+    par._p.append(h)
 
 
 def add_runs(par, text, rpr_tpl, size=None, italic_all=False):
@@ -46,6 +60,8 @@ def add_runs(par, text, rpr_tpl, size=None, italic_all=False):
         if not part:
             continue
         bold = italic = mono = False
+        if part.startswith('https://'):
+            add_hyperlink(par, part, size); continue
         if part.startswith('`'):
             part, mono = part[1:-1], True
         elif part.startswith('**'):
@@ -98,7 +114,7 @@ class Builder:
 
     def body(self, text, ref=False):
         par, rPr = self.new_par('body')
-        if '`' in text or ref:                     # long file paths / URLs: avoid stretched justified lines
+        if '`' in text or 'https://' in text or ref:                     # long file paths / URLs: avoid stretched justified lines
             par.alignment = WD_ALIGN_PARAGRAPH.LEFT
         add_runs(par, text, rPr, size=10.5 if not ref else 10)
 
@@ -117,7 +133,7 @@ class Builder:
         return par
 
     def figure(self, path, label, title, desc):
-        img = MASTER / path
+        img = MASTER / path.replace('05_analysis_train_expansion_v5/', 'TFM_TRAIN_EXPANSION/', 1)
         nocap = img.with_name(img.stem + '_nocap.png')
         if nocap.exists():                       # figure without the caption embedded in the image
             img = nocap
