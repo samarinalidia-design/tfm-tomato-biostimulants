@@ -1,0 +1,49 @@
+study_id,endpoint_scope,row_filter,field,new_value,evidence
+D_787a2af6e69899c4,all,,h2_stress_duration_days,84.0,"Tahiri 2022 p.746: ""maintained ... for the additional 12 weeks"" (DB unit = weeks; V5 lost it)"
+D_787a2af6e69899c4,all,arm_key_t ~ PGPR,h3_n_applications,2.0,"p.747: PGPR inoculation plus booster ""after 15 days"""
+D_787a2af6e69899c4,all,arm_key_t ~ \.(SB|B)\.PGPR$,h_dose_class,CFU,"p.747: ~10^9 CFU/mL, 50 mL"
+D_787a2af6e69899c4,all,arm_key_t ~ \.(SB|B)\.PGPR$,h_log10_dose,9.0,p.747: ~10^9 CFU/mL
+D_787a2af6e69899c4,all,arm_key_t ~ \.(SB|B)\.AMF$,h_dose_class,PER_PLANT_OR_POT,p.747: 10 g sand inoculum with spores per plant (not CFU)
+D_9cb48f9f1f80975a,all,experiment_key ~ ^E2$,h3_n_applications,26.0,"Perez-Inocencio 2023 p.3: inoculated ""at the beginning ... and once a week until the end"" over ~180 d (approx.; E1 value 1 had been copied)"
+D_2e3875208f031bf2,all,arm_key_t ~ S1I[23]$,h_stress_class,COMBINED,Dou 2023 Tables 6-7 p.8: S1 (soil salt) x I2/I3 (deficit irrigation) = salt + drought
+D_2e3875208f031bf2,all,arm_key_t ~ S1I[23]$,h3_stress_combined,1,idem
+D_2e3875208f031bf2,all,arm_key_t ~ S1I[23]$,h3_n_stresses,2,idem
+D_2e3875208f031bf2,all,arm_key_t ~ S1I,h3_stress_salinity,1,idem: S1 = saline soil
+D_2e3875208f031bf2,all,arm_key_t ~ S1I1$,h_stress_class,SALINITY,"S1I1 = saline soil, full irrigation"
+D_2e3875208f031bf2,all,arm_key_t ~ S1I1$,h3_stress_drought,0,idem
+D_2e3875208f031bf2,all,arm_key_t ~ S1I,h2_salinity_nacl_mm,,"salinity is soil salt content (g/g), not NaCl mM; V5 value 0 meant ""no salinity"""
+D_2e3875208f031bf2,all,arm_key_t ~ S1I,h2_salinity_measure_type,SOIL_SALT_CONTENT,idem
+D_2e3875208f031bf2,all,arm_key_t ~ S1I,h2_salinity_reported,1,idem
+D_5bfa54dd469be771,all,arm_key_t ~ \.SB\.SI60\.,h3_n_applications,1.0,Silicon 2023 p.3: Si applied once before transplant; ASE weekly x6 only
+D_5bfa54dd469be771,all,arm_key_t ~ \.SB\.SI60\.,h2_application_phase,NURSERY_SEEDLING,idem
+D_5bfa54dd469be771,yield,,h2_yield_scope,TOTAL,Table 3 p.7: fruit yield per plant at harvest (total)
+D_5bfa54dd469be771,all,,v6_temperature_day_c,31.0,p.3: polyhouse 28-34 C (midpoint)
+D_86b092ac9ca2d729,yield,,h2_yield_scope,TOTAL,"Ahmed 2022 p.98: ""Fruit yield ... recorded at crop maturity"""
+D_86b092ac9ca2d729,all,,v6_temperature_day_c,34.0,p.97: polyhouse 30-38 C (midpoint)
+D_61bafda8e5809db9,all,,h2_stress_duration_days,106.0,"AASJ 2023 p.4: ambient heat over the season, transplant 14 June to harvest 28 Sep/2 Oct"
+D_61bafda8e5809db9,all,,h2_plant_density_m2,3.3,p.4: hills 30 cm apart on 1 m wide plots
+D_61bafda8e5809db9,all,,h3_fert_n_kg_ha,286.0,p.4: per-feddan rates converted to ha (/0.42)
+D_19afb23b32e7648a,all,,h2_stress_duration_days,90.0,"Phyton 2022 p.4: 200 mM NaCl irrigation from transplant, grown 90 days"
+D_19afb23b32e7648a,all,,h2_stress_onset_phase,TRANSPLANT,idem
+D_6b5d82abb9f7e388,all,,v6_temperature_day_c,22.0,Alam 2023 p.4: mean temperature 22 C
+D_d2cc590a442913d8,all,,h3_n_applications,1.0,Sayed 2022: single seed/seedling priming before grafting
+D_068b862524c2c34a,all,experiment_key ~ ^E1$,h2_drought_etc_pct,60.0,Top 2023 p.5617 / db_arms: 0.6 vs 1.0 L per plant per day (2020)
+D_068b862524c2c34a,all,experiment_key ~ ^E2$,h2_drought_etc_pct,33.3,p.5617 / db_arms: 0.4 vs 1.2 L per plant per day (2021)
+D_068b862524c2c34a,all,,h2_drought_fc_pct,,"reduction is of irrigation volume, not % field capacity (V5 value 25 not in source)"
+D_068b862524c2c34a,all,,h2_drought_supply_type,ETC_OR_IRRIGATION_PCT,idem
+D_19afb23b32e7648a,all,,v6_flags,NO_UNSTRESSED_REFERENCE_CONTROL_COLLAPSED,Table 2 p.6: stressed control 42 g/plant vs 1166.6 g/plant; no unstressed arm
+D_24fe4181e5a0c693,all,,v6_flags,TARGET_TEXT_FIGURE_CONFLICT,p.10 text 0.86->3.18 kg/plant vs Fig. 7 p.11 0.56 kg/plant
+D_24fe4181e5a0c693,all,,v6_flags,TARGET_IMPLAUSIBLE_FOR_SYSTEM,3-4 kg/plant from 750 mL pots with 15-32 g fruits (Table 4 p.11)
+D_d2cc590a442913d8,all,,v6_flags,TARGET_TEXT_FIGURE_CONFLICT,"text +10.5%/+5.7% (p.1, p.4) vs ~10x in Fig. 1C"
+D_d2cc590a442913d8,all,,v6_flags,STRESS_AMBIENT_NO_UNSTRESSED_REFERENCE,"winter field season, monthly minima 12-22 C (Fig. 10 p.17)"
+D_61bafda8e5809db9,all,,v6_flags,STRESS_AMBIENT_NO_UNSTRESSED_REFERENCE,"summer heat, no temperature data, no cool comparator (p.2)"
+D_61bafda8e5809db9,all,,v6_flags,YIELD_SCOPE_MIXED_WITHIN_STUDY,H1 total (Fig. 1C p.11) vs H2 marketable (Table 8 p.10)
+D_61bafda8e5809db9,all,,v6_flags,PRODUCT_SUPPLIES_NUTRIENTS,"K-silicate supplies K, fulvic product supplies N (p.14)"
+D_6b5d82abb9f7e388,all,,v6_flags,TARGET_QUANTIZED_WHOLE_UNITS,Fig. 3k p.6: bars read in whole kg/plant
+D_068b862524c2c34a,all,,v6_flags,STRESS_BARELY_REALISED_SOURCE,"p.5620/5623: SMC only 1.4 pp lower; ""Plants did hence not experience severe water deficit"""
+D_df10fa5eec64cb8d,all,arm_key_t ~ SAL1000,v6_flags,STRESS_NOT_REALISED_SOURCE,Table 6 p.105: 1000 ppm yield ~8% above the non-saline control in both seasons
+D_adda3ddd52623208,all,arm_key_t ~ N70,v6_flags,NUTRIENT_LIMITATION_NOT_REALISED,Table 1 p.4: 70% nutrient control 51.19 g > 100% control 46.72 g
+D_adda3ddd52623208,all,,v6_flags,YIELD_POSSIBLY_REREPORTED,p.2: yield also reported in Di Stasio et al. 2018 (ref. 27)
+D_f3c00040a8fabdde,all,,v6_flags,PRODUCT_SUPPLIES_NUTRIENTS,Table 1 p.2: compost 20.3 g N/kg x 40 t/ha (~800 kg N/ha); gypsum supplies Ca/S
+D_1c70767428261b78,all,experiment_key ~ ^E1$,v6_flags,YIELD_EARLY_PARTIAL_HARVEST,p.67: E1 yield read at 60 DAT
+D_9cb48f9f1f80975a,all,,v6_flags,SMALL_N_STRAIN_RANK_REVERSALS,p.3 / Table 3 p.8: n = 5 plants per treatment

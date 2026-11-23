@@ -1,0 +1,182 @@
+{
+ "input_contrasts": 2147,
+ "duplicates_removed_from_default": 655,
+ "excluded_non_biostimulant": 4,
+ "by_endpoint_contrast": {
+  "CHL_CONTENT|B_vs_C": {
+   "default": {
+    "rows": 208,
+    "studies": 73
+   },
+   "quality_core": {
+    "rows": 173,
+    "studies": 55
+   }
+  },
+  "CHL_CONTENT|SB_vs_S": {
+   "default": {
+    "rows": 399,
+    "studies": 82
+   },
+   "quality_core": {
+    "rows": 210,
+    "studies": 54
+   }
+  },
+  "CHL_CONTENT|S_vs_C": {
+   "default": {
+    "rows": 163,
+    "studies": 87
+   },
+   "quality_core": {
+    "rows": 122,
+    "studies": 62
+   }
+  },
+  "CHL_INDEX|B_vs_C": {
+   "default": {
+    "rows": 247,
+    "studies": 41
+   },
+   "quality_core": {
+    "rows": 223,
+    "studies": 37
+   }
+  },
+  "CHL_INDEX|SB_vs_S": {
+   "default": {
+    "rows": 363,
+    "studies": 49
+   },
+   "quality_core": {
+    "rows": 301,
+    "studies": 41
+   }
+  },
+  "CHL_INDEX|S_vs_C": {
+   "default": {
+    "rows": 108,
+    "studies": 44
+   },
+   "quality_core": {
+    "rows": 90,
+    "studies": 39
+   }
+  }
+ },
+ "moderator_level_SB_vs_S_content": {
+  "ARM": 311,
+  "NONE": 86,
+  "EXPERIMENT": 2
+ },
+ "flags_default": {
+  "FIGURE_SOURCE": 706,
+  "VARIANCE_IMPUTED": 699,
+  "TOTAL_COMPUTED_A_PLUS_B": 308,
+  "N_NOT_STATED": 135,
+  "UNIT_MAGNITUDE_IMPLAUSIBLE": 121,
+  "UNLABELLED_BARS_AS_SE": 115,
+  "SOURCE_PIGMENT_INCONSISTENT": 94,
+  "MEAN_ROUNDED_LT_2_SIG_DIGITS": 68,
+  "V6_STRESS_NOT_REALISED": 54,
+  "SOURCE_QUALITY_CONCERN": 37,
+  "EXTREME_EFFECT": 27,
+  "V6_PRODUCT_SUPPLIES_NUTRIENTS": 19,
+  "TIMEPOINT_OUTSIDE_STRESS": 18,
+  "PRINT_YEAR_AFTER_2023_IN_FROZEN_TRAIN": 5
+ },
+ "moderators_with_coverage_ge_50pct_SB_vs_S": [
+  "h2_application_phase",
+  "h2_density_source",
+  "h2_density_status",
+  "h2_drought_etc_pct",
+  "h2_drought_fc_pct",
+  "h2_drought_supply_type",
+  "h2_dujardin",
+  "h2_live_microorganism",
+  "h2_n_components",
+  "h2_nonliving_microbial_product",
+  "h2_salinity_ecw_dsm",
+  "h2_salinity_measure_type",
+  "h2_salinity_nacl_mm",
+  "h2_stress_duration_reported",
+  "h2_stress_onset_phase",
+  "h2_substrate_type",
+  "h3_abs_latitude",
+  "h3_active_botanical_extract",
+  "h3_active_chitosan",
+  "h3_active_hormone_like",
+  "h3_active_humic",
+  "h3_active_nano",
+  "h3_active_protein_amino",
+  "h3_active_seaweed",
+  "h3_active_selenium",
+  "h3_active_silicon",
+  "h3_application_phase_ord",
+  "h3_arid_country",
+  "h3_class_key",
+  "h3_country",
+  "h3_cultivar_key",
+  "h3_declared_tolerance",
+  "h3_experiment_year_source",
+  "h3_fert_none",
+  "h3_fert_nutrient_solution",
+  "h3_fert_reported",
+  "h3_genus_main",
+  "h3_latitude_source",
+  "h3_n_actives",
+  "h3_n_applications_source",
+  "h3_n_routes",
+  "h3_n_stresses",
+  "h3_n_taxa",
+  "h3_region",
+  "h3_route_fertigation",
+  "h3_route_foliar",
+  "h3_route_root_dip",
+  "h3_route_seed",
+  "h3_route_soil_drench",
+  "h3_route_substrate_mix",
+  "h3_soil_texture_source",
+  "h3_stress_ambient",
+  "h3_stress_biotic",
+  "h3_stress_cold",
+  "h3_stress_combined",
+  "h3_stress_drought",
+  "h3_stress_heat",
+  "h3_stress_metal",
+  "h3_stress_nutrient",
+  "h3_stress_other",
+  "h3_stress_salinity",
+  "h3_taxon_amf",
+  "h3_taxon_azoto_azospir",
+  "h3_taxon_bacillus",
+  "h3_taxon_other_bacteria",
+  "h3_taxon_pseudomonas",
+  "h3_taxon_rhizobia",
+  "h3_taxon_streptomyces",
+  "h3_taxon_trichoderma",
+  "h3_taxon_yeast",
+  "h_crop_group",
+  "h_dj_beneficial_bacteria",
+  "h_dj_beneficial_fungi",
+  "h_dj_chitosan_biopolymer",
+  "h_dj_humic_fulvic",
+  "h_dj_inorganic",
+  "h_dj_protein_n",
+  "h_dj_seaweed_botanical",
+  "h_dose_class",
+  "h_dujardin",
+  "h_growth_habit",
+  "h_hybrid",
+  "h_potted",
+  "h_route",
+  "h_stress_class",
+  "h_stress_families",
+  "h_system",
+  "v6_age_days",
+  "v6_age_reference",
+  "v6_age_unit_rule",
+  "v6_stress_realisation"
+ ],
+ "n_moderator_columns": 128
+}

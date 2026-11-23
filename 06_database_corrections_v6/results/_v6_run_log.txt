@@ -1,0 +1,257 @@
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:596: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m &= df[flt[0]].astype(str).str.contains(flt[1], regex=True)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:596: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m &= df[flt[0]].astype(str).str.contains(flt[1], regex=True)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:596: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m &= df[flt[0]].astype(str).str.contains(flt[1], regex=True)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:596: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m &= df[flt[0]].astype(str).str.contains(flt[1], regex=True)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:596: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m &= df[flt[0]].astype(str).str.contains(flt[1], regex=True)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:596: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  m &= df[flt[0]].astype(str).str.contains(flt[1], regex=True)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:59: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[field] = np.nan if isinstance(value, (int, float)) and not isinstance(value, bool) else None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:251: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[col] = np.nan
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:251: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[col] = np.nan
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:251: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[col] = np.nan
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:251: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[col] = np.nan
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:251: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[col] = np.nan
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:254: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[src] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:327: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['h3_fert_n_kg_ha_v6src'] = df.get('h3_fert_n_kg_ha_v6src')
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:346: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_rootstock'] = None
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_grafted'] = np.nan
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:395: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_age_days'] = [o[0] for o in out]
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:396: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_age_reference'] = [o[1] for o in out]
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:397: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_age_unit_rule'] = [o[2] for o in out]
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:404: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f'v6_days_{ref.lower()}'] = np.where(df.v6_age_reference == ref, df.v6_age_days, np.nan)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:404: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f'v6_days_{ref.lower()}'] = np.where(df.v6_age_reference == ref, df.v6_age_days, np.nan)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:404: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f'v6_days_{ref.lower()}'] = np.where(df.v6_age_reference == ref, df.v6_age_days, np.nan)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:414: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_stress_realisation'] = cls
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:415: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_stress_loss_pct'] = np.where(sb, (1 - np.exp(s)) * 100, np.nan)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:439: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_pair_key'] = key
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:450: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_dup_priority'] = pri
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:451: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_primary_of_pair'] = 1
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:641: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['in_default_v6'] = ((df.in_default == 1) & df.v6_excluded_reason.isna() & (df.v6_primary_of_pair == 1)).astype(int)
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:643: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['v6_reliability_flag'] = flags.map(lambda x: int(bool(set(x) & RELIABILITY_FLAGS)))
+C:\Users\lenovo\Desktop\master's\TFM_GITHUB_REPO\06_database_corrections_v6\scripts\v6_corrections.py:644: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['in_quality_core_v6'] = ((df.in_default_v6 == 1) & (df.v6_reliability_flag == 0)).astype(int)
+{
+ "generated_at": "2026-11-22T08:56:13+00:00",
+ "runs": {
+  "train_yield": {
+   "rows_v5": 849,
+   "rows_v6": 849,
+   "studies": 79,
+   "in_default_v5": 831,
+   "in_default_v6": 694,
+   "in_quality_core_v6": 559,
+   "quality_core_studies": 70,
+   "excluded_non_biostimulant": 1,
+   "rebased_new": 0,
+   "secondary_duplicates": 136,
+   "audit_cells": 286,
+   "moderator_fills": {
+    "v6_pot_volume_l": 178,
+    "h2_days_application_before_stress": 25,
+    "v6_temperature_day_c": 81,
+    "v6_photoperiod_h": 55,
+    "v6_relative_humidity_pct": 94,
+    "v6_abs_latitude_printed": 329,
+    "v6_temperature_night_c": 61,
+    "h2_plant_density_m2": 18,
+    "h2_stress_duration_days": 12
+   },
+   "fert_n_filled": 18,
+   "rootstock_rows": 24,
+   "stress_realisation_SB_vs_S": {
+    "NO_UNSTRESSED_REFERENCE": 207,
+    "REALISED": 197,
+    "NOT_REALISED": 68,
+    "MILD": 61,
+    "SEVERE_CONTROL_LT_25PCT": 45
+   },
+   "non_biostimulant_candidates_left": 0
+  },
+  "train_dry_biomass": {
+   "rows_v5": 1510,
+   "rows_v6": 1513,
+   "studies": 172,
+   "in_default_v5": 1455,
+   "in_default_v6": 1312,
+   "in_quality_core_v6": 1218,
+   "quality_core_studies": 171,
+   "excluded_non_biostimulant": 2,
+   "rebased_new": 3,
+   "secondary_duplicates": 138,
+   "audit_cells": 117,
+   "moderator_fills": {
+    "v6_photoperiod_h": 517,
+    "v6_relative_humidity_pct": 599,
+    "v6_temperature_day_c": 799,
+    "v6_temperature_night_c": 609,
+    "v6_pot_volume_l": 393,
+    "h2_days_application_before_stress": 54,
+    "h2_stress_duration_days": 63,
+    "v6_abs_latitude_printed": 217
+   },
+   "fert_n_filled": 9,
+   "rootstock_rows": 12,
+   "stress_realisation_SB_vs_S": {
+    "REALISED": 508,
+    "NO_UNSTRESSED_REFERENCE": 236,
+    "MILD": 139,
+    "NOT_REALISED": 66,
+    "SEVERE_CONTROL_LT_25PCT": 61
+   },
+   "non_biostimulant_candidates_left": 3
+  },
+  "test_yield": {
+   "rows_v5": 117,
+   "rows_v6": 117,
+   "studies": 16,
+   "in_default_v5": 117,
+   "in_default_v6": 107,
+   "in_quality_core_v6": 95,
+   "quality_core_studies": 15,
+   "excluded_non_biostimulant": 0,
+   "rebased_new": 0,
+   "secondary_duplicates": 10,
+   "audit_cells": 0,
+   "moderator_fills": {
+    "v6_abs_latitude_printed": 82,
+    "v6_pot_volume_l": 94,
+    "h2_days_application_before_stress": 9,
+    "v6_relative_humidity_pct": 12,
+    "v6_temperature_day_c": 12,
+    "v6_temperature_night_c": 10,
+    "v6_photoperiod_h": 10,
+    "h2_stress_duration_days": 9
+   },
+   "fert_n_filled": 0,
+   "rootstock_rows": 0,
+   "stress_realisation_SB_vs_S": {
+    "REALISED": 44,
+    "NO_UNSTRESSED_REFERENCE": 19,
+    "NOT_REALISED": 8,
+    "SEVERE_CONTROL_LT_25PCT": 4,
+    "MILD": 2
+   },
+   "non_biostimulant_candidates_left": 0
+  },
+  "test_dry_biomass": {
+   "rows_v5": 382,
+   "rows_v6": 382,
+   "studies": 32,
+   "in_default_v5": 378,
+   "in_default_v6": 312,
+   "in_quality_core_v6": 296,
+   "quality_core_studies": 31,
+   "excluded_non_biostimulant": 0,
+   "rebased_new": 0,
+   "secondary_duplicates": 66,
+   "audit_cells": 0,
+   "moderator_fills": {
+    "v6_photoperiod_h": 295,
+    "v6_pot_volume_l": 240,
+    "v6_relative_humidity_pct": 194,
+    "v6_temperature_day_c": 170,
+    "v6_temperature_night_c": 55,
+    "h2_stress_duration_days": 103,
+    "h2_days_application_before_stress": 40,
+    "v6_abs_latitude_printed": 19
+   },
+   "fert_n_filled": 0,
+   "rootstock_rows": 0,
+   "stress_realisation_SB_vs_S": {
+    "REALISED": 131,
+    "MILD": 16,
+    "NO_UNSTRESSED_REFERENCE": 16,
+    "NOT_REALISED": 12,
+    "SEVERE_CONTROL_LT_25PCT": 4
+   },
+   "non_biostimulant_candidates_left": 0
+  }
+ },
+ "moderator_parse_train": {
+  "EXACT": 1252,
+  "MULTIPLE_VALUES": 98,
+  "RANGE_MIDPOINT": 93,
+  "UNIT_NOT_CONVERTED(D2: days and weeks only)": 63,
+  "PLUS_MINUS_CENTRE": 51,
+  "NOT_NUMERIC_TEXT": 50,
+  "DMS_CONVERTED": 46,
+  "FIRST_NUMBER": 24,
+  "NOT_REPORTED_OR_CONFLICT": 12,
+  "NOT_A_VOLUME": 11,
+  "AMBIGUOUS_TEXT": 10,
+  "LIGHT_DARK_PAIR": 6,
+  "MULTIPLE_PERIODS": 4,
+  "US_GALLON_X3.785": 2,
+  "SPACING_ROW_X_PLANT": 2,
+  "IMPLAUSIBLE(EXACT)": 1,
+  "PARTIAL_PHASE_ONLY": 1
+ },
+ "moderator_parse_test": {
+  "EXACT": 330,
+  "RANGE_MIDPOINT": 17,
+  "FIRST_NUMBER": 7,
+  "DMS_CONVERTED": 7,
+  "MULTIPLE_VALUES": 7,
+  "NOT_NUMERIC_TEXT": 6,
+  "UNIT_NOT_CONVERTED(D2: days and weeks only)": 4,
+  "PLUS_MINUS_CENTRE": 2,
+  "AMBIGUOUS_TEXT": 1,
+  "NOT_REPORTED_OR_CONFLICT": 1
+ },
+ "register_rows": 8145,
+ "register_by_rule": {
+  "B2_PARSED_MODERATOR": 5645,
+  "B2_PRINTED_LATITUDE_REPLACES_CENTROID": 990,
+  "A_SOURCE_CHECKED_STUDY_AUDIT": 856,
+  "B3_ONE_CONTRAST_PER_ARM_PAIR": 350,
+  "B4_SvsC_GE_-0.05": 154,
+  "B4_SvsC_LT_ln0.25": 114,
+  "B7_FERT_N_PARSED": 27,
+  "B1_RESTORE_V31_REBASE": 6,
+  "B1_RESTORE_V31_FIX": 3
+ }
+}

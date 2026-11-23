@@ -1,0 +1,21 @@
+chlorophyll learning fold 0
+chlorophyll learning fold 1
+chlorophyll learning fold 2
+chlorophyll learning fold 3
+chlorophyll learning fold 4
+         target  frac          model  n_train_studies   RMSE  RMSE_se    MAE
+0   chlorophyll   0.2  BASELINE_mean           15.133  0.316    0.012  0.237
+1   chlorophyll   0.2            MR0           15.133  0.312    0.010  0.232
+2   chlorophyll   0.2      RF_REF_wn           15.133  0.324    0.010  0.246
+3   chlorophyll   0.4  BASELINE_mean           30.333  0.310    0.009  0.229
+4   chlorophyll   0.4            MR0           30.333  0.310    0.008  0.232
+5   chlorophyll   0.4      RF_REF_wn           30.333  0.316    0.008  0.241
+6   chlorophyll   0.6  BASELINE_mean           44.933  0.312    0.009  0.231
+7   chlorophyll   0.6            MR0           44.933  0.311    0.008  0.232
+8   chlorophyll   0.6      RF_REF_wn           44.933  0.321    0.010  0.242
+9   chlorophyll   0.8  BASELINE_mean           60.133  0.309    0.009  0.227
+10  chlorophyll   0.8            MR0           60.133  0.310    0.008  0.230
+11  chlorophyll   0.8      RF_REF_wn           60.133  0.317    0.009  0.237
+12  chlorophyll   1.0  BASELINE_mean           75.200  0.309    0.017  0.227
+13  chlorophyll   1.0            MR0           75.200  0.310    0.016  0.230
+14  chlorophyll   1.0      RF_REF_wn           75.200  0.320    0.017  0.239

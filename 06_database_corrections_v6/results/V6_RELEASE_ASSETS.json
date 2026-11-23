@@ -1,0 +1,25 @@
+{
+ "train": {
+  "asset": "TFM_DATABASE_TRAIN_DEV_V6_CORRECTED_20261122.zip",
+  "sqlite_sha256": "79687da6f9f0cab83df373d908c77ea9c350957ba328d228c671c2385a1be558",
+  "zip_bytes": 100070967,
+  "tables": {
+   "v6_train_yield": 849,
+   "v6_train_dry_biomass": 1513,
+   "v6_corrections_register": 6385,
+   "v6_study_audit_corrections": 48,
+   "v6_moderators_parsed": 1726
+  }
+ },
+ "test": {
+  "asset": "TFM_DATABASE_EXTERNAL_TEST_V6_CORRECTED_20261122.zip",
+  "sqlite_sha256": "fdd00ea43dfa4423e661174f3c3085b7dc6fea6ac135e6f76a5109d758070318",
+  "zip_bytes": 22662648,
+  "tables": {
+   "v6_test_yield": 117,
+   "v6_test_dry_biomass": 382,
+   "v6_corrections_register": 1760,
+   "v6_moderators_parsed": 382
+  }
+ }
+}

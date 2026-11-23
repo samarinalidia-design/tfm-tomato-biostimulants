@@ -1,0 +1,17 @@
+{
+ "asset": "TFM_DATABASE_TRAIN_DEV_V8_CHLOROPHYLL_20261122.zip",
+ "sqlite_sha256": "dddfd578d2daf68f52e6f35515b3a1c8e1be1e204806c46247a35e221e438fbf",
+ "zip_bytes": 101246612,
+ "chl_tables": {
+  "chl_study_status": 169,
+  "chl_values_pass": 5575,
+  "chl_values_adjudicated": 1345,
+  "chl_values_final": 2773,
+  "chl_new_arms": 332,
+  "chl_values_with_roles": 3103,
+  "chl_contrasts": 2147,
+  "chl_train_dataset": 2147,
+  "chl_receipts": 520
+ },
+ "base_tables_unchanged": 108
+}

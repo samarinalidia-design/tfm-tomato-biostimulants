@@ -1,0 +1,138 @@
+{
+ "rule_validation_on_V6_yield_agreement": {
+  "f_cultivar": 0.0671,
+  "f_dose": 0.3239,
+  "f_route": 0.0542,
+  "f_stress_type": 0.1154,
+  "f_biostimulant_class": 0.0448,
+  "f_composition": 0.0648,
+  "f_microorganism": 0.5159,
+  "f_n_applications": 0.4028,
+  "f_system": 0.0471,
+  "f_country": 0.1284,
+  "f_latitude": 0.9305,
+  "f_application_stage": 0.1084,
+  "f_dose_unit": 0.2886
+ },
+ "new_moderator_rows": 519,
+ "new_moderator_report": [
+  {
+   "study_id": "T044",
+   "rows_kept": 66,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T056",
+   "rows_kept": 75,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T062",
+   "rows_kept": 74,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T068",
+   "rows_kept": 82,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T085",
+   "rows_kept": 77,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T101",
+   "rows_kept": 51,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T102",
+   "rows_kept": 106,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T106",
+   "rows_kept": 143,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "T108",
+   "rows_kept": 50,
+   "rows_dropped_verbatim_not_found": 0
+  }
+ ],
+ "test_chlorophyll_V8": {
+  "rows": 159,
+  "default_rows": 63,
+  "default_studies": 15,
+  "by_type": {
+   "B_vs_C": 33,
+   "SB_vs_S": 30
+  },
+  "coverage_default": {
+   "h2_dujardin": 1.0,
+   "h_stress_class": 1.0,
+   "h_route": 1.0,
+   "h_system": 1.0,
+   "h_log10_dose": 0.079,
+   "f_cultivar": 0.968,
+   "f_country": 0.524,
+   "h_stress_intensity": 0.746,
+   "f_latitude": 0.0,
+   "h3_taxon_bacillus": 1.0
+  },
+  "stress_class_SBvsS": {
+   "SALINITY": 14,
+   "DROUGHT": 10,
+   "BIOTIC": 5,
+   "HEAT": 1
+  },
+  "dujardin": {
+   "DJ_BENEFICIAL_BACTERIA": 31,
+   "DJ_BENEFICIAL_FUNGI": 10,
+   "DJ_OTHER_NON_DUJARDIN": 7,
+   "DJ_PROTEIN_N": 6,
+   "DJ_CHITOSAN_BIOPOLYMER": 4,
+   "DJ_SEAWEED_BOTANICAL": 4,
+   "DJ_MICROBIAL_UNSPECIFIED": 1
+  }
+ },
+ "test_chl_index_V8": {
+  "rows": 244,
+  "default_rows": 108,
+  "default_studies": 10,
+  "by_type": {
+   "SB_vs_S": 66,
+   "B_vs_C": 42
+  },
+  "coverage_default": {
+   "h2_dujardin": 1.0,
+   "h_stress_class": 1.0,
+   "h_route": 1.0,
+   "h_system": 1.0,
+   "h_log10_dose": 0.296,
+   "f_cultivar": 0.87,
+   "f_country": 0.296,
+   "h_stress_intensity": 0.528,
+   "f_latitude": 0.0,
+   "h3_taxon_bacillus": 1.0
+  },
+  "stress_class_SBvsS": {
+   "BIOTIC": 39,
+   "SALINITY": 19,
+   "DROUGHT": 8
+  },
+  "dujardin": {
+   "DJ_BENEFICIAL_BACTERIA": 35,
+   "DJ_MIXTURE": 20,
+   "DJ_BENEFICIAL_FUNGI": 18,
+   "DJ_HUMIC_FULVIC": 8,
+   "DJ_INORGANIC": 8,
+   "DJ_UNCLASSIFIED": 8,
+   "DJ_CHITOSAN_BIOPOLYMER": 4,
+   "DJ_PROTEIN_N": 4,
+   "DJ_SEAWEED_BOTANICAL": 3
+  }
+ }
+}

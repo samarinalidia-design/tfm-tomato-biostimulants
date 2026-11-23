@@ -1,0 +1,105 @@
+{
+ "pooled": {
+  "CHL_CONTENT|B_vs_C": {
+   "studies": 27,
+   "contrasts": 111,
+   "pooled_pct": 21.5,
+   "ci": [
+    9.5,
+    34.8
+   ],
+   "tau": 0.264,
+   "I2": 99.2,
+   "PI": [
+    -28.3,
+    106.0
+   ],
+   "SD_study_means": 0.247
+  },
+  "CHL_CONTENT|SB_vs_S": {
+   "studies": 34,
+   "contrasts": 198,
+   "pooled_pct": 38.3,
+   "ci": [
+    29.1,
+    48.2
+   ],
+   "tau": 0.194,
+   "I2": 98.4,
+   "PI": [
+    -6.1,
+    103.7
+   ],
+   "SD_study_means": 0.325
+  },
+  "CHL_CONTENT|S_vs_C": {
+   "studies": 32,
+   "contrasts": 107,
+   "pooled_pct": -33.7,
+   "ci": [
+    -42.9,
+    -23.1
+   ],
+   "tau": 0.421,
+   "I2": 99.5,
+   "PI": [
+    -71.4,
+    53.3
+   ],
+   "SD_study_means": 0.455
+  },
+  "CHL_INDEX|B_vs_C": {
+   "studies": 7,
+   "contrasts": 46,
+   "pooled_pct": 6.8,
+   "ci": [
+    1.5,
+    12.5
+   ],
+   "tau": 0.062,
+   "I2": 93.5,
+   "PI": [
+    -6.4,
+    21.9
+   ],
+   "SD_study_means": 0.133
+  },
+  "CHL_INDEX|SB_vs_S": {
+   "studies": 10,
+   "contrasts": 54,
+   "pooled_pct": 23.6,
+   "ci": [
+    16.3,
+    31.3
+   ],
+   "tau": 0.09,
+   "I2": 97.5,
+   "PI": [
+    2.7,
+    48.8
+   ],
+   "SD_study_means": 0.273
+  },
+  "CHL_INDEX|S_vs_C": {
+   "studies": 9,
+   "contrasts": 27,
+   "pooled_pct": -24.9,
+   "ci": [
+    -35.5,
+    -12.5
+   ],
+   "tau": 0.226,
+   "I2": 99.4,
+   "PI": [
+    -53.0,
+    20.1
+   ],
+   "SD_study_means": 0.305
+  }
+ },
+ "variance_status": {
+  "IMPUTED_CVBAR": 591,
+  "REPORTED": 413,
+  "USER_ASSUMED_SE": 82
+ }
+}

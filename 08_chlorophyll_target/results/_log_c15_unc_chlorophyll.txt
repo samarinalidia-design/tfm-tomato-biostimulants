@@ -1,0 +1,23 @@
+chlorophyll uncertainty seed 11 fold 0
+chlorophyll uncertainty seed 11 fold 1
+chlorophyll uncertainty seed 11 fold 2
+chlorophyll uncertainty seed 11 fold 3
+chlorophyll uncertainty seed 11 fold 4
+chlorophyll uncertainty seed 22 fold 0
+chlorophyll uncertainty seed 22 fold 1
+chlorophyll uncertainty seed 22 fold 2
+chlorophyll uncertainty seed 22 fold 3
+chlorophyll uncertainty seed 22 fold 4
+chlorophyll uncertainty seed 33 fold 0
+chlorophyll uncertainty seed 33 fold 1
+chlorophyll uncertainty seed 33 fold 2
+chlorophyll uncertainty seed 33 fold 3
+chlorophyll uncertainty seed 33 fold 4
+     target             model  coverage95  half_width  RMSE
+chlorophyll     BASELINE_mean       0.947       0.678 0.311
+chlorophyll               MR0       0.936       0.629 0.311
+chlorophyll    RF_REF_wivw_re       0.931       0.656 0.325
+chlorophyll         RF_REF_wn       0.935       0.649 0.319
+chlorophyll RIDGE_REF_wivw_re       0.945       0.708 0.326
+chlorophyll      RIDGE_REF_wn       0.941       0.666 0.321
+chlorophyll   RIDGE_REF_wnone       0.932       0.669 0.328

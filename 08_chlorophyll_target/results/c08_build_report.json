@@ -1,0 +1,293 @@
+{
+ "rule_validation_on_V6_yield_agreement": {
+  "f_cultivar": 0.9576,
+  "f_dose": 0.9576,
+  "f_route": 0.9576,
+  "f_stress_type": 0.9576,
+  "f_biostimulant_class": 0.9576,
+  "f_composition": 0.9576,
+  "f_microorganism": 0.9576,
+  "f_n_applications": 0.9576,
+  "f_system": 0.9576,
+  "f_country": 0.9576,
+  "f_latitude": 1.0,
+  "f_application_stage": 0.9576,
+  "f_dose_unit": 0.9576
+ },
+ "new_moderator_rows": 2298,
+ "new_moderator_report": [
+  {
+   "study_id": "150",
+   "rows_kept": 79,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "164",
+   "rows_kept": 51,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "212",
+   "rows_kept": 74,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "259",
+   "rows_kept": 170,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "3",
+   "rows_kept": 122,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "368",
+   "rows_kept": 46,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "379",
+   "rows_kept": 50,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "48",
+   "rows_kept": 57,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "794",
+   "rows_kept": 106,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "809",
+   "rows_kept": 43,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "838",
+   "rows_kept": 421,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "914",
+   "rows_kept": 48,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_04fa19ad49a5a820",
+   "rows_kept": 71,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_1f3dfb42727890f2",
+   "rows_kept": 57,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_2478dd539d31c416",
+   "rows_kept": 75,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_290cc24e3ad5811b",
+   "rows_kept": 38,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_4322c4cdf5c8fe4f",
+   "rows_kept": 84,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_48f99795a500094e",
+   "rows_kept": 40,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_5cd248bbaa94d91e",
+   "rows_kept": 35,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_65e27a8f43ec1066",
+   "rows_kept": 138,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_67175170b0043ca2",
+   "rows_kept": 73,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_73ffb9c5e144253d",
+   "rows_kept": 63,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_7d909539de117437",
+   "rows_kept": 111,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_a0f9f3ebcc4776ee",
+   "rows_kept": 120,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_b011f02860cd6a91",
+   "rows_kept": 117,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_b711bb82e78aaa0d",
+   "rows_kept": 82,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_c1de983a8bc94329",
+   "rows_kept": 49,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_c21fe13f44bdeae0",
+   "rows_kept": 68,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_c8f05b000606bcbe",
+   "rows_kept": 152,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_c99d8fea76812bd2",
+   "rows_kept": 62,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_d73a0c43c80df3fc",
+   "rows_kept": 88,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_dc8c35fca802eecb",
+   "rows_kept": 46,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_e9087c3ebb3b2d55",
+   "rows_kept": 125,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_f3f7d436ab5a1d2b",
+   "rows_kept": 175,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_f66e64aa2b4bc5de",
+   "rows_kept": 56,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_fd0eac9cc1b5ecc6",
+   "rows_kept": 157,
+   "rows_dropped_verbatim_not_found": 0
+  },
+  {
+   "study_id": "D_fec4bf7d8af2cec4",
+   "rows_kept": 109,
+   "rows_dropped_verbatim_not_found": 0
+  }
+ ],
+ "train_chlorophyll_V8": {
+  "rows": 816,
+  "default_rows": 607,
+  "default_studies": 94,
+  "by_type": {
+   "SB_vs_S": 399,
+   "B_vs_C": 208
+  },
+  "coverage_default": {
+   "h2_dujardin": 1.0,
+   "h_stress_class": 1.0,
+   "h_route": 1.0,
+   "h_system": 1.0,
+   "h_log10_dose": 0.404,
+   "f_cultivar": 0.855,
+   "f_country": 0.708,
+   "h_stress_intensity": 0.649,
+   "f_latitude": 0.071,
+   "h3_taxon_bacillus": 1.0
+  },
+  "stress_class_SBvsS": {
+   "SALINITY": 198,
+   "DROUGHT": 82,
+   "COMBINED": 55,
+   "COLD": 24,
+   "HEAT": 20,
+   "HEAVY_METAL": 13,
+   "BIOTIC": 4,
+   "CHEMICAL_TOXICITY": 2,
+   "OTHER": 1
+  },
+  "dujardin": {
+   "DJ_BENEFICIAL_BACTERIA": 226,
+   "DJ_BENEFICIAL_FUNGI": 97,
+   "DJ_PROTEIN_N": 75,
+   "DJ_OTHER_NON_DUJARDIN": 60,
+   "DJ_SEAWEED_BOTANICAL": 59,
+   "DJ_INORGANIC": 44,
+   "DJ_MIXTURE": 23,
+   "DJ_CHITOSAN_BIOPOLYMER": 15,
+   "DJ_HUMIC_FULVIC": 4,
+   "DJ_UNCLASSIFIED": 3,
+   "DJ_MICROBIAL_UNSPECIFIED": 1
+  }
+ },
+ "train_chl_index_V8": {
+  "rows": 912,
+  "default_rows": 610,
+  "default_studies": 55,
+  "by_type": {
+   "SB_vs_S": 363,
+   "B_vs_C": 247
+  },
+  "coverage_default": {
+   "h2_dujardin": 1.0,
+   "h_stress_class": 1.0,
+   "h_route": 1.0,
+   "h_system": 1.0,
+   "h_log10_dose": 0.389,
+   "f_cultivar": 0.869,
+   "f_country": 0.703,
+   "h_stress_intensity": 0.636,
+   "f_latitude": 0.149,
+   "h3_taxon_bacillus": 1.0
+  },
+  "stress_class_SBvsS": {
+   "SALINITY": 111,
+   "DROUGHT": 107,
+   "HEAT": 64,
+   "COLD": 44,
+   "BIOTIC": 24,
+   "COMBINED": 9,
+   "NUTRIENT": 4
+  },
+  "dujardin": {
+   "DJ_BENEFICIAL_BACTERIA": 144,
+   "DJ_INORGANIC": 100,
+   "DJ_OTHER_NON_DUJARDIN": 92,
+   "DJ_BENEFICIAL_FUNGI": 91,
+   "DJ_UNCLASSIFIED": 58,
+   "DJ_SEAWEED_BOTANICAL": 44,
+   "DJ_MIXTURE": 25,
+   "DJ_PROTEIN_N": 22,
+   "DJ_CHITOSAN_BIOPOLYMER": 20,
+   "DJ_HUMIC_FULVIC": 12,
+   "DJ_MICROBIAL_UNSPECIFIED": 2
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "target": "chlorophyll",
+ "rows": 607,
+ "studies": 94,
+ "clusters": 82,
+ "n_cat": 65,
+ "n_num": 32,
+ "sd_target": 0.30963311575005253,
+ "seconds": 317
+}

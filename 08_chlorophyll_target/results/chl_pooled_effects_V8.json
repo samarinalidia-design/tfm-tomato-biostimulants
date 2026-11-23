@@ -1,0 +1,182 @@
+{
+ "default|CHL_CONTENT|B_vs_C": {
+  "studies": 73,
+  "contrasts": 208,
+  "pct": 16.2,
+  "ci": [
+   10.0,
+   22.8
+  ],
+  "pi": [
+   -26.6,
+   84.1
+  ],
+  "tau": 0.233,
+  "sd_study_means": 0.237
+ },
+ "default|CHL_CONTENT|SB_vs_S": {
+  "studies": 82,
+  "contrasts": 399,
+  "pct": 32.1,
+  "ci": [
+   27.3,
+   37.1
+  ],
+  "pi": [
+   -4.3,
+   82.4
+  ],
+  "tau": 0.163,
+  "sd_study_means": 0.297
+ },
+ "default|CHL_CONTENT|S_vs_C": {
+  "studies": 87,
+  "contrasts": 163,
+  "pct": -28.7,
+  "ci": [
+   -36.0,
+   -20.6
+  ],
+  "pi": [
+   -73.8,
+   94.1
+  ],
+  "tau": 0.508,
+  "sd_study_means": 0.45
+ },
+ "default|CHL_INDEX|B_vs_C": {
+  "studies": 41,
+  "contrasts": 247,
+  "pct": 15.0,
+  "ci": [
+   6.1,
+   24.6
+  ],
+  "pi": [
+   -31.3,
+   92.6
+  ],
+  "tau": 0.26,
+  "sd_study_means": 0.175
+ },
+ "default|CHL_INDEX|SB_vs_S": {
+  "studies": 49,
+  "contrasts": 363,
+  "pct": 26.1,
+  "ci": [
+   17.6,
+   35.3
+  ],
+  "pi": [
+   -22.8,
+   106.0
+  ],
+  "tau": 0.248,
+  "sd_study_means": 0.22
+ },
+ "default|CHL_INDEX|S_vs_C": {
+  "studies": 44,
+  "contrasts": 108,
+  "pct": -16.8,
+  "ci": [
+   -20.6,
+   -12.9
+  ],
+  "pi": [
+   -38.1,
+   11.7
+  ],
+  "tau": 0.149,
+  "sd_study_means": 0.246
+ },
+ "quality_core|CHL_CONTENT|B_vs_C": {
+  "studies": 56,
+  "contrasts": 174,
+  "pct": 15.3,
+  "ci": [
+   9.7,
+   21.1
+  ],
+  "pi": [
+   -19.5,
+   64.9
+  ],
+  "tau": 0.181,
+  "sd_study_means": 0.191
+ },
+ "quality_core|CHL_CONTENT|SB_vs_S": {
+  "studies": 54,
+  "contrasts": 210,
+  "pct": 27.7,
+  "ci": [
+   21.6,
+   34.2
+  ],
+  "pi": [
+   -10.4,
+   82.0
+  ],
+  "tau": 0.179,
+  "sd_study_means": 0.212
+ },
+ "quality_core|CHL_CONTENT|S_vs_C": {
+  "studies": 63,
+  "contrasts": 123,
+  "pct": -26.1,
+  "ci": [
+   -32.4,
+   -19.3
+  ],
+  "pi": [
+   -63.2,
+   48.4
+  ],
+  "tau": 0.353,
+  "sd_study_means": 0.328
+ },
+ "quality_core|CHL_INDEX|B_vs_C": {
+  "studies": 37,
+  "contrasts": 223,
+  "pct": 14.3,
+  "ci": [
+   4.6,
+   24.9
+  ],
+  "pi": [
+   -33.6,
+   96.7
+  ],
+  "tau": 0.273,
+  "sd_study_means": 0.163
+ },
+ "quality_core|CHL_INDEX|SB_vs_S": {
+  "studies": 41,
+  "contrasts": 301,
+  "pct": 26.5,
+  "ci": [
+   17.9,
+   35.7
+  ],
+  "pi": [
+   -19.4,
+   98.5
+  ],
+  "tau": 0.227,
+  "sd_study_means": 0.222
+ },
+ "quality_core|CHL_INDEX|S_vs_C": {
+  "studies": 39,
+  "contrasts": 90,
+  "pct": -15.7,
+  "ci": [
+   -19.7,
+   -11.6
+  ],
+  "pi": [
+   -36.8,
+   12.4
+  ],
+  "tau": 0.145,
+  "sd_study_means": 0.233
+ }
+}

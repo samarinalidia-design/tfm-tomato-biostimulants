@@ -1,0 +1,4 @@
+   target          model     role  ood   n   MAE  coverage
+chl_index RF_REF_wivw_re     TEST    0 108 0.228     0.926
+chl_index RF_REF_wivw_re TRAIN_CV    0 582 0.156     0.959
+chl_index RF_REF_wivw_re TRAIN_CV    1  28 0.201     0.929

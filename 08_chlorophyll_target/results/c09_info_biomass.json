@@ -1,0 +1,10 @@
+{
+ "target": "biomass",
+ "rows": 1312,
+ "studies": 172,
+ "clusters": 171,
+ "n_cat": 64,
+ "n_num": 32,
+ "sd_target": 0.36118287320760206,
+ "seconds": 478
+}

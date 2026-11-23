@@ -1,0 +1,10 @@
+{
+ "target": "chl_index",
+ "rows": 610,
+ "studies": 55,
+ "clusters": 54,
+ "n_cat": 65,
+ "n_num": 32,
+ "sd_target": 0.2670447789844795,
+ "seconds": 355
+}

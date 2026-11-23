@@ -1,0 +1,17 @@
+group,n,columns
+unit_strings (f_*_unit),30,f_dose_unit;f_days_application_before_stress_unit;f_substrate_unit;f_soil_texture_unit;f_soil_ph_unit;f_organic_matter_unit;f_latitude_unit;f_dose_unit_unit;f_field_capacity_pct_unit;f_pot_volume_l_unit;f_temperature_day_c_unit;f_temperature_night_c_unit;f_relative_humidity_unit;f_ppfd_unit;f_nacl_mm_unit;f_soil_ec_unit;f_photoperiod_h_unit;f_n_applications_unit;f_plant_density_m2_unit;f_fertilization_unit;f_stress_duration_days_unit;f_inoculum_dose_unit;f_product_name_unit;f_ec_irrigation_ds_m_unit;f_composition_unit;f_application_stage_unit;f_irrigation_regime_unit;f_route_unit;f_stress_onset_stage_unit;f_season_unit
+country (f_country),1,f_country
+"genotype text (cultivar, genotype type, fruit type, growth habit, grafted)",5,f_cultivar;f_genotype_type;f_grafted;f_fruit_type;f_growth_habit
+system/substrate text,2,f_system;f_substrate
+"stress text (type, onset, irrigation regime)",3,f_stress_type;f_stress_onset_stage;f_irrigation_regime
+"product text (class, composition, microorganism, strain)",4,f_composition;f_biostimulant_class;f_microorganism;f_strain
+"application text (route, frequency, stage, dose unit)",4,f_dose_unit;f_route;f_frequency;f_application_stage
+season/soil/fertilisation text,3,f_season;f_soil_texture;f_fertilization
+pathogen text,4,f_pathogen;f_pathogen_strain;f_inoculum_dose;f_inoculation_method
+"raw numeric environment (f_ pH, OM, lat, T, RH, PPFD, photoperiod, pot, density)",10,f_soil_ph;f_organic_matter;f_latitude;f_pot_volume_l;f_temperature_day_c;f_temperature_night_c;f_relative_humidity;f_ppfd;f_photoperiod_h;f_plant_density_m2
+"raw numeric stress (f_ FC, NaCl, soil EC, ECw, duration)",5,f_field_capacity_pct;f_nacl_mm;f_soil_ec;f_stress_duration_days;f_ec_irrigation_ds_m
+"raw numeric application (f_ dose, n applications, days before stress)",3,f_n_applications;f_dose;f_days_application_before_stress
+"harmonised categories (h_ dose class, stress class, crop group, habit, hybrid, system, route, du Jardin)",8,h_dose_class;h_stress_class;h_crop_group;h_growth_habit;h_hybrid;h_system;h_route;h2_dujardin
+"harmonised dose/application (h_log10_dose, dose rank, n applications)",3,h_log10_dose;h_dose_rel_study;h_n_applications
+"harmonised stress intensity (h_stress_intensity, rank, NaCl equiv.)",3,h_stress_intensity;h_stress_rank_study;h_nacl_equiv_mm
+"product type flags (live microbe, non-living microbial, n components, potted)",4,h_potted;h2_n_components;h2_live_microorganism;h2_nonliving_microbial_product

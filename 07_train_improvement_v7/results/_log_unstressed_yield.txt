@@ -1,0 +1,11 @@
+              config   RMSE  RMSE_seed_sd  d_vs_REF  d_vs_REF_lo  d_vs_REF_hi  d_vs_MEAN_pct  d_vs_MEAN_lo  d_vs_MEAN_hi
+   WITH_BvsC | RIDGE 0.4618        0.0159   -0.0029      -0.0147       0.0103        -5.5263       -0.0627        0.0142
+  SBvsS_ONLY | RIDGE 0.4647        0.0096    0.0000       0.0000       0.0000        -4.9331       -0.0548        0.0125
+      WITH_BvsC | RF 0.4697        0.0141    0.0049      -0.0191       0.0303        -3.9245       -0.0480        0.0119
+     SBvsS_ONLY | RF 0.4802        0.0229    0.0155      -0.0071       0.0383        -1.7668       -0.0381        0.0222
+      WITH_BvsC_MEAN 0.4867        0.0011    0.0219      -0.0206       0.0577        -0.4454       -0.0132        0.0075
+                MEAN 0.4888        0.0018    0.0241      -0.0125       0.0548         0.0000        0.0000        0.0000
+     SBvsS_ONLY_MEAN 0.4888        0.0018    0.0241      -0.0125       0.0548         0.0000        0.0000        0.0000
+WITH_BvsC_MEAN_SBvsS 0.4888        0.0018    0.0241      -0.0125       0.0548         0.0000        0.0000        0.0000
+studies with both: 49, Spearman(stressed, unstressed study means) = 0.61 (p = 3.58e-06); mean stressed 0.452, unstressed 0.266
+229s

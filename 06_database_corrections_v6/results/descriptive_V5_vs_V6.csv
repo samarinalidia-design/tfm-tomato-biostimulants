@@ -1,0 +1,7 @@
+endpoint,set,SB_vs_S_contrasts,studies,study_mean_lnRR,pct,median,between_study_SD
+yield,V5 default,568,70,0.469,59.9,0.312,0.456
+yield,V6 default,470,70,0.468,59.7,0.312,0.455
+yield,V6 quality core,337,57,0.393,48.2,0.288,0.32
+dry_biomass,V5 default,961,164,0.353,42.3,0.31,0.304
+dry_biomass,V6 default,850,164,0.355,42.7,0.31,0.301
+dry_biomass,V6 quality core,756,155,0.367,44.4,0.313,0.271

@@ -1,0 +1,25 @@
+chlorophyll seed 11 fold 0 done
+chlorophyll seed 11 fold 1 done
+chlorophyll seed 11 fold 2 done
+chlorophyll seed 11 fold 3 done
+chlorophyll seed 11 fold 4 done
+chlorophyll seed 22 fold 0 done
+chlorophyll seed 22 fold 1 done
+chlorophyll seed 22 fold 2 done
+chlorophyll seed 22 fold 3 done
+chlorophyll seed 22 fold 4 done
+chlorophyll seed 33 fold 0 done
+chlorophyll seed 33 fold 1 done
+chlorophyll seed 33 fold 2 done
+chlorophyll seed 33 fold 3 done
+chlorophyll seed 33 fold 4 done
+{"target": "chlorophyll", "rows": 607, "studies": 94, "clusters": 93, "n_cat": 65, "n_num": 32, "sd_target": 0.30963311575005253, "seconds": 395}
+     target                model   n  studies   RMSE      R2  RMSE_study_balanced  d_vs_mean_pct  d_ci_low_pct  d_ci_high_pct
+chlorophyll BASELINE_mean_studyw 607       94 0.3107 -0.0084               0.3060        -0.0616       -1.0921         0.9840
+chlorophyll        BASELINE_mean 607       94 0.3109 -0.0096               0.3061         0.0000        0.0000         0.0000
+chlorophyll                  MR0 607       94 0.3110 -0.0104               0.3059         0.0399       -1.2300         1.4508
+chlorophyll            RF_REF_wn 607       94 0.3189 -0.0626               0.2960         2.5896       -5.3400        11.6995
+chlorophyll         RIDGE_REF_wn 607       94 0.3206 -0.0738               0.2999         3.1316       -2.6418        10.8082
+chlorophyll       RF_REF_wivw_re 607       94 0.3252 -0.1051               0.3002         4.6228       -4.1029        14.0944
+chlorophyll    RIDGE_REF_wivw_re 607       94 0.3255 -0.1070               0.3041         4.7120       -5.1141        16.1125
+chlorophyll      RIDGE_REF_wnone 607       94 0.3279 -0.1231               0.3055         5.4694       -2.0561        16.1998

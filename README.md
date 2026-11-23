@@ -3,7 +3,8 @@
 Code, frozen evidence databases and analysis outputs of the master's thesis (TFM, Agrobiología Ambiental)
 on the efficacy of biostimulants for tomato (*Solanum lycopersicum*) under abiotic stress:
 a verified relational database built with an AI-assisted (Claude multi-agent) extraction system,
-three-level meta-analysis and grouped-validation machine learning (version V5, 2026-11-20).
+three-level meta-analysis and grouped-validation machine learning (version V5, 2026-11-20), followed by a corrected
+database (V6, 2026-11-22), an exploratory analysis of the prediction limits (V7) and leaf chlorophyll as a third target (V8, 2026-11-24).
 
 ## Repository layout
 
@@ -15,6 +16,9 @@ three-level meta-analysis and grouped-validation machine learning (version V5, 2
 | `03_data_freeze/` | Frozen exports of both databases: analysis marts (`A_*`), `evidence_long`, `contrast_candidates`, covariance of shared controls, QA tables, `acceptance_report.json` and freeze manifest with SHA-256. |
 | `04_analysis_history/` | Earlier analysis stages: `SynerPlant_Yield_V2` (audit, corrections register, first models) and `SynerPlant_Yield_V4_HARMONIZATION` (pre-registered V4 analysis and post-hoc test). |
 | `05_analysis_train_expansion_v5/` | Current analysis. `v5/` holds the V5 pipeline (scripts `v5_01`–`v5_16`, R meta-analysis, model freeze with SHA-256, results, figures Fig1–Fig22, FigB1–B4, FigM1–M5, Excel workbooks, `README_V5.md`, `SUMMARY_V5_RU.md`); `scripts/`, `data/`, `results/` hold expansion rounds 1–7. `v5/tfm_docx/` contains the code that writes the thesis Methods and Results. |
+| `06_database_corrections_v6/` | V6 correction layer: errors found by re-checking the database against the full texts and systematic table-building errors; corrected analysis tables with a cell-level change log (`README_V6_RU.md`). The frozen V5 databases and tables are unchanged. |
+| `07_train_improvement_v7/` | Exploratory post-freeze analysis (TRAIN only): can database structure, filters or descriptor encoding improve prediction? Same CV engine, folds and evaluation rows (`README_V7_RU.md`; thesis Figure 27). |
+| `08_chlorophyll_target/` | V8: leaf chlorophyll content and chlorophyll index (SPAD) as a third target — extraction protocol and agent prompts (`docs/`), extraction / reconciliation / dataset scripts `c02`–`c08`, comparable CV of four targets (`c09`), stress × biostimulant meta-analysis (`c10`, `c13`), model freeze before the TEST extraction (`freeze/`, `c11`), one-time TEST evaluation (`c12`), extra analyses (`c15`, `c16`), thesis figures and tables (`figures_TFM_V8/`, `tables_TFM_V8/`, `c14`, `c17`) and the thesis-update scripts (`c18`, `c19`). See `README_V8_RU.md`. |
 
 ## Databases (release assets)
 
@@ -25,6 +29,14 @@ The SQLite databases exceed GitHub's file-size limit and are attached to the rel
 * `TFM_DATABASE_EXTERNAL_TEST_DATA_FREEZE_20261118.zip` — the same for EXTERNAL_TEST.
 
 SHA-256 of the unzipped files are listed in `RELEASE_ASSETS_AND_EXCLUSIONS.json` and match the freeze manifests in `03_data_freeze/`.
+
+The corrected and extended databases are attached to the release [`data-v6-v8`](../../releases/tag/data-v6-v8):
+
+* `TFM_DATABASE_TRAIN_DEV_V6_CORRECTED_20261122.zip` and `TFM_DATABASE_EXTERNAL_TEST_V6_CORRECTED_20261122.zip` — databases with the V6 corrections;
+* `TFM_DATABASE_TRAIN_DEV_V8_CHLOROPHYLL_20261122.zip` — the V6 TRAIN_DEV database plus the `chl_*` leaf-chlorophyll tables (the 108 base tables are unchanged).
+
+Scripts that need a database read it from the unzipped freeze folder in `03_data_freeze/` by default, or from the paths given in the
+environment variables `TFM_TRAIN_DB` / `TFM_TEST_DB`.
 
 ## What is not included
 
@@ -39,7 +51,9 @@ SHA-256 of the unzipped files are listed in `RELEASE_ASSETS_AND_EXCLUSIONS.json`
 Python 3.12 (pandas, numpy, scikit-learn, scipy, matplotlib, openpyxl, pyarrow) and R 4.5 (metafor 5.2, clubSandwich).
 Unzip the databases into the corresponding `03_data_freeze/` folders, adjust the input paths at the top of
 `05_analysis_train_expansion_v5/v5/scripts/v5_common.py` / `v5_01_build.py`, and run the steps listed in
-`05_analysis_train_expansion_v5/v5/README_V5.md`.
+`05_analysis_train_expansion_v5/v5/README_V5.md`. The V6, V7 and V8 steps are listed in the README of each folder; the chlorophyll
+extraction itself (agent passes on the full texts) needs the source articles, which are not distributed, but every later step runs from the
+files in `08_chlorophyll_target/data/`.
 
 ## Licence
 

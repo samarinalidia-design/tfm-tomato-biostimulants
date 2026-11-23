@@ -1,0 +1,383 @@
+study_id,experiment_key,arm_key,feature,target_col,value_raw,unit_raw,value_num,parse_status,mod_id,locator
+T014,E1,,pot_volume_l,v6_pot_volume_l,1.5,L,1.5,EXACT,231,"PDF p.2, Methods 2.1 para 1"
+T014,E1,,temperature_day_c,v6_temperature_day_c,26,degC (single growth-room temperature printed as '±26 °C'; no day/night split stated),26.0,EXACT,232,"PDF p.2, Methods 2.1 para 1"
+T014,E1,,relative_humidity,v6_relative_humidity_pct,65,"% (approximate, printed ~65 %)",65.0,EXACT,233,"PDF p.2, Methods 2.1 para 1"
+T014,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,234,"PDF p.2, Methods 2.1 para 1"
+T014,E1,E1.S,stress_duration_days,h2_stress_duration_days,11,days (watering withheld from pollination day 0 to rewatering at 11 DAP; recovery assessed 13 DAP),11.0,EXACT,245,"PDF p.3, Methods 2.2 para 1; PDF p.4 Fig. 1A schedule"
+T014,E1,E1.SB,stress_duration_days,h2_stress_duration_days,11,days (watering withheld from pollination day 0 to rewatering at 11 DAP; recovery assessed 13 DAP),11.0,EXACT,246,"PDF p.3, Methods 2.2 para 1; PDF p.4 Fig. 1A schedule"
+T014,E1,E1.SB,days_application_before_stress,h2_days_application_before_stress,7 and 1,"days before drought initiation (drought initiated at pollination, 0 DAP)",,AMBIGUOUS_TEXT,262,"PDF p.4, Fig. 1A schedule and caption; PDF p.3 Methods 2.2"
+T017,E1,,temperature_day_c,v6_temperature_day_c,24,C (single chamber setpoint; no day/night distinction printed),24.0,EXACT,276,"p2, Sec. 2.2.1"
+T017,E1,,photoperiod_h,v6_photoperiod_h,16,h light (16/8 h light/dark),16.0,EXACT,277,"p2, Sec. 2.2.1"
+T017,E1,,relative_humidity,v6_relative_humidity_pct,75,"% (printed as 'RU', defined as relative humidity in Abbreviations, p1)",75.0,EXACT,279,"p2, Sec. 2.2.1; p1 Abbreviations footnote"
+T017,E1,,stress_duration_days,h2_stress_duration_days,5,d (morphology set; molecular sampling at 72 h),5.0,EXACT,284,"p2, Sec. 2.2.1; p4 Sec. 3.1.1"
+T017,E1,,days_application_before_stress,h2_days_application_before_stress,0,d (dip immediately followed by transfer to NaCl medium),0.0,EXACT,290,"p2, Sec. 2.2.1"
+T017,E2,,pot_volume_l,v6_pot_volume_l,0.1,L,0.1,EXACT,296,"p2, Sec. 2.2.2"
+T017,E2,,temperature_day_c,v6_temperature_day_c,24,C (single setpoint; no day/night distinction printed),24.0,EXACT,297,"p2, Sec. 2.2.2"
+T017,E2,,stress_duration_days,h2_stress_duration_days,7,d (Abstract '1-week'; Methods give only total trial length 52 d and frequency three times a week),7.0,EXACT,304,"p1, Abstract"
+T017,E3,,pot_volume_l,v6_pot_volume_l,4,L,4.0,EXACT,316,"p3, Sec. 2.2.3"
+T012,E1,,temperature_day_c,v6_temperature_day_c,26,C,26.0,EXACT,429,"physical PDF p.2 (journal p.316), Sect. 2.2"
+T012,E1,,temperature_night_c,v6_temperature_night_c,20,C,20.0,EXACT,430,"physical PDF p.2 (journal p.316), Sect. 2.2"
+T012,E1,,relative_humidity,v6_relative_humidity_pct,70,%,70.0,EXACT,431,"physical PDF p.2 (journal p.316), Sect. 2.2"
+T012,E1,,photoperiod_h,v6_photoperiod_h,14,h,14.0,EXACT,432,"physical PDF p.2 (journal p.316), Sect. 2.2"
+T012,E1,,stress_duration_days,h2_stress_duration_days,20,d,20.0,EXACT,435,"physical PDF p.2 (journal p.316), Sect. 2.2 and 2.3"
+T012,E1,,days_application_before_stress,h2_days_application_before_stress,0,d,0.0,EXACT,440,"physical PDF p.2 (journal p.316), Sect. 2.2 (Si source and NaCl defined as components of the same treatment solution at transplanting)"
+T009,E1,,pot_volume_l,v6_pot_volume_l,65,L,65.0,EXACT,499,"physical PDF p4, Section 2.2 para 1"
+T009,E1,,plant_density_m2,h2_plant_density_m2,5,plants m-2,5.0,EXACT,500,"physical PDF p4, Section 2.2 para 3"
+T009,E1,,latitude,v6_abs_latitude_printed,40°49' N (40.817 N),degrees N,40.81666666666667,DMS_CONVERTED,502,"physical PDF p3, Section 2.1 para 1"
+T040,E1,,pot_volume_l,v6_pot_volume_l,9.5,L,9.5,EXACT,752,"F_5e9f43aa4096219bc07d physical p3, Sec 2.2 para 2"
+T040,E1,,plant_density_m2,h2_plant_density_m2,3.5,plants m-2,3.5,EXACT,753,"F_5e9f43aa4096219bc07d physical p3, Sec 2.2 para 1"
+T040,E1,,latitude,v6_abs_latitude_printed,42 deg 25 min N,degrees-minutes N as printed (longitude 12 deg 08 min E; 310 m a.s.l.),42.416666666666664,DMS_CONVERTED,755,"F_5e9f43aa4096219bc07d physical p3, Sec 2.2 para 1"
+T015,E1,E1.TOM.SB_AN,days_application_before_stress,h2_days_application_before_stress,-7,days (negative = first biostimulant application 7 d after stress onset),-7.0,EXACT,945,p14 Section 4.4 with p13 Section 4.2 (receipt SRC-8d5ded567c7e976212d76f23)
+T015,E1,E1.TOM.SB_PGPR,days_application_before_stress,h2_days_application_before_stress,-7,days (negative = first biostimulant application 7 d after stress onset),-7.0,EXACT,946,p14 Section 4.4 with p13 Section 4.2 (receipt SRC-8d5ded567c7e976212d76f23)
+T015,E1,E1.THE.SB_AN,days_application_before_stress,h2_days_application_before_stress,-7,days (negative = first biostimulant application 7 d after stress onset),-7.0,EXACT,947,p14 Section 4.4 with p13 Section 4.2 (receipt SRC-8d5ded567c7e976212d76f23)
+T015,E1,E1.THE.SB_PGPR,days_application_before_stress,h2_days_application_before_stress,-7,days (negative = first biostimulant application 7 d after stress onset),-7.0,EXACT,948,p14 Section 4.4 with p13 Section 4.2 (receipt SRC-8d5ded567c7e976212d76f23)
+T006,E1,,pot_volume_l,v6_pot_volume_l,2,L,2.0,EXACT,1027,"Fulltext p.9, Section 4.2 Experimental Design (line 4)"
+T006,E1,,temperature_day_c,v6_temperature_day_c,27,°C (± 1),27.0,EXACT,1028,"Fulltext p.9, Section 4.2 Experimental Design (line 5)"
+T006,E1,,temperature_night_c,v6_temperature_night_c,22,°C (± 1),22.0,EXACT,1029,"Fulltext p.9, Section 4.2 Experimental Design (line 5)"
+T006,E1,,relative_humidity,v6_relative_humidity_pct,80,% RH (± 5),80.0,EXACT,1030,"Fulltext p.9, Section 4.2 Experimental Design (line 5)"
+T006,E1,,photoperiod_h,v6_photoperiod_h,16,h light (8 h dark),16.0,EXACT,1031,"Fulltext p.9, Section 4.2 Experimental Design (line 5)"
+T006,E1,E1.S,stress_duration_days,h2_stress_duration_days,14,days per drought period; two separate 14-d water-withholding periods separated by recovery (cumulative 28 d not printed as a number),14.0,EXACT,1050,Fulltext p.1 Abstract; cross-check p.9-10 Section 4.2
+T006,E1,E1.SB_MC,stress_duration_days,h2_stress_duration_days,14,days per drought period; two separate 14-d water-withholding periods separated by recovery (cumulative 28 d not printed as a number),14.0,EXACT,1051,Fulltext p.1 Abstract; cross-check p.9-10 Section 4.2
+T006,E1,E1.SB_CC,stress_duration_days,h2_stress_duration_days,14,days per drought period; two separate 14-d water-withholding periods separated by recovery (cumulative 28 d not printed as a number),14.0,EXACT,1052,Fulltext p.1 Abstract; cross-check p.9-10 Section 4.2
+T006,E1,E1.SB_MC,days_application_before_stress,h2_days_application_before_stress,3,days (first application before first drought; third application 72 h before second drought),3.0,EXACT,1094,Fulltext p.9 Section 4.2 (lines 10-14); p.10 Figure 1 ('3 d priming')
+T006,E1,E1.SB_CC,days_application_before_stress,h2_days_application_before_stress,3,days (first application before first drought; third application 72 h before second drought),3.0,EXACT,1095,Fulltext p.9 Section 4.2 (lines 10-14); p.10 Figure 1 ('3 d priming')
+T008,E1,,pot_volume_l,v6_pot_volume_l,0.4,L,0.4,EXACT,1100,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (printed 400 ml)"
+T008,E1,,temperature_day_c,v6_temperature_day_c,24,C,24.0,EXACT,1101,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (single 24 C setpoint printed for the whole 16-h light/8-h dark cycle)"
+T008,E1,,temperature_night_c,v6_temperature_night_c,24,C,24.0,EXACT,1102,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (single 24 C setpoint printed for the whole 16-h light/8-h dark cycle; no separate night value)"
+T008,E1,,relative_humidity,v6_relative_humidity_pct,50,%,50.0,EXACT,1103,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,1104,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.ST,stress_duration_days,h2_stress_duration_days,5,d,5.0,EXACT,1115,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.DOP+ST,stress_duration_days,h2_stress_duration_days,5,d,5.0,EXACT,1121,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.PRO+ST,stress_duration_days,h2_stress_duration_days,5,d,5.0,EXACT,1127,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.DR,stress_duration_days,h2_stress_duration_days,5,d,5.0,EXACT,1132,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.DOP+DR,stress_duration_days,h2_stress_duration_days,5,d,5.0,EXACT,1137,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.PRO+DR,stress_duration_days,h2_stress_duration_days,5,d,5.0,EXACT,1142,"PDF p.4 (printed p.3), Plant growth and treatment, first paragraph (left column)"
+T008,E1,E1.DOP+ST,days_application_before_stress,h2_days_application_before_stress,21,d,21.0,EXACT,1160,"PDF p.4 (printed p.3), Plant growth and treatment (application from sowing, right column; salt stress started at end of day 21, left column)"
+T008,E1,E1.DOP+DR,days_application_before_stress,h2_days_application_before_stress,21,d,21.0,EXACT,1169,"PDF p.4 (printed p.3), Plant growth and treatment (application from sowing, right column; drought started at end of day 21, left column)"
+T008,E1,E1.PRO+ST,days_application_before_stress,h2_days_application_before_stress,21,d,21.0,EXACT,1186,"PDF p.4 (printed p.3), Plant growth and treatment (application from sowing, right column; salt stress started at end of day 21, left column)"
+T008,E1,E1.PRO+DR,days_application_before_stress,h2_days_application_before_stress,21,d,21.0,EXACT,1195,"PDF p.4 (printed p.3), Plant growth and treatment (application from sowing, right column; drought started at end of day 21, left column)"
+T057,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,1437,"p13 Methods, 'Plant culture environment and transgenesis'"
+T057,E2,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,1438,"p13 Methods, 'Plant culture environment and transgenesis'"
+T057,E1,,temperature_day_c,v6_temperature_day_c,22,C,22.0,EXACT,1439,"p13 Methods, 'Plant culture environment and transgenesis' (single greenhouse temperature printed; day/night not distinguished; night value not assigned)"
+T057,E2,,temperature_day_c,v6_temperature_day_c,22,C,22.0,EXACT,1440,"p13 Methods, 'Plant culture environment and transgenesis' (single greenhouse temperature printed; day/night not distinguished; night value not assigned)"
+T057,E1,,relative_humidity,v6_relative_humidity_pct,60,%,60.0,EXACT,1441,"p13 Methods, 'Plant culture environment and transgenesis'"
+T057,E2,,relative_humidity,v6_relative_humidity_pct,60,%,60.0,EXACT,1442,"p13 Methods, 'Plant culture environment and transgenesis'"
+T057,E1,,stress_duration_days,h2_stress_duration_days,3,days (72 h from inoculation to lesion reading; inoculum block removed after 1 day),3.0,EXACT,1451,"p14 Methods, 'Pathogen inoculation'"
+T057,E2,,stress_duration_days,h2_stress_duration_days,3,days (72 h from inoculation to lesion reading; inoculum block removed after 1 day),3.0,EXACT,1452,"p14 Methods, 'Pathogen inoculation'; p11 Fig 10 caption (b-d) 'after 72 h of inoculation'"
+T077,E1,,temperature_day_c,v6_temperature_day_c,22,C,22.0,EXACT,1506,"p2 Materials and methods > Experimental setup and plant materials, paragraph 3 (growth chamber conditions)"
+T077,E1,,temperature_night_c,v6_temperature_night_c,18,C,18.0,EXACT,1507,"p2 Materials and methods > Experimental setup and plant materials, paragraph 3 (growth chamber conditions)"
+T077,E1,,relative_humidity,v6_relative_humidity_pct,60-70,%,65.0,RANGE_MIDPOINT,1508,"p2 Materials and methods > Experimental setup and plant materials, paragraph 3 (growth chamber conditions)"
+T077,E1,,photoperiod_h,v6_photoperiod_h,16,h light (16 h day / 8 h night),16.0,EXACT,1509,"p2 Materials and methods > Experimental setup and plant materials, paragraph 3 (growth chamber conditions)"
+T077,E1,,stress_duration_days,h2_stress_duration_days,5,d (as printed for the cohort uprooted for laboratory analysis; drought duration for the yield cohort recorded at physiological maturity is not stated),5.0,EXACT,1515,"p2 Materials and methods > Experimental setup and plant materials, paragraph 3"
+T064,E1,,pot_volume_l,v6_pot_volume_l,5,L,5.0,EXACT,1562,"PDF p2, Methods 2.1 Plant materials, right column para 2"
+T018,E1,,temperature_day_c,v6_temperature_day_c,25,degC,25.0,EXACT,1676,"PDF p11, Section 4.1, last line (greenhouse conditions)"
+T018,E1,,temperature_night_c,v6_temperature_night_c,18,degC,18.0,EXACT,1677,"PDF p11, Section 4.1, last line (greenhouse conditions)"
+T018,E1,,photoperiod_h,v6_photoperiod_h,16,h light (16/8 h day/night),16.0,EXACT,1678,"PDF p12, Section 4.1, first line"
+T018,E1,,relative_humidity,v6_relative_humidity_pct,60,%,60.0,EXACT,1680,"PDF p12, Section 4.1, first two lines"
+T018,E1,,stress_duration_days,h2_stress_duration_days,"approx. 3 months from start of salt application to harvest (printed in months only, includes 3-week ramp; not converted to days)",months,,UNIT_NOT_CONVERTED(D2: days and weeks only),1692,"PDF p12, Section 4.1, third paragraph, last sentence"
+T018,E1,E1.B_AMF,days_application_before_stress,h2_days_application_before_stress,20,days,20.0,EXACT,1715,"PDF p12, Section 4.1, third paragraph"
+T018,E1,E1.SB_AMF,days_application_before_stress,h2_days_application_before_stress,20,days,20.0,EXACT,1716,"PDF p12, Section 4.1, third paragraph"
+T018,E1,E1.B_COMP+AMF,days_application_before_stress,h2_days_application_before_stress,20 (AMF component; compost timing not stated),days,20.0,FIRST_NUMBER,1717,"PDF p12, Section 4.1, third paragraph"
+T018,E1,E1.SB_COMP+AMF,days_application_before_stress,h2_days_application_before_stress,20 (AMF component; compost timing not stated),days,20.0,FIRST_NUMBER,1718,"PDF p12, Section 4.1, third paragraph"
+T019,E1,,photoperiod_h,v6_photoperiod_h,9-12 (natural photoperiod),h light per day,10.5,RANGE_MIDPOINT,1878,p3 Sec 2.2
+T019,E2,E2.S_NaCl,stress_duration_days,h2_stress_duration_days,15,days after stress challenge as printed (Sec 2.6 harvest 'after twenty days of treatment application' is inconsistent with 3 + 15 = 18),15.0,EXACT,1920,p4 Sec 2.5 and Sec 2.6
+T019,E2,E2.S_Fol,stress_duration_days,h2_stress_duration_days,15,days after stress challenge as printed (Sec 2.6 harvest 'after twenty days of treatment application' is inconsistent with 3 + 15 = 18),15.0,EXACT,1927,p4 Sec 2.5 and Sec 2.6
+T019,E2,E2.SB_NaCl_IS1,stress_duration_days,h2_stress_duration_days,15,days after stress challenge as printed (Sec 2.6 harvest 'after twenty days of treatment application' is inconsistent with 3 + 15 = 18),15.0,EXACT,1935,p4 Sec 2.5 and Sec 2.6
+T019,E2,E2.SB_NaCl_IS1,days_application_before_stress,h2_days_application_before_stress,3,days,3.0,EXACT,1936,p4 Sec 2.5
+T019,E2,E2.SB_NaCl_IS6,stress_duration_days,h2_stress_duration_days,15,days after stress challenge as printed (Sec 2.6 harvest 'after twenty days of treatment application' is inconsistent with 3 + 15 = 18),15.0,EXACT,1954,p4 Sec 2.5 and Sec 2.6
+T019,E2,E2.SB_NaCl_IS6,days_application_before_stress,h2_days_application_before_stress,3,days,3.0,EXACT,1955,p4 Sec 2.5
+T019,E2,E2.SB_Fol_IS1,stress_duration_days,h2_stress_duration_days,15,days after stress challenge as printed (Sec 2.6 harvest 'after twenty days of treatment application' is inconsistent with 3 + 15 = 18),15.0,EXACT,1972,p4 Sec 2.5 and Sec 2.6
+T019,E2,E2.SB_Fol_IS1,days_application_before_stress,h2_days_application_before_stress,3,days,3.0,EXACT,1973,p4 Sec 2.5
+T019,E2,E2.SB_Fol_IS6,stress_duration_days,h2_stress_duration_days,15,days after stress challenge as printed (Sec 2.6 harvest 'after twenty days of treatment application' is inconsistent with 3 + 15 = 18),15.0,EXACT,1990,p4 Sec 2.5 and Sec 2.6
+T019,E2,E2.SB_Fol_IS6,days_application_before_stress,h2_days_application_before_stress,3,days,3.0,EXACT,1991,p4 Sec 2.5
+T021,E1,,pot_volume_l,v6_pot_volume_l,0.2,L,0.2,EXACT,2010,"PDF p.2 (journal p.4112), Materials and methods, 'Plant materials and Systemin treatment'; printed as 200 cm3 (exact metric equivalence 200 cm3 = 0.2 L)"
+T021,E2,,pot_volume_l,v6_pot_volume_l,0.2,L,0.2,EXACT,2011,"PDF p.2 (journal p.4112), Materials and methods, 'Plant materials and Systemin treatment' ('For all experiments'); printed as 200 cm3 (= 0.2 L)"
+T021,E1,E1.S,stress_duration_days,h2_stress_duration_days,3,days,3.0,EXACT,2042,"PDF p.3 (journal p.4113), left column, 'Pathogen inoculation and disease quantification'; printed as 72 h (exact 72 h = 3 d), single inoculation with no removal, time from inoculation to the disease-rating assessment (fungal qPCR sampled at 48 hpi)"
+T021,E1,E1.SB,stress_duration_days,h2_stress_duration_days,3,days,3.0,EXACT,2043,"PDF p.3 (journal p.4113), left column, 'Pathogen inoculation and disease quantification'; printed as 72 h (exact 72 h = 3 d), single inoculation with no removal, time from inoculation to the disease-rating assessment (fungal qPCR sampled at 48 hpi)"
+T021,E1,E1.SB,days_application_before_stress,h2_days_application_before_stress,1,days,1.0,EXACT,2044,"PDF p.3 (journal p.4113), left column, 'Pathogen inoculation and disease quantification'; printed as 24 h (exact 24 h = 1 d); confirmed by Fig. 1 caption PDF p.6 ('24 h after treatment with 20 nM Sys or water')"
+T022,E1,,stress_duration_days,h2_stress_duration_days,30,days post inoculation to destructive assessment (uprooting); single planned assessment,30.0,EXACT,2104,"p4, Methods 2.6.1, right column paragraph after treatment list"
+T022,E1,E1.SB_FOL,days_application_before_stress,h2_days_application_before_stress,first soil application 4 days before inoculation (1st vs 5th DAT on the same printed DAT schedule); root dip at transplanting precedes inoculation by an unstated number of days (DAT 0 not defined); second soil application 5 days after inoculation (10th DAT),days (on the printed DAT schedule),,MULTIPLE_VALUES,2161,"p4, Methods 2.6.1 treatment list T1, T3; T4 = T1 + T3"
+T022,E1,E1.SB_MI,days_application_before_stress,h2_days_application_before_stress,first soil application 4 days before inoculation (1st vs 5th DAT on the same printed DAT schedule); root dip at transplanting precedes inoculation by an unstated number of days (DAT 0 not defined); second soil application 5 days after inoculation (10th DAT),days (on the printed DAT schedule),,MULTIPLE_VALUES,2162,"p4, Methods 2.6.1 treatment list T2, T3; T6 = T2 + T3"
+T022,E1,E1.SB_FOL_MI,days_application_before_stress,h2_days_application_before_stress,first soil application 4 days before inoculation (1st vs 5th DAT on the same printed DAT schedule); root dip at transplanting precedes inoculation by an unstated number of days (DAT 0 not defined); second soil application 5 days after inoculation (10th DAT),days (on the printed DAT schedule),,MULTIPLE_VALUES,2163,"p4, Methods 2.6.1 treatment list T1, T2, T3; T8 = T1 + T2 + T3"
+T020,E1,,pot_volume_l,v6_pot_volume_l,5,L,5.0,EXACT,2210,"PDF p13, Methods 'In planta evaluation...', sentence 1"
+T020,E1,,latitude,v6_abs_latitude_printed,S 01° 13′ 14.6″,"DMS (printed degrees-minutes-seconds, south; code normalizes to decimal)",1.2207222222222223,DMS_CONVERTED,2212,"PDF p11, Methods 'Study site', sentence 1"
+T020,E1,,days_application_before_stress,h2_days_application_before_stress,0,"days (day resolution; 18 h seed soak ended at sowing, FOL drench on the same day as sowing)",0.0,EXACT,2241,"PDF p13, Methods 'In planta evaluation...', sentences 1-2 (with p12 seed-soak sentence, receipt SRC-6c47f63eda2824f79d6642d5)"
+T027,E1,,temperature_day_c,v6_temperature_day_c,28,degC (printed as one greenhouse value 28 +/- 2 C; not split by day/night),28.0,EXACT,2363,"PDF p.6 (journal p.422), Methods greenhouse section, right column para 1"
+T027,E1,,temperature_night_c,v6_temperature_night_c,28,degC (printed as one greenhouse value 28 +/- 2 C; not split by day/night),28.0,EXACT,2364,"PDF p.6 (journal p.422), Methods greenhouse section, right column para 1"
+T027,E1,,relative_humidity,v6_relative_humidity_pct,42,% (printed 42 +/- 5%),42.0,EXACT,2365,"PDF p.6 (journal p.422), Methods greenhouse section, right column para 1"
+T027,E1,,photoperiod_h,v6_photoperiod_h,15,h light per day (15 h day/9 h night),15.0,EXACT,2366,"PDF p.6 (journal p.422), Methods greenhouse section, right column para 1"
+T027,E1,E1.SB_MR20,days_application_before_stress,h2_days_application_before_stress,0,days (applied immediately after nematode inoculation; simultaneous),0.0,EXACT,2393,"PDF p.6 (journal p.422), Methods greenhouse section, left column para 3"
+T027,E1,E1.SB_MR12MR25,days_application_before_stress,h2_days_application_before_stress,0,days (applied immediately after nematode inoculation; simultaneous),0.0,EXACT,2404,"PDF p.6 (journal p.422), Methods greenhouse section, left column para 3"
+T024,E1,,pot_volume_l,v6_pot_volume_l,2,L,2.0,EXACT,2415,"p4 right col, 2.7.2"
+T024,E2,,pot_volume_l,v6_pot_volume_l,2,L,2.0,EXACT,2416,"p4 right col, 2.7.2"
+T024,E3,,pot_volume_l,v6_pot_volume_l,2,L,2.0,EXACT,2417,"p4 right col, 2.7.2"
+T024,E1,,temperature_day_c,v6_temperature_day_c,22,"C (assay chamber setting, 2.7.3)",22.0,EXACT,2418,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T024,E1,,temperature_night_c,v6_temperature_night_c,20,"C (assay chamber setting, 2.7.3)",20.0,EXACT,2419,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T024,E1,,photoperiod_h,v6_photoperiod_h,16,"h light as printed; dark period printed as 18 h (internally inconsistent, sums to 34 h)",16.0,EXACT,2420,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T024,E1,,relative_humidity,v6_relative_humidity_pct,80,%,80.0,EXACT,2421,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T024,E2,,temperature_day_c,v6_temperature_day_c,26,"C (assay chamber setting, 2.7.3)",26.0,EXACT,2423,"p5 left col, 2.7.3 bacterial spot assay paragraph"
+T024,E2,,temperature_night_c,v6_temperature_night_c,24,"C (assay chamber setting, 2.7.3)",24.0,EXACT,2424,"p5 left col, 2.7.3 bacterial spot assay paragraph"
+T024,E2,,photoperiod_h,v6_photoperiod_h,16,"h light as printed; dark period printed as 18 h (internally inconsistent, sums to 34 h)",16.0,EXACT,2425,"p5 left col, 2.7.3 bacterial spot assay paragraph"
+T024,E2,,relative_humidity,v6_relative_humidity_pct,80,% chamber setting (plants bagged at close to 100% from 24 h before to 72 h after inoculation),80.0,EXACT,2426,"p5 left col, 2.7.3 bacterial spot assay paragraph"
+T024,E3,,temperature_day_c,v6_temperature_day_c,25,"C (post-germination plant-raising setting, 2.7.2; not restated in 2.7.4)",25.0,EXACT,2428,"p4 right col, 2.7.2 Plant material and growing conditions"
+T024,E3,,temperature_night_c,v6_temperature_night_c,22,"C (post-germination plant-raising setting, 2.7.2; not restated in 2.7.4)",22.0,EXACT,2429,"p4 right col, 2.7.2 Plant material and growing conditions"
+T024,E3,,photoperiod_h,v6_photoperiod_h,16,h light (printed for the germination phase; not restated for the PGP assay),16.0,EXACT,2430,"p4 right col, 2.7.2 Plant material and growing conditions"
+T024,E3,,relative_humidity,v6_relative_humidity_pct,60,% (printed for the germination phase; not restated for the PGP assay),60.0,EXACT,2431,"p4 right col, 2.7.2 Plant material and growing conditions"
+T024,E1,,stress_duration_days,h2_stress_duration_days,45,days from Forl inoculation to disease evaluation,45.0,EXACT,2440,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T024,E2,,stress_duration_days,h2_stress_duration_days,6,days from Xep inoculation to disease evaluation,6.0,EXACT,2449,"p5 left col, 2.7.3 bacterial spot assay paragraph"
+T024,E1,,days_application_before_stress,h2_days_application_before_stress,3,days (printed as exactly 72 h between last soil drench and Forl inoculation),3.0,EXACT,2476,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T024,E2,,days_application_before_stress,h2_days_application_before_stress,1,days (printed as exactly 24 h between last soil drench and Xep inoculation),1.0,EXACT,2477,"p4 right col, 2.7.3 In vivo biocontrol activity"
+T031,,,pot_volume_l,v6_pot_volume_l,45,cm3 (as printed; code normalizes to L),45.0,EXACT,2595,p15 Methods 4.2 para 1
+T031,,,photoperiod_h,v6_photoperiod_h,14,h light (14:10 light-dark),14.0,EXACT,2596,p15 Methods 4.2 para 1-2
+T031,E1,,temperature_day_c,v6_temperature_day_c,25,"C (+/- 2), single chamber setpoint, 28 d",25.0,EXACT,2608,p15 Methods 4.2 para 2
+T031,E2,,temperature_day_c,v6_temperature_day_c,25,C (+/- 2); pre-split 14 d and non-stress regime; cold arms 10 C (see stress_intensity),25.0,EXACT,2615,p15 Methods 4.2 para 2
+T031,E2,,stress_duration_days,h2_stress_duration_days,14,d,14.0,EXACT,2619,p15 Methods 4.2 para 2; p5 Fig 2 caption
+T031,E2,,days_application_before_stress,h2_days_application_before_stress,14,d from first application (at transplant) to cold onset; read from printed schedule,14.0,EXACT,2621,p15 Methods 4.2 para 1-2
+T031,E3,,temperature_day_c,v6_temperature_day_c,25,C (+/- 2); pre-split 14 d and non-stress regime; cold arms 10 C (see stress_intensity),25.0,EXACT,2625,p15 Methods 4.2 para 2; p5 Fig 3 caption
+T031,E3,,stress_duration_days,h2_stress_duration_days,14,d (sampling at 1 and 14 DAS),14.0,EXACT,2629,p5 Fig 3 caption
+T031,E3,,days_application_before_stress,h2_days_application_before_stress,14,d from first application (at transplant) to cold onset; read from printed schedule,14.0,EXACT,2631,p15 Methods 4.2 para 1-2
+T035,E1,,pot_volume_l,v6_pot_volume_l,9,L,9.0,EXACT,2730,"Fulltext PDF p.14, Section 4.1, paragraph after Figure 2"
+T035,E1,,plant_density_m2,h2_plant_density_m2,3.5,plants/m2,3.5,EXACT,2731,"Fulltext PDF p.14, Section 4.1, paragraph after Figure 2, last sentence"
+T035,E1,,latitude,v6_abs_latitude_printed,42°25' N,degrees N (printed DMS),42.416666666666664,DMS_CONVERTED,2733,"Fulltext PDF p.14, Section 4.1, paragraph 1"
+T035,E1,,temperature_night_c,v6_temperature_night_c,"heating setpoint: kept above 20 at night during the first month only (management setpoint, not a measured mean)",C,,NOT_NUMERIC_TEXT,2735,"Fulltext PDF p.14, Section 4.1, paragraph 1"
+T035,E1,,temperature_day_c,v6_temperature_day_c,"ventilation/side-opening activation setpoint: when daily air temperature exceeded 27 (management setpoint, not a measured mean)",C,,NOT_NUMERIC_TEXT,2736,"Fulltext PDF p.14, Section 4.1, paragraph 1"
+T037,E1,,relative_humidity,v6_relative_humidity_pct,60-85,% (greenhouse range),72.5,RANGE_MIDPOINT,2847,p4 Methods 2.8.1 para 1
+T037,E1,,stress_duration_days,h2_stress_duration_days,14,days (salinity onset to measurement; printed as two weeks),14.0,EXACT,2852,p4 Methods 2.8.1 last sentence; 2.8.2
+T037,E1,,days_application_before_stress,h2_days_application_before_stress,7,days (printed as one week),7.0,EXACT,2853,p4 Methods 2.8.1 para 1
+T036,E1,,stress_duration_days,h2_stress_duration_days,42,"days (six weeks per Methods 2.4/2.8; Fig. 4 photo caption p7 states 7 weeks of salinity, Results 3.5 p6 mentions visual symptoms after three weeks)",42.0,EXACT,3066,"PDF p4, Methods 2.4 and 2.8"
+T036,E2,,stress_duration_days,h2_stress_duration_days,42,"days (six weeks per Methods 2.4/2.8; Fig. 4 photo caption p7 states 7 weeks of salinity, Results 3.5 p6 mentions visual symptoms after three weeks)",42.0,EXACT,3067,"PDF p4, Methods 2.4 and 2.8"
+T036,E1,,days_application_before_stress,h2_days_application_before_stress,21,"days, approximate (soil drench at planting; salt from the 4th week after transplanting following three-week greenhouse growth; exact start day not stated; seed bacterization a further ~4 d earlier)",21.0,EXACT,3090,"PDF p4, Methods 2.3 (continued) and 2.4; drench timing p3 Methods 2.3"
+T032,E1,,pot_volume_l,v6_pot_volume_l,6,L,6.0,EXACT,3114,"p.3, Section 2.1, paragraph 1"
+T032,E1,,plant_density_m2,h2_plant_density_m2,printed spacing 1.0 m within row x 1.0 m between rows (no plants m-2 value printed; not converted),m x m spacing,,MULTIPLE_VALUES,3115,"p.3, Section 2.1, paragraph 3"
+T032,E1,,latitude,v6_abs_latitude_printed,40°32′08.7″ N (printed DMS; longitude 23°00′06.4″ E),DMS,40.53575,DMS_CONVERTED,3117,"p.3, Section 2.1, paragraph 1"
+T038,E2,,photoperiod_h,v6_photoperiod_h,16,h light per 24 h,16.0,EXACT,3250,p.2 Methods 2.1 para 2
+T038,E2,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,3251,p.2 Methods 2.1 para 2
+T038,E2,,temperature_night_c,v6_temperature_night_c,20,C,20.0,EXACT,3252,p.2 Methods 2.1 para 2
+T038,E2,,relative_humidity,v6_relative_humidity_pct,60 % day / 80 % night,%,60.0,FIRST_NUMBER,3253,p.2 Methods 2.1 para 2
+T038,E1,,stress_duration_days,h2_stress_duration_days,14,d,14.0,EXACT,3269,p.4 Fig. 1 caption (A)
+T038,E2,,stress_duration_days,h2_stress_duration_days,10,d,10.0,EXACT,3270,p.2 Methods 2.1 para 1
+T038,E1,,days_application_before_stress,h2_days_application_before_stress,0,d (extract and NaCl present simultaneously in the germination medium),0.0,EXACT,3285,p.3 Results 3.1; p.4 Fig. 1 caption (A)
+T038,E2,,days_application_before_stress,h2_days_application_before_stress,22,d from end of 14-d priming to NaCl onset (derived 2 d vermiculite + 20 d Hoagland; 36 d from start of priming),22.0,EXACT,3286,p.2 Methods 2.1 para 1 (derived from printed durations)
+T044,E1,,temperature_day_c,v6_temperature_day_c,21-24,C,22.5,RANGE_MIDPOINT,3328,"p2, Methods 2.2, right column"
+T044,E1,,temperature_night_c,v6_temperature_night_c,16-18,C,17.0,RANGE_MIDPOINT,3329,"p2, Methods 2.2, right column"
+T044,E1,,relative_humidity,v6_relative_humidity_pct,60-70,%,65.0,RANGE_MIDPOINT,3330,"p2, Methods 2.2, right column"
+T044,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,3331,"p2, Methods 2.2, right column"
+T044,E1,,stress_duration_days,h2_stress_duration_days,15,d,15.0,EXACT,3336,"p2, Methods 2.2, right column (Methods 2.4 p3 'After two weeks of salt stress' consistent; Fig. 1 caption p5 'after four weeks in a greenhouse under 200 mM NaCl stress' discordant, see notes)"
+T044,E2,,stress_duration_days,h2_stress_duration_days,2,h,,UNIT_NOT_CONVERTED(D2: days and weeks only),3342,"p2, Methods 2.2, right column; also p3 Methods 2.4 left column ('immediately after 2 h of heat stress at 42 °C')"
+T042,E1,,temperature_day_c,v6_temperature_day_c,28,°C,28.0,EXACT,3502,"p2 Methods 2.1, paragraph 1 (normal-condition growth)"
+T042,E1,,temperature_night_c,v6_temperature_night_c,18,°C,18.0,EXACT,3503,"p2 Methods 2.1, paragraph 1 (normal-condition growth)"
+T042,E1,,photoperiod_h,v6_photoperiod_h,16,h light per day (16 h/8 h light/dark),16.0,EXACT,3504,"p2 Methods 2.1, paragraph 1 (normal-condition growth)"
+T042,E1,,relative_humidity,v6_relative_humidity_pct,50,%,50.0,EXACT,3506,"p2 Methods 2.1, paragraph 1 (normal-condition growth)"
+T042,E2,,temperature_day_c,v6_temperature_day_c,32,°C (Methods 2.1; conflicts with 35 in Results 3.2),32.0,EXACT,3514,"p2 Methods 2.1, paragraph 1, heat stress sentence"
+T042,E2,,temperature_day_c,v6_temperature_day_c,35,°C (Results 3.2; conflicts with 32 in Methods 2.1),35.0,EXACT,3515,"p5 Results 3.2, first sentence"
+T042,E2,,temperature_night_c,v6_temperature_night_c,22,°C (Methods 2.1; conflicts with 25 in Results 3.2),22.0,EXACT,3516,"p2 Methods 2.1, paragraph 1, heat stress sentence"
+T042,E2,,temperature_night_c,v6_temperature_night_c,25,°C (Results 3.2; conflicts with 22 in Methods 2.1),25.0,EXACT,3517,"p5 Results 3.2, first sentence"
+T042,E2,,photoperiod_h,v6_photoperiod_h,16,h light per day (16 h/8 h; growth-chamber version in Methods 2.1 only),16.0,EXACT,3518,"p2 Methods 2.1, paragraph 1, heat stress sentence"
+T042,E2,,relative_humidity,v6_relative_humidity_pct,50,% (growth-chamber version in Methods 2.1 only),50.0,EXACT,3520,"p2 Methods 2.1, paragraph 1, heat stress sentence"
+T042,E2,,stress_duration_days,h2_stress_duration_days,25,days (Methods 2.1; conflicts with 42 d in Results 3.2),25.0,EXACT,3526,"p2 Methods 2.1, paragraph 1, heat stress sentence"
+T042,E2,,stress_duration_days,h2_stress_duration_days,42,days (Results 3.2; conflicts with 25 d in Methods 2.1),42.0,EXACT,3527,"p5 Results 3.2, first sentence"
+T049,E1,E1.SB,days_application_before_stress,h2_days_application_before_stress,21,days (3 weeks; derived),21.0,EXACT,3688,p3 Methods 2.6 paragraph 2 (derived: Trichoderma in pot soil at transplanting; pathogen 3 weeks after transplanting)
+T048,E1,,temperature_day_c,v6_temperature_day_c,28-30,degC,29.0,RANGE_MIDPOINT,3696,PDF p4 sec 2.4 cultivation paragraph
+T048,E1,,temperature_night_c,v6_temperature_night_c,15-17,degC,16.0,RANGE_MIDPOINT,3697,PDF p4 sec 2.4 cultivation paragraph
+T048,E1,E1.S,stress_duration_days,h2_stress_duration_days,80,days from Fo inoculation to destructive harvest,80.0,EXACT,3717,PDF p4 sec 2.5 Harvest first sentence
+T048,E1,E1.SB_Ri,stress_duration_days,h2_stress_duration_days,80,days from Fo inoculation to destructive harvest,80.0,EXACT,3725,PDF p4 sec 2.5 Harvest first sentence
+T048,E1,E1.SB_Th,stress_duration_days,h2_stress_duration_days,80,days from Fo inoculation to destructive harvest,80.0,EXACT,3733,PDF p4 sec 2.5 Harvest first sentence
+T048,E1,E1.SB_RiTh,stress_duration_days,h2_stress_duration_days,80,days from Fo inoculation to destructive harvest,80.0,EXACT,3741,PDF p4 sec 2.5 Harvest first sentence
+T048,E1,E1.SB_Ri,days_application_before_stress,h2_days_application_before_stress,Ri applied at pot filling before sowing; Fo 4 weeks after transplantation; exact Ri-to-Fo interval in days not printed (no numeric value assigned),,,NOT_REPORTED_OR_CONFLICT,3762,PDF p4 sec 2.4 paragraphs 'Inoculation with Fo' and sowing; Ri timing p3 sec 2.4
+T048,E1,E1.SB_Th,days_application_before_stress,h2_days_application_before_stress,21,days (derived from same reference event: Fo 4 weeks = 28 d after transplantation minus Th 7 d after transplantation),21.0,EXACT,3781,PDF p4 sec 2.4 first paragraph and paragraph 'Inoculation with Fo'
+T048,E1,E1.SB_RiTh,days_application_before_stress,h2_days_application_before_stress,"Th 21 d (Fo 4 weeks = 28 d minus Th 7 d after transplantation); Ri at pot filling before sowing, exact Ri-to-Fo interval not printed",days,,MULTIPLE_VALUES,3800,PDF p4 sec 2.4 first paragraph and paragraph 'Inoculation with Fo'
+T050,E1,,temperature_day_c,v6_temperature_day_c,25,C (single chamber setpoint during 25-d seedling phase; day/night split not printed),25.0,EXACT,3831,"p11, section 4.5.1, para 1"
+T050,E1,,temperature_day_c,v6_temperature_day_c,28,C (single chamber setpoint during 28-d post-treatment assay phase; day/night split not printed),28.0,EXACT,3832,"p11, section 4.5.1, para 2"
+T050,E1,,relative_humidity,v6_relative_humidity_pct,80,%,80.0,EXACT,3833,"p11, section 4.5.1, paras 1-2 (both phases)"
+T050,E1,,photoperiod_h,v6_photoperiod_h,12,h,12.0,EXACT,3834,"p11, section 4.5.1, paras 1-2 (both phases)"
+T050,E1,,stress_duration_days,h2_stress_duration_days,28,days (printed growth-chamber maintenance period; outcomes measured 28 d after applying treatments; inoculation-to-assessment interval not printed separately),28.0,EXACT,3837,"p11, section 4.5.1 para 2 and section 4.5.2"
+T050,E1,E1.SB.CH1,days_application_before_stress,h2_days_application_before_stress,1,days (printed as 24 h before inoculation),1.0,EXACT,3851,"p11, section 4.5.1, para 2"
+T050,E1,E1.SB.CH2,days_application_before_stress,h2_days_application_before_stress,1,days (printed as 24 h before inoculation),1.0,EXACT,3852,"p11, section 4.5.1, para 2"
+T050,E1,E1.SB.CH3,days_application_before_stress,h2_days_application_before_stress,1,days (printed as 24 h before inoculation),1.0,EXACT,3853,"p11, section 4.5.1, para 2"
+T054,E1,,temperature_day_c,v6_temperature_day_c,25,C (single printed chamber temperature; no separate day/night values printed),25.0,EXACT,3979,"p3 Methods 2.2, paragraphs 2-3"
+T054,E1,,photoperiod_h,v6_photoperiod_h,16,h light per day (16/8 h light/dark),16.0,EXACT,3980,"p3 Methods 2.2, paragraphs 2-3"
+T054,E1,,relative_humidity,v6_relative_humidity_pct,50-65,%,57.5,RANGE_MIDPOINT,3981,"p3 Methods 2.2, second paragraph (8-day Petri incubation with unamended 1/2 MS negative control)"
+T054,E2,,pot_volume_l,v6_pot_volume_l,2,L per hydroponic container (three seedlings per container),2.0,EXACT,3995,"p3 Methods 2.4, first paragraph"
+T054,E2,,temperature_day_c,v6_temperature_day_c,25,C (single printed temperature for hydroponic phase and post-inoculation 10 d; no separate day/night values),25.0,EXACT,3996,"p3 Methods 2.4, first paragraph"
+T054,E2,,photoperiod_h,v6_photoperiod_h,16,h light per day (16 h light/8 h dark),16.0,EXACT,3997,"p3 Methods 2.4, first paragraph"
+T054,E2,,relative_humidity,v6_relative_humidity_pct,60,% in the hydroponic containers; the 10 d after Fol inoculation were under unquantified 'high humidity',60.0,EXACT,3998,"p3 Methods 2.4, first paragraph"
+T054,E2,,stress_duration_days,h2_stress_duration_days,10,d after inoculation (Methods 2.4 and Fig. 4 caption; Section 3.3 p8 mentions an '8-day observation period'),10.0,EXACT,4004,p3 Methods 2.4 first paragraph; p7 Fig. 4 caption
+T028,E1,,photoperiod_h,v6_photoperiod_h,16,h light per day (16 h light / 8 h dark),16.0,EXACT,4445,p.3 Methods 'Seedling preparations and greenhouse experiment' (left column)
+T028,E1,E1.S100B,days_application_before_stress,h2_days_application_before_stress,1,d,1.0,EXACT,4500,p.3 Methods 'Seedling preparations and greenhouse experiment' (left column)
+T028,E1,E1.S150B,days_application_before_stress,h2_days_application_before_stress,1,d,1.0,EXACT,4501,p.3 Methods 'Seedling preparations and greenhouse experiment' (left column)
+T028,E1,E1.S200B,days_application_before_stress,h2_days_application_before_stress,1,d,1.0,EXACT,4502,p.3 Methods 'Seedling preparations and greenhouse experiment' (left column)
+T058,E1,,relative_humidity,v6_relative_humidity_pct,77,%,77.0,EXACT,4573,PDF p3 sec 2.4 Greenhouse assay (left column)
+T058,E1,,photoperiod_h,v6_photoperiod_h,16,h of supplemental lighting per day (as printed; total day length not separately stated),16.0,EXACT,4574,PDF p3 sec 2.4 Greenhouse assay (left column)
+T059,E1,,pot_volume_l,v6_pot_volume_l,1,L,1.0,EXACT,4753,"p.3 Sec 2.4 Experiment set-up, right column para 3"
+T061,E1,,pot_volume_l,v6_pot_volume_l,8,L,8.0,EXACT,4870,"p3, Section 2.4 In planta assays (right column)"
+T061,E1,E1.S,stress_duration_days,h2_stress_duration_days,11,days,11.0,EXACT,4905,"p12, Section 3.3.4 Leaf relative water content (right column); NDVI on days 0, 3, 7, 11 from water stress application (p4 Section 2.4.2)"
+T061,E1,E1.SB_F,stress_duration_days,h2_stress_duration_days,11,days,11.0,EXACT,4906,"p12, Section 3.3.4 Leaf relative water content (right column); NDVI on days 0, 3, 7, 11 from water stress application (p4 Section 2.4.2)"
+T061,E1,E1.SB_S,stress_duration_days,h2_stress_duration_days,11,days,11.0,EXACT,4907,"p12, Section 3.3.4 Leaf relative water content (right column); NDVI on days 0, 3, 7, 11 from water stress application (p4 Section 2.4.2)"
+T065,E1,,latitude,v6_abs_latitude_printed,40°48′49.2″ N,degrees-minutes-seconds (as printed),40.81366666666666,DMS_CONVERTED,4984,"PDF p2, Methods 2.1, site coordinates"
+T070,E1,,pot_volume_l,v6_pot_volume_l,2,L,2.0,EXACT,5076,"Fulltext PDF p.3, Section 2.1, para. beginning 'Maize and tomato seedlings with two pairs of true leaves'"
+T070,E1,,temperature_day_c,v6_temperature_day_c,25,degC,25.0,EXACT,5078,"Fulltext PDF p.4, Section 2.1, para. beginning 'Plants were grown for 27 days'"
+T070,E1,,temperature_night_c,v6_temperature_night_c,18,degC,18.0,EXACT,5079,"Fulltext PDF p.4, Section 2.1, para. beginning 'Plants were grown for 27 days'"
+T070,E1,,relative_humidity,v6_relative_humidity_pct,60,%,60.0,EXACT,5080,"Fulltext PDF p.4, Section 2.1, para. beginning 'Plants were grown for 27 days'"
+T070,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,5081,"Fulltext PDF p.4, Section 2.1, para. beginning 'Plants were grown for 27 days'"
+T070,E1,,stress_duration_days,h2_stress_duration_days,"printed only as 'for over three weeks' at target level, after a 3-4 day gradual dry-down; no exact day count printed",,,MULTIPLE_VALUES,5085,"Fulltext PDF p.3 last line to p.4 para. 1, Section 2.1"
+T073,E1,,pot_volume_l,v6_pot_volume_l,17,L,17.0,EXACT,5300,"PDF p11, Methods 4.2 Plant material and growth conditions"
+T073,E2,,pot_volume_l,v6_pot_volume_l,17,L,17.0,EXACT,5301,"PDF p11, Methods 4.2 Plant material and growth conditions"
+T073,E1,,plant_density_m2,h2_plant_density_m2,3,plants m-2,3.0,EXACT,5302,"PDF p11, Methods 4.2 Plant material and growth conditions"
+T073,E2,,plant_density_m2,h2_plant_density_m2,3,plants m-2,3.0,EXACT,5303,"PDF p11, Methods 4.2 Plant material and growth conditions"
+T073,E1,,latitude,v6_abs_latitude_printed,36.758889,decimal degrees N; CONVERTED from printed DMS 36°45′32.0″N as 36 + 45/60 + 32.0/3600,36.758889,EXACT,5306,"PDF p11, Methods 4.1 Experimental site and greenhouse conditions"
+T073,E2,,latitude,v6_abs_latitude_printed,36.758889,decimal degrees N; CONVERTED from printed DMS 36°45′32.0″N as 36 + 45/60 + 32.0/3600,36.758889,EXACT,5307,"PDF p11, Methods 4.1 Experimental site and greenhouse conditions"
+T076,E1,,temperature_day_c,v6_temperature_day_c,24 +/- 1 (single maintained air temperature for the whole experiment; no separate day/night values printed),degC,24.0,PLUS_MINUS_CENTRE,5522,"PDF p3, Section 2.1 para 2"
+T076,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,5524,"PDF p3, Section 2.1 para 2"
+T076,E1,E1.B.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5663,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T076,E1,E1.M.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5664,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T076,E1,E1.BM.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5665,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T076,E1,E1.SH.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5666,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T076,E1,E1.BSH.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5667,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T076,E1,E1.MSH.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5668,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T076,E1,E1.C.DS,stress_duration_days,h2_stress_duration_days,7,days,7.0,EXACT,5669,"PDF p5, Section 2.3 para 3; p4 Figure 1 (Drought Day 58-65)"
+T074,E1,,pot_volume_l,v6_pot_volume_l,300,mL,300.0,EXACT,5679,"PDF p5, Methods 2.4, left column, para 1 (printed in mL; code normalizes to L)"
+T074,E1,,relative_humidity,v6_relative_humidity_pct,60-70,%,65.0,RANGE_MIDPOINT,5680,"PDF p5, Methods 2.4, left column, para 3"
+T074,E1,,photoperiod_h,v6_photoperiod_h,16,h light per day (16 h light/8 h dark),16.0,EXACT,5681,"PDF p5, Methods 2.4, left column, para 3"
+T074,E1,E1.S.C,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5812,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC01,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5819,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC04,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5826,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC05,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5833,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC06,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5840,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC08,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5847,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC11,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5854,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC12,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5861,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC13,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5868,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC17,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5875,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC18,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5882,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC20,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5889,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC24,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5896,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC25,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5903,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC27,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5910,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC30,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5917,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC31,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5924,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC34,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5931,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC37,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5938,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC42,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5945,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC44,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5952,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC45,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5959,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC46,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5966,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC47,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5973,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC48,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5980,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC49,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5987,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC50,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,5994,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC51,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,6001,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T074,E1,E1.S.BC52,stress_duration_days,h2_stress_duration_days,42,days of salt treatment to harvest,42.0,EXACT,6008,"PDF p5, Methods 2.4, salinity para (end of left column, top of right column)"
+T082,E1,,pot_volume_l,v6_pot_volume_l,10,L,10.0,EXACT,6039,"p4, Materials and methods, 'Greenhouse experiments', left column, para 1"
+T082,E1,,temperature_day_c,v6_temperature_day_c,25-28,degC,26.5,RANGE_MIDPOINT,6041,"p4, Materials and methods, 'Greenhouse experiments', left column, para 1"
+T082,E1,,temperature_night_c,v6_temperature_night_c,18-20,degC,19.0,RANGE_MIDPOINT,6042,"p4, Materials and methods, 'Greenhouse experiments', left column, para 1"
+T082,E1,,relative_humidity,v6_relative_humidity_pct,60-70,%,65.0,RANGE_MIDPOINT,6043,"p4, Materials and methods, 'Greenhouse experiments', left column, para 1"
+T082,E1,E1.SB,days_application_before_stress,h2_days_application_before_stress,AMBIGUOUS_VERBATIM: '7 days after B. subtilis application' - reference application (pre-transplant root dip vs 14-DAT soil drench) not specified; not resolved to a single numeric interval,,,MULTIPLE_VALUES,6065,"p4, Materials and methods, 'Greenhouse experiments', left column, para 1"
+T081,E1,,temperature_day_c,v6_temperature_day_c,25,°C,25.0,EXACT,6243,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E2,,temperature_day_c,v6_temperature_day_c,25,°C,25.0,EXACT,6244,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E3,,temperature_day_c,v6_temperature_day_c,25,°C,25.0,EXACT,6245,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E4,,temperature_day_c,v6_temperature_day_c,25,°C,25.0,EXACT,6246,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E5,,temperature_day_c,v6_temperature_day_c,25,°C,25.0,EXACT,6247,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E1,,temperature_night_c,v6_temperature_night_c,20,°C,20.0,EXACT,6248,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E2,,temperature_night_c,v6_temperature_night_c,20,°C,20.0,EXACT,6249,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E3,,temperature_night_c,v6_temperature_night_c,20,°C,20.0,EXACT,6250,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E4,,temperature_night_c,v6_temperature_night_c,20,°C,20.0,EXACT,6251,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E5,,temperature_night_c,v6_temperature_night_c,20,°C,20.0,EXACT,6252,p3 Methods 2.2 (setpoint; recorded extremes 28/17 °C excluded as observed climate)
+T081,E6,,temperature_day_c,v6_temperature_day_c,25,°C,25.0,EXACT,6253,p5 Methods 2.5 (growth-chamber setpoint)
+T081,E6,,temperature_night_c,v6_temperature_night_c,22,°C,22.0,EXACT,6254,p5 Methods 2.5 (growth-chamber setpoint)
+T081,E6,,relative_humidity,v6_relative_humidity_pct,85% day / 90% night,%,85.0,FIRST_NUMBER,6255,p5 Methods 2.5 (growth-chamber setting)
+T081,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6256,"p3 Methods 2.2 (supplementary LED; 22 umol/s is lamp flux, not PPFD)"
+T081,E2,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6257,"p3 Methods 2.2 (supplementary LED; 22 umol/s is lamp flux, not PPFD)"
+T081,E3,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6258,"p3 Methods 2.2 (supplementary LED; 22 umol/s is lamp flux, not PPFD)"
+T081,E4,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6259,"p3 Methods 2.2 (supplementary LED; 22 umol/s is lamp flux, not PPFD)"
+T081,E5,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6260,"p3 Methods 2.2 (supplementary LED; 22 umol/s is lamp flux, not PPFD)"
+T081,E6,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6261,"p5 Methods 2.5 (20,000 lux is illuminance, not PPFD)"
+T081,E1,,days_application_before_stress,h2_days_application_before_stress,1,days from the second PGPM application to virus inoculation (as printed; not computed from Figure 1 days),1.0,EXACT,6298,p3 Methods 2.3
+T081,E2,,days_application_before_stress,h2_days_application_before_stress,1,days from the second PGPM application to virus inoculation (as printed; not computed from Figure 1 days),1.0,EXACT,6299,p3 Methods 2.3
+T081,E3,,days_application_before_stress,h2_days_application_before_stress,1,days from the second PGPM application to virus inoculation (as printed; not computed from Figure 1 days),1.0,EXACT,6300,p3 Methods 2.3
+T081,E4,,days_application_before_stress,h2_days_application_before_stress,1,days from the second PGPM application to virus inoculation (as printed; not computed from Figure 1 days),1.0,EXACT,6301,p3 Methods 2.3
+T081,E5,,days_application_before_stress,h2_days_application_before_stress,1,days from the second PGPM application to virus inoculation (as printed; not computed from Figure 1 days),1.0,EXACT,6302,p3 Methods 2.3
+T084,E1,,photoperiod_h,v6_photoperiod_h,16,h light per 24 h (16/8 h light/dark fluorescent light supplementing natural sunlight),16.0,EXACT,6581,"p5 right col, top paragraph (greenhouse conditions)"
+T084,E1,E1.SB.NRBC,days_application_before_stress,h2_days_application_before_stress,1,"day from the last (9 DAT) bacterial application to FOL inoculation, as printed ('the following day'); first drench interval not printed",1.0,EXACT,6649,"p5 left col, 'Evaluation of beneficial microbes under greenhouse conditions'"
+T084,E1,E1.SB.NRBA,days_application_before_stress,h2_days_application_before_stress,1,"day from the last (9 DAT) bacterial application to FOL inoculation, as printed ('the following day'); first drench interval not printed",1.0,EXACT,6677,"p5 left col, 'Evaluation of beneficial microbes under greenhouse conditions'"
+T084,E1,E1.SB.NRBC+Si,days_application_before_stress,h2_days_application_before_stress,1,"day from the last (9 DAT) bacterial application to FOL inoculation, as printed ('the following day'); Si and first-drench intervals not printed",1.0,EXACT,6705,"p5 left col, 'Evaluation of beneficial microbes under greenhouse conditions'"
+T084,E1,E1.SB.NRBA+Si,days_application_before_stress,h2_days_application_before_stress,1,"day from the last (9 DAT) bacterial application to FOL inoculation, as printed ('the following day'); Si and first-drench intervals not printed",1.0,EXACT,6733,"p5 left col, 'Evaluation of beneficial microbes under greenhouse conditions'"
+T083,E1,,pot_volume_l,v6_pot_volume_l,1,L,1.0,EXACT,6857,"PDF p6, Methods 2.3.1, left column"
+T083,E3,,pot_volume_l,v6_pot_volume_l,1,L,1.0,EXACT,6858,"PDF p5, Figure 2 caption"
+T083,E1,,temperature_day_c,v6_temperature_day_c,20–25,°C,22.5,RANGE_MIDPOINT,6859,"PDF p6, Methods 2.3.1, left column (one maintained greenhouse range as printed; not split into day/night)"
+T083,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6860,"PDF p6, Methods 2.3.1, left column"
+T083,E1,,relative_humidity,v6_relative_humidity_pct,65,%,65.0,EXACT,6861,"PDF p6, Methods 2.3.1, left column"
+T083,E2,,temperature_day_c,v6_temperature_day_c,21,°C,21.0,EXACT,6862,"PDF p6, Methods 2.3.3, right column (single climate-chamber incubation temperature)"
+T083,E2,,photoperiod_h,v6_photoperiod_h,constant light,,,NOT_NUMERIC_TEXT,6863,"PDF p6, Methods 2.3.3, right column"
+T083,E2,,relative_humidity,v6_relative_humidity_pct,70,%,70.0,EXACT,6864,"PDF p6, Methods 2.3.3, right column"
+T083,E3,,temperature_day_c,v6_temperature_day_c,20–25,°C,22.5,RANGE_MIDPOINT,6865,"PDF p8, Methods 2.4.1, right column top (printed as one day-night range; not split)"
+T083,E3,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,6866,"PDF p8, Methods 2.4.1, right column top"
+T083,E3,,relative_humidity,v6_relative_humidity_pct,65,%,65.0,EXACT,6867,"PDF p8, Methods 2.4.1, right column top"
+T083,E2,,stress_duration_days,h2_stress_duration_days,72,h,,UNIT_NOT_CONVERTED(D2: days and weeks only),6877,"PDF p6, Methods 2.3.3, right column (challenge/incubation printed as a duration)"
+T083,E2,,days_application_before_stress,h2_days_application_before_stress,30,days,30.0,EXACT,6878,"PDF p4, Figure 1 caption (printed colonization period; Methods 2.3.3 p6: 'after one month of bacterial inoculation (Day 44)')"
+T083,E3,,stress_duration_days,h2_stress_duration_days,3,weeks,21.0,EXACT|WEEKS_X7,6897,"PDF p8, Methods 2.4.2, right column (printed challenge period; agrees with Fig 2 caption p5 '3 weeks as a part of the challenge period'; CONFLICT: Fig 8 caption p14 says '11 days of F. oxysporum challenge')"
+T083,E3,,days_application_before_stress,h2_days_application_before_stress,10,days,10.0,EXACT,6898,"PDF p8, Methods 2.4.2, right column (Fig 2 caption p5: 'Seedlings were grown for 10 days as a colonization period')"
+T093,E1,,stress_duration_days,h2_stress_duration_days,42,days after nematode inoculation (experiment end),42.0,EXACT,7218,"p4 Methods, continuation of greenhouse assay (first sentence)"
+T093,E1,E1.SB_SALICYLIC,days_application_before_stress,h2_days_application_before_stress,10,days (printed interval from first OA application to nematode inoculation),10.0,EXACT,7229,p3 Methods 'Nematicidal assay of organic acids under Greenhouse conditions'; arm T4
+T093,E1,E1.SB_CITRIC,days_application_before_stress,h2_days_application_before_stress,10,days (printed interval from first OA application to nematode inoculation),10.0,EXACT,7239,p3 Methods 'Nematicidal assay of organic acids under Greenhouse conditions'; arm T5
+T093,E1,E1.SB_MALIC,days_application_before_stress,h2_days_application_before_stress,10,days (printed interval from first OA application to nematode inoculation),10.0,EXACT,7249,p3 Methods 'Nematicidal assay of organic acids under Greenhouse conditions'; arm T6
+T093,E1,E1.SB_LACTIC,days_application_before_stress,h2_days_application_before_stress,10,days (printed interval from first OA application to nematode inoculation),10.0,EXACT,7259,p3 Methods 'Nematicidal assay of organic acids under Greenhouse conditions'; arm T7
+T093,E1,E1.SB_BENZOIC,days_application_before_stress,h2_days_application_before_stress,10,days (printed interval from first OA application to nematode inoculation),10.0,EXACT,7269,p3 Methods 'Nematicidal assay of organic acids under Greenhouse conditions'; arm T8
+T093,E1,E1.SB_ACETIC,days_application_before_stress,h2_days_application_before_stress,10,days (printed interval from first OA application to nematode inoculation),10.0,EXACT,7279,p3 Methods 'Nematicidal assay of organic acids under Greenhouse conditions'; arm T9
+T087,E1,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7301,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E1,,temperature_night_c,v6_temperature_night_c,20,C,20.0,EXACT,7302,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E2,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7303,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E2,,temperature_night_c,v6_temperature_night_c,20,C,20.0,EXACT,7304,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E3,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7305,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E3,,temperature_night_c,v6_temperature_night_c,20,C,20.0,EXACT,7306,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E4,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7307,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E4,,temperature_night_c,v6_temperature_night_c,20,C,20.0,EXACT,7308,"p.2, right column, last lines of Methods 2.1; setpoint (recorded extremes 28/17 C excluded)"
+T087,E1,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7309,"p.2 right column bottom to p.3 left column top, Methods 2.1"
+T087,E2,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7310,"p.2 right column bottom to p.3 left column top, Methods 2.1"
+T087,E3,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7311,"p.2 right column bottom to p.3 left column top, Methods 2.1"
+T087,E4,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7312,"p.2 right column bottom to p.3 left column top, Methods 2.1"
+T087,E5,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7349,"p.3, right column, Methods 2.3"
+T087,E5,,temperature_night_c,v6_temperature_night_c,22,C,22.0,EXACT,7350,"p.3, right column, Methods 2.3"
+T087,E6,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7351,"p.3, right column, Methods 2.3"
+T087,E6,,temperature_night_c,v6_temperature_night_c,22,C,22.0,EXACT,7352,"p.3, right column, Methods 2.3"
+T087,E7,,temperature_day_c,v6_temperature_day_c,25,C,25.0,EXACT,7353,"p.3, right column, Methods 2.3"
+T087,E7,,temperature_night_c,v6_temperature_night_c,22,C,22.0,EXACT,7354,"p.3, right column, Methods 2.3"
+T087,E5,,relative_humidity,v6_relative_humidity_pct,85 (day) / 90 (night),%,85.0,FIRST_NUMBER,7355,"p.3, right column, Methods 2.3"
+T087,E6,,relative_humidity,v6_relative_humidity_pct,85 (day) / 90 (night),%,85.0,FIRST_NUMBER,7356,"p.3, right column, Methods 2.3"
+T087,E7,,relative_humidity,v6_relative_humidity_pct,85 (day) / 90 (night),%,85.0,FIRST_NUMBER,7357,"p.3, right column, Methods 2.3"
+T087,E5,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7358,"p.3, right column, Methods 2.3"
+T087,E6,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7359,"p.3, right column, Methods 2.3"
+T087,E7,,photoperiod_h,v6_photoperiod_h,16,h,16.0,EXACT,7360,"p.3, right column, Methods 2.3"
+T087,E1,E1.SB,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7391,"p.3, left column, Methods 2.2 first sentence"
+T087,E2,E2.SB,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7403,"p.3, left column, Methods 2.2 first sentence"
+T087,E3,E3.SB,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7415,"p.3, left column, Methods 2.2 first sentence"
+T087,E4,E4.SB,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7427,"p.3, left column, Methods 2.2 first sentence"
+T087,E6,E6.SB_CMV,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7446,"p.3, left column, Methods 2.2 first sentence; p.3 right column, Methods 2.3"
+T087,E6,E6.SB_TSWV,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7452,"p.3, left column, Methods 2.2 first sentence; p.3 right column, Methods 2.3"
+T087,E7,E7.SB,days_application_before_stress,h2_days_application_before_stress,1,day after the second MBI600 application (as printed),1.0,EXACT,7463,"p.3, left column, Methods 2.2 first sentence; p.3 right column, Methods 2.3"
+T096,E1,,temperature_day_c,v6_temperature_day_c,27–29,°C,28.0,RANGE_MIDPOINT,7870,"F_351bde58bed872b70993 PDF p.6, left col, Methods 'In planta pot experiment' (continued); one maintained greenhouse range as printed, not split into day/night and not duplicated as a night value"
+T096,E1,,relative_humidity,v6_relative_humidity_pct,70–80,%,75.0,RANGE_MIDPOINT,7871,"F_351bde58bed872b70993 PDF p.6, left col, Methods 'In planta pot experiment' (continued); the ~90% RH for 48 h after FOL application is recorded under inoculation_method"
+T096,E1,,photoperiod_h,v6_photoperiod_h,16,h light (16 h light: 8 h dark),16.0,EXACT,7872,"F_351bde58bed872b70993 PDF p.6, left col, Methods 'In planta pot experiment' (continued)"
+T096,E1,,days_application_before_stress,h2_days_application_before_stress,24,h (printed in hours; not converted to days),,UNIT_NOT_CONVERTED(D2: days and weeks only),7885,"F_351bde58bed872b70993 PDF p.6, left col, Methods 'In planta pot experiment' (continued); applies to inoculated treatment arms T5-T7"
+T092,E1,,temperature_day_c,v6_temperature_day_c,25 ± 2,°C (single maintained greenhouse temperature as printed; no separate day/night values),25.0,PLUS_MINUS_CENTRE,7973,"PDF p3, Methods 'Plant material and virus source'"
+T092,E1,,photoperiod_h,v6_photoperiod_h,16,h light (16 h light / 8 h dark),16.0,EXACT,7974,"PDF p3, Methods 'Plant material and virus source'"
+T092,E1,,stress_duration_days,h2_stress_duration_days,40,days post-inoculation to symptom scoring and biomass endpoint (printed dpi; viral qPCR sampling printed as 50 dpi in p4 Methods vs 40 dpi elsewhere),40.0,EXACT,7987,"PDF p4, Methods 'Virus inoculation and disease severity assessment'; Fig. 4 caption p7"
+T085,E1,,temperature_day_c,v6_temperature_day_c,25,"°C (single climate-chamber setpoint 25 ± 1 °C after inoculation; not a day/night split, applies to whole 16:8 cycle)",25.0,EXACT,8389,"p3 Growth and physiological measurements, left column para 2"
+T085,E1,,relative_humidity,v6_relative_humidity_pct,60,% (climate-chamber setpoint after inoculation),60.0,EXACT,8390,"p3 Growth and physiological measurements, left column para 2"
+T085,E1,,photoperiod_h,v6_photoperiod_h,16,"h light (16:8 h light:dark, climate chamber)",16.0,EXACT,8391,"p3 Growth and physiological measurements, left column para 2"
+T085,E1,,days_application_before_stress,h2_days_application_before_stress,1,days (final application 24 h before inoculation; timing of first application relative to inoculation not printed as such and not computed),1.0,EXACT,8403,"p3 Growth and physiological measurements, left column para 2"
+T110,E1,,pot_volume_l,v6_pot_volume_l,1.5,L,1.5,EXACT,8589,"PDF p.3, Materials and Methods > Plant Growth Conditions, Treatments, and Design Experimental, para 1"
+T110,E1,E1.WT.S,stress_duration_days,h2_stress_duration_days,25,d,25.0,EXACT,8613,"PDF p.6, Fig. 2 caption (also Methods p.3 'After 25 days of the treatment imposition')"
+T110,E1,E1.WT.SB,stress_duration_days,h2_stress_duration_days,25,d,25.0,EXACT,8614,"PDF p.6, Fig. 2 caption (also Methods p.3 'After 25 days of the treatment imposition')"
+T110,E1,E1.NR.S,stress_duration_days,h2_stress_duration_days,25,d,25.0,EXACT,8615,"PDF p.6, Fig. 2 caption (also Methods p.3 'After 25 days of the treatment imposition')"
+T110,E1,E1.NR.SB,stress_duration_days,h2_stress_duration_days,25,d,25.0,EXACT,8616,"PDF p.6, Fig. 2 caption (also Methods p.3 'After 25 days of the treatment imposition')"
+T110,E1,E1.WT.SB,days_application_before_stress,h2_days_application_before_stress,0,d,0.0,EXACT,8649,"PDF p.1, Abstract"
+T110,E1,E1.NR.SB,days_application_before_stress,h2_days_application_before_stress,0,d,0.0,EXACT,8650,"PDF p.1, Abstract"
+T043,E1,,pot_volume_l,v6_pot_volume_l,5,L,5.0,EXACT,8760,"PDF p3, Materials and methods, Plant material and growth conditions"
+T043,E1,,latitude,v6_abs_latitude_printed,"39°25'01"" N",degrees N (DMS as printed),39.41694444444444,DMS_CONVERTED,8762,"PDF p3, Materials and methods, Plant material and growth conditions"
+T043,E1,E1.S,stress_duration_days,h2_stress_duration_days,46,days,46.0,EXACT,8779,"PDF p3, Plant material and growth conditions (salt stress paragraph)"
+T043,E1,E1.SB_BS,stress_duration_days,h2_stress_duration_days,46,days,46.0,EXACT,8785,"PDF p3, Plant material and growth conditions (salt stress paragraph)"
+T043,E1,E1.SB_BM08,stress_duration_days,h2_stress_duration_days,46,days,46.0,EXACT,8791,"PDF p3, Plant material and growth conditions (salt stress paragraph)"
+T043,E1,E1.SB_BS+BM08,stress_duration_days,h2_stress_duration_days,46,days,46.0,EXACT,8797,"PDF p3, Plant material and growth conditions (salt stress paragraph)"
+T043,E1,E1.SB_BS,days_application_before_stress,h2_days_application_before_stress,about 26 and 13 days before salt onset (derived: BS at 2 and 15 DAT vs salt start 4 weeks = 28 days after transplanting),"days (derived, approximate)",,NOT_NUMERIC_TEXT,8867,"PDF p3, Treatment applications and Plant material and growth conditions (salt stress paragraph)"
+T043,E1,E1.SB_BM08,days_application_before_stress,h2_days_application_before_stress,about 21 days before salt onset (derived: BM08 at 1 week vs salt start 4 weeks after transplanting),"days (derived, approximate)",,NOT_NUMERIC_TEXT,8868,"PDF p3, Treatment applications and Plant material and growth conditions (salt stress paragraph)"
+T043,E1,E1.SB_BS+BM08,days_application_before_stress,h2_days_application_before_stress,"BS about 26 and 13 days, BM08 about 21 days before salt onset (derived from 2/15 DAT and 1 week vs salt start 4 weeks after transplanting)","days (derived, approximate)",,NOT_NUMERIC_TEXT,8869,"PDF p3, Treatment applications and Plant material and growth conditions (salt stress paragraph)"

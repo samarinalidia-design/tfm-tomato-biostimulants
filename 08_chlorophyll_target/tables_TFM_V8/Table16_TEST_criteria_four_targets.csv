@@ -1,0 +1,6 @@
+target,role,model,H1,H2,H3,verdict
+Fruit yield,selected A,RIDGE_REF,False,True,False,PARTIAL
+Dry biomass,selected A,BASELINE_mean,False,True,False,PARTIAL
+Chlorophyll index (SPAD etc.),primary,RF_REF_wivw_re,False,False,True,PARTIAL
+Leaf chlorophyll content,primary,MR0,False,True,True,PARTIAL
+Leaf chlorophyll content,pre-declared ML candidate,RF_REF_wn,True,True,True,CONFIRMED

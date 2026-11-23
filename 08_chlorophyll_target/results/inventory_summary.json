@@ -1,0 +1,43 @@
+{
+ "TRAIN": {
+  "studies_in_db": 399,
+  "studies_with_chlorophyll_asset": 172,
+  "content_a_b_total (not SPAD only)": 152,
+  "spad_only": 20,
+  "with_chl_a": 62,
+  "with_chl_b": 42,
+  "with_total": 121,
+  "with_spad": 54,
+  "assets": 318,
+  "usable_candidates (content, source available, not only baseline)": 152,
+  "design_coded_in_db": 134,
+  "coded_with_SB_vs_S_pair": 132,
+  "coded_with_unstressed_C_and_B": 99,
+  "design_not_coded (no yield/biomass target)": 38,
+  "workflow_status": {
+   "CLOSED": 133,
+   "NO_TARGET_CONFIRMED": 36,
+   "EXCLUDED_SCOPE": 3
+  }
+ },
+ "TEST": {
+  "studies_in_db": 80,
+  "studies_with_chlorophyll_asset": 31,
+  "content_a_b_total (not SPAD only)": 25,
+  "spad_only": 6,
+  "with_chl_a": 9,
+  "with_chl_b": 7,
+  "with_total": 18,
+  "with_spad": 10,
+  "assets": 43,
+  "usable_candidates (content, source available, not only baseline)": 25,
+  "design_coded_in_db": 24,
+  "coded_with_SB_vs_S_pair": 24,
+  "coded_with_unstressed_C_and_B": 16,
+  "design_not_coded (no yield/biomass target)": 7,
+  "workflow_status": {
+   "CLOSED": 24,
+   "NO_TARGET_CONFIRMED": 7
+  }
+ }
+}

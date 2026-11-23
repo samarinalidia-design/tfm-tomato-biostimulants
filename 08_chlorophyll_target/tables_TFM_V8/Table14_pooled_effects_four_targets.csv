@@ -1,0 +1,25 @@
+endpoint,data_set,studies,contrasts,effect_pct,ci95,pi95,tau_total,I2
+Fruit yield,TRAIN_primary,76,831,45.3,"[+33.2, +58.6]","[-40, +250]",0.439,99.1
+Fruit yield,TRAIN_SB_vs_S_only,70,568,56.7,"[+41.2, +73.9]","[-39, +305]",0.473,98.6
+Fruit yield,TRAIN_author_SD_only,29,264,50.7,"[+25.6, +80.8]","[-54, +395]",0.574,99.8
+Fruit yield,TEST,16,117,40.3,"[+12.8, +74.4]","[-46, +264]",0.435,98.6
+Fruit yield,TRAIN_plus_TEST,92,948,44.3,"[+33.3, +56.3]","[-40, +246]",0.439,99.0
+Fruit yield,TEST_minus_TRAIN,92,948,-3.9,"[-23.8, +21.1]",,,
+Dry biomass,TRAIN_primary,172,1452,34.7,"[+29.8, +39.7]","[-27, +148]",0.31,99.0
+Dry biomass,TRAIN_SB_vs_S_only,164,961,41.2,"[+34.6, +48.1]","[-26, +168]",0.325,99.2
+Dry biomass,TRAIN_author_SD_only,86,661,31.5,"[+25.9, +37.2]","[-27, +135]",0.292,99.0
+Dry biomass,TEST,31,378,30.6,"[+18.3, +44.2]","[-42, +196]",0.398,99.3
+Dry biomass,TRAIN_plus_TEST,203,1830,34.0,"[+29.5, +38.7]","[-30, +157]",0.33,99.1
+Dry biomass,TEST_minus_TRAIN,203,1830,-3.0,"[-12.4, +7.6]",,,
+Leaf chlorophyll content,TRAIN_primary,94,607,25.3,"[+19.4, +31.6]","[-30, +126]",0.295,99.6
+Leaf chlorophyll content,TRAIN_SB_vs_S_only,82,399,32.1,"[+23.7, +41.0]","[-32, +156]",0.33,99.7
+Leaf chlorophyll content,TRAIN_author_SD_only,29,161,25.1,"[+17.3, +33.4]","[-20, +97]",0.219,99.0
+Leaf chlorophyll content,TEST,15,63,19.6,"[-0.9, +44.2]","[-48, +173]",0.374,99.3
+Leaf chlorophyll content,TRAIN_plus_TEST,109,670,24.6,"[+18.8, +30.6]","[-32, +128]",0.304,99.6
+Leaf chlorophyll content,TEST_minus_TRAIN,109,670,-4.4,"[-20.5, +15.1]",,,
+Chlorophyll index (SPAD etc.),TRAIN_primary,55,610,20.0,"[+14.2, +26.1]","[-23, +87]",0.221,98.8
+Chlorophyll index (SPAD etc.),TRAIN_SB_vs_S_only,49,363,25.5,"[+17.7, +33.7]","[-25, +109]",0.251,98.6
+Chlorophyll index (SPAD etc.),TRAIN_author_SD_only,33,396,21.6,"[+12.9, +30.9]","[-28, +105]",0.254,99.2
+Chlorophyll index (SPAD etc.),TEST,10,108,33.9,"[+0.9, +77.8]","[-50, +257]",0.415,99.7
+Chlorophyll index (SPAD etc.),TRAIN_plus_TEST,65,718,22.1,"[+15.4, +29.1]","[-27, +105]",0.259,99.2
+Chlorophyll index (SPAD etc.),TEST_minus_TRAIN,65,718,12.0,"[-15.6, +48.6]",,,

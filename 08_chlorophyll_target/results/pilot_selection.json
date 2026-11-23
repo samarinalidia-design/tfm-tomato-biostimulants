@@ -1,0 +1,23 @@
+{
+ "seed": 20261122,
+ "selected": 50,
+ "design_coded": 45,
+ "source_type": {
+  "figure": 26,
+  "table": 19,
+  "both": 4,
+  "text/other": 1
+ },
+ "stress_family": {
+  "SAL": 22,
+  "OTHER/UNCODED": 16,
+  "DROUGHT": 7,
+  "HEAT": 3,
+  "BIO": 1,
+  "COLD": 1
+ },
+ "with_spad_too": 11,
+ "fulltext_sha_ok": 50,
+ "all_files_ok": 50,
+ "missing_or_mismatch_files": []
+}

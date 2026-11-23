@@ -1,0 +1,5 @@
+     target     model     role  ood   n   MAE  coverage
+chlorophyll RF_REF_wn     TEST    0  57 0.237     0.947
+chlorophyll RF_REF_wn     TEST    1   6 0.337     1.000
+chlorophyll RF_REF_wn TRAIN_CV    0 577 0.234     0.938
+chlorophyll RF_REF_wn TRAIN_CV    1  30 0.336     0.900

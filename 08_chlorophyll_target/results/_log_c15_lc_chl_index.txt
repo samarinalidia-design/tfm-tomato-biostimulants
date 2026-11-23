@@ -1,0 +1,21 @@
+chl_index learning fold 0
+chl_index learning fold 1
+chl_index learning fold 2
+chl_index learning fold 3
+chl_index learning fold 4
+       target  frac           model  n_train_studies   RMSE  RMSE_se    MAE
+0   chl_index   0.2   BASELINE_mean            9.200  0.279    0.019  0.200
+1   chl_index   0.2             MR0            9.200  0.266    0.018  0.191
+2   chl_index   0.2  RF_REF_wivw_re            9.200  0.284    0.021  0.198
+3   chl_index   0.4   BASELINE_mean           17.600  0.266    0.017  0.196
+4   chl_index   0.4             MR0           17.600  0.263    0.017  0.190
+5   chl_index   0.4  RF_REF_wivw_re           17.600  0.258    0.018  0.190
+6   chl_index   0.6   BASELINE_mean           26.733  0.271    0.016  0.200
+7   chl_index   0.6             MR0           26.733  0.265    0.018  0.192
+8   chl_index   0.6  RF_REF_wivw_re           26.733  0.252    0.016  0.187
+9   chl_index   0.8   BASELINE_mean           34.867  0.266    0.015  0.200
+10  chl_index   0.8             MR0           34.867  0.263    0.017  0.192
+11  chl_index   0.8  RF_REF_wivw_re           34.867  0.214    0.008  0.164
+12  chl_index   1.0   BASELINE_mean           44.000  0.267    0.028  0.200
+13  chl_index   1.0             MR0           44.000  0.263    0.032  0.192
+14  chl_index   1.0  RF_REF_wivw_re           44.000  0.203    0.010  0.158

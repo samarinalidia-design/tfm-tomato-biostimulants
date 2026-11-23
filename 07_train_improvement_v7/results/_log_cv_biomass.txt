@@ -1,0 +1,36 @@
+biomass seed 11 fold 0 done
+biomass seed 11 fold 1 done
+biomass seed 11 fold 2 done
+biomass seed 11 fold 3 done
+biomass seed 11 fold 4 done
+biomass seed 22 fold 0 done
+biomass seed 22 fold 1 done
+biomass seed 22 fold 2 done
+biomass seed 22 fold 3 done
+biomass seed 22 fold 4 done
+biomass seed 33 fold 0 done
+biomass seed 33 fold 1 done
+biomass seed 33 fold 2 done
+biomass seed 33 fold 3 done
+biomass seed 33 fold 4 done
+    data   features         model   RMSE  RMSE_sd      R2  RMSE_sb  d_vs_V5mean  d_sb_vs_V5mean
+V6_QCORE          -           MR0 0.3622   0.0017 -0.0065   0.3296      -0.5324         -0.3179
+      V5          -           MR0 0.3625   0.0014 -0.0079   0.3297      -0.4606         -0.2844
+      V6          -           MR0 0.3625   0.0014 -0.0080   0.3296      -0.4572         -0.3111
+V6_QCORE          - BASELINE_mean 0.3638   0.0020 -0.0154   0.3301      -0.0937         -0.1485
+      V6          - BASELINE_mean 0.3641   0.0018 -0.0171   0.3303      -0.0072         -0.0978
+      V5          - BASELINE_mean 0.3641   0.0019 -0.0173   0.3306       0.0000          0.0000
+      V6   DENSE_V7   RIDGE_wnone 0.3649   0.0007 -0.0217   0.3268       0.2208         -1.1557
+      V6   DENSE_V7            RF 0.3683   0.0017 -0.0406   0.3296       1.1411         -0.3170
+V6_QCORE   DENSE_V7         RIDGE 0.3693   0.0044 -0.0465   0.3348       1.4260          1.2752
+V6_QCORE   DENSE_V7           MRX 0.3718   0.0006 -0.0607   0.3320       2.1160          0.4269
+      V6     REF_V5   RIDGE_wnone 0.3726   0.0035 -0.0651   0.3291       2.3261         -0.4541
+      V6   DENSE_V7         RIDGE 0.3728   0.0016 -0.0662   0.3351       2.3815          1.3526
+      V6     REF_V5            RF 0.3735   0.0022 -0.0700   0.3289       2.5612         -0.5128
+      V6   DENSE_V7           MRX 0.3750   0.0014 -0.0786   0.3336       2.9706          0.8904
+      V5     REF_V5            RF 0.3767   0.0004 -0.0885   0.3307       3.4436          0.0388
+      V6 COMPACT_V7         RIDGE 0.3806   0.0076 -0.1118   0.3383       4.5290          2.3224
+V6_QCORE     REF_V5         RIDGE 0.3896   0.0090 -0.1646   0.3440       6.9897          4.0574
+      V6     REF_V5         RIDGE 0.3914   0.0073 -0.1755   0.3451       7.4921          4.3922
+      V5     REF_V5         RIDGE 0.3960   0.0058 -0.2033   0.3469       8.7599          4.9372
+1301s

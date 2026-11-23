@@ -1,0 +1,35 @@
+{
+ "main_effect_contrasts": 22,
+ "main_effect_studies": [
+  "281",
+  "D_0dea1827dd555ada",
+  "D_0e62bf49f098dfeb",
+  "D_3086dff1f0079347",
+  "D_4b4f2119a7ee5348"
+ ],
+ "proxy_contrasts": 42,
+ "proxy_studies": [
+  "643",
+  "838",
+  "D_4b4f2119a7ee5348",
+  "D_c734b354a0e9c1b6",
+  "D_f3f7d436ab5a1d2b"
+ ],
+ "yield_rows": 913,
+ "yield_studies": 88,
+ "yield_studies_default_v6": 76,
+ "yield_studies_with_recovered": 85,
+ "exp_loss_coverage_SB_vs_S_studies": 0.5609756097560976,
+ "exp_loss_by_class": {
+  "BIOTIC": 0.0,
+  "CHEMICAL_TOXICITY": 0.0,
+  "COLD": 0.0,
+  "COMBINED": 0.11,
+  "DROUGHT": 0.61,
+  "HEAT": 0.0,
+  "NUTRIENT": 0.0,
+  "OTHER": 0.0,
+  "OTHER_MANAGEMENT": 0.0,
+  "SALINITY": 0.73
+ }
+}

@@ -1,0 +1,25 @@
+yield seed 11 fold 0 done
+yield seed 11 fold 1 done
+yield seed 11 fold 2 done
+yield seed 11 fold 3 done
+yield seed 11 fold 4 done
+yield seed 22 fold 0 done
+yield seed 22 fold 1 done
+yield seed 22 fold 2 done
+yield seed 22 fold 3 done
+yield seed 22 fold 4 done
+yield seed 33 fold 0 done
+yield seed 33 fold 1 done
+yield seed 33 fold 2 done
+yield seed 33 fold 3 done
+yield seed 33 fold 4 done
+{"target": "yield", "rows": 694, "studies": 76, "clusters": 68, "n_cat": 68, "n_num": 31, "sd_target": 0.4627604328068762, "seconds": 325}
+target                model   n  studies   RMSE      R2  RMSE_study_balanced  d_vs_mean_pct  d_ci_low_pct  d_ci_high_pct
+ yield    RIDGE_REF_wivw_re 694       76 0.4524  0.0427               0.4825        -3.0735       -7.9185         3.6840
+ yield      RIDGE_REF_wnone 694       76 0.4553  0.0307               0.4793        -2.4683       -5.9537         2.1619
+ yield         RIDGE_REF_wn 694       76 0.4580  0.0191               0.4943        -1.8846       -5.0872         2.4451
+ yield BASELINE_mean_studyw 694       76 0.4656 -0.0137               0.4982        -0.2581       -0.8564         0.3535
+ yield                  MR0 694       76 0.4661 -0.0159               0.4985        -0.1493       -0.4599         0.1283
+ yield        BASELINE_mean 694       76 0.4668 -0.0189               0.4972         0.0000        0.0000         0.0000
+ yield       RF_REF_wivw_re 694       76 0.4725 -0.0443               0.5023         1.2345       -2.8786         6.7586
+ yield            RF_REF_wn 694       76 0.4738 -0.0496               0.5084         1.4950       -3.0819         8.1790

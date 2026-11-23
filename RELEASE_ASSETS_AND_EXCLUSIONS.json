@@ -6,7 +6,8 @@
    "sha256_of_contents": {
     "TFM_DATABASE_CLASS_A_FINAL.sqlite": "a7f473fdf248174c5c53e4173ea0a7bcd09905331dda9ad13c934e31c2dfd4de",
     "TFM_DATABASE_CLASS_A_FINAL.xlsx": "5219f6744e9c1841c0e1d5d78de444a6c056976a660d8a851b31c3d780499dcc"
-   }
+   },
+   "release": "data-freeze-v5"
   },
   {
    "asset": "TFM_DATABASE_EXTERNAL_TEST_DATA_FREEZE_20261118.zip",
@@ -14,7 +15,35 @@
    "sha256_of_contents": {
     "TFM_DATABASE_CLASS_A_FINAL.sqlite": "106ef154d01a1164acd51a8d19dfb52cc15e7c60b4a41a40b1ff9f8dfd89593b",
     "TFM_DATABASE_CLASS_A_FINAL.xlsx": "6b149ee81237b019b37414ab9dfc6ff98f6776209212b3f5ad184b9f039d221e"
-   }
+   },
+   "release": "data-freeze-v5"
+  },
+  {
+   "asset": "TFM_DATABASE_TRAIN_DEV_V6_CORRECTED_20261122.zip",
+   "bytes_zip": 100070967,
+   "sha256_of_contents": {
+    "TFM_DATABASE_CLASS_A_V6_CORRECTED.sqlite": "79687da6f9f0cab83df373d908c77ea9c350957ba328d228c671c2385a1be558"
+   },
+   "release": "data-v6-v8",
+   "description": "TRAIN_DEV database with the V6 corrections (06_database_corrections_v6)"
+  },
+  {
+   "asset": "TFM_DATABASE_EXTERNAL_TEST_V6_CORRECTED_20261122.zip",
+   "bytes_zip": 22662648,
+   "sha256_of_contents": {
+    "TFM_DATABASE_CLASS_A_V6_CORRECTED.sqlite": "fdd00ea43dfa4423e661174f3c3085b7dc6fea6ac135e6f76a5109d758070318"
+   },
+   "release": "data-v6-v8",
+   "description": "EXTERNAL_TEST database with the V6 corrections"
+  },
+  {
+   "asset": "TFM_DATABASE_TRAIN_DEV_V8_CHLOROPHYLL_20261122.zip",
+   "bytes_zip": 101246612,
+   "sha256_of_contents": {
+    "TFM_DATABASE_CLASS_A_V8_CHLOROPHYLL.sqlite": "dddfd578d2daf68f52e6f35515b3a1c8e1be1e204806c46247a35e221e438fbf"
+   },
+   "release": "data-v6-v8",
+   "description": "V6 TRAIN_DEV database plus the chl_* leaf-chlorophyll tables (08_chlorophyll_target)"
   }
  ],
  "skipped_files": [

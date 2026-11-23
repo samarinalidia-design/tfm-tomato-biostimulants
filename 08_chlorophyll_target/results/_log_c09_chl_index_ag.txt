@@ -1,0 +1,25 @@
+chl_index seed 11 fold 0 done
+chl_index seed 11 fold 1 done
+chl_index seed 11 fold 2 done
+chl_index seed 11 fold 3 done
+chl_index seed 11 fold 4 done
+chl_index seed 22 fold 0 done
+chl_index seed 22 fold 1 done
+chl_index seed 22 fold 2 done
+chl_index seed 22 fold 3 done
+chl_index seed 22 fold 4 done
+chl_index seed 33 fold 0 done
+chl_index seed 33 fold 1 done
+chl_index seed 33 fold 2 done
+chl_index seed 33 fold 3 done
+chl_index seed 33 fold 4 done
+{"target": "chl_index", "rows": 610, "studies": 55, "clusters": 51, "n_cat": 65, "n_num": 32, "sd_target": 0.2670447789844795, "seconds": 303}
+   target                model   n  studies   RMSE      R2  RMSE_study_balanced  d_vs_mean_pct  d_ci_low_pct  d_ci_high_pct
+chl_index       RF_REF_wivw_re 610       55 0.2491  0.1281               0.2164       -10.9111      -15.4050        -3.6172
+chl_index            RF_REF_wn 610       55 0.2577  0.0669               0.2263        -7.8346      -13.9148         0.5954
+chl_index BASELINE_mean_studyw 610       55 0.2716 -0.0360               0.2251        -2.8890       -5.9096        -0.7735
+chl_index                  MR0 610       55 0.2723 -0.0415               0.2253        -2.6302       -6.0611        -0.4965
+chl_index    RIDGE_REF_wivw_re 610       55 0.2752 -0.0638               0.2441        -1.5914      -11.3441        17.2105
+chl_index      RIDGE_REF_wnone 610       55 0.2758 -0.0684               0.2329        -1.3815       -7.7155         9.7141
+chl_index         RIDGE_REF_wn 610       55 0.2779 -0.0846               0.2316        -0.6362       -5.4926         6.1995
+chl_index        BASELINE_mean 610       55 0.2797 -0.0985               0.2298         0.0000        0.0000         0.0000

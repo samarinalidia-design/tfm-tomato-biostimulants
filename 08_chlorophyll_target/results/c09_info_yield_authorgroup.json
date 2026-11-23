@@ -1,0 +1,10 @@
+{
+ "target": "yield",
+ "rows": 694,
+ "studies": 76,
+ "clusters": 68,
+ "n_cat": 68,
+ "n_num": 31,
+ "sd_target": 0.4627604328068762,
+ "seconds": 325
+}

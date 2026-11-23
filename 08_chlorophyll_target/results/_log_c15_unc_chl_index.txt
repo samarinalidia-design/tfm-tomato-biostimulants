@@ -1,0 +1,23 @@
+chl_index uncertainty seed 11 fold 0
+chl_index uncertainty seed 11 fold 1
+chl_index uncertainty seed 11 fold 2
+chl_index uncertainty seed 11 fold 3
+chl_index uncertainty seed 11 fold 4
+chl_index uncertainty seed 22 fold 0
+chl_index uncertainty seed 22 fold 1
+chl_index uncertainty seed 22 fold 2
+chl_index uncertainty seed 22 fold 3
+chl_index uncertainty seed 22 fold 4
+chl_index uncertainty seed 33 fold 0
+chl_index uncertainty seed 33 fold 1
+chl_index uncertainty seed 33 fold 2
+chl_index uncertainty seed 33 fold 3
+chl_index uncertainty seed 33 fold 4
+   target             model  coverage95  half_width  RMSE
+chl_index     BASELINE_mean       0.943       0.602 0.272
+chl_index               MR0       0.916       0.462 0.270
+chl_index    RF_REF_wivw_re       0.962       0.476 0.204
+chl_index         RF_REF_wn       0.964       0.520 0.221
+chl_index RIDGE_REF_wivw_re       0.954       0.527 0.238
+chl_index      RIDGE_REF_wn       0.943       0.569 0.257
+chl_index   RIDGE_REF_wnone       0.948       0.527 0.242
